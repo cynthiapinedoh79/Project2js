@@ -36,14 +36,7 @@ h3 {
 h1,
 h2 {
     text-transform: uppercase;
-}
-
-h2 {
     margin-bottom: 2rem;
-}
-
-.sub-heading-color {
-    color: var(--primary-text-color);
 }
 
 
@@ -64,9 +57,10 @@ h2 {
     --bs-btn-active-bg: none;
     --bs-btn-active-border-color: none;
 }
+
 section {
     border: none;
-    background-color: none;
+    background-color: var(--highlight-color);
     /* FLEX PARENT PROPERTIES */
     display: flex;
     flex-direction:column;
@@ -177,6 +171,28 @@ footer {
     padding-bottom: 0;
 }
 
+/*Taxpayer Information*/
+#tpi-form {
+    text-align: left;
+}
+
+#tpi-form p{
+    margin-right: 25px;
+}
+
+
+.box.container-fluid p{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+margin-left: 0px;
+}
+
+.container-fluid div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
 
 @media screen and (min-width: 768px) {
 
