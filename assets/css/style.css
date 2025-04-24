@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Macondo&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+:root {
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Lato", cursive;
+    --primary-color: #2c2321;
+
+    --secondary-color: #d1aa85;
+
+    --third-color: #f9e9dc;
+
+    --highlight-color: #56701d;
+
+    --highlight-color-light: #d8e1c7;
+
+    --bg-review-card: #f6f1df;
+
+    --contact-header-color: #614833;
+}
+
+
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.sub-heading-color {
+    color: var(--primary-color);
+}
+
+
+#header {
+    padding-top: 3.5rem;
+}
+
+#header .lead {
+    font-family: var(--secondary-font);
+}
+
+h2.display-6 {
+    font-weight: 400;
+}
+
+p.lead.display-6.sub-heading-color {
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    color: var(--contact-header-color);
+    padding-bottom: 20px;
+}
+
+p.lead.display-7.sub-heading-color {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--contact-header-color);
+    padding-bottom: 0px;
+}
+
+
+.btn-primary {
+    font-weight: bold;
+    font-size: 140%;
+    --bs-btn-color: var(--highlight-color);
+    --bs-btn-bg: none;
+    --bs-btn-border-width: none;
+    --bs-btn-hover-color: var(--secondary-color);
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: none;
+}
+section {
+    border: 2px solid slategrey;
+    /* FLEX PARENT PROPERTIES */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* SPACING PROPERTIES */
+    gap:5px;
+    flex-basis: auto;
+    align-self:flex-end;
+    justify-content: center;
+}
+
+fieldset {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+legend {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+input{
+    width: auto;
+}
+
+address {
+    text-align: center;
+    align-content: center;
+    margin:0;
+}
+
+#f-r span {
+    color: #9a0000;
+    font-size: smaller;
+}
+
+#success a.btn.btn-primary.mb-5 {
+    --bs-btn-color: var(--primary-color);
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    padding-bottom: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    #history .card-body {
+        min-height: 270px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+
+   
+}
+
+@media screen and (min-width: 1200px) {
+
+
+}
+
+@media screen and (min-width: 1400px) {
+
+
+   
+
+}
