@@ -59,7 +59,7 @@ h2 {
 }
 
 section {
-    border: none;
+    border: 1px solid var(--border-color);
     background-color: var(--highlight-color);
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -75,21 +75,28 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
+    text-align: center;
 }
 
-.container-fluid div {
+form#ms-form {
+    margin-left: 0px;
+    justify-content: center;
+    align-items: flex-start;
+    width: auto;
+}
+
+div.container-fluid {
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 form label {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--primary-text-color);
-    margin-left: 25px;
-    margin-right: 0;
+    margin:0;
     width: auto;
     padding: 5px;
 }
@@ -100,9 +107,8 @@ input.form-control{
     color: var(--primary-text-color);
     background-color: none;
     border-radius: 5px;
-    padding: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding: 5px;
+    margin:0;
     width: auto;
 }
 input.form-control:focus {
@@ -110,18 +116,26 @@ input.form-control:focus {
     box-shadow: 0 0 5px var(--primary-text-color);
 }
 fieldset {
-    border: none;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     width: 95%;
-    margin-bottom: 10px;
+    margin:0px;
+    padding: 5px;
+    align-content:center;
+    align-items: flex-start;
+    justify-content:center;
+    text-align: center;
 }
 
 legend {
+    border: 1px solid var(--border-color);
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--primary-text-color);
-    padding: 0 10px;
     font-size: large;
+    padding: 10px;
+    text-align: center;
+
 }
 
 
@@ -136,17 +150,19 @@ input#radio-btn {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+
     /* SPACING PROPERTIES */
+    align-items: center;
     gap:15px;
     flex-basis:auto;
-    align-self:flex-end;
+    align-self:flex-start;
     height: auto;
     width: 95%;
     margin-bottom: 10px;
     text-align: center;
     margin-bottom: 10px;
+    vertical-align: middle;
 }
 
 
@@ -172,6 +188,10 @@ footer {
 }
 
 /*Taxpayer Information*/
+p{
+    width: auto;
+}
+
 #tpi-form {
     text-align: left;
 }
@@ -180,19 +200,25 @@ footer {
     margin-right: 25px;
 }
 
+div.box.container-fluid {
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:inline-flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
-.box.container-fluid p{
-    display: inline-block;
-    vertical-align: middle;
+    /* SPACING PROPERTIES */
+    align-items: center;
+    gap:10px;
+    flex-basis:auto;
+    align-self:flex-start;
+    height: auto;
     margin-bottom: 10px;
-margin-left: 0px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.container-fluid div {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 10px;
-}
 
 @media screen and (min-width: 768px) {
 
