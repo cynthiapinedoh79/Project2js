@@ -100,12 +100,21 @@ form label {
     padding: 5px;
 }
 
-form input{
-    margin-left: 0;
+input.form-control{
+    font-family: var(--primary-font);
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     width: auto;
-    border: 3px solid var(--primary-color);
 }
-
+input.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
 fieldset {
     border: 1px solid var(--primary-color);
     border-radius: 5px;
@@ -118,6 +127,7 @@ legend {
     font-weight: 600;
     color: var(--primary-color);
     padding: 0 10px;
+    font-size: large;
 }
 
 
