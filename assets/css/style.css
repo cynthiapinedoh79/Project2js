@@ -80,16 +80,12 @@ form {
 
 form#ms-form {
     justify-content: center;
-    align-items: flex-start;
     width: auto;
 
     /* FLEX PARENT PROPERTIES */
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
-    align-items: flex-start;
 }
 
 #ms div.box.container-fluid {
@@ -98,7 +94,6 @@ form#ms-form {
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;
-    align-items: flex-start;
 
     /* SPACING PROPERTIES */
     margin-bottom: 10px;
@@ -117,10 +112,11 @@ form label {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--primary-text-color);
-    margin:5px;
+    margin-left:5px;
     width: auto;
     padding: 5px;
     justify-content: center;
+    display: inline-block;
 }
 
 #rrf .form-check-input[type=checkbox] {
@@ -135,6 +131,7 @@ form label {
     padding: 0;
     float: left;
     justify-content: center;
+    display: inline-block;
 }
 
 .form-check-input[type=checkbox] {
@@ -142,6 +139,7 @@ form label {
     padding: 0;
     float: left;
     position: relative;
+    display: inline-block;
 }
 
 input.form-control:focus {
@@ -159,7 +157,6 @@ fieldset {
     margin-bottom: 5px;
     padding: 5px;
     align-content:center;
-    align-items: flex-start;
     justify-content:center;
     text-align: center;
 }
@@ -187,13 +184,11 @@ input#radio-btn {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
 
     /* SPACING PROPERTIES */
     align-items: center;
     gap:15px;
     flex-basis:auto;
-    align-self:flex-start;
     height: auto;
     width: 100%;
     margin-bottom: 10px;
@@ -228,6 +223,7 @@ footer {
 p{
     width: auto;
     text-align: left;
+    vertical-align: middle;
     margin:0;
     padding: 0;
 }
@@ -246,13 +242,11 @@ div.box.container-fluid {
     display:inline-flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
 
     /* SPACING PROPERTIES */
     align-items: center;
     gap:10px;
     flex-basis:auto;
-    align-self:flex-start;
     height: auto;
     margin-bottom: 10px;
     text-align: left;
@@ -265,13 +259,7 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
 
-}
-
-#expr label.form-label {
-    margin-right:15px;
 }
 
 #rrf{
@@ -280,8 +268,6 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
 
 }
 
@@ -291,8 +277,6 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
 }
 
 
@@ -302,8 +286,6 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
 }
 
 #ifdead{
@@ -312,8 +294,6 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
     gap: 15px;
 }
 
@@ -323,14 +303,53 @@ div#expr{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self:flex-start;
+}
+
+#pec{
+    border: none;
+/* FLEX PARENT PROPERTIES */
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
 }
 
 div.form-check{
     margin:0;
     padding:0;
 }
+
+/*Filing Status and exemptions*/
+
+#snra, #slwy, #aj30, #comm-m, #comm-o{
+    border: none;
+/* FLEX PARENT PROPERTIES */
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+gap:10px;
+vertical-align: middle;
+}
+
+
+
+#fsae input.form-check-input[type=checkbox] {
+    margin: 0.25em 0 0 0;
+    padding: 0;
+    float: left;
+    justify-content: center;
+    display: inline-block;
+
+}
+#fsae input.form-check-input[type=radio] {
+    margin: 0.25em 0 0 0;
+    padding: 0;
+    float: left;
+    justify-content: center;
+    display: inline-block;
+    
+}
+
+
 
 @media screen and (min-width: 768px) {
     }

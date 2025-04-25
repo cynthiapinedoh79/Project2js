@@ -415,8 +415,9 @@
                                 </label>
                             </div>
                             <div id="expr">
-                                <label for="expr" class="form-label">If "Yes", enter the amount of income
-                                    excluded</label>
+                                <p>If "Yes", enter the amount of income
+                                    excluded</p>
+                                <label for="expr" class="form-label"></label>
                                 <span class="input-group-text">$</span>
                                 <input class="form-control" id="expr" name="expr" type="number"
                                     aria-label="Amount (to the nearest dollar)">
@@ -525,7 +526,7 @@
                         <legend>Presidential Election Campain</legend>
                         <div class="box container-fluid">
                             <p>Check here if you, or your spouse if filing a join return, want $3 to go to this fund</p>
-                            <div class="form-check" id="trfby">
+                            <div class="form-check" id="pec">
                                 <div>
                                     <label class="form-check-label" for="checkDefault">You</label>
                                     <input class="form-check-input" type="checkbox" value="" id="checkDefault">
@@ -549,197 +550,161 @@
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
                 <h3>Filing Status and Exemptions</h3>
-                <form id="tpi-form" action="success.html" method="get">
-                    <ol>
-                        <li>
+                <form id="fsae" action="success.html" method="get">
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>1</p>
+                            <p>Single</p>
+                            <div class="form-check">
+                                <label class="form-check-label" for="radioDefault1">
+                                </label>
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>2</p>
+                            <p>Married filing jointly (even if only one had income)</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
-                                    Single
                                 </label>
                             </div>
-                        </li>
-                        <li>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div id="mfs" class="box container-fluid">
+                            <p>3</p>
+                            <p>Married filing separately</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
-                                    Married filing jointly (even if only one had income)
                                 </label>
                             </div>
-                        </li>
-                        
-                    </ol>
-
-
-
-
-
-
-
+                    </fieldset>
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Did the taxpayer's address changed since last year's return?</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
+                            <div>
+                                <label for="spfname" class="form-label">Spouse First Name<span>
+                                        required!</span></label>
+                                <input class="form-control" id="spfname" name="spfname" type="text" required>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
-                                <label class="form-check-label" for="radioDefault2">
-                                    No
-                                </label>
 
+                            <div>
+                                <label for="splname" class="form-label">Last Name<span>
+                                        required!</span></label>
+                                <input class="form-control" id="splname" name="splname" type="text" required>
+                            </div>
+
+                            <div>
+                                <label for="ssn" class="form-label">SSN<span> required!</span></label>
+                                <input class="form-control" id="ssn" name="ssn" type="number" required>
                             </div>
                         </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <div id="snra">
+                                <p>Check here if the spouse is a nonresident alien</p>
+                                <label class="form-check-label" for="checkDefault"></label>
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                            </div>
                     </fieldset>
 
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Are you excluding Pueto Rico income this tax return?</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
-                                <label class="form-check-label" for="radioDefault2">
-                                    No
-                                </label>
-                            </div>
-                            <div id="expr">
-                                <label for="expr" class="form-label">If "Yes", enter the amount of income
-                                    excluded</label>
-                                <span class="input-group-text">$</span>
-                                <input class="form-control" id="expr" name="expr" type="number"
-                                    aria-label="Amount (to the nearest dollar)">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-                    </fieldset>
 
+                            <div id="slwy">
+                                <p>Did your spouse ever live with you in 2024?</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                        checked>
+                                    <label class="form-check-label" for="radioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="aj30">
+                                <p>If "Yes", did you and your spouse live together at anytime after June 30,
+                                    2024?
+                                </p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                        checked>
+                                    <label class="form-check-label" for="radioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                    </fieldset>
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Did the taxpayer, spouse, or any dependent receive insurance through the Markeplace?See
-                                Form-8962</p>
-                            <p></p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
-                                <label class="form-check-label" for="radioDefault2">
-                                    No
-                                </label>
-                            </div>
 
-                            <div class="form-check" id="rrf">
-                                <p>If the return was rejected for F8962-070 (e-file database indicates that Form 8962 or
-                                    a binary attachment with an explanation must be attached)</p>
-                                <p>To attach a PDF with an explanation of why
-                                    Form 8962 is not being filed with the return</p>
-                                <div>
-                                    <label class="form-check-label" for="checkDefault"></label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                            <div id="comm-m">
+                                <p>Married filing separately, only. If the state in the address above is a
+                                    community property stte (AZ, CA, ID, LA, NV, NM, TX, WA, WI), or a return is being
+                                    filed to one of these states, answer the follow questions</p>
+                                <p>Military. Is this your home of record?</p>
+                                <p>If "Yes", fill in Form 8958</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                        checked>
+                                    <label class="form-check-label" for="radioDefault2">
+                                        No
+                                    </label>
                                 </div>
                             </div>
-                        </div>
-                    </fieldset>
+                            <div id="comm-o">
+                                <p>Others. Are you a resident of this community property state?</p>
+                                <p> If "Yes", fill in Form 8958 and use Form 1040. If "No", you CANNOT e-file
+                                    this
+                                    return.</p>
 
-                    <fieldset>
-                        <div class="box container-fluid">
-                            <p>Check if blind</p>
-                            <div class="form-check" id="ifblind">
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Taxpayer</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Yes
+                                    </label>
                                 </div>
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Spouse</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="box container-fluid">
-                            <p>Check if totally and permanently disabled</p>
-                            <div class="form-check" id="ifdisabled">
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Taxpayer</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Spouse</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="box container-fluid">
-                            <p>Date of death, ONLY if in 2024 or 2025</p>
-                            <div class="form-check" id="ifdead">
-                                <div>
-                                    <label for="dd" class="form-label">Taxpayer</label>
-                                    <input class="form-control" id="dd" name="dd" type="date">
-                                </div>
-                                <div>
-                                    <label for="sdd" class="form-label">Spouse</label>
-                                    <input class="form-control" id="sdd" name="sdd" type="date">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                        checked>
+                                    <label class="form-check-label" for="radioDefault2">
+                                        No
+                                    </label>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
 
-                    <fieldset>
-                        <div class="box container-fluid">
-                            <p>This tax return is being filed by</p>
-                            <div class="form-check" id="trfby">
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Surviving spouse</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Someone else</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
-                    <fieldset>
-                        <legend>Presidential Election Campain</legend>
-                        <div class="box container-fluid">
-                            <p>Check here if you, or your spouse if filing a join return, want $3 to go to this fund</p>
-                            <div class="form-check" id="trfby">
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">You</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                                <div>
-                                    <label class="form-check-label" for="checkDefault">Spouse</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
-            </div>
+        </div>
         </div>
     </section>
 
