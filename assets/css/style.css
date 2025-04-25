@@ -71,55 +71,92 @@ section {
 
 /* forms */
 form {
-    border: 1px solid var(--border-color);
+    border: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 5px;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
 form#ms-form {
-    margin-left: 0px;
     justify-content: center;
     align-items: flex-start;
     width: auto;
+
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+    align-items: flex-start;
+}
+
+#ms div.box.container-fluid {
+ border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    /* SPACING PROPERTIES */
+    margin-bottom: 10px;
+    vertical-align: middle;
 }
 
 div.container-fluid {
-    display: inline-block;
+    border: 1px solid var(--border-color);
+    display: flex;
     vertical-align: middle;
-    margin: 5px;
+    margin: 0;
+    padding: 5px;
 }
 
 form label {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--primary-text-color);
-    margin:0;
+    margin:5px;
     width: auto;
     padding: 5px;
+    justify-content: center;
 }
 
-input.form-control{
-    font-family: var(--primary-font);
-    font-weight: 400;
-    color: var(--primary-text-color);
-    background-color: none;
-    border-radius: 5px;
-    padding: 5px;
-    margin:0;
-    width: auto;
+#rrf .form-check-input[type=checkbox] {
+    margin: 0.25em 0 0 0;
+    padding: 0;
+    float: left;
+    justify-content: center;
 }
+
+.form-check-input[type=radio] {
+    margin: 0.75em 0 0 0;
+    padding: 0;
+    float: left;
+    justify-content: center;
+}
+
+.form-check-input[type=checkbox] {
+    margin: 0.75em 0 0 0;
+    padding: 0;
+    float: left;
+    position: relative;
+}
+
 input.form-control:focus {
     border-color: var(--primary-text-color);
     box-shadow: 0 0 5px var(--primary-text-color);
 }
+
+input#expr.form-control{
+    width: auto;
+}
 fieldset {
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    width: 95%;
-    margin:0px;
+    width: 100%;
+    margin-bottom: 5px;
     padding: 5px;
     align-content:center;
     align-items: flex-start;
@@ -133,7 +170,7 @@ legend {
     font-weight: 600;
     color: var(--primary-text-color);
     font-size: large;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 
 }
@@ -158,7 +195,7 @@ input#radio-btn {
     flex-basis:auto;
     align-self:flex-start;
     height: auto;
-    width: 95%;
+    width: 100%;
     margin-bottom: 10px;
     text-align: center;
     margin-bottom: 10px;
@@ -190,6 +227,9 @@ footer {
 /*Taxpayer Information*/
 p{
     width: auto;
+    text-align: left;
+    margin:0;
+    padding: 0;
 }
 
 #tpi-form {
@@ -197,7 +237,7 @@ p{
 }
 
 #tpi-form p{
-    margin-right: 25px;
+    padding-right: 10px;
 }
 
 div.box.container-fluid {
@@ -215,7 +255,7 @@ div.box.container-fluid {
     align-self:flex-start;
     height: auto;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
 }
 
@@ -231,20 +271,73 @@ div#expr{
 }
 
 #expr label.form-label {
-    margin-right:25px;
+    margin-right:15px;
+}
+
+#rrf{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+
+}
+
+#ifblind{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+}
+
+
+#ifdisabled{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+}
+
+#ifdead{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+    gap: 15px;
+}
+
+#trfby{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+}
+
+div.form-check{
+    margin:0;
+    padding:0;
 }
 
 @media screen and (min-width: 768px) {
-
-
-    #history .card-body {
-        min-height: 270px;
     }
 
 }
 
 @media screen and (min-width: 992px) {
-
 
    
 }
@@ -257,6 +350,5 @@ div#expr{
 @media screen and (min-width: 1400px) {
 
 
-   
 
 }

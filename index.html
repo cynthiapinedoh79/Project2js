@@ -444,20 +444,21 @@
                                 </label>
                             </div>
                             <div id="expr">
-                                <label for="expr" class="form-label">If "Yes", enter the amount of income excluded<span>
-                                        required!</span></label>
-                                <input class="form-control" id="expr" name="expr" type="number" placeholder="$0.00"
-                                    required>
+                                <label for="expr" class="form-label">If "Yes", enter the amount of income
+                                    excluded</label>
+                                <span class="input-group-text">$</span>
+                                <input class="form-control" id="expr" name="expr" type="number"
+                                    aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text">.00</span>
                             </div>
                         </div>
                     </fieldset>
 
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Did the taxpayer, spouse, or any dependent receive insurance through the Markeplace? See
-                                Form-8962.</p>
-                            <p>If the return was rejected for F8962-070 (e-file database indicates that Form 8962 or a
-                                binary attachment with an explanation must be attached)</p>
+                            <p>Did the taxpayer, spouse, or any dependent receive insurance through the Markeplace?See
+                                Form-8962</p>
+                            <p></p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
@@ -471,11 +472,80 @@
                                     No
                                 </label>
                             </div>
-                            <div id="expr">
-                                <label for="expr" class="form-label">Check here to attach a PDF with an explanation of why
-                                    Form 8962 is not being filed with the return<span>
-                                        required!</span></label>
-                                <input class="form-control" id="expr" name="expr" type="checkbox">
+
+                            <div class="form-check" id="rrf">
+                                <p>If the return was rejected for F8962-070 (e-file database indicates that Form 8962 or
+                                    a binary attachment with an explanation must be attached)</p>
+                                <p>To attach a PDF with an explanation of why
+                                    Form 8962 is not being filed with the return</p>
+                                <div>
+                                    <label class="form-check-label" for="checkDefault"></label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>Check if blind</p>
+                            <div class="form-check" id="ifblind">
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Taxpayer</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Spouse</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>Check if totally and permanently disabled</p>
+                            <div class="form-check" id="ifdisabled">
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Taxpayer</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Spouse</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>Date of death, ONLY if in 2024 or 2025</p>
+                            <div class="form-check" id="ifdead">
+                                <div>
+                                    <label for="dd" class="form-label">Taxpayer</label>
+                                    <input class="form-control" id="dd" name="dd" type="date">
+                                </div>
+                                <div>
+                                    <label for="sdd" class="form-label">Spouse</label>
+                                    <input class="form-control" id="sdd" name="sdd" type="date">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>This tax return is being filed by</p>
+                            <div class="form-check" id="trfby">
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Surviving spouse</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
+                                <div>
+                                    <label class="form-check-label" for="checkDefault">Someone else</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                </div>
                             </div>
                         </div>
                     </fieldset>
