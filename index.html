@@ -43,21 +43,21 @@
                                 <h3>This return can be filed on Form 1040</h3>
                             </div>
                             <form id="ms-form" action="success.html" method="get">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Spanish forms on the screen and printed
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
-                                <label class="form-check-label" for="radioDefault2">
-                                    Spanish forms printed only
-                                </label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Spanish forms on the screen and printed
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                        checked>
+                                    <label class="form-check-label" for="radioDefault2">
+                                        Spanish forms printed only
+                                    </label>
 
-                            </div>
-                        </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@
 
             </div>
         </div>
-    </section> 
+    </section>
     <br>
 
     <section id="2nds" class="container section">
@@ -409,7 +409,7 @@
 
                     <fieldset>
                         <div class="box container-fluid">
-                                <p>Did the taxpayer's address changed since last year's return?</p>
+                            <p>Did the taxpayer's address changed since last year's return?</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
@@ -429,7 +429,7 @@
 
                     <fieldset>
                         <div class="box container-fluid">
-                                <p>Are you excluding Pueto Rico income this tax return?</p>
+                            <p>Are you excluding Pueto Rico income this tax return?</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
@@ -443,46 +443,64 @@
                                     No
                                 </label>
                             </div>
+                            <div id="expr">
+                                <label for="expr" class="form-label">If "Yes", enter the amount of income excluded<span>
+                                        required!</span></label>
+                                <input class="form-control" id="expr" name="expr" type="number" placeholder="$0.00"
+                                    required>
+                            </div>
                         </div>
-                        <div>
-                            <label for="expr" class="form-label">If "Yes", enter the amount of income excluded<span>
-                                required!</span></label>
-                        <input class="form-control" id="expr" name="expr" type="number" placeholder="$0.00" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="box container-fluid">
+                            <p>Did the taxpayer, spouse, or any dependent receive insurance through the Markeplace? See
+                                Form-8962.</p>
+                            <p>If the return was rejected for F8962-070 (e-file database indicates that Form 8962 or a
+                                binary attachment with an explanation must be attached)</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    No
+                                </label>
+                            </div>
+                            <div id="expr">
+                                <label for="expr" class="form-label">Check here to attach a PDF with an explanation of why
+                                    Form 8962 is not being filed with the return<span>
+                                        required!</span></label>
+                                <input class="form-control" id="expr" name="expr" type="checkbox">
+                            </div>
                         </div>
-                    </fieldset>    
+                    </fieldset>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
             </div>
         </div>
-    </section>                
-
-                    
+    </section>
 
 
 
 
 
 
-                    <div class="container-fluid" id="msg">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" rows="4" id="message" name="message"></textarea>
-                    </div>
 
-                    <br>
-                    <h3>Confidentiality</h3>
-                    <div class="container-fluid checkbox form-group">
-                        <label><input type="checkbox" required> Terms & Conditions<span>
-                                required!</span></label>
-                        <br>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+    <div class="container-fluid" id="msg">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" rows="4" id="message" name="message"></textarea>
+    </div>
 
-            </div>
-        </div>
+    </div>
+    </div>
     </section>
 
 

@@ -219,6 +219,20 @@ div.box.container-fluid {
     vertical-align: middle;
 }
 
+div#expr{
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self:flex-start;
+
+}
+
+#expr label.form-label {
+    margin-right:25px;
+}
 
 @media screen and (min-width: 768px) {
 
