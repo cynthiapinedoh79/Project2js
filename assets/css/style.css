@@ -63,7 +63,7 @@ section {
     background-color: var(--highlight-color);
     /* FLEX PARENT PROPERTIES */
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -83,22 +83,24 @@ form#ms-form {
     width: auto;
 
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
-#ms div.box.container-fluid {
- border: none;
-    /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:column;
-    flex-wrap: wrap;
 
-    /* SPACING PROPERTIES */
-    margin-bottom: 10px;
+#ms div.container-fluid {
     vertical-align: middle;
+    margin: 0;
+    padding: 5px;
+    /* FLEX PARENT PROPERTIES */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
 
 div.container-fluid {
     border: 1px solid var(--border-color);
@@ -112,9 +114,9 @@ form label {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--primary-text-color);
-    margin-left:5px;
+    margin-left: 10px;
     width: auto;
-    padding: 5px;
+    padding: 2.5px;
     justify-content: center;
     display: inline-block;
 }
@@ -127,7 +129,7 @@ form label {
 }
 
 .form-check-input[type=radio] {
-    margin: 0.75em 0 0 0;
+    margin: 0.5em 0 0 0;
     padding: 0;
     float: left;
     justify-content: center;
@@ -135,7 +137,7 @@ form label {
 }
 
 .form-check-input[type=checkbox] {
-    margin: 0.75em 0 0 0;
+    margin: 0.5em 0 0 0;
     padding: 0;
     float: left;
     position: relative;
@@ -147,17 +149,18 @@ input.form-control:focus {
     box-shadow: 0 0 5px var(--primary-text-color);
 }
 
-input#expr.form-control{
+input#expr.form-control {
     width: auto;
 }
+
 fieldset {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     width: 100%;
     margin-bottom: 5px;
     padding: 5px;
-    align-content:center;
-    justify-content:center;
+    align-content: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -174,21 +177,29 @@ legend {
 
 
 input#radio-btn {
-    margin:0;
+    margin: 0;
 }
 
 
-#g-info, #j-info, #m-address, #email-address, #phone-number, #birth-date, #occupation, #f-address, #signature {
+#g-info,
+#j-info,
+#m-address,
+#email-address,
+#phone-number,
+#birth-date,
+#occupation,
+#f-address,
+#signature {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
 
     /* SPACING PROPERTIES */
     align-items: center;
-    gap:15px;
-    flex-basis:auto;
+    gap: 15px;
+    flex-basis: auto;
     height: auto;
     width: 100%;
     margin-bottom: 10px;
@@ -201,7 +212,7 @@ input#radio-btn {
 address {
     text-align: center;
     align-content: center;
-    margin:0;
+    margin: 0;
 }
 
 span {
@@ -220,11 +231,11 @@ footer {
 }
 
 /*Taxpayer Information*/
-p{
+p {
     width: auto;
     text-align: left;
     vertical-align: middle;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -232,102 +243,112 @@ p{
     text-align: left;
 }
 
-#tpi-form p{
+#tpi-form p {
     padding-right: 10px;
 }
 
 div.box.container-fluid {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:inline-flex;
-    flex-direction:row;
+    display: inline-flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
     /* SPACING PROPERTIES */
     align-items: center;
-    gap:10px;
-    flex-basis:auto;
+    gap: 10px;
+    flex-basis: auto;
     height: auto;
     margin-bottom: 10px;
     text-align: left;
     vertical-align: middle;
 }
 
-div#expr{
+div.box.container-fluid p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+div#expr {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
 }
 
-#rrf{
+#rrf {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
 }
 
-#ifblind{
+#ifblind {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 
-#ifdisabled{
+#ifdisabled {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-#ifdead{
+#ifdead {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-#trfby{
+#trfby {
     border: none;
     /* FLEX PARENT PROPERTIES */
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-#pec{
+#pec {
     border: none;
-/* FLEX PARENT PROPERTIES */
-display:flex;
-flex-direction:row;
-flex-wrap: wrap;
+    /* FLEX PARENT PROPERTIES */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-div.form-check{
-    margin:0;
-    padding:0;
+div.form-check {
+    margin: 0;
+    padding: 0;
 }
 
 /*Filing Status and exemptions*/
 
-#snra, #slwy, #aj30, #comm-m, #comm-o{
+#snra,
+#slwy,
+#aj30,
+#comm-m,
+#comm-o, #exemp {
     border: none;
-/* FLEX PARENT PROPERTIES */
-display:flex;
-flex-direction:row;
-flex-wrap: wrap;
-gap:10px;
-vertical-align: middle;
+    /* FLEX PARENT PROPERTIES */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    vertical-align: middle;
 }
 
 
@@ -335,39 +356,34 @@ vertical-align: middle;
 #fsae input.form-check-input[type=checkbox] {
     margin: 0.25em 0 0 0;
     padding: 0;
-    float: left;
+    float: flex-;
     justify-content: center;
     display: inline-block;
 
 }
+
 #fsae input.form-check-input[type=radio] {
     margin: 0.25em 0 0 0;
     padding: 0;
     float: left;
     justify-content: center;
-    display: inline-block;
-    
+    display: inline-block;s
+
+}
+
+#nbxc{
+    width: 75px;
 }
 
 
 
-@media screen and (min-width: 768px) {
-    }
+
+@media screen and (min-width: 768px) {}
 
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {}
 
-   
-}
+@media screen and (min-width: 1200px) {}
 
-@media screen and (min-width: 1200px) {
-
-
-}
-
-@media screen and (min-width: 1400px) {
-
-
-
-}
+@media screen and (min-width: 1400px) {}
