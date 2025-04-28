@@ -341,7 +341,7 @@ div.form-check {
 #slwy,
 #aj30,
 #comm-m,
-#comm-o, #exemp {
+#comm-o, #exemp, #dsol, #dmsol {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -375,24 +375,45 @@ div.form-check {
     width: 75px;
 }
 
+.table-responsive{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
 th{
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--primary-text-color);
-    font-size: small;
+    font-size: smaller;
     padding: 5px;
     text-align: center;
 }
 td{
-    font-size: x-small;
+    font-size: smaller;
     padding: 1px;
     text-align: center;
 }
 
-
-@media screen and (min-width: 768px) {}
-
+#dmsol .form-select{
+    width: auto;
 }
+
+#dmsol label{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+}
+
 
 @media screen and (min-width: 992px) {}
 

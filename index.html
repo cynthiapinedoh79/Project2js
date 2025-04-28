@@ -585,19 +585,19 @@
 
                             <fieldset>
                                 <div class="box container-fluid">
-                                    <div>
+                                    <div class="form-check">
                                         <label for="spfname" class="form-label">Spouse First Name<span>
                                                 required!</span></label>
                                         <input class="form-control" id="spfname" name="spfname" type="text" required>
                                     </div>
 
-                                    <div>
+                                    <div class="form-check">
                                         <label for="splname" class="form-label">Last Name<span>
                                                 required!</span></label>
                                         <input class="form-control" id="splname" name="splname" type="text" required>
                                     </div>
 
-                                    <div>
+                                    <div class="form-check">
                                         <label for="ssn" class="form-label">SSN<span> required!</span></label>
                                         <input class="form-control" id="ssn" name="ssn" type="number" required>
                                     </div>
@@ -605,7 +605,7 @@
                             </fieldset>
                             <fieldset>
                                 <div class="box container-fluid">
-                                    <div id="snra">
+                                    <div id="snra" class="form-check">
                                         <p>Check here if the spouse is a nonresident alien</p>
                                         <label class="form-check-label" for="checkDefault"></label>
                                         <input class="form-check-input" type="checkbox" value="" id="checkDefault">
@@ -775,8 +775,8 @@
 
                         <fieldset>
                             <div class="box container-fluid">
-                                <div class="form-check" id="pec">
-                                    <div>
+                                <div id="pec">
+                                    <div class="form-check">
                                         <label class="form-check-label" for="checkDefault">Check here if treating a
                                             nonresident alien or dual-status alien spouse as a U.S.
                                             resident for the entire tax year.</label>
@@ -786,7 +786,7 @@
                                         <div class="box container-fluid">
                                             <p>Enter their name (see instructions and attach
                                                 statement if requiered)</p>
-                                            <div>
+                                            <div class="form-check">
                                                 <label for="spnonr-name" class="form-label">Name</label>
                                                 <input class="form-control" id="spnonr-name" name="spnonr-name"
                                                     type="text">
@@ -807,161 +807,395 @@
                         </div>
                         <fieldset>
                             <div id="exemp" class="box container-fluid">
-                                <div class="box container-fluid">
-                                    <p>a</p>
-                                    <label class="form-check-label" for="checkDefault">Yourself</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                <p>a</p>
 
-                                    <p>b</p>
-                                    <label class="form-check-label" for="checkDefault">Spouse</label>
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                <label class="form-check-label" for="checkDefault">Yourself</label>
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+
+                                <p>b</p>
+                                <label class="form-check-label" for="checkDefault">Spouse</label>
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
 
 
-                                    <label class="form-check-label" for="checkDefault">Number of boxes checked on 6a and
-                                        6b</label>
-                                    <input class="form-control" id="nbxc" name="nbxc" type="number">
-                                </div>
+                                <label class="form-check-label" for="checkDefault">Number of boxes checked on 6a and
+                                    6b</label>
+                                <input class="form-control" id="nbxc" name="nbxc" type="number">
                             </div>
-                        </fieldset>
 
-                        <fieldset>
-                            <div id="chk-if" class="box container-fluid">
 
-                                <p>Check if</p>
-                                <fieldset>
-                                    <fieldset>
-                                        <div class="box container-fluid">
-                                            <p>(a)</p>
-                                            <label class="form-check-label" for="checkDefault">You can be claimed on
-                                                another
-                                                person's return</label>
-                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <div class="box container-fluid">
-                                            <p>(b)</p>
-                                            <label class="form-check-label" for="checkDefault">Filing status 2 and
-                                                spouse
-                                                can be claimed on another's person;s return</label>
-                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <div class="box container-fluid">
-                                            <p>(c)</p>
-                                            <label class="form-check-label" for="checkDefault">You are using filing
-                                                status 4
-                                                and claiminng nonresident alien spouse</label>
-                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                            <fieldset>
+                                <div id="chk-if" class="box container-fluid">
 
-                                            <div class="container-fluid" id="j-info">
-                                                <div>
-                                                    <label for="s4-sfname" class="form-label">First Name<span>
-                                                            required!</span></label>
-                                                    <input class="form-control" id="s4-sfname" name="s4-sfname"
-                                                        type="text" required>
+                                    <p>Check if</p>
+                                    <fieldset>
+                                        <fieldset>
+                                            <div class="box container-fluid">
+
+                                                <p>(a)</p>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="checkDefault">You can be
+                                                        claimed on
+                                                        another
+                                                        person's return</label>
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="box container-fluid">
+
+                                                <p>(b)</p>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="checkDefault">Filing status 2
+                                                        and
+                                                        spouse
+                                                        can be claimed on another's person;s return</label>
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="box container-fluid">
+
+                                                <p>(c)</p>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="checkDefault">You are using
+                                                        filing
+                                                        status 4
+                                                        and claiminng nonresident alien spouse</label>
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault">
                                                 </div>
 
-                                                <div>
-                                                    <label for="s4-slname" class="form-label">Last Name<span>
-                                                            required!</span></label>
-                                                    <input class="form-control" id="s4-slname" name="s4-slname"
-                                                        type="text" required>
-                                                </div>
+                                                <div class="container-fluid" id="j-info">
+                                                    <div class="form-check">
+                                                        <label for="s4-sfname" class="form-label">First Name<span>
+                                                                required!</span></label>
+                                                        <input class="form-control" id="s4-sfname" name="s4-sfname"
+                                                            type="text" required>
+                                                    </div>
 
-                                                <div>
-                                                    <label for="s4-sssn" class="form-label">SSN<span>
-                                                            required!</span></label>
-                                                    <input class="form-control" id="s4-sssn" name="s4-sssn"
-                                                        type="number" required>
+                                                    <div class="form-check">
+                                                        <label for="s4-slname" class="form-label">Last Name<span>
+                                                                required!</span></label>
+                                                        <input class="form-control" id="s4-slname" name="s4-slname"
+                                                            type="text" required>
+                                                    </div>
+
+                                                    <div class="form-check">
+                                                        <label for="s4-sssn" class="form-label">SSN<span>
+                                                                required!</span></label>
+                                                        <input class="form-control" id="s4-sssn" name="s4-sssn"
+                                                            type="number" required>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
+                                        </fieldset>
+                                </div>
 
-                                        </div>
-                                    </fieldset>
-                            </div>
-
+                            </fieldset>
                         </fieldset>
 
                         <fieldset>
                             <div id="dp-ndp" class="box container-fluid">
-                                <div class="box container-fluid">
-                                    <p>c</p>
-                                    <p><strong>Dependents / Nondependents</strong></p>
 
-                                    <label class="form-check-label" for="checkDefault">Click here to charge a flat fee for dependent instead of a fee per dependent</label>
+                                <p>c</p>
+                                <p><strong>Dependents / Nondependents</strong></p>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="checkDefault">Click here to charge a flat fee
+                                        for dependent
+                                        instead of a fee per dependent</label>
                                     <input class="form-check-input" type="checkbox" value="" id="checkDefault">
 
-                                    <p>The ODC column indicates that the dependent qualifies for the credit for other dependents.</p>
-                                    <p>If a dependent's social security card says "Not Valid for Employment", that dependent is not eligeble for the child tax credit.</p>
-                                    <p>If the CTC box is marked for a dependent with the type of social security card, overrite the CTC checkbox and uncheck the box.</p>
 
-                                    <table class="table table-hover table-bordered">
-                                        <thead class="table-light">
-                                            <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Date of bird</th>
-                                            <th>Age</th>
-                                            <th>SSN</th>
-                                            <th>Relation to you</th>
-                                            <th>Mos in home</th>
-                                            <th>Code</th>
-                                            <th>DC</th>
-                                            <th>EIC</th>
-                                            <th>CTC</th>
-                                            <th>ODC</th>
-                                            <th>Identity theft PIN</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <th scope="row"><input class="form-control" id="#dp-ndp" name="#dp-ndp" type="number"></th>
-                                            <td><input class="form-control" id="dfname" name="dfname" type="text"></td>
-                                            <td><input class="form-control" id="dlname" name="dlname" type="text"></td>
-                                            <td><input class="form-control" id="ddob" name="ddob" type="date"></td>
-                                            <td><input class="form-control" id="dage" name="dage" type="number"></td>
-                                            <td><input class="form-control" id="dssn" name="dssn" type="number"></td>
-                                            <td><input class="form-control" id="drelation" name="drelation"
-                                                    type="text"></td>
-                                            <td><input class="form-control" id="dmih" name="dmih"
-                                                    type="number"></td>
-                                            <td><input class="form-control" id="dcode" name="dcode"
-                                                    type="text"></td>
-                                            <td><input class="form-check-input" type="checkbox" value="" id="checkDefault"></td>
-                                            <td><input class="form-check-input" type="checkbox" value="" id="checkDefault"></td>
-                                            <td><input class="form-check-input" type="checkbox" value="" id="checkDefault"></td>
-                                            <td><input class="form-check-input" type="checkbox" value="" id="checkDefault"></td>
-                                            <td><input class="form-control" id="ditpin" name="ditpin"
-                                                    type="text"></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                
+                                    <p>The ODC column indicates that the dependent qualifies for the credit for other
+                                        dependents.
+                                    </p>
+                                    <p>If a dependent's social security card says "Not Valid for Employment", that
+                                        dependent is not
+                                        eligeble for the child tax credit.</p>
+                                    <p>If the CTC box is marked for a dependent with the type of social security card,
+                                        overrite the
+                                        CTC checkbox and uncheck the box.</p>
                                 </div>
+                                <fieldset>
+                                    <div id="dp-ndp" class="box container-fluid">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Date of bird</th>
+                                                        <th>Age</th>
+                                                        <th>SSN</th>
+                                                        <th>Relation to you</th>
+                                                        <th>Mos in home</th>
+                                                        <th>Code</th>
+                                                        <th>DC</th>
+                                                        <th>EIC</th>
+                                                        <th>CTC</th>
+                                                        <th>ODC</th>
+                                                        <th>Identity theft PIN</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input class="form-control" id="dfname" name="dfname"
+                                                                type="text"></td>
+                                                        <td><input class="form-control" id="dlname" name="dlname"
+                                                                type="text"></td>
+                                                        <td><input class="form-control" id="ddob" name="ddob"
+                                                                type="date"></td>
+                                                        <td><input class="form-control" id="dage" name="dage"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" id="dssn" name="dssn"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" id="drelation" name="drelation"
+                                                                type="text">
+                                                        </td>
+                                                        <td><input class="form-control" id="dmih" name="dmih"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" id="dcode" name="dcode"
+                                                                type="text"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-control" id="ditpin" name="ditpin"
+                                                                type="text"></td>
+                                                    </tr>
+                                                    <td><input class="form-control" id="dfname" name="dfname"
+                                                            type="text"></td>
+                                                    <td><input class="form-control" id="dlname" name="dlname"
+                                                            type="text"></td>
+                                                    <td><input class="form-control" id="ddob" name="ddob" type="date">
+                                                    </td>
+                                                    <td><input class="form-control" id="dage" name="dage" type="number">
+                                                    </td>
+                                                    <td><input class="form-control" id="dssn" name="dssn" type="number">
+                                                    </td>
+                                                    <td><input class="form-control" id="drelation" name="drelation"
+                                                            type="text">
+                                                    </td>
+                                                    <td><input class="form-control" id="dmih" name="dmih" type="number">
+                                                    </td>
+                                                    <td><input class="form-control" id="dcode" name="dcode" type="text">
+                                                    </td>
+                                                    <td><input class="form-check-input" type="checkbox" value=""
+                                                            id="checkDefault"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value=""
+                                                            id="checkDefault"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value=""
+                                                            id="checkDefault"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value=""
+                                                            id="checkDefault"></td>
+                                                    <td><input class="form-control" id="ditpin" name="ditpin"
+                                                            type="text"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="box container-fluid">
+                                        <div class="form-check">
+                                            <label for="dsol" class="form-label">State of living</span></label>
+                                            <select id="dsol" class="form-select form-control" name="dsol">
+                                                <option value="" selected>Select</option>
+                                                <option>AL</option>
+                                                <option>AK</option>
+                                                <option>AZ</option>
+                                                <option>AR</option>
+                                                <option>CA</option>
+                                                <option>CO</option>
+                                                <option>CT</option>
+                                                <option>DE</option>
+                                                <option>FL</option>
+                                                <option>GA</option>
+                                                <option>HI</option>
+                                                <option>ID</option>
+                                                <option>IL</option>
+                                                <option>IN</option>
+                                                <option>IA</option>
+                                                <option>KS</option>
+                                                <option>KY</option>
+                                                <option>LA</option>
+                                                <option>ME</option>
+                                                <option>MD</option>
+                                                <option>MA</option>
+                                                <option>MI</option>
+                                                <option>MN</option>
+                                                <option>MS</option>
+                                                <option>MO</option>
+                                                <option>MT</option>
+                                                <option>NE</option>
+                                                <option>NV</option>
+                                                <option>NH</option>
+                                                <option>NJ</option>
+                                                <option>NM</option>
+                                                <option>NY</option>
+                                                <option>NC</option>
+                                                <option>ND</option>
+                                                <option>OH</option>
+                                                <option>OK</option>
+                                                <option>OR</option>
+                                                <option>PA</option>
+                                                <option>RI</option>
+                                                <option>SC</option>
+                                                <option>SD</option>
+                                                <option>TN</option>
+                                                <option>TX</option>
+                                                <option>UT</option>
+                                                <option>VT</option>
+                                                <option>VA</option>
+                                                <option>WA</option>
+                                                <option>WV</option>
+                                                <option>WI</option>
+                                                <option>WY</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <div id="dmsol" class="box container-fluid">
+                                        <p>Did you live in more than one states? Which</p>
+                                            
+                                            <label for="dm1sol" class="form-label"></span></label>
+                                            <select id="dm1sol" class="form-select form-control" name="dm1sol">
+                                                <option value="" selected>Select</option>
+                                                <option>AL</option>
+                                                <option>AK</option>
+                                                <option>AZ</option>
+                                                <option>AR</option>
+                                                <option>CA</option>
+                                                <option>CO</option>
+                                                <option>CT</option>
+                                                <option>DE</option>
+                                                <option>FL</option>
+                                                <option>GA</option>
+                                                <option>HI</option>
+                                                <option>ID</option>
+                                                <option>IL</option>
+                                                <option>IN</option>
+                                                <option>IA</option>
+                                                <option>KS</option>
+                                                <option>KY</option>
+                                                <option>LA</option>
+                                                <option>ME</option>
+                                                <option>MD</option>
+                                                <option>MA</option>
+                                                <option>MI</option>
+                                                <option>MN</option>
+                                                <option>MS</option>
+                                                <option>MO</option>
+                                                <option>MT</option>
+                                                <option>NE</option>
+                                                <option>NV</option>
+                                                <option>NH</option>
+                                                <option>NJ</option>
+                                                <option>NM</option>
+                                                <option>NY</option>
+                                                <option>NC</option>
+                                                <option>ND</option>
+                                                <option>OH</option>
+                                                <option>OK</option>
+                                                <option>OR</option>
+                                                <option>PA</option>
+                                                <option>RI</option>
+                                                <option>SC</option>
+                                                <option>SD</option>
+                                                <option>TN</option>
+                                                <option>TX</option>
+                                                <option>UT</option>
+                                                <option>VT</option>
+                                                <option>VA</option>
+                                                <option>WA</option>
+                                                <option>WV</option>
+                                                <option>WI</option>
+                                                <option>WY</option>
+                                            </select>
+                                            <label for="dm2sol" class="form-label">,</span></label>
+                                            <select id="dm2sol" class="form-select form-control" name="dm2sol">
+                                                <option value="" selected>Select</option>
+                                                <option>AL</option>
+                                                <option>AK</option>
+                                                <option>AZ</option>
+                                                <option>AR</option>
+                                                <option>CA</option>
+                                                <option>CO</option>
+                                                <option>CT</option>
+                                                <option>DE</option>
+                                                <option>FL</option>
+                                                <option>GA</option>
+                                                <option>HI</option>
+                                                <option>ID</option>
+                                                <option>IL</option>
+                                                <option>IN</option>
+                                                <option>IA</option>
+                                                <option>KS</option>
+                                                <option>KY</option>
+                                                <option>LA</option>
+                                                <option>ME</option>
+                                                <option>MD</option>
+                                                <option>MA</option>
+                                                <option>MI</option>
+                                                <option>MN</option>
+                                                <option>MS</option>
+                                                <option>MO</option>
+                                                <option>MT</option>
+                                                <option>NE</option>
+                                                <option>NV</option>
+                                                <option>NH</option>
+                                                <option>NJ</option>
+                                                <option>NM</option>
+                                                <option>NY</option>
+                                                <option>NC</option>
+                                                <option>ND</option>
+                                                <option>OH</option>
+                                                <option>OK</option>
+                                                <option>OR</option>
+                                                <option>PA</option>
+                                                <option>RI</option>
+                                                <option>SC</option>
+                                                <option>SD</option>
+                                                <option>TN</option>
+                                                <option>TX</option>
+                                                <option>UT</option>
+                                                <option>VT</option>
+                                                <option>VA</option>
+                                                <option>WA</option>
+                                                <option>WV</option>
+                                                <option>WI</option>
+                                                <option>WY</option>
+                                            </select>
+                                    </div>
+                                </fieldset>
+
+
+
+
+
                             </div>
                         </fieldset>
 
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
             </div>
-            </fieldset>
-
-
-
-
-
-
-
-            </fieldset>
-
-            </fieldset>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
-        </div>
         </div>
     </section>
 
