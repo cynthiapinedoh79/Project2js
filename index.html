@@ -98,6 +98,10 @@
                                 <label for="ssn" class="form-label">SSN<span> required!</span></label>
                                 <input class="form-control" id="ssn" name="ssn" type="number" required>
                             </div>
+                            <div>
+                                <label for="email" class="form-label">Email<span> required!</span></label>
+                                <input class="form-control" id="email" name="email" type="email" required>
+                            </div>
                         </div>
                     </fieldset>
 
@@ -107,9 +111,8 @@
 
                         <div class="container-fluid" id="j-info">
                             <div>
-                                <label for="sfname" class="form-label">First Name<span>
-                                        required!</span></label>
-                                <input class="form-control" id="sfname" name="sfname" type="text" required>
+                                <label for="sfname" class="form-label">First Name</label>
+                                <input class="form-control" id="sfname" name="sfname" type="text" >
                             </div>
 
                             <div>
@@ -118,9 +121,8 @@
                             </div>
 
                             <div>
-                                <label for="slname" class="form-label">Last Name<span>
-                                        required!</span></label>
-                                <input class="form-control" id="slname" name="slname" type="text" required>
+                                <label for="slname" class="form-label">Last Name</label>
+                                <input class="form-control" id="slname" name="slname" type="text">
                             </div>
 
                             <div>
@@ -129,9 +131,15 @@
                             </div>
 
                             <div>
-                                <label for="sssn" class="form-label">SSN<span> required!</span></label>
-                                <input class="form-control" id="sssn" name="sssn" type="number" required>
+                                <label for="sssn" class="form-label">SSN</label>
+                                <input class="form-control" id="sssn" name="sssn" type="number">
                             </div>
+
+                            <div>
+                                <label for="semail" class="form-label">Spouse Email</label>
+                                <input class="form-control" id="semail" name="semail" type="email">
+                            </div>
+                            <div>
 
                         </div>
                     </fieldset>
@@ -215,22 +223,6 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Email Address</legend>
-                        <div class="container-fluid" id="email-address">
-                            <div>
-                                <label for="email" class="form-label">Email<span> required!</span></label>
-                                <input class="form-control" id="email" name="email" type="email" required>
-                            </div>
-                            <div>
-                                <label for="semail" class="form-label">Spouse Email<span>
-                                        required!</span></label>
-                                <input class="form-control" id="semail" name="semail" type="email" required>
-                            </div>
-                        </div>
-                    </fieldset>
-
-
-                    <fieldset>
                         <legend>Phone Number</legend>
                         <div class="container-fluid" id="phone-number">
                             <div>
@@ -238,16 +230,20 @@
                                     numbers)<span>
                                         required!</span></label>
                                 <input class="form-control" id="phone" name="phone" type="tel" required>
-                            </div>
-                            <div>
-                                <label for="sphone" class="form-label">Spouse Phone (only numbers)<span>
-                                        required!</span></label>
-                                <input class="form-control" id="sphone" name="sphone" type="tel" required>
-                            </div>
-                            <div>
                                 <label for="callh" class="form-label">Type<span>
                                         required!</span></label>
                                 <select id="callh" class="form-select form-control" name="callh" required>
+                                    <option value="" selected>Select</option>
+                                    <option>Morning</option>
+                                    <option>Afernoon</option>
+                                    <option>Evening</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="sphone" class="form-label">Spouse Phone (only numbers)</label>
+                                <input class="form-control" id="sphone" name="sphone" type="tel">
+                                <label for="callh" class="form-label">Type</label>
+                                <select id="callh" class="form-select form-control" name="callh">
                                     <option value="" selected>Select</option>
                                     <option>Morning</option>
                                     <option>Afernoon</option>
@@ -267,9 +263,8 @@
                             </div>
                             <div>
 
-                                <label for="sbd" class="form-label">Spouse Birth Date<span>
-                                        required!</span></label>
-                                <input class="form-control" id="sbd" name="sbd" type="date" required>
+                                <label for="sbd" class="form-label">Spouse Birth Date</label>
+                                <input class="form-control" id="sbd" name="sbd" type="date">
                             </div>
                         </div>
                     </fieldset>
@@ -283,9 +278,8 @@
                                 <input class="form-control" id="occ" name="occ" type="text" required>
                             </div>
                             <div>
-                                <label for="socc" class="form-label">Spouse Occupation<span>
-                                        required!</span></label>
-                                <input class="form-control" id="socc" name="socc" type="text" required>
+                                <label for="socc" class="form-label">Spouse Occupation</label>
+                                <input class="form-control" id="socc" name="socc" type="text">
                             </div>
                         </div>
                     </fieldset>
@@ -295,51 +289,28 @@
                         <div class="container-fluid" id="f-address">
 
                             <div>
-                                <label for="faddress" class="form-label">Forein Street Address<span>
-                                        required!</span></label>
-                                <input class="form-control" id="faddress" name="faddress" type="text" required>
+                                <label for="faddress" class="form-label">Forein Street Address</label>
+                                <input class="form-control" id="faddress" name="faddress" type="text">
                             </div>
                             <div>
-                                <label for="fzipcode" class="form-label">Forein Zip Code<span>
-                                        required!</span></label>
-                                <input class="form-control" id="fzipcode" name="fzipcode" type="number" required>
+                                <label for="fzipcode" class="form-label">Forein Zip Code</label>
+                                <input class="form-control" id="fzipcode" name="fzipcode" type="number">
                             </div>
                             <div>
-                                <label for="fcity" class="form-label">City<span>
-                                        required!</span></label>
-                                <input class="form-control" id="fcity" name="fcity" type="text" required>
+                                <label for="fcity" class="form-label">City</label>
+                                <input class="form-control" id="fcity" name="fcity" type="text">
                             </div>
                             <div>
-                                <label for="fstate" class="form-label">State<span>
-                                        required!</span></label>
-                                <input class="form-control" id="fstate" name="fstate" type="text" required>
+                                <label for="fstate" class="form-label">State</label>
+                                <input class="form-control" id="fstate" name="fstate" type="text">
                             </div>
                             <div>
-                                <label for="fcountry" class="form-label">Forein Country<span>
-                                        required!</span></label>
-                                <input class="form-control" id="fcountry" name="fcountry" type="text" required>
+                                <label for="fcountry" class="form-label">Forein Country</label>
+                                <input class="form-control" id="fcountry" name="fcountry" type="text">
                             </div>
                             <div>
-                                <label for="fphone" class="form-label">Forein Phone<span>
-                                        required!</span></label>
-                                <input class="form-control" id="fphone" name="fphone" type="number" required>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Taxpayer Signature</legend>
-                        <div class="container-fluid" id="signature">
-
-                            <div>
-                                <label for="dsignature" class="form-label">Signature<span>
-                                        required!</span></label>
-                                <input class="form-control" id="dsignature" name="dsignature" type="text" required>
-                            </div>
-                            <div>
-                                <label for="sdsignature" class="form-label">Spouse Signature<span>
-                                        required!</span></label>
-                                <input class="form-control" id="sdsignature" name="sdsignature" type="text" required>
+                                <label for="fphone" class="form-label">Forein Phone</label>
+                                <input class="form-control" id="fphone" name="fphone" type="number">
                             </div>
                         </div>
                     </fieldset>
@@ -450,6 +421,7 @@
                                     a binary attachment with an explanation must be attached)</p>
                                 <p>To attach a PDF with an explanation of why
                                     Form 8962 is not being filed with the return</p>
+                                
                                 <div>
                                     <label class="form-check-label" for="checkDefault"></label>
                                     <input class="form-check-input" type="checkbox" value="" id="checkDefault">
@@ -586,28 +558,25 @@
                             <fieldset>
                                 <div class="box container-fluid">
                                     <div class="form-check">
-                                        <label for="spfname" class="form-label">Spouse First Name<span>
-                                                required!</span></label>
-                                        <input class="form-control" id="spfname" name="spfname" type="text" required>
+                                        <label for="spfname" class="form-label">Spouse First Name</label>
+                                        <input class="form-control" id="spfname" name="spfname" type="text">
                                     </div>
 
                                     <div class="form-check">
-                                        <label for="splname" class="form-label">Last Name<span>
-                                                required!</span></label>
-                                        <input class="form-control" id="splname" name="splname" type="text" required>
+                                        <label for="splname" class="form-label">Last Name</label>
+                                        <input class="form-control" id="splname" name="splname" type="text">
                                     </div>
 
                                     <div class="form-check">
-                                        <label for="ssn" class="form-label">SSN<span> required!</span></label>
-                                        <input class="form-control" id="ssn" name="ssn" type="number" required>
+                                        <label for="ssn" class="form-label">SSN</label>
+                                        <input class="form-control" id="ssn" name="ssn" type="number">
                                     </div>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <div class="box container-fluid">
                                     <div id="snra" class="form-check">
-                                        <p>Check here if the spouse is a nonresident alien</p>
-                                        <label class="form-check-label" for="checkDefault"></label>
+                                        <label class="form-check-label" for="checkDefault">Check here if the spouse is a nonresident alien</label>
                                         <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                                     </div>
                             </fieldset>
@@ -734,6 +703,8 @@
                             </div>
                         </fieldset>
                     </fieldset>
+
+                     <!--Part 5-->
                     <fieldset>
                         <div class="box container-fluid">
                             <p>5</p>
@@ -772,16 +743,15 @@
                             </div>
                         </fieldset>
 
-
                         <fieldset>
-                            <div class="box container-fluid">
-                                <div id="pec">
-                                    <div class="form-check">
+                            <div id="pec" class="box container-fluid">
+                                    <div  class="form-check">
                                         <label class="form-check-label" for="checkDefault">Check here if treating a
                                             nonresident alien or dual-status alien spouse as a U.S.
-                                            resident for the entire tax year.</label>
+                                            resident for the entire tax year</label>
                                         <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                                     </div>
+
                                     <fieldset>
                                         <div class="box container-fluid">
                                             <p>Enter their name (see instructions and attach
@@ -793,12 +763,11 @@
                                             </div>
                                         </div>
                                     </fieldset>
-
-                                </div>
                             </div>
                         </fieldset>
 
                     </fieldset>
+                    <!--Part 6-->
 
                     <fieldset>
                         <div class="box container-fluid">
@@ -905,13 +874,14 @@
 
                                 <p>c</p>
                                 <p><strong>Dependents / Nondependents</strong></p>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="checkDefault">Click here to charge a flat fee
-                                        for dependent
-                                        instead of a fee per dependent</label>
+                                <div class="box container-fluid">
+                                    <div class="form-check">
+                                    <label class="form-check-label" for="checkDefault">Check here to charge a flat fee
+                                        for dependent instead of a fee per dependent.</label>
                                     <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    </div>
 
-
+                                    <hr>
                                     <p>The ODC column indicates that the dependent qualifies for the credit for other
                                         dependents.
                                     </p>
@@ -928,23 +898,18 @@
                                             <table class="table table-hover table-bordered">
                                                 <thead class="table-light">
                                                     <tr>
+                                                        <th>#</th>
                                                         <th>First Name</th>
                                                         <th>Last Name</th>
                                                         <th>Date of bird</th>
                                                         <th>Age</th>
                                                         <th>SSN</th>
                                                         <th>Relation to you</th>
-                                                        <th>Mos in home</th>
-                                                        <th>Code</th>
-                                                        <th>DC</th>
-                                                        <th>EIC</th>
-                                                        <th>CTC</th>
-                                                        <th>ODC</th>
-                                                        <th>Identity theft PIN</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <th>1</th>
                                                         <td><input class="form-control" id="dfname" name="dfname"
                                                                 type="text"></td>
                                                         <td><input class="form-control" id="dlname" name="dlname"
@@ -958,21 +923,9 @@
                                                         <td><input class="form-control" id="drelation" name="drelation"
                                                                 type="text">
                                                         </td>
-                                                        <td><input class="form-control" id="dmih" name="dmih"
-                                                                type="number"></td>
-                                                        <td><input class="form-control" id="dcode" name="dcode"
-                                                                type="text"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-control" id="ditpin" name="ditpin"
-                                                                type="text"></td>
+                                                        
                                                     </tr>
+                                                    <th>2</th>
                                                     <td><input class="form-control" id="dfname" name="dfname"
                                                             type="text"></td>
                                                     <td><input class="form-control" id="dlname" name="dlname"
@@ -986,9 +939,45 @@
                                                     <td><input class="form-control" id="drelation" name="drelation"
                                                             type="text">
                                                     </td>
+                                                    
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Mos in home</th>
+                                                        <th>Code</th>
+                                                        <th>DC</th>
+                                                        <th>EIC</th>
+                                                        <th>CTC</th>
+                                                        <th>ODC</th>
+                                                        <th>Identity theft PIN</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <td><input class="form-control" id="dmih" name="dmih"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" id="dcode" name="dcode"
+                                                                type="number"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-check-input" type="checkbox" value=""
+                                                                id="checkDefault"></td>
+                                                        <td><input class="form-control" id="ditpin" name="ditpin"
+                                                                type="number"></td>
+                                                    </tr>
+                                                    <th>2</th>
                                                     <td><input class="form-control" id="dmih" name="dmih" type="number">
                                                     </td>
-                                                    <td><input class="form-control" id="dcode" name="dcode" type="text">
+                                                    <td><input class="form-control" id="dcode" name="dcode" type="number">
                                                     </td>
                                                     <td><input class="form-check-input" type="checkbox" value=""
                                                             id="checkDefault"></td>
@@ -999,7 +988,7 @@
                                                     <td><input class="form-check-input" type="checkbox" value=""
                                                             id="checkDefault"></td>
                                                     <td><input class="form-control" id="ditpin" name="ditpin"
-                                                            type="text"></td>
+                                                            type="number"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1008,184 +997,205 @@
                                 </fieldset>
 
                                 <fieldset>
-                                    <div class="box container-fluid">
-                                        <div class="form-check">
-                                            <label for="dsol" class="form-label">State of living</span></label>
-                                            <select id="dsol" class="form-select form-control" name="dsol">
-                                                <option value="" selected>Select</option>
-                                                <option>AL</option>
-                                                <option>AK</option>
-                                                <option>AZ</option>
-                                                <option>AR</option>
-                                                <option>CA</option>
-                                                <option>CO</option>
-                                                <option>CT</option>
-                                                <option>DE</option>
-                                                <option>FL</option>
-                                                <option>GA</option>
-                                                <option>HI</option>
-                                                <option>ID</option>
-                                                <option>IL</option>
-                                                <option>IN</option>
-                                                <option>IA</option>
-                                                <option>KS</option>
-                                                <option>KY</option>
-                                                <option>LA</option>
-                                                <option>ME</option>
-                                                <option>MD</option>
-                                                <option>MA</option>
-                                                <option>MI</option>
-                                                <option>MN</option>
-                                                <option>MS</option>
-                                                <option>MO</option>
-                                                <option>MT</option>
-                                                <option>NE</option>
-                                                <option>NV</option>
-                                                <option>NH</option>
-                                                <option>NJ</option>
-                                                <option>NM</option>
-                                                <option>NY</option>
-                                                <option>NC</option>
-                                                <option>ND</option>
-                                                <option>OH</option>
-                                                <option>OK</option>
-                                                <option>OR</option>
-                                                <option>PA</option>
-                                                <option>RI</option>
-                                                <option>SC</option>
-                                                <option>SD</option>
-                                                <option>TN</option>
-                                                <option>TX</option>
-                                                <option>UT</option>
-                                                <option>VT</option>
-                                                <option>VA</option>
-                                                <option>WA</option>
-                                                <option>WV</option>
-                                                <option>WI</option>
-                                                <option>WY</option>
-                                            </select>
-                                        </div>
+                                    <div id="stol" class="box container-fluid">
+                                        <p>State of living</p>
+
+                                        <label for="dsol" class="form-label"></span></label>
+                                        <select id="dsol" class="form-select form-control" name="dsol">
+                                            <option value="" selected>Select</option>
+                                            <option>AL</option>
+                                            <option>AK</option>
+                                            <option>AZ</option>
+                                            <option>AR</option>
+                                            <option>CA</option>
+                                            <option>CO</option>
+                                            <option>CT</option>
+                                            <option>DE</option>
+                                            <option>FL</option>
+                                            <option>GA</option>
+                                            <option>HI</option>
+                                            <option>ID</option>
+                                            <option>IL</option>
+                                            <option>IN</option>
+                                            <option>IA</option>
+                                            <option>KS</option>
+                                            <option>KY</option>
+                                            <option>LA</option>
+                                            <option>ME</option>
+                                            <option>MD</option>
+                                            <option>MA</option>
+                                            <option>MI</option>
+                                            <option>MN</option>
+                                            <option>MS</option>
+                                            <option>MO</option>
+                                            <option>MT</option>
+                                            <option>NE</option>
+                                            <option>NV</option>
+                                            <option>NH</option>
+                                            <option>NJ</option>
+                                            <option>NM</option>
+                                            <option>NY</option>
+                                            <option>NC</option>
+                                            <option>ND</option>
+                                            <option>OH</option>
+                                            <option>OK</option>
+                                            <option>OR</option>
+                                            <option>PA</option>
+                                            <option>RI</option>
+                                            <option>SC</option>
+                                            <option>SD</option>
+                                            <option>TN</option>
+                                            <option>TX</option>
+                                            <option>UT</option>
+                                            <option>VT</option>
+                                            <option>VA</option>
+                                            <option>WA</option>
+                                            <option>WV</option>
+                                            <option>WI</option>
+                                            <option>WY</option>
+                                        </select>
                                     </div>
                                 </fieldset>
 
                                 <fieldset>
                                     <div id="dmsol" class="box container-fluid">
                                         <p>Did you live in more than one states? Which</p>
-                                            
-                                            <label for="dm1sol" class="form-label"></span></label>
-                                            <select id="dm1sol" class="form-select form-control" name="dm1sol">
-                                                <option value="" selected>Select</option>
-                                                <option>AL</option>
-                                                <option>AK</option>
-                                                <option>AZ</option>
-                                                <option>AR</option>
-                                                <option>CA</option>
-                                                <option>CO</option>
-                                                <option>CT</option>
-                                                <option>DE</option>
-                                                <option>FL</option>
-                                                <option>GA</option>
-                                                <option>HI</option>
-                                                <option>ID</option>
-                                                <option>IL</option>
-                                                <option>IN</option>
-                                                <option>IA</option>
-                                                <option>KS</option>
-                                                <option>KY</option>
-                                                <option>LA</option>
-                                                <option>ME</option>
-                                                <option>MD</option>
-                                                <option>MA</option>
-                                                <option>MI</option>
-                                                <option>MN</option>
-                                                <option>MS</option>
-                                                <option>MO</option>
-                                                <option>MT</option>
-                                                <option>NE</option>
-                                                <option>NV</option>
-                                                <option>NH</option>
-                                                <option>NJ</option>
-                                                <option>NM</option>
-                                                <option>NY</option>
-                                                <option>NC</option>
-                                                <option>ND</option>
-                                                <option>OH</option>
-                                                <option>OK</option>
-                                                <option>OR</option>
-                                                <option>PA</option>
-                                                <option>RI</option>
-                                                <option>SC</option>
-                                                <option>SD</option>
-                                                <option>TN</option>
-                                                <option>TX</option>
-                                                <option>UT</option>
-                                                <option>VT</option>
-                                                <option>VA</option>
-                                                <option>WA</option>
-                                                <option>WV</option>
-                                                <option>WI</option>
-                                                <option>WY</option>
-                                            </select>
-                                            <label for="dm2sol" class="form-label">,</span></label>
-                                            <select id="dm2sol" class="form-select form-control" name="dm2sol">
-                                                <option value="" selected>Select</option>
-                                                <option>AL</option>
-                                                <option>AK</option>
-                                                <option>AZ</option>
-                                                <option>AR</option>
-                                                <option>CA</option>
-                                                <option>CO</option>
-                                                <option>CT</option>
-                                                <option>DE</option>
-                                                <option>FL</option>
-                                                <option>GA</option>
-                                                <option>HI</option>
-                                                <option>ID</option>
-                                                <option>IL</option>
-                                                <option>IN</option>
-                                                <option>IA</option>
-                                                <option>KS</option>
-                                                <option>KY</option>
-                                                <option>LA</option>
-                                                <option>ME</option>
-                                                <option>MD</option>
-                                                <option>MA</option>
-                                                <option>MI</option>
-                                                <option>MN</option>
-                                                <option>MS</option>
-                                                <option>MO</option>
-                                                <option>MT</option>
-                                                <option>NE</option>
-                                                <option>NV</option>
-                                                <option>NH</option>
-                                                <option>NJ</option>
-                                                <option>NM</option>
-                                                <option>NY</option>
-                                                <option>NC</option>
-                                                <option>ND</option>
-                                                <option>OH</option>
-                                                <option>OK</option>
-                                                <option>OR</option>
-                                                <option>PA</option>
-                                                <option>RI</option>
-                                                <option>SC</option>
-                                                <option>SD</option>
-                                                <option>TN</option>
-                                                <option>TX</option>
-                                                <option>UT</option>
-                                                <option>VT</option>
-                                                <option>VA</option>
-                                                <option>WA</option>
-                                                <option>WV</option>
-                                                <option>WI</option>
-                                                <option>WY</option>
-                                            </select>
+
+                                        <label for="dm1sol" class="form-label"></span></label>
+                                        <select id="dm1sol" class="form-select form-control" name="dm1sol">
+                                            <option value="" selected>Select</option>
+                                            <option>AL</option>
+                                            <option>AK</option>
+                                            <option>AZ</option>
+                                            <option>AR</option>
+                                            <option>CA</option>
+                                            <option>CO</option>
+                                            <option>CT</option>
+                                            <option>DE</option>
+                                            <option>FL</option>
+                                            <option>GA</option>
+                                            <option>HI</option>
+                                            <option>ID</option>
+                                            <option>IL</option>
+                                            <option>IN</option>
+                                            <option>IA</option>
+                                            <option>KS</option>
+                                            <option>KY</option>
+                                            <option>LA</option>
+                                            <option>ME</option>
+                                            <option>MD</option>
+                                            <option>MA</option>
+                                            <option>MI</option>
+                                            <option>MN</option>
+                                            <option>MS</option>
+                                            <option>MO</option>
+                                            <option>MT</option>
+                                            <option>NE</option>
+                                            <option>NV</option>
+                                            <option>NH</option>
+                                            <option>NJ</option>
+                                            <option>NM</option>
+                                            <option>NY</option>
+                                            <option>NC</option>
+                                            <option>ND</option>
+                                            <option>OH</option>
+                                            <option>OK</option>
+                                            <option>OR</option>
+                                            <option>PA</option>
+                                            <option>RI</option>
+                                            <option>SC</option>
+                                            <option>SD</option>
+                                            <option>TN</option>
+                                            <option>TX</option>
+                                            <option>UT</option>
+                                            <option>VT</option>
+                                            <option>VA</option>
+                                            <option>WA</option>
+                                            <option>WV</option>
+                                            <option>WI</option>
+                                            <option>WY</option>
+                                        </select>
+                                        <label for="dm2sol" class="form-label">,</span></label>
+                                        <select id="dm2sol" class="form-select form-control" name="dm2sol">
+                                            <option value="" selected>Select</option>
+                                            <option>AL</option>
+                                            <option>AK</option>
+                                            <option>AZ</option>
+                                            <option>AR</option>
+                                            <option>CA</option>
+                                            <option>CO</option>
+                                            <option>CT</option>
+                                            <option>DE</option>
+                                            <option>FL</option>
+                                            <option>GA</option>
+                                            <option>HI</option>
+                                            <option>ID</option>
+                                            <option>IL</option>
+                                            <option>IN</option>
+                                            <option>IA</option>
+                                            <option>KS</option>
+                                            <option>KY</option>
+                                            <option>LA</option>
+                                            <option>ME</option>
+                                            <option>MD</option>
+                                            <option>MA</option>
+                                            <option>MI</option>
+                                            <option>MN</option>
+                                            <option>MS</option>
+                                            <option>MO</option>
+                                            <option>MT</option>
+                                            <option>NE</option>
+                                            <option>NV</option>
+                                            <option>NH</option>
+                                            <option>NJ</option>
+                                            <option>NM</option>
+                                            <option>NY</option>
+                                            <option>NC</option>
+                                            <option>ND</option>
+                                            <option>OH</option>
+                                            <option>OK</option>
+                                            <option>OR</option>
+                                            <option>PA</option>
+                                            <option>RI</option>
+                                            <option>SC</option>
+                                            <option>SD</option>
+                                            <option>TN</option>
+                                            <option>TX</option>
+                                            <option>UT</option>
+                                            <option>VT</option>
+                                            <option>VA</option>
+                                            <option>WA</option>
+                                            <option>WV</option>
+                                            <option>WI</option>
+                                            <option>WY</option>
+                                        </select>
                                     </div>
                                 </fieldset>
-
-
-
-
+                                <fieldset>
+                                    <div class="box container-fluid">
+                                        <p>Attach SSN copy and valid ID in US</p>
+                                        <fieldset>
+                                            <div id="atti" class="box container-fluid">
+                                            <div id="uploadSSN">
+                                                <label for="ssnPhoto">Upload your SSN copy:</label>
+                                                <br><br>
+                                                <input type="file" id="ssnPhoto" name="ssnPhoto"
+                                                    accept="image/*">
+                                                <br>
+                                                <img id="ssnPreview" src="#" alt="Image Preview" style="display:none; width: 200px; height: auto;">
+                                            </div>
+                                            <div id="uploadId">
+                                                <label for="idPhoto">Upload your ID copy:</label>
+                                                <br><br>
+                                                <input type="file" id="idPhoto" name="idPhoto"
+                                                    accept="image/*">
+                                                <br>
+                                                <img id="idPreview" src="#" alt="Image Preview" style="display:none; width: 200px; height: auto;">
+                                            </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </fieldset>
 
                             </div>
                         </fieldset>
@@ -1198,9 +1208,6 @@
             </div>
         </div>
     </section>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

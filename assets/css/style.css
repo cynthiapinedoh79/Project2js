@@ -81,7 +81,6 @@ form {
 form#ms-form {
     justify-content: center;
     width: auto;
-
     /* FLEX PARENT PROPERTIES */
     display: flex;
     flex-direction: column;
@@ -118,7 +117,7 @@ form label {
     width: auto;
     padding: 2.5px;
     justify-content: center;
-    display: inline-block;
+    display: inline;
 }
 
 #rrf .form-check-input[type=checkbox] {
@@ -133,15 +132,15 @@ form label {
     padding: 0;
     float: left;
     justify-content: center;
-    display: inline-block;
+    display: inline;
 }
 
 .form-check-input[type=checkbox] {
     margin: 0.5em 0 0 0;
     padding: 0;
-    float: left;
+    justify-content: center;
+    display: inline;
     position: relative;
-    display: inline-block;
 }
 
 input.form-control:focus {
@@ -341,7 +340,7 @@ div.form-check {
 #slwy,
 #aj30,
 #comm-m,
-#comm-o, #exemp, #dsol, #dmsol {
+#comm-o, #exemp, #pec, #stol, #dsol, #dmsol {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -356,9 +355,9 @@ div.form-check {
 #fsae input.form-check-input[type=checkbox] {
     margin: 0.25em 0 0 0;
     padding: 0;
-    float: flex-;
+    float: flex;
     justify-content: center;
-    display: inline-block;
+    display: inline;
 
 }
 
@@ -367,7 +366,7 @@ div.form-check {
     padding: 0;
     float: left;
     justify-content: center;
-    display: inline-block;s
+    display: inline;
 
 }
 
@@ -376,7 +375,7 @@ div.form-check {
 }
 
 .table-responsive{
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
     overflow-x: auto;
@@ -386,6 +385,7 @@ div.form-check {
 table{
     width: 100%;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 th{
@@ -409,6 +409,20 @@ td{
 #dmsol label{
     margin: 0;
     padding: 0;
+}
+
+#stol .form-select{
+    width: auto;
+}
+
+hr{
+    border: none;
+}
+
+.form-check{
+    display: inline;
+    flex-wrap: wrap;
+
 }
 
 @media screen and (min-width: 768px) {
