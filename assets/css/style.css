@@ -39,6 +39,14 @@ h2 {
     margin-bottom: 2rem;
 }
 
+p {
+    width: auto;
+    text-align: left;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
 
 #header {
     padding-top: 2rem;
@@ -78,15 +86,6 @@ form {
     text-align: left;
 }
 
-form#ms-form {
-    justify-content: center;
-    width: auto;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
 
 #ms div.container-fluid {
     vertical-align: middle;
@@ -113,39 +112,28 @@ form label {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--primary-text-color);
-    margin-left: 10px;
+    margin-left: 0;
     width: auto;
     padding: 2.5px;
     justify-content: center;
     display: inline;
-}
-
-#rrf .form-check-input[type=checkbox] {
-    margin: 0.25em 0 0 0;
-    padding: 0;
-    float: left;
-    justify-content: center;
+    position: relative;
 }
 
 .form-check-input[type=radio] {
-    margin: 0.5em 0 0 0;
-    padding: 0;
-    float: left;
-    justify-content: center;
-    display: inline;
-}
-
-.form-check-input[type=checkbox] {
-    margin: 0.5em 0 0 0;
+    margin: 0;
     padding: 0;
     justify-content: center;
     display: inline;
     position: relative;
 }
 
-input.form-control:focus {
-    border-color: var(--primary-text-color);
-    box-shadow: 0 0 5px var(--primary-text-color);
+.form-check-input[type=checkbox] {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: inline;
+    position: relative;
 }
 
 input#expr.form-control {
@@ -207,13 +195,6 @@ input#radio-btn {
     vertical-align: middle;
 }
 
-
-address {
-    text-align: center;
-    align-content: center;
-    margin: 0;
-}
-
 span {
     color: #cf0000;
     font-size: smaller;
@@ -223,20 +204,8 @@ span {
     --bs-btn-color: var(--primary-text-color);
 }
 
-
-footer {
-    background-color: var(--primary-text-color);
-    padding-bottom: 0;
-}
-
 /*Taxpayer Information*/
-p {
-    width: auto;
-    text-align: left;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-}
+
 
 #tpi-form {
     text-align: left;
@@ -278,7 +247,7 @@ div#expr {
 
 }
 
-#rrf {
+#rrf, #ifblind, #ifdisabled, #ifdead, #trfby, #pec {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -287,47 +256,6 @@ div#expr {
 
 }
 
-#ifblind {
-    border: none;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-#ifdisabled {
-    border: none;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#ifdead {
-    border: none;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-#trfby {
-    border: none;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#pec {
-    border: none;
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
 div.form-check {
     margin: 0;
@@ -349,8 +277,6 @@ div.form-check {
     gap: 10px;
     vertical-align: middle;
 }
-
-
 
 #fsae input.form-check-input[type=checkbox] {
     margin: 0.25em 0 0 0;
@@ -425,12 +351,10 @@ hr{
 
 }
 
-@media screen and (min-width: 768px) {
-}
+@media screen (min-width: 768px) {}
 
+@media screen (min-width: 992px) {}
 
-@media screen and (min-width: 992px) {}
+@media screen (min-width: 1200px) {}
 
-@media screen and (min-width: 1200px) {}
-
-@media screen and (min-width: 1400px) {}
+@media screen (min-width: 1400px) {}
