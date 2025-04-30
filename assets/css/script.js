@@ -1,3 +1,41 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Attach SSN to the form*/
 const ssnPhotoInput = document.getElementById("ssnPhoto");
 const ssnPreviewImage = document.getElementById("ssnPreview");
@@ -37,3 +75,53 @@ idPhotoInput.addEventListener("change", function (event) {
   }
 }
 );
+
+/*Save forms*/
+document.getElementById("gi-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  // Prevent the default form submission
+  const giData = new giData(this);
+  // Create a FormData object from the form
+  fetch("/submit-data", {
+    method: "POST",
+    body: giData,
+  })
+    // Send the form data to the server
+    .then(response => response.json())
+    .then(data => console.log("Success:", data))
+    // Handle the response from the server
+    .catch(error => console.error("Error:", error));
+});
+
+document.getElementById("tpi-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  // Prevent the default form submission
+  const tpiData = new tpiData(this);
+  // Create a FormData object from the form
+  fetch("/submit-data", {
+    method: "POST",
+    body: tpiData,
+  })
+    // Send the form data to the server
+    .then(response => response.json())
+    .then(data => console.log("Success:", data))
+    // Handle the response from the server
+    .catch(error => console.error("Error:", error));
+});
+
+document.getElementById("fsae").addEventListener("submit", function (event) {
+  event.preventDefault();
+  // Prevent the default form submission
+  const fsaeData = new fsaeData(this);
+  // Create a FormData object from the form
+  fetch("/submit-data", {
+    method: "POST",
+    body: fsaeData,
+  })
+    // Send the form data to the server
+    .then(response => response.json())
+    .then(data => console.log("Success:", data))
+    // Handle the response from the server
+    .catch(error => console.error("Error:", error));
+});
+

@@ -6,14 +6,14 @@
     --secondary-font: "Lato", cursive;
     --primary-text-color: #000000;
     --secondary-text-color: #ffffff;
-    --primary-color: #390099;
+    --primary-color: #33008a;
     --secondary-color: #9E0059;
     --third-color: #ff0054;
     --fourth-color: #ff5400;
     --fifth-color: #ffbd00;
 
-    --highlight-color: #30018244;
-    --highlight-color-light: #ffc4d7;
+    --highlight-color: #330582;
+    --highlight-color-light: #1a006f1f;
     --border-color: slategrey;
 }
 
@@ -65,17 +65,23 @@ p {
 }
 
 
-.btn-primary {
+button.btn.btn-primary {
+    width:fit-content;
     font-weight: bold;
-    font-size: 125%;
-    --bs-btn-color: var(--primary-color);
-    --bs-btn-bg: none;
-    --bs-btn-border-width: none;
-    --bs-btn-hover-color: var(--fifth-color);
-    --bs-btn-hover-bg: none;
-    --bs-btn-hover-border-color: none;
-    --bs-btn-active-bg: none;
-    --bs-btn-active-border-color: none;
+    color: white;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 110%;
+    display:block;
+    margin: 0 auto;
+    padding: 0.25rem 1rem;
+}
+
+button.btn.btn-primary:hover {
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--fifth-color);
+    font-size: 120%;
 }
 
 section {
@@ -165,7 +171,7 @@ input#expr.form-control {
 
 fieldset {
     border: none;
-    background-color: var(--highlight-color);
+    background-color: none;
     border-radius: 5px;
     width: 100%;
     margin-bottom:0.5rem;
@@ -173,6 +179,18 @@ fieldset {
     align-content: center;
     justify-content: center;
     text-align: center;
+}
+
+#Fs fieldset{
+    background-color: var(--highlight-color-light);
+}
+
+#Ss fieldset{
+    background-color: var(--highlight-color-light);
+}
+
+#Ts fieldset{
+    background-color: var(--highlight-color-light);
 }
 
 legend {
@@ -225,7 +243,7 @@ select#dsol.form-select.form-control{
 }
 
 span {
-    color: #cf0000;
+    color: #b60101;
     font-size: smaller;
 }
 
@@ -317,6 +335,7 @@ table{
 
 .table{
     --bs-table-bg:none;
+    border:  1px solid var(--primary-color);
 }
 
 .table-light{
@@ -325,6 +344,7 @@ table{
 }
 
 th{
+    border:  1px solid var(--primary-color);
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--primary-text-color);
