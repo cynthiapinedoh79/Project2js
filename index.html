@@ -79,30 +79,33 @@
                             <div>
                                 <label for="fname" class="form-label">First Name<span>
                                         required!</span></label>
-                                <input class="form-control" id="fname" name="fname" type="text" required>
+                                <input class="form-control" id="fname" name="fName" type="text" required>
+                                <p id="fnameFbk"></p>
                             </div>
 
                             <div>
                                 <label for="fnamei" class="form-label">Initial</label>
-                                <input class="form-control" id="fnamei" name="fnamei" type="text">
+                                <input class="form-control" id="fnamei" name="fNameI" type="text">
                             </div>
 
                             <div>
                                 <label for="lname" class="form-label">Last Name<span>
                                         required!</span></label>
-                                <input class="form-control" id="lname" name="lname" type="text" required>
+                                <input class="form-control" id="lname" name="lName" type="text" required>
                             </div>
                             <div>
                                 <label for="lnamesu" class="form-label">Suffix</label>
-                                <input class="form-control" id="lnamesu" name="lnamesu" type="text">
+                                <input class="form-control" id="lnamesu" name="lNameSu" type="text">
                             </div>
                             <div>
                                 <label for="ssn" class="form-label">SSN<span> required!</span></label>
                                 <input class="form-control" id="ssn" name="ssn" type="number" required>
+                                <p id="ssnFbk"></p>
                             </div>
                             <div>
                                 <label for="email" class="form-label">Email<span> required!</span></label>
                                 <input class="form-control" id="email" name="email" type="email" required>
+                                <p id="emailFbk"></p>
                             </div>
                         </div>
                     </fieldset>
@@ -115,32 +118,35 @@
                         <div class="container-fluid" id="j-info">
                             <div>
                                 <label for="sfname" class="form-label">First Name</label>
-                                <input class="form-control" id="sfname" name="sfname" type="text">
+                                <input class="form-control" id="sfname" name="sfName" type="text">
+                                <p id="sfnameFbk"></p>
                             </div>
 
                             <div>
                                 <label for="sfnamei" class="form-label">Initial</label>
-                                <input class="form-control" id="sfnamei" name="sfnamei" type="text">
+                                <input class="form-control" id="sfnamei" name="sfNameI" type="text">
                             </div>
 
                             <div>
                                 <label for="slname" class="form-label">Last Name</label>
-                                <input class="form-control" id="slname" name="slname" type="text">
+                                <input class="form-control" id="slname" name="slName" type="text">
                             </div>
 
                             <div>
                                 <label for="slnamesu" class="form-label">Suffix</label>
-                                <input class="form-control" id="slnamesu" name="slnamesu" type="text">
+                                <input class="form-control" id="slnamesu" name="slNameSu" type="text">
                             </div>
 
                             <div>
                                 <label for="sssn" class="form-label">SSN</label>
-                                <input class="form-control" id="sssn" name="sssn" type="number">
+                                <input class="form-control" id="sssn" name="sSsn" type="number">
+                                <p id="sSsnFbk"></p>
                             </div>
 
                             <div>
                                 <label for="semail" class="form-label">Spouse Email</label>
-                                <input class="form-control" id="semail" name="semail" type="email">
+                                <input class="form-control" id="semail" name="sEmail" type="email">
+                                <p id="semailFbk"></p>
                             </div>
                             <div>
 
@@ -159,7 +165,8 @@
                             <div>
                                 <label for="zipcode" class="form-label">Zip Code<span>
                                         required!</span></label>
-                                <input class="form-control" id="zipcode" name="zipcode" type="number" required>
+                                <input class="form-control" id="zipcode" name="zipCode" type="number" required>
+                                <p id="zipcodeFbk"></p>
                             </div>
                             <div>
                                 <label for="city" class="form-label">City<span>
@@ -234,6 +241,8 @@
                                     numbers)<span>
                                         required!</span></label>
                                 <input class="form-control" id="phone" name="phone" type="tel" required>
+                                <p id="phoneFbk"></p>
+
                                 <label for="callh" class="form-label">Type<span>
                                         required!</span></label>
                                 <select id="callh" class="form-select form-control" name="callh" required>
@@ -246,6 +255,8 @@
                             <div>
                                 <label for="sphone" class="form-label">Spouse Phone (only numbers)</label>
                                 <input class="form-control" id="sphone" name="sphone" type="tel">
+                                <p id="sphoneFbk"></p>
+
                                 <label for="callh" class="form-label">Type</label>
                                 <select id="callh" class="form-select form-control" name="callh">
                                     <option value="" selected>Select</option>
@@ -262,14 +273,16 @@
 
                         <div class="container-fluid" id="birth-date">
                             <div>
-                                <label for="bd" class="form-label">Birth Date<span>
+                                <label for="dob" class="form-label">Birth Date<span>
                                         required!</span></label>
-                                <input class="form-control" id="bd" name="bd" type="date" required>
+                                <input class="form-control" id="dob" name="doB" type="date" required>
+                                <p id="dobFbk"></p>
                             </div>
                             <div>
 
-                                <label for="sbd" class="form-label">Spouse Birth Date</label>
-                                <input class="form-control" id="sbd" name="sbd" type="date">
+                                <label for="sdob" class="form-label">Spouse Birth Date</label>
+                                <input class="form-control" id="sdob" name="sdoB" type="date">
+                                <p id="sdobFbk"></p>
                             </div>
                         </div>
                     </fieldset>
