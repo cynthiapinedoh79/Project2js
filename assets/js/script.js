@@ -29,13 +29,12 @@ function(){
       }
 
       function isValidEmail(email){
-        const regex = /
-        ^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
       }
-      if (isValidEmail(email)!){
+      if (!isValidEmail(email)){
         emailFbk.innerText =`Invalid email`
-      } 
+      }
 
 
       /*Joint Information*/
@@ -59,11 +58,10 @@ function(){
       }
 
       function isValidSEmail(semail){
-        const regex = /
-        ^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(semail);
       }
-      if (isValidSEmail(semail)!){
+      if (!isValidSEmail(semail)){
         semailFbk.innerText =`Invalid email`
       } 
 
@@ -88,16 +86,16 @@ function(){
       }
 
       /*Birth Date*/
-      function isOlderThan18(dob){
+      function isYoungerThan18(dob){
 
-        const dob = new Date (dob);
+        const tdob = new Date (dob);
         const today = new Date ();
 
         const age = today.getFullYear() - dob.getFullYear();
         const monthDiff = today.getMonth() - dob.getMonth();
         const dayDiff = today.getDate() - dob.getDate();
 
-        if(age > 18 || (age ===18 && (monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0)))
+        if(age < 18 || (age ===18 && (monthDiff < 0 || (monthDiff === 0 && dayDiff <= 0)))
         )
           {
             return true;
@@ -105,46 +103,23 @@ function(){
           return false
       }
   
-      if (is isOlderThan18!(dob)) {
+      if (isYoungerThan18(dob)) {
         dobFbk.innerText =`${fname} you are not older than 18`
       }
 
     }
 
 
-    function sisOlderThan18(sdob){
 
-      const sdob = new Date (sdob);
-      const stoday = new Date ();
 
-      const sage = stoday.getFullYear() - sdob.getFullYear();
-      const smonthDiff = stoday.getMonth() - sdob.getMonth();
-      const sdayDiff = stoday.getDate() - sdob.getDate();
 
-      if(age > 18 || (sage ===18 && (smonthDiff > 0 || (smonthDiff === 0 && sdayDiff >= 0)))
-      )
-        {
-          return true;
-        }
-        return false
-    }
 
-    if (is sisOlderThan18!(sdob)) {
-      sdobFbk.innerText =`${sfname} you are not older than 18`
-    }
+
+
+
+
 
   }
-
-
-
-
-
-
-
-
-
-
-}
 );
 
 
