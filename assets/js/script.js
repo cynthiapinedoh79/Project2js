@@ -9,19 +9,15 @@ function(){
       let giFormData = e.target;
 
       /*General Information*/
-      let fname = giFormData.fName.value;
-      let fnamei = giFormData.fNameI.value;
-      let lname = giFormData.lName.value;
-      let lnamesu = giFormData.lNameSu.value;
-      let ssn = giFormData.ssn.value;
+      const fname = giFormData.fName.value.trim();
+      const lname = giFormData.lName.value;
+      const lnamesu = giFormData.lNameSu.value;
+      const ssn = giFormData.ssn.value;
       let ssnFbk = document.getElementById ("ssnFbk");
       let email = giFormData.email.value;
       let emailFbk = document.getElementById ("emailFbk");
 
-      if (fname.toString().lenght !== 2){
-        //code if snn doesn't have 2 letters
-        fnameFbk.innerText =`Name must contain at least 2 letters`
-      }
+
 
       if (ssn.toString().lenght !== 9){
         //code if snn doesn't have 9 digits
@@ -38,11 +34,11 @@ function(){
 
 
       /*Joint Information*/
-      let sfname = giFormData.sfName.value;
-      let sfnamei = giFormData.fNameI.value;
-      let slname = giFormData.lName.value;
+      const sfname = giFormData.sfName.value;
+      const sfnamei = giFormData.fNameI.value;
+      const slname = giFormData.lName.value;
       let slnamesu = giFormData.lNameSu.value;
-      let sssn = giFormData.sSsn.value;
+      const sssn = giFormData.sSsn.value;
       let sssnFbk = document.getElementById ("sSsnFbk");
       let semail = giFormData.sEmail.value;
       let sEmailFbk = document.getElementById ("sEmailFbk");
@@ -150,19 +146,11 @@ function(){
 
 
 
-
-
-
-
-
-
-
-
 /*Attach SSN to the form*/
 const ssnPhotoInput = document.getElementById("ssnPhoto");
 const ssnPreviewImage = document.getElementById("ssnPreview");
 
-nssPhotoInput.addEventListener("change", function (event) {
+ssnPhotoInput.addEventListener("change", function (event) {
   const file = event.target.files[0];
   /*Get the selected file*/
   if (file) {
@@ -175,8 +163,7 @@ nssPhotoInput.addEventListener("change", function (event) {
     reader.readAsDataURL(file);
     //Read the file as a data URL (base64)
   }
-}
-);
+});
 
 /*Attach ID to the form*/
 const idPhotoInput = document.getElementById("idPhoto");
@@ -195,8 +182,7 @@ idPhotoInput.addEventListener("change", function (event) {
     reader.readAsDataURL(file);
     //Read the file as a data URL (base64)
   }
-}
-);
+});
 
 /*Save forms*/
 document.getElementById("gi-form").addEventListener("submit", function (event) {
@@ -214,6 +200,7 @@ document.getElementById("gi-form").addEventListener("submit", function (event) {
     // Handle the response from the server
     .catch(error => console.error("Error:", error));
 });
+
 
 document.getElementById("tpi-form").addEventListener("submit", function (event) {
   event.preventDefault();

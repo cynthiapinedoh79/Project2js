@@ -119,6 +119,9 @@ form {
     align-items: center;
 }
 
+fieldset div{
+    justify-items: left;
+}
 
 div.container-fluid {
     border: 1px solid var(--border-color);
