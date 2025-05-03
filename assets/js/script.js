@@ -10,75 +10,106 @@ function(){
 
       /*General Information*/
       const fname = giFormData.fName.value.trim();
+          /*Get initial from first name*/
+          const fnamei = fname ? fname.charAt(0).toUpperCase() : "";
+          document.getElementById("fnamei").value = fnamei;
+
       const lname = giFormData.lName.value;
       const lnamesu = giFormData.lNameSu.value;
       const ssn = giFormData.ssn.value;
+      const cssn = giFormData.cSsn.value;
       let ssnFbk = document.getElementById ("ssnFbk");
+      let cssnFbk = document.getElementById ("cssnFbk");
       let email = giFormData.email.value;
       let emailFbk = document.getElementById ("emailFbk");
 
+      //SSN
+      if (/^\d{9}$/.test(ssn)){
+        ssnFbk.innerText =``;
+        console.log(ssn);
+       
+        if (/^\d{9}$/.test(cssn)){
+          cssnFbk.innerText =``;
+          console.log(cssn);
 
+            //To confirm Taxpayer SSN
+            if (ssn !== cssn){
+            //code if ssn doesn't match
+            cssnFbk.innerText =`SSN doesn't match`;
+            }
 
-      if (ssn.toString().lenght !== 9){
-        //code if snn doesn't have 9 digits
-        ssnFbk.innerText =`${fname} your SSN should be 9 digits`
+          } else {
+          cssnFbk.innerText =`9 digits SSN`;
+        } 
+
+      } else {
+        ssnFbk.innerText =`9 digits SSN`;
       }
-
-      function isValidEmail(email){
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-      }
-      if (!isValidEmail(email)){
-        emailFbk.innerText =`Invalid email`
-      }
-
 
       /*Joint Information*/
-      const sfname = giFormData.sfName.value;
-      const sfnamei = giFormData.fNameI.value;
+      const sfname = giFormData.sfName.value.trim();
+          /*Get initial from spouse first name*/
+          const sfnamei = sfname ? sfname.charAt(0).toUpperCase() : "";
+          document.getElementById("sfnamei").value = sfnamei;
+
       const slname = giFormData.lName.value;
-      let slnamesu = giFormData.lNameSu.value;
+      const slnamesu = giFormData.lNameSu.value;
       const sssn = giFormData.sSsn.value;
-      let sssnFbk = document.getElementById ("sSsnFbk");
+      const csssn = giFormData.csSsn.value;
+      let sssnFbk = document.getElementById ("sssnFbk");
+      let csssnFbk = document.getElementById ("csssnFbk");
       let semail = giFormData.sEmail.value;
       let sEmailFbk = document.getElementById ("sEmailFbk");
 
-      if (ssn.toString().lenght !== 2){
-        //code if snn doesn't have 2 letters
-        sfnameFbk.innerText =`Name must contain at least 2 letters`
+      //Spouse SSN
+      if (/^\d{9}$/.test(sssn)){
+        sssnFbk.innerText =``;
+        console.log(sssn);
+       
+        if (/^\d{9}$/.test(csssn)){
+          csssnFbk.innerText =``;
+          console.log(csssn);
+
+            //To confirm Taxpayer SSN
+            if (sssn !== csssn){
+            //code if ssn doesn't match
+            csssnFbk.innerText =`SSN doesn't match`;
+            }
+
+          } else {
+          csssnFbk.innerText =`9 digits SSN`;
+        } 
+
+      } else {
+        sssnFbk.innerText =`9 digits SSN`;
       }
 
-      if (sssn.toString().lenght !== 9){
-        //code if snn doesn't have 9 digits
-        ssnFbk.innerText =`${sfname} your SSN should be 9 digits`
-      }
-
-      function isValidSEmail(semail){
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(semail);
-      }
-      if (!isValidSEmail(semail)){
-        semailFbk.innerText =`Invalid email`
-      } 
-
+      
       /*Mailing Address*/
+      //If zipcode doesn't have 5 digits
       let zipcode = giFormData.zipCode.value;
-      if (zipcode.toString().lenght !== 5){
-        //code if snn doesn't have 5 digits
-        zipcodeFbk.innerText =`Zip Code must have 5 digits`
+      if (/^\d{5}$/.test(zipcode)){
+        zipcodeFbk.innerText =``;
+        console.log(zipcode);
+      } else {
+        zipcodeFbk.innerText =`5 digits zipcode`;
       }
 
       /*Phone Number*/
       let phone = giFormData.phone.value;
-      if (phone.toString().lenght !== 10){
+      if (/^\d{10}$/.test(phone)){
+        phoneFbk.innerText =``;
+      }else{
         //Phone must have 10 digits
-        phoneFbk.innerText =`Phone number must have 5 digits`
+        phoneFbk.innerText =`Must be 10 digits`;
       }
 
-      let sphone = giFormData.phone.value;
-      if (sphone.toString().lenght !== 10){
-        //Phone must have 10 digits
-        sphoneFbk.innerText =`Phone number must have 5 digits`
+      let sphone = giFormData.sPhone.value;
+      if (/^\d{10}$/.test(sphone)){
+       sphoneFbk.innerText =``;
+      } else{
+        //Spouse phone must have 10 digits
+        sphoneFbk.innerText =`Must be 10 digits`;
       }
 
       /*Birth Date*/
