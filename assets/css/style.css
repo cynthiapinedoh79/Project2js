@@ -217,10 +217,17 @@ select#dsol.form-select.form-control{
     border: 1px solid var(--primary-color);
     width: auto;
 }
-/*Joint Information*/
-#j-info{
-    display: none;
+
+button#vage {
+border: none;
+color: var(--primary-text-color);
 }
+
+button#vage:hover {
+    color: var(--primary-color);
+    font-size: 120%;
+}
+
 
 
 #g-info,

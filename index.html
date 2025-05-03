@@ -318,11 +318,10 @@
                                 <input class="form-control" id="dob" name="doB" type="date" required>
                                 <p id="dobFbk"></p>
                                 <script>
-                                    function isUnde18() {
+                                    function isUnder18() {
                                         const dobString = document.getElementById("dob").value;
                                         if (!dobString) {
                                             dobFbk.innerText = `Invalid date`;
-                                            return;
                                         }
         
                                         //Convert the string to a Date object
@@ -340,6 +339,8 @@
                                         const rAge = age < 18 ? true : false;
                                         if (rAge) {
                                             dobFbk.innerText = `Age < 18`;
+                                        } else {
+                                            dobFbk.innerText = age;
                                         }
                                     }
                                 </script>
