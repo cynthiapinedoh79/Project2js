@@ -95,7 +95,18 @@
                             </div>
                             <div>
                                 <label for="lnamesu" class="form-label">Suffix</label>
-                                <input class="form-control" id="lnamesu" name="lNameSu" type="text">
+                                <select id="lnamesu" class="form-select form-control" name="lNameSu" required>
+                                    <option value="" selected>Select</option>
+                                    <option>Miss</option>
+                                    <option>Mrs.</option>
+                                    <option>Ms.</option>
+                                    <option>Jr.</option>
+                                    <option>Sr.</option>
+                                    <option>Mr.</option>
+                                    <option>I</option>
+                                    <option>II</option>
+                                    <option>III</option>
+                                </select>
                             </div>
                             <div>
                                 <label for="ssn" class="form-label">SSN<span> required!</span></label>
@@ -117,10 +128,19 @@
 
                     <fieldset>
                         <legend>Joint Information</legend>
+                        <script>
+                            function displayJointInfo() {
+                                const jidiv = document.getElementById("j-info");
+                                jidiv.style.display = (jidiv.style.display === "none") || (jidiv.style.display ==="") ? "block" : "none";
+                              console.log("displayJointInfo function called!");
+                            }
+                          </script>
 
-                        <p>If filing a JOINT return, enter your spouse's Information</p>
+                        <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
+                            here If filing a JOINT return, enter your spouse's Information</button>
 
-                        <div class="container-fluid" id="j-info">
+                        <div id="j-info" class="container-fluid" style="display: none;">
+                            <p>hooolaaa</p>
                             <div>
                                 <label for="sfname" class="form-label">First Name</label>
                                 <input class="form-control" id="sfname" name="sfName" type="text">
@@ -139,7 +159,18 @@
 
                             <div>
                                 <label for="slnamesu" class="form-label">Suffix</label>
-                                <input class="form-control" id="slnamesu" name="slNameSu" type="text">
+                                <select id="slnamesu" class="form-select form-control" name="slNameSu" required>
+                                    <option value="" selected>Select</option>
+                                    <option>Miss</option>
+                                    <option>Mrs.</option>
+                                    <option>Ms.</option>
+                                    <option>Jr.</option>
+                                    <option>Sr.</option>
+                                    <option>Mr.</option>
+                                    <option>I</option>
+                                    <option>II</option>
+                                    <option>III</option>
+                                </select>
                             </div>
 
                             <div>

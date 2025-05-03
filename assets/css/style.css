@@ -217,6 +217,11 @@ select#dsol.form-select.form-control{
     border: 1px solid var(--primary-color);
     width: auto;
 }
+/*Joint Information*/
+#j-info{
+    display: none;
+}
+
 
 #g-info,
 #j-info,

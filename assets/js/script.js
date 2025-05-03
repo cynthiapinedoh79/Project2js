@@ -47,13 +47,16 @@ function(){
       }
 
       /*Joint Information*/
+
+
+      
       const sfname = giFormData.sfName.value.trim();
           /*Get initial from spouse first name*/
           const sfnamei = sfname ? sfname.charAt(0).toUpperCase() : "";
           document.getElementById("sfnamei").value = sfnamei;
 
-      const slname = giFormData.lName.value;
-      const slnamesu = giFormData.lNameSu.value;
+      const slname = giFormData.slName.value;
+      const slnamesu = giFormData.slNameSu.value;
       const sssn = giFormData.sSsn.value;
       const csssn = giFormData.csSsn.value;
       let sssnFbk = document.getElementById ("sssnFbk");
