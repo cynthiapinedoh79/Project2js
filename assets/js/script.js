@@ -47,9 +47,6 @@ function(){
       }
 
       /*Joint Information*/
-
-
-      
       const sfname = giFormData.sfName.value.trim();
           /*Get initial from spouse first name*/
           const sfnamei = sfname ? sfname.charAt(0).toUpperCase() : "";
@@ -116,26 +113,9 @@ function(){
       }
 
       /*Birth Date*/
-      function isYoungerThan18(dob){
 
-        const tdob = new Date (dob);
-        const today = new Date ();
 
-        const age = today.getFullYear() - dob.getFullYear();
-        const monthDiff = today.getMonth() - dob.getMonth();
-        const dayDiff = today.getDate() - dob.getDate();
 
-        if(age < 18 || (age ===18 && (monthDiff < 0 || (monthDiff === 0 && dayDiff <= 0)))
-        )
-          {
-            return true;
-          }
-          return false
-      }
-  
-      if (isYoungerThan18(dob)) {
-        dobFbk.innerText =`${fname} you are not older than 18`
-      }
 
     }
 

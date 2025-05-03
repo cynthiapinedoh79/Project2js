@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- font awesome and google fonts -->
+    <!-- font awesome and google fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -95,7 +95,7 @@
                             </div>
                             <div>
                                 <label for="lnamesu" class="form-label">Suffix</label>
-                                <select id="lnamesu" class="form-select form-control" name="lNameSu" required>
+                                <select id="lnamesu" class="form-select form-control" name="lNameSu">
                                     <option value="" selected>Select</option>
                                     <option>Miss</option>
                                     <option>Mrs.</option>
@@ -131,16 +131,15 @@
                         <script>
                             function displayJointInfo() {
                                 const jidiv = document.getElementById("j-info");
-                                jidiv.style.display = (jidiv.style.display === "none") || (jidiv.style.display ==="") ? "block" : "none";
-                              console.log("displayJointInfo function called!");
+                                jidiv.style.display = (jidiv.style.display === "none") || (jidiv.style.display === "") ?
+                                    "flex" : "none";
                             }
-                          </script>
+                        </script>
 
                         <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
                             here If filing a JOINT return, enter your spouse's Information</button>
 
                         <div id="j-info" class="container-fluid" style="display: none;">
-                            <p>hooolaaa</p>
                             <div>
                                 <label for="sfname" class="form-label">First Name</label>
                                 <input class="form-control" id="sfname" name="sfName" type="text">
@@ -159,7 +158,7 @@
 
                             <div>
                                 <label for="slnamesu" class="form-label">Suffix</label>
-                                <select id="slnamesu" class="form-select form-control" name="slNameSu" required>
+                                <select id="slnamesu" class="form-select form-control" name="slNameSu">
                                     <option value="" selected>Select</option>
                                     <option>Miss</option>
                                     <option>Mrs.</option>
@@ -318,6 +317,33 @@
                                         required!</span></label>
                                 <input class="form-control" id="dob" name="doB" type="date" required>
                                 <p id="dobFbk"></p>
+                                <script>
+                                    function isUnde18() {
+                                        const dobString = document.getElementById("dob").value;
+                                        if (!dobString) {
+                                            dobFbk.innerText = `Invalid date`;
+                                            return;
+                                        }
+        
+                                        //Convert the string to a Date object
+                                        const dob = new Date(dobString);
+                                        const today = new Date();
+                                        //Calculate the age
+                                        let age = today.getFullYear() - dob.getFullYear();
+                                        const monthDiff = today.getMonth() - dob.getMonth();
+                                        const dayDiff = today.getDate() - dob.getDate();
+        
+                                        //Check if the birthday has not occurred yet this year
+                                        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                                            age--;
+                                        }
+                                        const rAge = age < 18 ? true : false;
+                                        if (rAge) {
+                                            dobFbk.innerText = `Age < 18`;
+                                        }
+                                    }
+                                </script>
+                                <button onclick="isUnder18()" id="vage">Verify Age</button>
                             </div>
                             <div>
 
@@ -345,8 +371,17 @@
 
                     <fieldset>
                         <legend>Foreign Address</legend>
+                        <script>
+                            function fAddInfo() {
+                                const fadiv = document.getElementById("f-address");
+                                fadiv.style.display = (fadiv.style.display === "none") || (fadiv.style.display === "") ?
+                                    "flex" : "none";
+                            }
+                        </script>
 
-                        <div class="container-fluid" id="f-address">
+                        <button onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
+
+                        <div class="container-fluid" id="f-address" style="display: none;">
 
                             <div>
                                 <label for="faddress" class="form-label">Forein Street Address</label>
@@ -865,433 +900,427 @@
                             <p><strong>EXEMPTIONS</strong></p>
                         </div>
 
-                            <div id="exemp" class="box container-fluid">
-                                <p>a</p>
+                        <div id="exemp" class="box container-fluid">
+                            <p>a</p>
 
-                                <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                        type="checkbox" value="" id="checkDefault">Yourself</label>
-
-
-                                <p>b</p>
-                                <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                        type="checkbox" value="" id="checkDefault">Spouse</label>
+                            <label class="form-check-label" for="checkDefault"><input class="form-check-input"
+                                    type="checkbox" value="" id="checkDefault">Yourself</label>
 
 
-
-                                <label class="form-check-label" for="checkDefault">Number of boxes checked on 6a and
-                                    6b<input class="form-control" id="nbxc" name="nbxc" type="number"></label>
-
-                            </div>
-                            <div id="chk-if" class="box container-fluid">
-
-                                <p>Check if</p>
-
-                                <fieldset>
-                                    <div class="box container-fluid">
-
-                                        <p>(a)</p>
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="checkDefault">You can be
-                                                claimed on
-                                                another
-                                                person's return <input class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault">
-
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <div class="box container-fluid">
-
-                                        <p>(b)</p>
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="checkDefault">Filing status 2
-                                                and
-                                                spouse
-                                                can be claimed on another's person;s return <input
-                                                    class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault"></label>
-
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <div class="box container-fluid">
-
-                                        <p>(c)</p>
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="checkDefault">You are using
-                                                filing
-                                                status 4
-                                                and claiminng nonresident alien spouse <input class="form-check-input"
-                                                    type="checkbox" value="" id="checkDefault"></label>
-                                        </div>
-                                        <div class="container-fluid" id="j-info">
-                                            <div class="form-check">
-                                                <label for="s4-sfname" class="form-label">First Name<span>
-                                                        required!</span></label>
-                                                <input class="form-control" id="s4-sfname" name="s4-sfname" type="text"
-                                                    required>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <label for="s4-slname" class="form-label">Last Name<span>
-                                                        required!</span></label>
-                                                <input class="form-control" id="s4-slname" name="s4-slname" type="text"
-                                                    required>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <label for="s4-sssn" class="form-label">SSN<span>
-                                                        required!</span></label>
-                                                <input class="form-control" id="s4-sssn" name="s4-sssn" type="number"
-                                                    required>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </fieldset>
-
-                            </div>
+                            <p>b</p>
+                            <label class="form-check-label" for="checkDefault"><input class="form-check-input"
+                                    type="checkbox" value="" id="checkDefault">Spouse</label>
 
 
-                            <div id="dp-ndp" class="box container-fluid">
 
-                                <p>c</p>
-                                <p><strong>DEPENDENTS / NON-DEPENDENTS</strong></p>
+                            <label class="form-check-label" for="checkDefault">Number of boxes checked on 6a and
+                                6b<input class="form-control" id="nbxc" name="nbxc" type="number"></label>
+
+                        </div>
+                        <div id="chk-if" class="box container-fluid">
+
+                            <p>Check if</p>
+
+                            <fieldset>
                                 <div class="box container-fluid">
+
+                                    <p>(a)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input
-                                                class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                            Check here to charge a flat
-                                            fee
-                                            for dependent instead of a fee per dependent.</label>
+                                        <label class="form-check-label" for="checkDefault">You can be
+                                            claimed on
+                                            another
+                                            person's return <input class="form-check-input" type="checkbox" value=""
+                                                id="checkDefault">
+
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="box container-fluid">
+
+                                    <p>(b)</p>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="checkDefault">Filing status 2
+                                            and
+                                            spouse
+                                            can be claimed on another's person;s return <input class="form-check-input"
+                                                type="checkbox" value="" id="checkDefault"></label>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="box container-fluid">
+
+                                    <p>(c)</p>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="checkDefault">You are using
+                                            filing
+                                            status 4
+                                            and claiminng nonresident alien spouse <input class="form-check-input"
+                                                type="checkbox" value="" id="checkDefault"></label>
+                                    </div>
+                                    <div class="container-fluid" id="j-info">
+                                        <div class="form-check">
+                                            <label for="s4-sfname" class="form-label">First Name<span>
+                                                    required!</span></label>
+                                            <input class="form-control" id="s4-sfname" name="s4-sfname" type="text"
+                                                required>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <label for="s4-slname" class="form-label">Last Name<span>
+                                                    required!</span></label>
+                                            <input class="form-control" id="s4-slname" name="s4-slname" type="text"
+                                                required>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <label for="s4-sssn" class="form-label">SSN<span>
+                                                    required!</span></label>
+                                            <input class="form-control" id="s4-sssn" name="s4-sssn" type="number"
+                                                required>
+                                        </div>
 
                                     </div>
 
-                                    <hr>
-                                    <p>The ODC column indicates that the dependent qualifies for the credit for
-                                        other
-                                        dependents.
-                                    </p>
-                                    <p>If a dependent's social security card says "Not Valid for Employment", that
-                                        dependent is not
-                                        eligeble for the child tax credit.</p>
-                                    <p>If the CTC box is marked for a dependent with the type of social security
-                                        card,
-                                        overrite the
-                                        CTC checkbox and uncheck the box.</p>
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+
+                        <div id="dp-ndp" class="box container-fluid">
+
+                            <p>c</p>
+                            <p><strong>DEPENDENTS / NON-DEPENDENTS</strong></p>
+                            <div class="box container-fluid">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
+                                            type="checkbox" value="" id="checkDefault">
+                                        Check here to charge a flat
+                                        fee
+                                        for dependent instead of a fee per dependent.</label>
+
                                 </div>
 
-                                    <div id="dp-ndp" class="box container-fluid">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-bordered">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>First Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>Date of bird</th>
-                                                        <th>Age</th>
-                                                        <th>SSN</th>
-                                                        <th>Relation to you</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>1</th>
-                                                        <td><input class="form-control" id="dfname" name="dfname"
-                                                                type="text"></td>
-                                                        <td><input class="form-control" id="dlname" name="dlname"
-                                                                type="text"></td>
-                                                        <td><input class="form-control" id="ddob" name="ddob"
-                                                                type="date"></td>
-                                                        <td><input class="form-control" id="dage" name="dage"
-                                                                type="number"></td>
-                                                        <td><input class="form-control" id="dssn" name="dssn"
-                                                                type="number"></td>
-                                                        <td><input class="form-control" id="drelation" name="drelation"
-                                                                type="text">
-                                                        </td>
-
-                                                    </tr>
-                                                    <th>2</th>
-                                                    <td><input class="form-control" id="dfname" name="dfname"
-                                                            type="text"></td>
-                                                    <td><input class="form-control" id="dlname" name="dlname"
-                                                            type="text"></td>
-                                                    <td><input class="form-control" id="ddob" name="ddob" type="date">
-                                                    </td>
-                                                    <td><input class="form-control" id="dage" name="dage" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="dssn" name="dssn" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="drelation" name="drelation"
-                                                            type="text">
-                                                    </td>
-
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table table-hover table-bordered">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Mos in home</th>
-                                                        <th>Code</th>
-                                                        <th>DC</th>
-                                                        <th>EIC</th>
-                                                        <th>CTC</th>
-                                                        <th>ODC</th>
-                                                        <th>Identity theft PIN</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>1</th>
-                                                        <td><input class="form-control" id="dmih" name="dmih"
-                                                                type="number"></td>
-                                                        <td><input class="form-control" id="dcode" name="dcode"
-                                                                type="number"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-check-input" type="checkbox" value=""
-                                                                id="checkDefault"></td>
-                                                        <td><input class="form-control" id="ditpin" name="ditpin"
-                                                                type="number"></td>
-                                                    </tr>
-                                                    <th>2</th>
-                                                    <td><input class="form-control" id="dmih" name="dmih" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="dcode" name="dcode"
-                                                            type="number">
-                                                    </td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""
-                                                            id="checkDefault"></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""
-                                                            id="checkDefault"></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""
-                                                            id="checkDefault"></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""
-                                                            id="checkDefault"></td>
-                                                    <td><input class="form-control" id="ditpin" name="ditpin"
-                                                            type="number"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-
-
-                                <fieldset>
-                                    <div id="stol" class="box container-fluid">
-                                        <label for="dsol" class="form-label">State of living</label>
-                                        <select id="dsol" class="form-select form-control" name="dsol">
-                                            <option value="" selected>Select</option>
-                                            <option>AL</option>
-                                            <option>AK</option>
-                                            <option>AZ</option>
-                                            <option>AR</option>
-                                            <option>CA</option>
-                                            <option>CO</option>
-                                            <option>CT</option>
-                                            <option>DE</option>
-                                            <option>FL</option>
-                                            <option>GA</option>
-                                            <option>HI</option>
-                                            <option>ID</option>
-                                            <option>IL</option>
-                                            <option>IN</option>
-                                            <option>IA</option>
-                                            <option>KS</option>
-                                            <option>KY</option>
-                                            <option>LA</option>
-                                            <option>ME</option>
-                                            <option>MD</option>
-                                            <option>MA</option>
-                                            <option>MI</option>
-                                            <option>MN</option>
-                                            <option>MS</option>
-                                            <option>MO</option>
-                                            <option>MT</option>
-                                            <option>NE</option>
-                                            <option>NV</option>
-                                            <option>NH</option>
-                                            <option>NJ</option>
-                                            <option>NM</option>
-                                            <option>NY</option>
-                                            <option>NC</option>
-                                            <option>ND</option>
-                                            <option>OH</option>
-                                            <option>OK</option>
-                                            <option>OR</option>
-                                            <option>PA</option>
-                                            <option>RI</option>
-                                            <option>SC</option>
-                                            <option>SD</option>
-                                            <option>TN</option>
-                                            <option>TX</option>
-                                            <option>UT</option>
-                                            <option>VT</option>
-                                            <option>VA</option>
-                                            <option>WA</option>
-                                            <option>WV</option>
-                                            <option>WI</option>
-                                            <option>WY</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <p>Did you live in more than one states?
-                                        Which</p>
-                                    <div id="dmsol" class="box container-fluid">
-                                        <label for="dm1sol" class="form-label"></label>
-                                        <select id="dm1sol" class="form-select form-control" name="dm1sol">
-                                            <option value="" selected>Select</option>
-                                            <option>AL</option>
-                                            <option>AK</option>
-                                            <option>AZ</option>
-                                            <option>AR</option>
-                                            <option>CA</option>
-                                            <option>CO</option>
-                                            <option>CT</option>
-                                            <option>DE</option>
-                                            <option>FL</option>
-                                            <option>GA</option>
-                                            <option>HI</option>
-                                            <option>ID</option>
-                                            <option>IL</option>
-                                            <option>IN</option>
-                                            <option>IA</option>
-                                            <option>KS</option>
-                                            <option>KY</option>
-                                            <option>LA</option>
-                                            <option>ME</option>
-                                            <option>MD</option>
-                                            <option>MA</option>
-                                            <option>MI</option>
-                                            <option>MN</option>
-                                            <option>MS</option>
-                                            <option>MO</option>
-                                            <option>MT</option>
-                                            <option>NE</option>
-                                            <option>NV</option>
-                                            <option>NH</option>
-                                            <option>NJ</option>
-                                            <option>NM</option>
-                                            <option>NY</option>
-                                            <option>NC</option>
-                                            <option>ND</option>
-                                            <option>OH</option>
-                                            <option>OK</option>
-                                            <option>OR</option>
-                                            <option>PA</option>
-                                            <option>RI</option>
-                                            <option>SC</option>
-                                            <option>SD</option>
-                                            <option>TN</option>
-                                            <option>TX</option>
-                                            <option>UT</option>
-                                            <option>VT</option>
-                                            <option>VA</option>
-                                            <option>WA</option>
-                                            <option>WV</option>
-                                            <option>WI</option>
-                                            <option>WY</option>
-                                        </select>
-                                        <label for="dm2sol" class="form-label">,</span></label>
-                                        <select id="dm2sol" class="form-select form-control" name="dm2sol">
-                                            <option value="" selected>Select</option>
-                                            <option>AL</option>
-                                            <option>AK</option>
-                                            <option>AZ</option>
-                                            <option>AR</option>
-                                            <option>CA</option>
-                                            <option>CO</option>
-                                            <option>CT</option>
-                                            <option>DE</option>
-                                            <option>FL</option>
-                                            <option>GA</option>
-                                            <option>HI</option>
-                                            <option>ID</option>
-                                            <option>IL</option>
-                                            <option>IN</option>
-                                            <option>IA</option>
-                                            <option>KS</option>
-                                            <option>KY</option>
-                                            <option>LA</option>
-                                            <option>ME</option>
-                                            <option>MD</option>
-                                            <option>MA</option>
-                                            <option>MI</option>
-                                            <option>MN</option>
-                                            <option>MS</option>
-                                            <option>MO</option>
-                                            <option>MT</option>
-                                            <option>NE</option>
-                                            <option>NV</option>
-                                            <option>NH</option>
-                                            <option>NJ</option>
-                                            <option>NM</option>
-                                            <option>NY</option>
-                                            <option>NC</option>
-                                            <option>ND</option>
-                                            <option>OH</option>
-                                            <option>OK</option>
-                                            <option>OR</option>
-                                            <option>PA</option>
-                                            <option>RI</option>
-                                            <option>SC</option>
-                                            <option>SD</option>
-                                            <option>TN</option>
-                                            <option>TX</option>
-                                            <option>UT</option>
-                                            <option>VT</option>
-                                            <option>VA</option>
-                                            <option>WA</option>
-                                            <option>WV</option>
-                                            <option>WI</option>
-                                            <option>WY</option>
-                                        </select>
-
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <div class="box container-fluid">
-                                        <p>Attach SSN copy and valid ID in US</p>
-
-                                        <div id="atti" class="box container-fluid">
-                                            <div id="uploadSSN">
-                                                <label for="ssnPhoto">Upload your SSN copy:</label>
-                                                <br><br>
-                                                <input type="file" id="ssnPhoto" name="ssnPhoto" accept="image/*">
-                                                <br>
-                                                <img id="ssnPreview" src="#" alt="Image Preview"
-                                                    style="display:none; width: 200px; height: auto;">
-                                            </div>
-                                            <div id="uploadId">
-                                                <label for="idPhoto">Upload your ID copy:</label>
-                                                <br><br>
-                                                <input type="file" id="idPhoto" name="idPhoto" accept="image/*">
-                                                <br>
-                                                <img id="idPreview" src="#" alt="Image Preview"
-                                                    style="display:none; width: 200px; height: auto;">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </fieldset>
-
+                                <hr>
+                                <p>The ODC column indicates that the dependent qualifies for the credit for
+                                    other
+                                    dependents.
+                                </p>
+                                <p>If a dependent's social security card says "Not Valid for Employment", that
+                                    dependent is not
+                                    eligeble for the child tax credit.</p>
+                                <p>If the CTC box is marked for a dependent with the type of social security
+                                    card,
+                                    overrite the
+                                    CTC checkbox and uncheck the box.</p>
                             </div>
+
+                            <div id="dp-ndp" class="box container-fluid">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Date of bird</th>
+                                                <th>Age</th>
+                                                <th>SSN</th>
+                                                <th>Relation to you</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td><input class="form-control" id="dfname" name="dfname" type="text">
+                                                </td>
+                                                <td><input class="form-control" id="dlname" name="dlname" type="text">
+                                                </td>
+                                                <td><input class="form-control" id="ddob" name="ddob" type="date"></td>
+                                                <td><input class="form-control" id="dage" name="dage" type="number">
+                                                </td>
+                                                <td><input class="form-control" id="dssn" name="dssn" type="number">
+                                                </td>
+                                                <td><input class="form-control" id="drelation" name="drelation"
+                                                        type="text">
+                                                </td>
+
+                                            </tr>
+                                            <th>2</th>
+                                            <td><input class="form-control" id="dfname" name="dfname" type="text"></td>
+                                            <td><input class="form-control" id="dlname" name="dlname" type="text"></td>
+                                            <td><input class="form-control" id="ddob" name="ddob" type="date">
+                                            </td>
+                                            <td><input class="form-control" id="dage" name="dage" type="number">
+                                            </td>
+                                            <td><input class="form-control" id="dssn" name="dssn" type="number">
+                                            </td>
+                                            <td><input class="form-control" id="drelation" name="drelation" type="text">
+                                            </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-hover table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Mos in home</th>
+                                                <th>Code</th>
+                                                <th>DC</th>
+                                                <th>EIC</th>
+                                                <th>CTC</th>
+                                                <th>ODC</th>
+                                                <th>Identity theft PIN</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td><input class="form-control" id="dmih" name="dmih" type="number">
+                                                </td>
+                                                <td><input class="form-control" id="dcode" name="dcode" type="number">
+                                                </td>
+                                                <td><input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault"></td>
+                                                <td><input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault"></td>
+                                                <td><input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault"></td>
+                                                <td><input class="form-check-input" type="checkbox" value=""
+                                                        id="checkDefault"></td>
+                                                <td><input class="form-control" id="ditpin" name="ditpin" type="number">
+                                                </td>
+                                            </tr>
+                                            <th>2</th>
+                                            <td><input class="form-control" id="dmih" name="dmih" type="number">
+                                            </td>
+                                            <td><input class="form-control" id="dcode" name="dcode" type="number">
+                                            </td>
+                                            <td><input class="form-check-input" type="checkbox" value=""
+                                                    id="checkDefault"></td>
+                                            <td><input class="form-check-input" type="checkbox" value=""
+                                                    id="checkDefault"></td>
+                                            <td><input class="form-check-input" type="checkbox" value=""
+                                                    id="checkDefault"></td>
+                                            <td><input class="form-check-input" type="checkbox" value=""
+                                                    id="checkDefault"></td>
+                                            <td><input class="form-control" id="ditpin" name="ditpin" type="number">
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                            <fieldset>
+                                <div id="stol" class="box container-fluid">
+                                    <label for="dsol" class="form-label">State of living</label>
+                                    <select id="dsol" class="form-select form-control" name="dsol">
+                                        <option value="" selected>Select</option>
+                                        <option>AL</option>
+                                        <option>AK</option>
+                                        <option>AZ</option>
+                                        <option>AR</option>
+                                        <option>CA</option>
+                                        <option>CO</option>
+                                        <option>CT</option>
+                                        <option>DE</option>
+                                        <option>FL</option>
+                                        <option>GA</option>
+                                        <option>HI</option>
+                                        <option>ID</option>
+                                        <option>IL</option>
+                                        <option>IN</option>
+                                        <option>IA</option>
+                                        <option>KS</option>
+                                        <option>KY</option>
+                                        <option>LA</option>
+                                        <option>ME</option>
+                                        <option>MD</option>
+                                        <option>MA</option>
+                                        <option>MI</option>
+                                        <option>MN</option>
+                                        <option>MS</option>
+                                        <option>MO</option>
+                                        <option>MT</option>
+                                        <option>NE</option>
+                                        <option>NV</option>
+                                        <option>NH</option>
+                                        <option>NJ</option>
+                                        <option>NM</option>
+                                        <option>NY</option>
+                                        <option>NC</option>
+                                        <option>ND</option>
+                                        <option>OH</option>
+                                        <option>OK</option>
+                                        <option>OR</option>
+                                        <option>PA</option>
+                                        <option>RI</option>
+                                        <option>SC</option>
+                                        <option>SD</option>
+                                        <option>TN</option>
+                                        <option>TX</option>
+                                        <option>UT</option>
+                                        <option>VT</option>
+                                        <option>VA</option>
+                                        <option>WA</option>
+                                        <option>WV</option>
+                                        <option>WI</option>
+                                        <option>WY</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <p>Did you live in more than one states?
+                                    Which</p>
+                                <div id="dmsol" class="box container-fluid">
+                                    <label for="dm1sol" class="form-label"></label>
+                                    <select id="dm1sol" class="form-select form-control" name="dm1sol">
+                                        <option value="" selected>Select</option>
+                                        <option>AL</option>
+                                        <option>AK</option>
+                                        <option>AZ</option>
+                                        <option>AR</option>
+                                        <option>CA</option>
+                                        <option>CO</option>
+                                        <option>CT</option>
+                                        <option>DE</option>
+                                        <option>FL</option>
+                                        <option>GA</option>
+                                        <option>HI</option>
+                                        <option>ID</option>
+                                        <option>IL</option>
+                                        <option>IN</option>
+                                        <option>IA</option>
+                                        <option>KS</option>
+                                        <option>KY</option>
+                                        <option>LA</option>
+                                        <option>ME</option>
+                                        <option>MD</option>
+                                        <option>MA</option>
+                                        <option>MI</option>
+                                        <option>MN</option>
+                                        <option>MS</option>
+                                        <option>MO</option>
+                                        <option>MT</option>
+                                        <option>NE</option>
+                                        <option>NV</option>
+                                        <option>NH</option>
+                                        <option>NJ</option>
+                                        <option>NM</option>
+                                        <option>NY</option>
+                                        <option>NC</option>
+                                        <option>ND</option>
+                                        <option>OH</option>
+                                        <option>OK</option>
+                                        <option>OR</option>
+                                        <option>PA</option>
+                                        <option>RI</option>
+                                        <option>SC</option>
+                                        <option>SD</option>
+                                        <option>TN</option>
+                                        <option>TX</option>
+                                        <option>UT</option>
+                                        <option>VT</option>
+                                        <option>VA</option>
+                                        <option>WA</option>
+                                        <option>WV</option>
+                                        <option>WI</option>
+                                        <option>WY</option>
+                                    </select>
+                                    <label for="dm2sol" class="form-label">,</span></label>
+                                    <select id="dm2sol" class="form-select form-control" name="dm2sol">
+                                        <option value="" selected>Select</option>
+                                        <option>AL</option>
+                                        <option>AK</option>
+                                        <option>AZ</option>
+                                        <option>AR</option>
+                                        <option>CA</option>
+                                        <option>CO</option>
+                                        <option>CT</option>
+                                        <option>DE</option>
+                                        <option>FL</option>
+                                        <option>GA</option>
+                                        <option>HI</option>
+                                        <option>ID</option>
+                                        <option>IL</option>
+                                        <option>IN</option>
+                                        <option>IA</option>
+                                        <option>KS</option>
+                                        <option>KY</option>
+                                        <option>LA</option>
+                                        <option>ME</option>
+                                        <option>MD</option>
+                                        <option>MA</option>
+                                        <option>MI</option>
+                                        <option>MN</option>
+                                        <option>MS</option>
+                                        <option>MO</option>
+                                        <option>MT</option>
+                                        <option>NE</option>
+                                        <option>NV</option>
+                                        <option>NH</option>
+                                        <option>NJ</option>
+                                        <option>NM</option>
+                                        <option>NY</option>
+                                        <option>NC</option>
+                                        <option>ND</option>
+                                        <option>OH</option>
+                                        <option>OK</option>
+                                        <option>OR</option>
+                                        <option>PA</option>
+                                        <option>RI</option>
+                                        <option>SC</option>
+                                        <option>SD</option>
+                                        <option>TN</option>
+                                        <option>TX</option>
+                                        <option>UT</option>
+                                        <option>VT</option>
+                                        <option>VA</option>
+                                        <option>WA</option>
+                                        <option>WV</option>
+                                        <option>WI</option>
+                                        <option>WY</option>
+                                    </select>
+
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="box container-fluid">
+                                    <p>Attach SSN copy and valid ID in US</p>
+
+                                    <div id="atti" class="box container-fluid">
+                                        <div id="uploadSSN">
+                                            <label for="ssnPhoto">Upload your SSN copy:</label>
+                                            <br><br>
+                                            <input type="file" id="ssnPhoto" name="ssnPhoto" accept="image/*">
+                                            <br>
+                                            <img id="ssnPreview" src="#" alt="Image Preview"
+                                                style="display:none; width: 200px; height: auto;">
+                                        </div>
+                                        <div id="uploadId">
+                                            <label for="idPhoto">Upload your ID copy:</label>
+                                            <br><br>
+                                            <input type="file" id="idPhoto" name="idPhoto" accept="image/*">
+                                            <br>
+                                            <img id="idPreview" src="#" alt="Image Preview"
+                                                style="display:none; width: 200px; height: auto;">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+
+                        </div>
                     </fieldset>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
             </div>
