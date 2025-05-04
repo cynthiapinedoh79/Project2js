@@ -126,8 +126,9 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Joint Information</legend>
+                    <fieldset >
+                        <legend id="b-legend-left">Joint Information</legend>
+                        <div>
                         <script>
                             function displayJointInfo() {
                                 const jidiv = document.getElementById("j-info");
@@ -135,62 +136,61 @@
                                     "flex" : "none";
                             }
                         </script>
+                        
+                            <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
+                                here If filing a JOINT return, enter your spouse's Information</button>
 
-                        <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
-                            here If filing a JOINT return, enter your spouse's Information</button>
+                            <div id="j-info" class="container-fluid" style="display: none;">
+                                <div>
+                                    <label for="sfname" class="form-label">First Name</label>
+                                    <input class="form-control" id="sfname" name="sfName" type="text">
+                                    <p id="sfnameFbk"></p>
+                                </div>
 
-                        <div id="j-info" class="container-fluid" style="display: none;">
-                            <div>
-                                <label for="sfname" class="form-label">First Name</label>
-                                <input class="form-control" id="sfname" name="sfName" type="text">
-                                <p id="sfnameFbk"></p>
-                            </div>
+                                <div>
+                                    <label for="sfnamei" class="form-label">Initial</label>
+                                    <input class="form-control" id="sfnamei" name="sfNameI" type="text" readonly>
+                                </div>
 
-                            <div>
-                                <label for="sfnamei" class="form-label">Initial</label>
-                                <input class="form-control" id="sfnamei" name="sfNameI" type="text" readonly>
-                            </div>
+                                <div>
+                                    <label for="slname" class="form-label">Last Name</label>
+                                    <input class="form-control" id="slname" name="slName" type="text">
+                                </div>
 
-                            <div>
-                                <label for="slname" class="form-label">Last Name</label>
-                                <input class="form-control" id="slname" name="slName" type="text">
-                            </div>
+                                <div>
+                                    <label for="slnamesu" class="form-label">Suffix</label>
+                                    <select id="slnamesu" class="form-select form-control" name="slNameSu">
+                                        <option value="" selected>Select</option>
+                                        <option>Miss</option>
+                                        <option>Mrs.</option>
+                                        <option>Ms.</option>
+                                        <option>Jr.</option>
+                                        <option>Sr.</option>
+                                        <option>Mr.</option>
+                                        <option>I</option>
+                                        <option>II</option>
+                                        <option>III</option>
+                                    </select>
+                                </div>
 
-                            <div>
-                                <label for="slnamesu" class="form-label">Suffix</label>
-                                <select id="slnamesu" class="form-select form-control" name="slNameSu">
-                                    <option value="" selected>Select</option>
-                                    <option>Miss</option>
-                                    <option>Mrs.</option>
-                                    <option>Ms.</option>
-                                    <option>Jr.</option>
-                                    <option>Sr.</option>
-                                    <option>Mr.</option>
-                                    <option>I</option>
-                                    <option>II</option>
-                                    <option>III</option>
-                                </select>
-                            </div>
+                                <div>
+                                    <label for="sssn" class="form-label">SSN</label>
+                                    <input class="form-control" id="sssn" name="sSsn" type="number">
+                                    <p id="sssnFbk"></p>
+                                </div>
+                                <div>
+                                    <label for="csssn" class="form-label">Confirm SSN</label>
+                                    <input class="form-control" id="csssn" name="csSsn" type="number">
+                                    <p id="csssnFbk"></p>
+                                </div>
 
-                            <div>
-                                <label for="sssn" class="form-label">SSN</label>
-                                <input class="form-control" id="sssn" name="sSsn" type="number">
-                                <p id="sssnFbk"></p>
+                                <div>
+                                    <label for="semail" class="form-label">Spouse Email</label>
+                                    <input class="form-control" id="semail" name="sEmail" type="email">
+                                    <p id="semailFbk"></p>
+                                </div>
                             </div>
-                            <div>
-                                <label for="csssn" class="form-label">Confirm SSN</label>
-                                <input class="form-control" id="csssn" name="csSsn" type="number">
-                                <p id="csssnFbk"></p>
-                            </div>
-
-                            <div>
-                                <label for="semail" class="form-label">Spouse Email</label>
-                                <input class="form-control" id="semail" name="sEmail" type="email">
-                                <p id="semailFbk"></p>
-                            </div>
-                            <div>
-
-                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset>
@@ -371,7 +371,8 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Foreign Address</legend>
+                        <legend id="b-legend-left">Foreign Address</legend>
+                        <div>
                         <script>
                             function fAddInfo() {
                                 const fadiv = document.getElementById("f-address");
@@ -379,34 +380,35 @@
                                     "flex" : "none";
                             }
                         </script>
+                        
+                            <button onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
 
-                        <button onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
+                            <div class="container-fluid" id="f-address" style="display: none;">
 
-                        <div class="container-fluid" id="f-address" style="display: none;">
-
-                            <div>
-                                <label for="faddress" class="form-label">Forein Street Address</label>
-                                <input class="form-control" id="faddress" name="faddress" type="text">
-                            </div>
-                            <div>
-                                <label for="fzipcode" class="form-label">Forein Zip Code</label>
-                                <input class="form-control" id="fzipcode" name="fzipcode" type="number">
-                            </div>
-                            <div>
-                                <label for="fcity" class="form-label">City</label>
-                                <input class="form-control" id="fcity" name="fcity" type="text">
-                            </div>
-                            <div>
-                                <label for="fstate" class="form-label">State</label>
-                                <input class="form-control" id="fstate" name="fstate" type="text">
-                            </div>
-                            <div>
-                                <label for="fcountry" class="form-label">Forein Country</label>
-                                <input class="form-control" id="fcountry" name="fcountry" type="text">
-                            </div>
-                            <div>
-                                <label for="fphone" class="form-label">Forein Phone</label>
-                                <input class="form-control" id="fphone" name="fphone" type="number">
+                                <div>
+                                    <label for="faddress" class="form-label">Forein Street Address</label>
+                                    <input class="form-control" id="faddress" name="faddress" type="text">
+                                </div>
+                                <div>
+                                    <label for="fzipcode" class="form-label">Forein Zip Code</label>
+                                    <input class="form-control" id="fzipcode" name="fzipcode" type="number">
+                                </div>
+                                <div>
+                                    <label for="fcity" class="form-label">City</label>
+                                    <input class="form-control" id="fcity" name="fcity" type="text">
+                                </div>
+                                <div>
+                                    <label for="fstate" class="form-label">State</label>
+                                    <input class="form-control" id="fstate" name="fstate" type="text">
+                                </div>
+                                <div>
+                                    <label for="fcountry" class="form-label">Forein Country</label>
+                                    <input class="form-control" id="fcountry" name="fcountry" type="text">
+                                </div>
+                                <div>
+                                    <label for="fphone" class="form-label">Forein Phone</label>
+                                    <input class="form-control" id="fphone" name="fphone" type="number">
+                                </div>
                             </div>
                         </div>
                     </fieldset>

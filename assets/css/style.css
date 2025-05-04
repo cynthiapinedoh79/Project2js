@@ -92,7 +92,7 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -133,7 +133,8 @@ form label {
     color: var(--primary-color);
     width: auto;
     padding: 2.5px;
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
     display: inline;
     position: relative;
 }
@@ -173,10 +174,12 @@ fieldset {
     width: 100%;
     margin-bottom:0.5rem;
     padding: 5px;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
     position: relative;
+    text-align: left;
+    justify-items: left;
+    align-content: left;
+    align-items: left;
+    vertical-align: middle;
 }
 
 #Fs fieldset{
@@ -212,6 +215,11 @@ legend {
     margin:0;
 }
 
+legend#b-legend-left{
+    width:130px;
+    margin:0;
+}
+
 select.form-select.form-control{
     border: 1px solid var(--primary-color);
     width: auto;
@@ -221,10 +229,18 @@ select#dsol.form-select.form-control{
     width: auto;
 }
 
-#j-info-btn, #fa-info-btn {
+#j-info-btn#j-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#j-info-btn.form-control, #fa-info-btn.form-control {
     background-color: var(--secondary-text-color);
     color: var(--secondary-color);
     font-size: 102%;
+    padding: 5px;
+    margin: 10px;
 }
 
 #j-info-btn:hover, #fa-info-btn:hover {
@@ -267,7 +283,7 @@ button#vage:hover {
     height: auto;
     width: 100%;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
     vertical-align: middle;
 }
