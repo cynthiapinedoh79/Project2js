@@ -79,8 +79,8 @@ button.btn.btn-primary {
 
 button.btn.btn-primary:hover {
     border: none;
-    background-color: var(--secondary-color);
-    color: var(--fifth-color);
+    background-color: var(--fifth-color);
+    color: var(--secondary-color);
     font-size: 120%;
 }
 
@@ -119,10 +119,6 @@ form {
     align-items: center;
 }
 
-fieldset div{
-    justify-items: left;
-}
-
 div.container-fluid {
     border: 1px solid var(--border-color);
     display: flex;
@@ -152,8 +148,6 @@ form label {
     position: relative;
 }
 
-
-
 .form-check-input[type=checkbox] {
     border: 1px solid var(--primary-color);
     margin-top: 0.25em;
@@ -182,14 +176,17 @@ fieldset {
     align-content: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 #Fs fieldset{
     background-color: var(--highlight-color-light);
+    display: flex;
 }
 
 #Ss fieldset{
     background-color: var(--highlight-color-light);
+    display: flex;
 }
 
 #Ts fieldset{
@@ -197,16 +194,22 @@ fieldset {
 }
 
 legend {
+    position: relative;
+    display: flex-start;
+    height:auto;
+    width:150px;
+    background-color: var(--highlight-color-light);
     text-transform: uppercase;
     border: none;
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--secondary-color);
     background-color: none;
-    font-size: large;
-    padding: 1px;
-    text-align: center;
-
+    font-size:medium;
+    text-align: left;
+    align-content: center;
+    padding: 10px;
+    margin:0;
 }
 
 select.form-select.form-control{
@@ -216,6 +219,18 @@ select.form-select.form-control{
 select#dsol.form-select.form-control{
     border: 1px solid var(--primary-color);
     width: auto;
+}
+
+#j-info-btn, #fa-info-btn {
+    background-color: var(--secondary-text-color);
+    color: var(--secondary-color);
+    font-size: 102%;
+}
+
+#j-info-btn:hover, #fa-info-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    font-size: 103%;
 }
 
 button#vage {
