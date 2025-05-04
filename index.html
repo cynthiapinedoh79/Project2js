@@ -70,7 +70,7 @@
     <section id="Fs" class="container section">
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
-                <h3 class="">Main Information Sheet</h3>
+                <h4 class="">Main Information Sheet</h4>
                 <form action="/submit-data" id="gi-form" action="success.html" method="get">
                     <fieldset>
                         <legend>General Information</legend>
@@ -424,7 +424,7 @@
     <section id="Ss" class="container section">
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
-                <h3>Taxpayer Information</h3>
+                <h4>Taxpayer Information</h4>
                 <form action="/submit-data" id="tpi-form" action="success.html" method="get">
 
                     <fieldset>
@@ -487,8 +487,10 @@
                                     No
                                 </label>
                             </div>
-                            <p>If "Yes", enter the amount of income excluded</p>
+                            
+                            
                             <div id="expr">
+                                <p>If "Yes", enter the amount of income excluded</p>
                                 <label for="expr" class="form-label"></label>
                                 <span class="input-group-text">$</span>
                                 <input class="form-control" id="expr" name="expr" type="number"
@@ -522,9 +524,9 @@
                             <div class="form-check" id="rrf">
                                 <p>If the return was rejected for F8962-070 (e-file database indicates that Form 8962 or
                                     a binary attachment with an explanation must be attached)</p>
-                                <p></p>
 
                                 <div>
+                                    <br>
                                     <label class="form-check-label" for="checkDefault"><input class="form-check-input"
                                             type="checkbox" value="" id="checkDefault">To attach a PDF with an
                                         explanation of why
@@ -635,7 +637,7 @@
     <section id="Ts" class="container section">
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
-                <h3>Filing Status and Exemptions</h3>
+                <h4>Filing Status and Exemptions</h4>
                 <form action="/submit-data" id="fsae" action="success.html" method="get">
 
                     <fieldset>
@@ -652,7 +654,6 @@
                         <div class="box container-fluid">
                             <p>2</p>
                             <div class="form-check">
-
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
                                         type="radio" name="radioDefault" id="radioDefault1" value="">Married filing
                                     jointly (even
@@ -666,7 +667,6 @@
                         <div id="mfs" class="box container-fluid">
                             <p>3</p>
                             <div class="form-check">
-
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
                                         type="radio" name="radioDefault" id="radioDefault1" value="">Married filing
                                     separately
@@ -916,8 +916,8 @@
 
 
 
-                            <label class="form-check-label" for="checkDefault">Number of boxes checked on 6a and
-                                6b<input class="form-control" id="nbxc" name="nbxc" type="number"></label>
+                            <label class="form-check-label" for="checkDefault"><input class="form-control" id="nbxc" name="nbxc" type="number">Number of boxes checked on 6a and
+                                6b</label>
 
                         </div>
                         <div id="chk-if" class="box container-fluid">
@@ -929,11 +929,11 @@
 
                                     <p>(a)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault">You can be
-                                            claimed on
-                                            another
-                                            person's return <input class="form-check-input" type="checkbox" value=""
-                                                id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input" type="checkbox" value=""
+                                                id="checkDefault">You can be
+                                                claimed on
+                                                another
+                                                person's return</label>
 
                                     </div>
                                 </div>
@@ -943,25 +943,24 @@
 
                                     <p>(b)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault">Filing status 2
-                                            and
-                                            spouse
-                                            can be claimed on another's person;s return <input class="form-check-input"
-                                                type="checkbox" value="" id="checkDefault"></label>
+                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input"
+                                                type="checkbox" value="" id="checkDefault">Filing status 2
+                                                and
+                                                spouse
+                                                can be claimed on another person's return </label>
 
                                     </div>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <div class="box container-fluid">
-
                                     <p>(c)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault">You are using
-                                            filing
-                                            status 4
-                                            and claiminng nonresident alien spouse <input class="form-check-input"
-                                                type="checkbox" value="" id="checkDefault"></label>
+                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input"
+                                                type="checkbox" value="" id="checkDefault">You are using
+                                                filing
+                                                status 4
+                                                and claiminng nonresident alien spouse </label>
                                     </div>
                                     <div class="container-fluid" id="j-info">
                                         <div class="form-check">
@@ -1007,7 +1006,6 @@
 
                                 </div>
 
-                                <hr>
                                 <p>The ODC column indicates that the dependent qualifies for the credit for
                                     other
                                     dependents.

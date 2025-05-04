@@ -14,9 +14,9 @@
 
     --highlight-color: #330582;
     --highlight-color-light: #1a006f1f;
-    --border-color: slategrey;
+    --border-input: #1a006f42;
+    --bgFbk-color: #f3eef2;
 }
-
 
 
 body {
@@ -42,7 +42,7 @@ h2
 }
 
 
-h3
+h4
 {
     color: var(--secondary-text-color);
     background-color: var(--primary-color);
@@ -66,10 +66,11 @@ p {
 
 
 button.btn.btn-primary {
+    border: none;
     width:fit-content;
     font-weight: bold;
-    color: white;
-    background-color: var(--primary-color);
+    color: var(--fifth-color);
+    background-color: var(--secondary-color);
     text-align: center;
     font-size: 110%;
     display:block;
@@ -122,6 +123,7 @@ form {
 div.container-fluid {
     border: 1px solid var(--border-color);
     display: flex;
+    align-items: center;
     vertical-align: middle;
     margin: 0;
     padding: 5px;
@@ -140,7 +142,7 @@ form label {
 }
 
 .form-check-input[type=radio] {
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
     margin-left: 0.1em;
     margin-right: 0.1em;
     margin-top: 0.25em;
@@ -150,7 +152,7 @@ form label {
 }
 
 .form-check-input[type=checkbox] {
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
     margin-top: 0.25em;
     margin-left: 0.1em;
     margin-right: 0.1em;
@@ -158,13 +160,18 @@ form label {
     display: inline;
 }
 
+.form-check-input:checked {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
 input.form-control {
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
 }
 
 input#expr.form-control {
     width: 75px;
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
 }
 
 fieldset {
@@ -177,9 +184,14 @@ fieldset {
     position: relative;
     text-align: left;
     justify-items: left;
-    align-content: left;
+    align-content: center;
     align-items: left;
     vertical-align: middle;
+}
+
+fieldset div {
+    align-content: center;
+    align-items: left;
 }
 
 #Fs fieldset{
@@ -200,7 +212,8 @@ legend {
     position: relative;
     display: flex-start;
     height:auto;
-    width:150px;
+    max-width: 130px;
+    min-width: 130px;
     background-color: var(--highlight-color-light);
     text-transform: uppercase;
     border: none;
@@ -216,48 +229,60 @@ legend {
 }
 
 legend#b-legend-left{
-    width:130px;
+    max-width: 130px;
+    min-width: 130px;
     margin:0;
+    align-items: center;
 }
 
 select.form-select.form-control{
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
     width: auto;
+    font-size: smaller;
 }
 select#dsol.form-select.form-control{
-    border: 1px solid var(--highlight-color-light);
+    border: 1px solid var(--border-input);
     width: auto;
+    font-size: smaller;
 }
 
-#j-info-btn#j-info{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+input.form-control[type="date"] {
+    font-size: smaller;
 }
 
 #j-info-btn.form-control, #fa-info-btn.form-control {
-    border: 1px solid var(--highlight-color-light);
-    background-color: var(--secondary-text-color);
+    border: 1px solid var(--border-input);
+    background-color: var(--bgFbk-color);
     color: var(--secondary-color);
     font-size: 102%;
     padding: 5px;
     margin: 5px;
+    align-content: center;
 }
 
 #j-info-btn:hover, #fa-info-btn:hover {
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
-    font-size: 103%;
+    font-size: 110%;
 }
 
 button#vage {
 border: none;
-color: var(--primary-text-color);
+color: var(--third-color);
+background-color: var(--bgFbk-color);
+font-size: small;
+font-weight: 550;
+padding: 0.1rem;
+text-align: center;
 }
 
 button#vage:hover {
-    color: var(--primary-color);
-    font-size: 120%;
+border: none;
+color: var(--bgFbk-color);
+background-color: var(--third-color);
+text-align: center;
+font-size: smaller;
+font-weight: 600;
 }
 
 
@@ -292,6 +317,26 @@ button#vage:hover {
 span {
     color: #b60101;
     font-size: smaller;
+}
+/*Feedback paragraphs*/
+#fnameFbk, #mnameiFbk, #ssnFbk, #cssnFbk, #emailFbk, #phoneFbk, #zipFbk, #dobFbk {
+    color: var(--fourth-color);
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
+}
+
+#sfnameFbk, #smnameiFbk, #sssnFbk, #csssnFbk, #semailFbk, #sphoneFbk, #sdobFbk {
+    color: var(--fourth-color);
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
 }
 
 #success a.btn.btn-primary.mb-5 {
@@ -382,7 +427,7 @@ table{
 
 .table{
     --bs-table-bg:none;
-    border:  1px solid var(--highlight-color-light);
+    border:  1px solid var(--border-input);
 }
 
 .table-light{
@@ -391,7 +436,7 @@ table{
 }
 
 th{
-    border:  1px solid var(--highlight-color-light);
+    border:  1px solid var(--border-input);
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--primary-color);
@@ -402,7 +447,7 @@ th{
     text-transform: uppercase;
 }
 td{
-    border:  1px solid var(--highlight-color-light);
+    border:  1px solid var(--border-input);
     font-size: smaller;
     padding: 1px;
     text-align: center;
