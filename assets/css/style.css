@@ -140,7 +140,7 @@ form label {
 }
 
 .form-check-input[type=radio] {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color-light);
     margin-left: 0.1em;
     margin-right: 0.1em;
     margin-top: 0.25em;
@@ -150,7 +150,7 @@ form label {
 }
 
 .form-check-input[type=checkbox] {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color-light);
     margin-top: 0.25em;
     margin-left: 0.1em;
     margin-right: 0.1em;
@@ -159,12 +159,12 @@ form label {
 }
 
 input.form-control {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--highlight-color-light);
 }
 
 input#expr.form-control {
     width: 75px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--highlight-color-light);
 }
 
 fieldset {
@@ -221,11 +221,11 @@ legend#b-legend-left{
 }
 
 select.form-select.form-control{
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color-light);
     width: auto;
 }
 select#dsol.form-select.form-control{
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color-light);
     width: auto;
 }
 
@@ -236,11 +236,12 @@ select#dsol.form-select.form-control{
 }
 
 #j-info-btn.form-control, #fa-info-btn.form-control {
+    border: 1px solid var(--highlight-color-light);
     background-color: var(--secondary-text-color);
     color: var(--secondary-color);
     font-size: 102%;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
 }
 
 #j-info-btn:hover, #fa-info-btn:hover {
@@ -381,26 +382,27 @@ table{
 
 .table{
     --bs-table-bg:none;
-    border:  1px solid var(--primary-color);
+    border:  1px solid var(--highlight-color-light);
 }
 
 .table-light{
-    --bs-table-color: var(--secondary-text-color);
-    --bs-table-bg:var(--primary-color);
+    --bs-table-color: var(--primary-color);
+    --bs-table-bg:var(--highlight-color-light);
 }
 
 th{
-    border:  1px solid var(--primary-color);
+    border:  1px solid var(--highlight-color-light);
     font-family: var(--secondary-font);
     font-weight: 600;
-    color: var(--primary-text-color);
+    color: var(--primary-color);
     font-size: smaller;
     padding: 5px;
     text-align: center;
-    background-color: none  ;
+    background-color: none;
     text-transform: uppercase;
 }
 td{
+    border:  1px solid var(--highlight-color-light);
     font-size: smaller;
     padding: 1px;
     text-align: center;
