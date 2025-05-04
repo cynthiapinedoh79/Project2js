@@ -126,17 +126,18 @@
                         </div>
                     </fieldset>
 
-                    <fieldset >
+                    <fieldset>
                         <legend id="b-legend-left">Joint Information</legend>
                         <div>
-                        <script>
-                            function displayJointInfo() {
-                                const jidiv = document.getElementById("j-info");
-                                jidiv.style.display = (jidiv.style.display === "none") || (jidiv.style.display === "") ?
-                                    "flex" : "none";
-                            }
-                        </script>
-                        
+                            <script>
+                                function displayJointInfo() {
+                                    const jidiv = document.getElementById("j-info");
+                                    jidiv.style.display = (jidiv.style.display === "none") || (jidiv.style.display ===
+                                            "") ?
+                                        "flex" : "none";
+                                }
+                            </script>
+
                             <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
                                 here If filing a JOINT return, enter your spouse's Information</button>
 
@@ -280,7 +281,7 @@
                                 <label for="phone" class="form-label">Taxpayer Phone (only
                                     numbers)<span>
                                         required!</span></label>
-                                <input class="form-control" id="phone" name="phone" type="tel" maxlength="14" placeholder="(xxx) xxx-xxxx" required>
+                                <input class="form-control" id="phone" name="phone" type="tel" maxlength="14" required>
                                 <p id="phoneFbk"></p>
 
                                 <label for="callh" class="form-label">Type<span>
@@ -294,7 +295,7 @@
                             </div>
                             <div>
                                 <label for="sphone" class="form-label">Spouse Phone (only numbers)</label>
-                                <input class="form-control" id="sphone" name="sPhone" type="tel">
+                                <input class="form-control" id="sphone" name="sPhone" type="tel" maxlength="14">
                                 <p id="sphoneFbk"></p>
 
                                 <label for="callh" class="form-label">Type</label>
@@ -323,7 +324,7 @@
                                         if (!dobString) {
                                             dobFbk.innerText = `Invalid date`;
                                         }
-        
+
                                         //Convert the string to a Date object
                                         const dob = new Date(dobString);
                                         const today = new Date();
@@ -331,7 +332,7 @@
                                         let age = today.getFullYear() - dob.getFullYear();
                                         const monthDiff = today.getMonth() - dob.getMonth();
                                         const dayDiff = today.getDate() - dob.getDate();
-        
+
                                         //Check if the birthday has not occurred yet this year
                                         if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
                                             age--;
@@ -373,14 +374,15 @@
                     <fieldset>
                         <legend id="b-legend-left">Foreign Address</legend>
                         <div>
-                        <script>
-                            function fAddInfo() {
-                                const fadiv = document.getElementById("f-address");
-                                fadiv.style.display = (fadiv.style.display === "none") || (fadiv.style.display === "") ?
-                                    "flex" : "none";
-                            }
-                        </script>
-                        
+                            <script>
+                                function fAddInfo() {
+                                    const fadiv = document.getElementById("f-address");
+                                    fadiv.style.display = (fadiv.style.display === "none") || (fadiv.style.display ===
+                                            "") ?
+                                        "flex" : "none";
+                                }
+                            </script>
+
                             <button onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
 
                             <div class="container-fluid" id="f-address" style="display: none;">
@@ -487,8 +489,8 @@
                                     No
                                 </label>
                             </div>
-                            
-                            
+
+
                             <div id="expr">
                                 <p>If "Yes", enter the amount of income excluded</p>
                                 <label for="expr" class="form-label"></label>
@@ -916,7 +918,8 @@
 
 
 
-                            <label class="form-check-label" for="checkDefault"><input class="form-control" id="nbxc" name="nbxc" type="number">Number of boxes checked on 6a and
+                            <label class="form-check-label" for="checkDefault"><input class="form-control" id="nbxc"
+                                    name="nbxc" type="number">Number of boxes checked on 6a and
                                 6b</label>
 
                         </div>
@@ -929,11 +932,12 @@
 
                                     <p>(a)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input" type="checkbox" value=""
-                                                id="checkDefault">You can be
-                                                claimed on
-                                                another
-                                                person's return</label>
+                                        <label class="form-check-label" for="checkDefault"><input
+                                                class="form-check-input" type="checkbox" value="" id="checkDefault">You
+                                            can be
+                                            claimed on
+                                            another
+                                            person's return</label>
 
                                     </div>
                                 </div>
@@ -943,11 +947,12 @@
 
                                     <p>(b)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                                type="checkbox" value="" id="checkDefault">Filing status 2
-                                                and
-                                                spouse
-                                                can be claimed on another person's return </label>
+                                        <label class="form-check-label" for="checkDefault"><input
+                                                class="form-check-input" type="checkbox" value=""
+                                                id="checkDefault">Filing status 2
+                                            and
+                                            spouse
+                                            can be claimed on another person's return </label>
 
                                     </div>
                                 </div>
@@ -956,11 +961,12 @@
                                 <div class="box container-fluid">
                                     <p>(c)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                                type="checkbox" value="" id="checkDefault">You are using
-                                                filing
-                                                status 4
-                                                and claiminng nonresident alien spouse </label>
+                                        <label class="form-check-label" for="checkDefault"><input
+                                                class="form-check-input" type="checkbox" value="" id="checkDefault">You
+                                            are using
+                                            filing
+                                            status 4
+                                            and claiminng nonresident alien spouse </label>
                                     </div>
                                     <div class="container-fluid" id="j-info">
                                         <div class="form-check">

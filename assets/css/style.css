@@ -26,7 +26,9 @@ body {
 }
 
 h1,
-h2,h3 { font-family: var(--secondary-font);
+h2,
+h3 {
+    font-family: var(--secondary-font);
     color: var(--primary-text-color);
     font-weight: 700;
     background-color: var(--secondary-text-color);
@@ -34,16 +36,15 @@ h2,h3 { font-family: var(--secondary-font);
     margin-bottom: 1rem;
     text-align: center;
 }
-h2
-{
+
+h2 {
     color: var(--fourth-color);
     background-color: var(--secondary-text-color);
     font-weight: 500;
 }
 
 
-h4
-{
+h4 {
     color: var(--secondary-text-color);
     background-color: var(--primary-color);
     font-weight: 600;
@@ -67,13 +68,13 @@ p {
 
 button.btn.btn-primary {
     border: none;
-    width:fit-content;
+    width: fit-content;
     font-weight: bold;
     color: var(--fifth-color);
     background-color: var(--secondary-color);
     text-align: center;
     font-size: 110%;
-    display:block;
+    display: block;
     margin: 0 auto;
     padding: 0.25rem 1rem;
 }
@@ -89,8 +90,8 @@ section {
     border: none;
     background-color: var(--secondary-text-color);
     color: var(--secondary-text-color)
-    /* FLEX PARENT PROPERTIES */
-    display: flex;
+        /* FLEX PARENT PROPERTIES */
+        display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: left;
@@ -179,7 +180,7 @@ fieldset {
     background-color: none;
     border-radius: 5px;
     width: 100%;
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
     padding: 5px;
     position: relative;
     text-align: left;
@@ -194,24 +195,24 @@ fieldset div {
     align-items: left;
 }
 
-#Fs fieldset{
+#Fs fieldset {
     background-color: var(--highlight-color-light);
     display: flex;
 }
 
-#Ss fieldset{
+#Ss fieldset {
     background-color: var(--highlight-color-light);
     display: flex;
 }
 
-#Ts fieldset{
+#Ts fieldset {
     background-color: var(--highlight-color-light);
 }
 
 legend {
     position: relative;
     display: flex-start;
-    height:auto;
+    height: auto;
     max-width: 130px;
     min-width: 130px;
     background-color: var(--highlight-color-light);
@@ -221,26 +222,27 @@ legend {
     font-weight: 600;
     color: var(--secondary-color);
     background-color: none;
-    font-size:medium;
+    font-size: medium;
     text-align: left;
     align-content: center;
     padding: 10px;
-    margin:0;
+    margin: 0;
 }
 
-legend#b-legend-left{
+legend#b-legend-left {
     max-width: 130px;
     min-width: 130px;
-    margin:0;
+    margin: 0;
     align-items: center;
 }
 
-select.form-select.form-control{
+select.form-select.form-control {
     border: 1px solid var(--border-input);
     width: auto;
     font-size: smaller;
 }
-select#dsol.form-select.form-control{
+
+select#dsol.form-select.form-control {
     border: 1px solid var(--border-input);
     width: auto;
     font-size: smaller;
@@ -250,7 +252,8 @@ input.form-control[type="date"] {
     font-size: smaller;
 }
 
-#j-info-btn.form-control, #fa-info-btn.form-control {
+#j-info-btn.form-control,
+#fa-info-btn.form-control {
     border: 1px solid var(--border-input);
     background-color: var(--bgFbk-color);
     color: var(--secondary-color);
@@ -260,29 +263,30 @@ input.form-control[type="date"] {
     align-content: center;
 }
 
-#j-info-btn:hover, #fa-info-btn:hover {
+#j-info-btn:hover,
+#fa-info-btn:hover {
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
     font-size: 110%;
 }
 
 button#vage {
-border: none;
-color: var(--third-color);
-background-color: var(--bgFbk-color);
-font-size: small;
-font-weight: 550;
-padding: 0.1rem;
-text-align: center;
+    border: none;
+    color: var(--third-color);
+    background-color: var(--bgFbk-color);
+    font-size: small;
+    font-weight: 550;
+    padding: 0.1rem;
+    text-align: center;
 }
 
 button#vage:hover {
-border: none;
-color: var(--bgFbk-color);
-background-color: var(--third-color);
-text-align: center;
-font-size: smaller;
-font-weight: 600;
+    border: none;
+    color: var(--bgFbk-color);
+    background-color: var(--third-color);
+    text-align: center;
+    font-size: smaller;
+    font-weight: 600;
 }
 
 
@@ -318,8 +322,16 @@ span {
     color: #b60101;
     font-size: smaller;
 }
+
 /*Feedback paragraphs*/
-#fnameFbk, #mnameiFbk, #ssnFbk, #cssnFbk, #emailFbk, #phoneFbk, #zipFbk, #dobFbk {
+#fnameFbk,
+#mnameiFbk,
+#ssnFbk,
+#cssnFbk,
+#emailFbk,
+#phoneFbk,
+#zipFbk,
+#dobFbk {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -329,7 +341,13 @@ span {
     text-align: left;
 }
 
-#sfnameFbk, #smnameiFbk, #sssnFbk, #csssnFbk, #semailFbk, #sphoneFbk, #sdobFbk {
+#sfnameFbk,
+#smnameiFbk,
+#sssnFbk,
+#csssnFbk,
+#semailFbk,
+#sphoneFbk,
+#sdobFbk {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -377,7 +395,13 @@ div.box.container-fluid p {
     text-align: left;
 }
 
-#expr, #rrf, #ifblind, #ifdisabled, #ifdead, #trfby, #pec {
+#expr,
+#rrf,
+#ifblind,
+#ifdisabled,
+#ifdead,
+#trfby,
+#pec {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -397,7 +421,12 @@ div.form-check {
 #slwy,
 #aj30,
 #comm-m,
-#comm-o, #exemp, #pec, #stol, #dsol, #dmsol {
+#comm-o,
+#exemp,
+#pec,
+#stol,
+#dsol,
+#dmsol {
     border: none;
     /* FLEX PARENT PROPERTIES */
     display: flex;
@@ -407,11 +436,11 @@ div.form-check {
     vertical-align: middle;
 }
 
-#nbxc{
+#nbxc {
     width: 75px;
 }
 
-.table-responsive{
+.table-responsive {
     width: auto;
     margin: 0;
     padding: 0;
@@ -419,24 +448,24 @@ div.form-check {
     -webkit-overflow-scrolling: touch;
 }
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
     overflow-x: auto;
 }
 
-.table{
-    --bs-table-bg:none;
-    border:  1px solid var(--border-input);
+.table {
+    --bs-table-bg: none;
+    border: 1px solid var(--border-input);
 }
 
-.table-light{
+.table-light {
     --bs-table-color: var(--primary-color);
-    --bs-table-bg:var(--highlight-color-light);
+    --bs-table-bg: var(--highlight-color-light);
 }
 
-th{
-    border:  1px solid var(--border-input);
+th {
+    border: 1px solid var(--border-input);
     font-family: var(--secondary-font);
     font-weight: 600;
     color: var(--primary-color);
@@ -446,23 +475,24 @@ th{
     background-color: none;
     text-transform: uppercase;
 }
-td{
-    border:  1px solid var(--border-input);
+
+td {
+    border: 1px solid var(--border-input);
     font-size: smaller;
     padding: 1px;
     text-align: center;
 }
 
-#dmsol label{
+#dmsol label {
     margin: 0;
     padding: 0;
 }
 
-hr{
+hr {
     border: 2px solid var(--primary-color);
 }
 
-.form-check{
+.form-check {
     display: inline;
     flex-wrap: wrap;
 
