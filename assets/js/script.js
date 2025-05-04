@@ -96,13 +96,31 @@ function(){
       }
 
       /*Phone Number*/
-      let phone = giFormData.phone.value;
-      if (/^\d{10}$/.test(phone)){
-        phoneFbk.innerText =``;
-      }else{
-        //Phone must have 10 digits
-        phoneFbk.innerText =`Must be 10 digits`;
+      document.getElementById("phone").addEventListener("input", function(e) {
+        // Remove all non-digit characters from the input value
+        let input = e.target.value.replace(/\D/g, "");
+        // Limit to 10 digits
+        input = input.substring(0, 10); 
+
+        let formattedInput = "";
+        if (input.length > 0) {
+          formattedInput += "(" + input.substring(0, 3);
+        }
+        if (input.length >= 4) {
+          formattedInput += ") " + input.substring(3, 6);
+        }
+        if (input.length >= 7) {
+          formattedInput += "-" + input.substring(6, 10);
+        }
+
+        // Set the formatted value back to the input field
+        e.target.value = formattedInput;
+        
       }
+    );
+      
+        
+      
 
       let sphone = giFormData.sPhone.value;
       if (/^\d{10}$/.test(sphone)){
