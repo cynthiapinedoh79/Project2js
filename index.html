@@ -110,12 +110,14 @@
                             </div>
                             <div>
                                 <label for="ssn" class="form-label">SSN<span> required!</span></label>
-                                <input class="form-control" id="ssn" name="ssn" maxlength="11" type="number" required>
+                                <input class="form-control" id="ssn" name="ssn" maxlength="11" oninput="handleInput(this, 'ssnRaw')" required>
+                                <input type="hidden" id="ssnRaw">
                                 <p id="ssnFbk"></p>
                             </div>
                             <div>
                                 <label for="cssn" class="form-label">Confirm SSN<span> required!</span></label>
-                                <input class="form-control" id="cssn" name="cSsn" maxlength="11" type="number" required>
+                                <input class="form-control" id="cssn" name="cSsn" maxlength="11" oninput="handleInput(this, 'cssnRaw')" required>
+                                <input type="hidden" id="cssnRaw">
                                 <p id="cssnFbk"></p>
                             </div>
                             <div>

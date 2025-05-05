@@ -19,95 +19,81 @@ document.addEventListener("DOMContentLoaded",
       let email = giFormData.email.value;
       let emailFbk = document.getElementById("emailFbk");
 
+
       //SSN
-      
-      if (/^\d{9}$/.test(ssn)) {
-        const ssn = giFormData.ssn.value.replace(/\D/g, "");
-        let ssnFbk = document.getElementById("ssnFbk");
-
-              const ssnInput = document.getElementById("ssn");
-              let ssnReal = "";
-
-              ssnInput.addEventListener("input", (e)
-              => {
-                  const ssnValue = e.target.value.replace(/\D/g, "");
-
-                  if (ssnValue.length > 9) return;
-                  ssnReal = ssnValue;
-                  
-                  const ssnMasket = ssnReal
-                  .split("")
-                  .map ((char, i) => (i < 5 ? "*" : char))
-                  .join("");
-                  .replace(/(\*{3})(\*{2})(\d{0,4})/, "$1-$2-$3");
-
-                  ssnInput.value = ssnMasket;
-                  });
-
-                ssnInput.addEventListener("focus", () 
-                => {
-                    ssnInput.value = ssnReal;
-                    .replace(/(\d{3})(\d{2})(\d{0,4})/, "$1-$2-$3");
-                });
-
-                ssnInput.addEventListener("blur", ()
-                => {
-                    const ssnMasked = ssnReal
-                    .split("")
-                    .map((char, i) => (i < 5 ? "*" : char))
-                    .join("");
-                    .replace(/(\*{3})(\*{2})(\d{0,4})/, "$1-$2-$3");
-
-                    ssnInput.value = ssnMasked;
-                });
+      let ssn = giFormData.ssn.value.replace(/\D/g, "");
+      let ssnFbk = document.getElementById("ssnFbk");
+      let cssn = giFormData.ssn.value.replace(/\D/g, "");
+      let cssnFbk = document.getElementById("ssnFbk");
 
 
+        function handleInput(inputElem, hiddenId) {
+          let raw = document.getElementById(hiddenId).value;
+          const lastChar = inputElem.value.slice(-1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        if (/^\d{9}$/.test(cssn)) {
-          const cssn = giFormData.cSsn.value.replace(/\D/g, "");
-          let cssnFbk = document.getElementById("cssnFbk");
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          //To confirm Taxpayer SSN
-          if (ssn !== cssn) {
-            //code if ssn doesn't match
-            cssnFbk.innerText = `SSN doesn't match`;
+          // Only allow digits
+          if (/\d/.test(lastChar) && raw.length < 9) {
+            raw += lastChar;
           }
 
-        } else {
-          cssnFbk.innerText = `9 digits SSN`;
+          document.getElementById(hiddenId).value = raw;
+
+          // Build masked display
+          let masked = '';
+          if (raw.length <= 5) {
+            masked = '*'.repeat(raw.length);
+          } else {
+            masked = '*'.repeat(5) + raw.slice(5);
+          }
+
+          // Format ***-**-1234
+          if (masked.length > 5) {
+            masked = masked.replace(/^(.{3})(.{2})(.{0,4})$/, '$1-$2-$3');
+          }
+
+          inputElem.value = masked;
+
+          validateInputs();
         }
 
-      } else {
-        ssnFbk.innerText = `9 digits SSN`;
-      }
+        function validateInputs() {
+          const ssn = document.getElementById('ssnRaw').value;
+          const cssn = document.getElementById('cssnRaw').value;
+
+          if (ssn.length < 9) {
+            ssnFbk = 'SSN must be 9 digits.';
+            return;
+          }
+
+          if (cssn.length < 9) {
+            cssnFbk .textContent = 'Confirm SSN must be 9 digits.';
+            return;
+          }
+
+          if (ssn !== cssn) {
+            cssnFbk .textContent = 'SSNs do not match.';
+            return;
+          }
+
+          ssnFbk .textContent = 'SSNs match!';
+        }
+
+          
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       /*Joint Information*/
       const sfname = giFormData.sfName.value.trim();
@@ -127,11 +113,9 @@ document.addEventListener("DOMContentLoaded",
       //Spouse SSN
       if (/^\d{9}$/.test(sssn)) {
         sssnFbk.innerText = ``;
-        console.log(sssn);
 
         if (/^\d{9}$/.test(csssn)) {
           csssnFbk.innerText = ``;
-          console.log(csssn);
 
           //To confirm Taxpayer SSN
           if (sssn !== csssn) {
