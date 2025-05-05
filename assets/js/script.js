@@ -16,21 +16,84 @@ document.addEventListener("DOMContentLoaded",
 
       const lname = giFormData.lName.value;
       const lnamesu = giFormData.lNameSu.value;
-      const ssn = giFormData.ssn.value;
-      const cssn = giFormData.cSsn.value;
-      let ssnFbk = document.getElementById("ssnFbk");
-      let cssnFbk = document.getElementById("cssnFbk");
       let email = giFormData.email.value;
       let emailFbk = document.getElementById("emailFbk");
 
       //SSN
+      
       if (/^\d{9}$/.test(ssn)) {
-        ssnFbk.innerText = ``;
-        console.log(ssn);
+        const ssn = giFormData.ssn.value.replace(/\D/g, "");
+        let ssnFbk = document.getElementById("ssnFbk");
 
+              const ssnInput = document.getElementById("ssn");
+              let ssnReal = "";
+
+              ssnInput.addEventListener("input", (e)
+              => {
+                  const ssnValue = e.target.value.replace(/\D/g, "");
+
+                  if (ssnValue.length > 9) return;
+                  ssnReal = ssnValue;
+                  
+                  const ssnMasket = ssnReal
+                  .split("")
+                  .map ((char, i) => (i < 5 ? "*" : char))
+                  .join("");
+                  .replace(/(\*{3})(\*{2})(\d{0,4})/, "$1-$2-$3");
+
+                  ssnInput.value = ssnMasket;
+                  });
+
+                ssnInput.addEventListener("focus", () 
+                => {
+                    ssnInput.value = ssnReal;
+                    .replace(/(\d{3})(\d{2})(\d{0,4})/, "$1-$2-$3");
+                });
+
+                ssnInput.addEventListener("blur", ()
+                => {
+                    const ssnMasked = ssnReal
+                    .split("")
+                    .map((char, i) => (i < 5 ? "*" : char))
+                    .join("");
+                    .replace(/(\*{3})(\*{2})(\d{0,4})/, "$1-$2-$3");
+
+                    ssnInput.value = ssnMasked;
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         if (/^\d{9}$/.test(cssn)) {
-          cssnFbk.innerText = ``;
-          console.log(cssn);
+          const cssn = giFormData.cSsn.value.replace(/\D/g, "");
+          let cssnFbk = document.getElementById("cssnFbk");
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           //To confirm Taxpayer SSN
           if (ssn !== cssn) {
