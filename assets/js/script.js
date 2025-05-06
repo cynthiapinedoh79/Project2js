@@ -207,10 +207,29 @@ document.addEventListener("DOMContentLoaded",
 
 
       //Spouse SSN
-
+      
+      const sssn = giFormData.sSsn.value.replace(/\D/g, "");
+      const csssn = giFormData.csSsn.value.replace(/\D/g, "");
       // Spouse SSN Feedback Elements
-let sssnFbk = document.getElementById("sssnFbk");
-let csssnFbk = document.getElementById("csssnFbk");
+      let sssnFbk = document.getElementById("sssnFbk");
+      let csssnFbk = document.getElementById("csssnFbk");
+      
+
+      if (/^\d{9}$/.test(sssn)) {
+        sssnFbk.innerText = ``;
+      } else {
+        sssnFbk.innerText = 'SSN must be 9 digits.';
+        sssnFbk.className = 'error';
+      }
+
+
+        if (/^\d{9}$/.test(csssn)) {
+          csssnFbk.innerText = ``;
+      } else {
+        csssnFbk.innerText = 'SSN must be 9 digits.';
+        csssnFbk.className = 'error';
+      }
+
 
 // Spouse SSN Input Elements
 const sssnInput = document.getElementById('sssn');
