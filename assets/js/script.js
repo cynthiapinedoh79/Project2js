@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",
 
       //SSN
       const ssn = giFormData.ssn.value.replace(/\D/g, "");
-      const cssn = giFormData.ssn.value.replace(/\D/g, "");
+      const cssn = giFormData.cssn.value.replace(/\D/g, "");
       let ssnFbk = document.getElementById("ssnFbk");
       let cssnFbk = document.getElementById("cssnFbk");
       
@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded",
       if (/^\d{9}$/.test(ssn)) {
         ssnFbk.innerText = ``;
       } else {
-        cssnFbk.innerText = 'SSN must be 9 digits.';
-        cssnFbk.className = 'error';
+        ssnFbk.innerText = 'SSN must be 9 digits.';
+        ssnFbk.className = 'error';
       }
 
 
         if (/^\d{9}$/.test(cssn)) {
           cssnFbk.innerText = ``;
       } else {
-        ssnFbk.innerText = 'SSN must be 9 digits.';
-        ssnFbk.className = 'error';
+        cssnFbk.innerText = 'SSN must be 9 digits.';
+        cssnFbk.className = 'error';
       }
           
 
@@ -213,15 +213,15 @@ let csssnFbk = document.getElementById("csssnFbk");
 if (/^\d{9}$/.test(sssn)) {
   sssnFbk.innerText = ``;
 } else {
-  csssnFbk.innerText = 'SSN must be 9 digits.';
-  csssnFbk.className = 'error';
+  sssnFbk.innerText = 'SSN must be 9 digits.';
+  sssnFbk.className = 'error';
 }
 
 if (/^\d{9}$/.test(csssn)) {
   csssnFbk.innerText = ``;
 } else {
-  sssnFbk.innerText = 'SSN must be 9 digits.';
-  sssnFbk.className = 'error';
+  csssnFbk.innerText = 'SSN must be 9 digits.';
+  csssnFbk.className = 'error';
 }
 
 const sssnInput = document.getElementById('sssn');
@@ -231,8 +231,8 @@ function getRawSSSN(value) {
   return value.replace(/\D/g, '').slice(0, 9);
 }
 
-function maskSSSN(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+function maskSSSN(sRaw) {
+  return sRaw.length === 9 ? '***-**-' + sRaw.slice(-4) : sRaw;
 }
 
 function validateSSSNFields(fromSubmit = false) {
@@ -268,15 +268,15 @@ sssnInput.addEventListener('focus', () => {
 });
 
 sssnInput.addEventListener('input', () => {
-  const raw = getRawSSSN(sssnInput.value);
-  sssnInput.dataset.raw = raw;
-  sssnInput.value = raw;
+  const sRaw = getRawSSSN(sssnInput.value);
+  sssnInput.dataset.raw = sRaw;
+  sssnInput.value = sRaw;
   validateSSSNFields();
 });
 
 sssnInput.addEventListener('blur', () => {
-  const raw = getRawSSSN(sssnInput.dataset.raw || '');
-  sssnInput.value = maskSSSN(raw);
+  const sRaw = getRawSSSN(sssnInput.dataset.raw || '');
+  sssnInput.value = maskSSSN(sRaw);
 });
 
 // Event listeners for Confirm SSN
@@ -285,19 +285,20 @@ csssnInput.addEventListener('focus', () => {
 });
 
 csssnInput.addEventListener('input', () => {
-  const raw = getRawSSSN(csssnInput.value);
-  csssnInput.dataset.raw = raw;
-  csssnInput.value = raw;
+  const sRaw = getRawSSSN(csssnInput.value);
+  csssnInput.dataset.raw = sRaw;
+  csssnInput.value = sRaw;
   validateSSSNFields();
 });
 
 csssnInput.addEventListener('blur', () => {
-  const raw = getRawSSSN(csssnInput.dataset.raw || '');
-  csssnInput.value = maskSSSN(raw);
+  const sRaw = getRawSSSN(csssnInput.dataset.raw || '');
+  csssnInput.value = maskSSSN(sRaw);
 });
 
 // Submit handler
-form.addEventListener('submit', (e) => {
+const sForm = document.getElementById('form'); // Assuming form has id="form"
+sForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
@@ -339,6 +340,7 @@ form.addEventListener('submit', (e) => {
   sssnInput.value = maskSSSN(sssnRaw);
   csssnInput.value = maskSSSN(csssnRaw);
 });
+
 
 
       
