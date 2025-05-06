@@ -203,41 +203,32 @@ document.addEventListener("DOMContentLoaded",
       let sEmailFbk = document.getElementById("sEmailFbk");
 
 
+
+
+
       //Spouse SSN
 
-      const sssn = giFormData.sSsn.value.replace(/\D/g, "");
-const csssn = giFormData.csSsn.value.replace(/\D/g, "");
+      // Spouse SSN Feedback Elements
 let sssnFbk = document.getElementById("sssnFbk");
 let csssnFbk = document.getElementById("csssnFbk");
 
-if (/^\d{9}$/.test(sssn)) {
-  sssnFbk.innerText = ``;
-} else {
-  sssnFbk.innerText = 'SSN must be 9 digits.';
-  sssnFbk.className = 'error';
-}
-
-if (/^\d{9}$/.test(csssn)) {
-  csssnFbk.innerText = ``;
-} else {
-  csssnFbk.innerText = 'SSN must be 9 digits.';
-  csssnFbk.className = 'error';
-}
-
+// Spouse SSN Input Elements
 const sssnInput = document.getElementById('sssn');
 const csssnInput = document.getElementById('csssn');
 
-function getRawSSSN(value) {
+// Utility Functions
+function getRawSSN(value) {
   return value.replace(/\D/g, '').slice(0, 9);
 }
 
-function maskSSSN(sRaw) {
-  return sRaw.length === 9 ? '***-**-' + sRaw.slice(-4) : sRaw;
+function maskSSN(raw) {
+  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
 }
 
+// Validation Function
 function validateSSSNFields(fromSubmit = false) {
-  const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
-  const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
+  const sssnRaw = getRawSSN(sssnInput.dataset.raw || '');
+  const csssnRaw = getRawSSN(csssnInput.dataset.raw || '');
 
   if (!fromSubmit) {
     sssnFbk.innerText = '';
@@ -262,49 +253,50 @@ function validateSSSNFields(fromSubmit = false) {
   }
 }
 
-// Event listeners for SSN
+// Spouse SSN - Input Events
 sssnInput.addEventListener('focus', () => {
-  sssnInput.value = getRawSSSN(sssnInput.dataset.raw || '');
+  sssnInput.value = getRawSSN(sssnInput.dataset.raw || '');
 });
 
 sssnInput.addEventListener('input', () => {
-  const sRaw = getRawSSSN(sssnInput.value);
-  sssnInput.dataset.raw = sRaw;
-  sssnInput.value = sRaw;
+  const raw = getRawSSN(sssnInput.value);
+  sssnInput.dataset.raw = raw;
+  sssnInput.value = raw; // Ensures raw is visible during typing
   validateSSSNFields();
 });
 
 sssnInput.addEventListener('blur', () => {
-  const sRaw = getRawSSSN(sssnInput.dataset.raw || '');
-  sssnInput.value = maskSSSN(sRaw);
+  const raw = getRawSSN(sssnInput.dataset.raw || '');
+  sssnInput.dataset.raw = raw;
+  sssnInput.value = maskSSN(raw);
 });
 
-// Event listeners for Confirm SSN
+// Spouse Confirm SSN - Input Events
 csssnInput.addEventListener('focus', () => {
-  csssnInput.value = getRawSSSN(csssnInput.dataset.raw || '');
+  csssnInput.value = getRawSSN(csssnInput.dataset.raw || '');
 });
 
 csssnInput.addEventListener('input', () => {
-  const sRaw = getRawSSSN(csssnInput.value);
-  csssnInput.dataset.raw = sRaw;
-  csssnInput.value = sRaw;
+  const raw = getRawSSN(csssnInput.value);
+  csssnInput.dataset.raw = raw;
+  csssnInput.value = raw; // Ensures raw is visible during typing
   validateSSSNFields();
 });
 
 csssnInput.addEventListener('blur', () => {
-  const sRaw = getRawSSSN(csssnInput.dataset.raw || '');
-  csssnInput.value = maskSSSN(sRaw);
+  const raw = getRawSSN(csssnInput.dataset.raw || '');
+  csssnInput.dataset.raw = raw;
+  csssnInput.value = maskSSN(raw);
 });
 
-// Submit handler
-const sForm = document.getElementById('form'); // Assuming form has id="form"
-sForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+// Submit handler for Spouse SSNs
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent form submission unless fully valid
 
-  const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
-  const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
+  const sssnRaw = sssnInput.dataset.raw || '';
+  const csssnRaw = csssnInput.dataset.raw || '';
 
-  // Clear feedback first
+  // Clear feedback
   sssnFbk.innerText = '';
   csssnFbk.innerText = '';
   sssnFbk.className = '';
@@ -330,16 +322,20 @@ sForm.addEventListener('submit', (e) => {
     sValid = false;
   }
 
-  if (sValid) {
+  if (sValid && sssnRaw === csssnRaw) {
     csssnFbk.innerText = 'SSN successfully matched.';
     csssnFbk.className = 'success';
   }
 
+  // Validate again after submit for real-time feedback
   validateSSSNFields(true);
 
-  sssnInput.value = maskSSSN(sssnRaw);
-  csssnInput.value = maskSSSN(csssnRaw);
+  // Mask values after submit
+  sssnInput.value = maskSSN(sssnRaw);
+  csssnInput.value = maskSSN(csssnRaw);
 });
+
+
 
 
 
