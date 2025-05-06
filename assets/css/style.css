@@ -326,8 +326,6 @@ span {
 /*Feedback paragraphs*/
 #fnameFbk,
 #mnameiFbk,
-#ssnFbk,
-#cssnFbk,
 #emailFbk,
 #phoneFbk,
 #zipFbk,
@@ -341,10 +339,19 @@ span {
     text-align: left;
 }
 
+#ssnFbk,
+#cssnFbk,
+ {
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
+}
+
 #sfnameFbk,
 #smnameiFbk,
-#sssnFbk,
-#csssnFbk,
 #semailFbk,
 #sphoneFbk,
 #sdobFbk {
@@ -356,6 +363,36 @@ span {
     text-align: center;
     text-align: left;
 }
+
+
+#sssnFbk,
+#csssnFbk {
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
+}
+
+.error {
+    color: rgb(244, 3, 3);
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
+  }
+  .success {
+    color: rgb(2, 116, 2);
+    background-color: var(--bgFbk-color);
+    width: fit-content;
+    font-size: small;
+    padding: 0.1rem;
+    text-align: center;
+    text-align: left;
+  }
 
 #success a.btn.btn-primary.mb-5 {
     --bs-btn-color: var(--primary-text-color);

@@ -21,62 +21,114 @@ document.addEventListener("DOMContentLoaded",
 
 
       //SSN
-      let ssn = giFormData.ssn.value.replace(/\D/g, "");
+      const ssn = giFormData.ssn.value.replace(/\D/g, "");
       let ssnFbk = document.getElementById("ssnFbk");
-      let cssn = giFormData.ssn.value.replace(/\D/g, "");
-      let cssnFbk = document.getElementById("ssnFbk");
+      const cssn = giFormData.ssn.value.replace(/\D/g, "");
+      let cssnFbk = document.getElementById("cssnFbk");
 
 
-        function handleInput(inputElem, hiddenId) {
-          let raw = document.getElementById(hiddenId).value;
-          const lastChar = inputElem.value.slice(-1);
+      
+      
+      
 
-          // Only allow digits
-          if (/\d/.test(lastChar) && raw.length < 9) {
-            raw += lastChar;
-          }
+      
+          
+            const form = document.getElementById('gi-form');
+            const ssnInput = document.getElementById('ssn');
+            const cssnInput = document.getElementById('cssn');
+      
+            function getRawSSN(value) {
+              return value.replace(/\D/g, '').slice(0, 9);
+            }
+      
+            function maskSSN(raw) {
+              return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+            }
+      
+            ssnInput.addEventListener('focus', () => {
+              ssnInput.value = getRawSSN(ssnInput.dataset.raw || '');
+            });
+      
+            ssnInput.addEventListener('input', () => {
+              const raw = getRawSSN(ssnInput.value);
+              ssnInput.dataset.raw = raw;
+              ssnInput.value = raw;
+            });
+      
+            ssnInput.addEventListener('blur', () => {
+              const raw = getRawSSN(ssnInput.dataset.raw || '');
+              ssnInput.value = maskSSN(raw);
+            });
+      
+            cssnInput.addEventListener('focus', () => {
+              cssnInput.value = getRawSSN(cssnInput.dataset.raw || '');
+            });
+      
+            cssnInput.addEventListener('input', () => {
+              const raw = getRawSSN(cssnInput.value);
+              cssnInput.dataset.raw = raw;
+              cssnInput.value = raw;
+            });
+      
+            cssnInput.addEventListener('blur', () => {
+              const raw = getRawSSN(cssnInput.dataset.raw || '');
+              cssnInput.value = maskSSN(raw);
+            });
+      
+            form.addEventListener('submit', (e) => {
+              e.preventDefault();
+      
+              const ssnRaw = getRawSSN(ssnInput.dataset.raw || '');
+              const cssnRaw = getRawSSN(cssnInput.dataset.raw || '');
+      
+              ssnFbk.innerText = '';
+              cssnFbk.innerText = '';
+              ssnFbk.className = '';
+              cssnFbk.className = '';
+      
+              let valid = true;
+      
+              if (ssnRaw.length !== 9) {
+                ssnFbk.innerText = 'SSN must be 9 digits.';
+                ssnFbk.className = 'error';
+                valid = false;
+              }
+      
+              if (cssnRaw.length !== 9) {
+                cssnFbk.innerText = 'Confirm SSN must be 9 digits.';
+                cssnFbk.className = 'error';
+                valid = false;
+              }
+      
+              if (ssnRaw.length === 9 && cssnRaw.length === 9 && ssnRaw !== cssnRaw) {
+                cssnFbk.innerText = 'SSN and confirmation do not match.';
+                cssnFbk.className = 'error';
+                valid = false;
+              }
+      
+              if (valid) {
+                cssnFbk.innerText = 'SSN successfully matched.';
+                cssnFbk.className = 'success';
+              }
+      
+              // Re-mask after validation
+              ssnInput.value = maskSSN(ssnRaw);
+              cssnInput.value = maskSSN(cssnRaw);
+            });
 
-          document.getElementById(hiddenId).value = raw;
+      
 
-          // Build masked display
-          let masked = '';
-          if (raw.length <= 5) {
-            masked = '*'.repeat(raw.length);
-          } else {
-            masked = '*'.repeat(5) + raw.slice(5);
-          }
+      
 
-          // Format ***-**-1234
-          if (masked.length > 5) {
-            masked = masked.replace(/^(.{3})(.{2})(.{0,4})$/, '$1-$2-$3');
-          }
+      
 
-          inputElem.value = masked;
+      
 
-          validateInputs();
-        }
+      
+      
 
-        function validateInputs() {
-          const ssn = document.getElementById('ssnRaw').value;
-          const cssn = document.getElementById('cssnRaw').value;
-
-          if (ssn.length < 9) {
-            ssnFbk = 'SSN must be 9 digits.';
-            return;
-          }
-
-          if (cssn.length < 9) {
-            cssnFbk .textContent = 'Confirm SSN must be 9 digits.';
-            return;
-          }
-
-          if (ssn !== cssn) {
-            cssnFbk .textContent = 'SSNs do not match.';
-            return;
-          }
-
-          ssnFbk .textContent = 'SSNs match!';
-        }
+      
+      
 
           
 
