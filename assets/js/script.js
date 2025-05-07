@@ -381,82 +381,123 @@ form.addEventListener('submit', (e) => {
         zipcodeFbk.innerText = `5 digits zipcode`;
       }
 
+
+
       /*Phone Number*/
       let phone = giFormData.phone.value.replace(/\D/g, "");
+      const phoneInput = document.getElementById("phone");
+      const phoneFbk = document.getElementById("phoneFbk");
+      
 
-      if (/^\d{10}$/.test(phone)) {
-        phoneFbk.innerText = ``;
-
-        document.getElementById("phone").addEventListener("input", function (e) {
-          // Remove all non-digit characters from the input value
-          let input = e.target.value.replace(/\D/g, "");
-
-          // Limit to 10 digits
-          input = input.substring(0, 10);
-
-          let formattedInput = "";
-          if (input.length > 0) {
-            formattedInput += "(" + input.substring(0, 3);
-          }
-          if (input.length > 3) {
-            formattedInput += ") " + input.substring(3, 6);
-          }
-          if (input.length >= 7) {
-            formattedInput += "-" + input.substring(6, 10);
-          }
-
-          // Set the formatted value back to the input field
-          e.target.value = formattedInput;
-
-        });
-
-        const rawPhone = phone;
-        const formattedPhone = `(${rawPhone.slice(0, 3)}) ${rawPhone.slice(3, 6)}-${rawPhone.slice(6)}`;
-        document.getElementById("phone").value = formattedPhone;
-
+      if (phone.length < 10) {
+        phoneFbk.innerText = `Phone must be 10 digits. Currently: ${phone.length} digits.`;
+        phoneFbk.className = "error";
       } else {
-        //Phone must have 10 digits
-        phoneFbk.innerText = `Must be 10 digits`;
+        phoneFbk.innerText = "";
+        phoneFbk.className = "";
       }
+      
+      // Real-time validation
+      phoneInput.addEventListener("input", function (e) {
+        let input = e.target.value.replace(/\D/g, ""); // Only digits
+        input = input.substring(0, 10); // Max 10 digits
+      
+        let formattedInput = "";
+        if (input.length > 0) {
+          formattedInput += "(" + input.substring(0, 3);
+        }
+        if (input.length > 3) {
+          formattedInput += ") " + input.substring(3, 6);
+        }
+        if (input.length >= 7) {
+          formattedInput += "-" + input.substring(6, 10);
+        }
+      
+        e.target.value = formattedInput;
+      
+        // Real-time feedback
+        if (input.length < 10) {
+          phoneFbk.innerText = `Phone must be 10 digits. Currently: ${input.length} digits.`;
+          phoneFbk.className = "error";
+        } else {
+          phoneFbk.innerText = "";
+          phoneFbk.className = "";
+        }
+      });
+      
+      // Submit validation
+      form.addEventListener("submit", function (e) {
+        const input = phoneInput.value.replace(/\D/g, ""); // Always re-read latest value
+      
+        if (input.length < 10) {
+          e.preventDefault(); // Stop form submission
+          phoneFbk.innerText = `Phone must be 10 digits. Currently: ${input.length} digits.`;
+          phoneFbk.className = "error";
+        } else {
+          phoneFbk.innerText = "";
+          phoneFbk.className = "";
+          // Optional: format again in case user cleared the field
+          let formattedInput = `(${input.substring(0, 3)}) ${input.substring(3, 6)}-${input.substring(6, 10)}`;
+          phoneInput.value = formattedInput;
+        }
+      });
+      
+
+
+
+
+
 
       /*Spouse Phone Number*/
       let sphone = giFormData.sPhone.value.replace(/\D/g, "");
-
-      if (/^\d{10}$/.test(sphone)) {
-        sphoneFbk.innerText = ``;
-
-        document.getElementById("sphone").addEventListener("input", function (e) {
-          // Remove all non-digit characters from the input value
-          let input = e.target.value.replace(/\D/g, "");
-
-          // Limit to 10 digits
-          input = input.substring(0, 10);
-
-          let sformattedInput = "";
-          if (input.length > 0) {
-            sformattedInput += "(" + input.substring(0, 3);
-          }
-          if (input.length > 3) {
-            sformattedInput += ") " + input.substring(3, 6);
-          }
-          if (input.length >= 7) {
-            sformattedInput += "-" + input.substring(6, 10);
-          }
-
-          // Set the formatted value back to the input field
-          e.target.value = sformattedInput;
-
-        });
-
-        const srawPhone = sphone;
-        const sformattedPhone = `(${srawPhone.slice(0, 3)}) ${srawPhone.slice(3, 6)}-${srawPhone.slice(6)}`;
-        document.getElementById("sphone").value = sformattedPhone;
-
-      } else {
-        //Phone must have 10 digits
-        sphoneFbk.innerText = `Must be 10 digits`;
-      }
-
+      const sphoneInput = document.getElementById("sphone");
+      const sphoneFbk = document.getElementById("sphoneFbk");
+      
+      
+      // Real-time validation
+      sphoneInput.addEventListener("input", function (e) {
+        let sInput = e.target.value.replace(/\D/g, ""); // Only digits
+        sInput = sInput.substring(0, 10); // Max 10 digits
+      
+        let sFormattedInput = "";
+        if (sInput.length > 0) {
+          sFormattedInput += "(" + sInput.substring(0, 3);
+        }
+        if (sInput.length > 3) {
+          sFormattedInput += ") " + sInput.substring(3, 6);
+        }
+        if (sInput.length >= 7) {
+          sFormattedInput += "-" + sInput.substring(6, 10);
+        }
+      
+        e.target.value = sFormattedInput;
+      
+        // Real-time feedback
+        if (sInput.length < 10) {
+          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${sInput.length} digits.`;
+          sphoneFbk.className = "error";
+        } else {
+          sphoneFbk.innerText = "";
+          sphoneFbk.className = "";
+        }
+      });
+      
+      // Submit validation
+      form.addEventListener("submit", function (e) {
+        const sInput = sPhoneInput.value.replace(/\D/g, ""); // Always re-read latest value
+      
+        if (sInput.length < 10) {
+          e.preventDefault(); // Stop form submission
+          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${sInput.length} digits.`;
+          sphoneFbk.className = "error";
+        } else {
+          sphoneFbk.innerText = "";
+          sphoneFbk.className = "";
+          // Optional: format again in case user cleared the field
+          let sFormattedInput = `(${sInput.substring(0, 3)}) ${sInput.substring(3, 6)}-${sInput.substring(6, 10)}`;
+          sPhoneInput.value = sFormattedInput;
+        }
+      });
 
 
 

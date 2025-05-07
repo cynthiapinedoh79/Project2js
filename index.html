@@ -320,9 +320,11 @@
                                 <p id="dobFbk"></p>
                                 <script>
                                     function isUnder18() {
+                                        const dobFbk = document.getElementById("dobFbk");
                                         const dobString = document.getElementById("dob").value;
                                         if (!dobString) {
                                             dobFbk.innerText = `Invalid date`;
+                                            dobFbk.className = 'error';
                                         }
 
                                         //Convert the string to a Date object
@@ -340,8 +342,10 @@
                                         const rAge = age < 18 ? true : false;
                                         if (rAge) {
                                             dobFbk.innerText = `Age < 18`;
+                                            dobFbk.className = 'error';
                                         } else {
                                             dobFbk.innerText = age;
+                                            dobFbk.className = 'success';
                                         }
                                     }
                                 </script>
@@ -352,7 +356,74 @@
                                 <label for="sdob" class="form-label">Spouse Birth Date</label>
                                 <input class="form-control" id="sdob" name="sdoB" type="date">
                                 <p id="sdobFbk"></p>
+                            
+                                <script>
+
+                                    function isSUnder18() {
+                                        const sdobFbk = document.getElementById("sdobFbk");
+                                        const sdobString = document.getElementById("sdob").value;
+                                        if (!sdobString) {
+                                            sdobFbk.innerText = `Invalid date`;
+                                            sdobFbk.className = 'error';
+                                        }
+
+                                        //Convert the string to a Date object
+                                        const sdob = new Date(sdobString);
+                                        const today = new Date();
+                                        //Calculate the age
+                                        let sAge = today.getFullYear() - sdob.getFullYear();
+                                        const sMonthDiff = today.getMonth() - sdob.getMonth();
+                                        const sDayDiff = today.getDate() - sdob.getDate();
+
+                                        //Check if the birthday has not occurred yet this year
+                                        if (sMonthDiff < 0 || (sMonthDiff === 0 && sDayDiff < 0)) {
+                                            sAge--;
+                                        }
+                                        const srAge = sAge < 18 ? true : false;
+                                        if (srAge) {
+                                            sdobFbk.innerText = `Age < 18`;
+                                            sdobFbk.className = 'error';
+                                        } else {
+                                            sdobFbk.innerText = sAge;
+                                            sdobFbk.className = 'success';
+                                        }
+                                    }
+
+                                </script>
+                                <button onclick="isSUnder18()" id="vage">Verify Age</button>
                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </fieldset>
 

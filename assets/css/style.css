@@ -324,12 +324,13 @@ span {
 }
 
 /*Feedback paragraphs*/
+
+ /*Taxpayerfedback */
 #fnameFbk,
 #mnameiFbk,
 #emailFbk,
 #phoneFbk,
-#zipFbk,
-#dobFbk {
+#zipFbk {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -341,7 +342,7 @@ span {
 
 #ssnFbk,
 #cssnFbk,
- {
+#dobFbk  {
     background-color: var(--bgFbk-color);
     width: fit-content;
     font-size: small;
@@ -350,11 +351,13 @@ span {
     text-align: left;
 }
 
+
+
+ /*Taxpayer Spouse fedback */
 #sfnameFbk,
 #smnameiFbk,
 #semailFbk,
-#sphoneFbk,
-#sdobFbk {
+#sphoneFbk {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -364,9 +367,10 @@ span {
     text-align: left;
 }
 
-
 #sssnFbk,
-#csssnFbk {
+#csssnFbk, 
+#sdobFbk
+ {
     background-color: var(--bgFbk-color);
     width: fit-content;
     font-size: small;
@@ -375,6 +379,7 @@ span {
     text-align: left;
 }
 
+/* Classes for feedback */
 .error {
     color: rgb(244, 3, 3);
     background-color: var(--bgFbk-color);
