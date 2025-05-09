@@ -70,7 +70,7 @@
     <section id="Fs" class="container section">
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
-            <form action="/submit-data"  action="success.html" method="get">
+            <form id="my-form" action="/submit-data" method="get">
                 <div id="gi-form">
                     <h4 class="">Main Information Sheet</h4>
                 
@@ -140,7 +140,7 @@
                                 }
                             </script>
 
-                            <button onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
+                            <button type="button" onclick="displayJointInfo()" class="form-control" id="j-info-btn">Click
                                 here If filing a JOINT return, enter your spouse's Information</button>
 
                             <div id="j-info" class="container-fluid" style="display: none;">
@@ -300,8 +300,8 @@
                                 <input class="form-control" id="sphone" name="sPhone" type="tel" maxlength="14">
                                 <p id="sphoneFbk"></p>
 
-                                <label for="callh" class="form-label">Type</label>
-                                <select id="callh" class="form-select form-control" name="callh">
+                                <label for="scallh" class="form-label">Type</label>
+                                <select id="scallh" class="form-select form-control" name="scallh">
                                     <option value="" selected>Select</option>
                                     <option>Morning</option>
                                     <option>Afernoon</option>
@@ -351,7 +351,7 @@
                                         }
                                     }
                                 </script>
-                                <button onclick="isUnder18()" id="vage">Verify Age</button>
+                                <button type="button" onclick="isUnder18()" id="vage">Verify Age</button>
                             </div>
                             <div>
 
@@ -372,7 +372,7 @@
                                         //Convert the string to a Date object
                                         const sdob = new Date(sdobString);
                                         const today = new Date();
-                                        //Calculate the age
+                                        //Calculate the Spouse Age
                                         let sAge = today.getFullYear() - sdob.getFullYear();
                                         const sMonthDiff = today.getMonth() - sdob.getMonth();
                                         const sDayDiff = today.getDate() - sdob.getDate();
@@ -392,7 +392,7 @@
                                     }
 
                                 </script>
-                                <button onclick="isSUnder18()" id="vage">Verify Age</button>
+                                <button type="button" onclick="isSUnder18()" id="svage">Verify Spouse Age</button>
                             </div>
 
                         </div>
@@ -425,7 +425,7 @@
                                 }
                             </script>
 
-                            <button onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
+                            <button type="button" onclick="fAddInfo()" class="form-control" id="fa-info-btn">Foreign Address</button>
 
                             <div class="container-fluid" id="f-address" style="display: none;">
 
@@ -457,8 +457,6 @@
                         </div>
                     </fieldset>
                 </div>
-
-                
 
                 <div id="tpi-form">
                     <h4>Taxpayer Information</h4>
@@ -504,7 +502,7 @@
                             </div>
 
 
-                            <div id="expr">
+                            <div id="exprContainer">
                                 <p>If "Yes", enter the amount of income excluded</p>
                                 <label for="expr" class="form-label"></label>
                                 <span class="input-group-text">$</span>
@@ -523,7 +521,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="receiveMarketplace" id="receiveMarketplaceYes"
                                     value="yes">
-                                <label class="form-check-label" for="radioDefault1">
+                                <label class="form-check-label" for="receiveMarketplaceYes">
                                     Yes
                                 </label>
                             </div>
@@ -531,7 +529,7 @@
 
                                 <input class="form-check-input" type="radio" name="receiveMarketplace" id="receiveMarketplaceNo"
                                     value="no">
-                                <label class="form-check-label" for="radioDefault1">
+                                <label class="form-check-label" for="receiveMarketplaceNo">
                                     No
                                 </label>
                             </div>
@@ -542,8 +540,8 @@
 
                                 <div>
                                     <br>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">To attach a PDF with an
+                                    <label class="form-check-label" for="noF8962"><input class="form-check-input"
+                                            type="checkbox" value="" name="noF8962" id="noF8962">To attach a PDF with an
                                         explanation of why
                                         Form 8962 is not being filed with the return</label>
 
@@ -557,13 +555,13 @@
                             <p>Check if blind</p>
                             <div class="form-check" id="ifblind">
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Taxpayer</label>
+                                    <label class="form-check-label" for="blind"><input class="form-check-input"
+                                            type="checkbox" value="" name="blind" id="blind">Taxpayer</label>
 
                                 </div>
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Spouse</label>
+                                    <label class="form-check-label" for="blindSp"><input class="form-check-input"
+                                            type="checkbox" value="" name="blindSp" id="blindSp">Spouse</label>
 
                                 </div>
                             </div>
@@ -575,13 +573,13 @@
                             <p>Check if totally and permanently disabled</p>
                             <div class="form-check" id="ifdisabled">
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Taxpayer</label>
+                                    <label class="form-check-label" for="disable"><input class="form-check-input"
+                                            type="checkbox" value="" name="disable" id="disable">Taxpayer</label>
 
                                 </div>
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Spouse</label>
+                                    <label class="form-check-label" for="disableSp"><input class="form-check-input"
+                                            type="checkbox" value="" name="disableSp" id="disableSp">Spouse</label>
 
                                 </div>
                             </div>
@@ -609,13 +607,13 @@
                             <p>This tax return is being filed by</p>
                             <div class="form-check" id="trfby">
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Surviving spouse</label>
+                                    <label class="form-check-label" for="survivingSp"><input class="form-check-input"
+                                            type="checkbox" value="" name="survivingSp" id="survivingSp">Surviving spouse</label>
 
                                 </div>
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Someone else</label>
+                                    <label class="form-check-label" for="someoneElse"><input class="form-check-input"
+                                            type="checkbox" value="" name="someoneElse" id="someoneElse">Someone else</label>
 
                                 </div>
                             </div>
@@ -628,13 +626,13 @@
                             <p>Check here if you, or your spouse if filing a join return, want $3 to go to this fund</p>
                             <div class="form-check" id="pec">
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">You</label>
+                                    <label class="form-check-label" for="filingJoint3"><input class="form-check-input"
+                                            type="checkbox" value="" name= "filingJoint3" id="filingJoint3">You</label>
 
                                 </div>
                                 <div>
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Spouse</label>
+                                    <label class="form-check-label" for="filingJoint3Sp"><input class="form-check-input"
+                                            type="checkbox" value="" name= "filingJoint3Sp" id="filingJoint3Sp">Spouse</label>
 
                                 </div>
                             </div>
@@ -643,7 +641,8 @@
                 </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+            </form>
+              
 
             </div>
         </div>
@@ -710,9 +709,9 @@
                             <fieldset>
                                 <div class="box container-fluid">
                                     <div id="snra" class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input
+                                        <label class="form-check-label" for="nonresidenSp"><input
                                                 class="form-check-input" type="checkbox" value=""
-                                                id="checkDefault">Check here if the spouse
+                                                name="nonresidenSp" id="nonresidenSp">Check here if the spouse
                                             is a nonresident alien</label>
 
                                     </div>
@@ -891,8 +890,8 @@
                         <fieldset>
                             <div id="pec" class="box container-fluid">
                                 <div class="form-check">
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">Check here if treating a
+                                    <label class="form-check-label" for="nonr-dualSp"><input class="form-check-input"
+                                            type="checkbox" value="" name="nonr-dualSp" id="nonr-dualSp">Check here if treating a
                                         nonresident alien or dual-status alien spouse as a U.S.
                                         resident for the entire tax year</label>
 
@@ -922,17 +921,17 @@
                         <div id="exemp" class="box container-fluid">
                             <p>a</p>
 
-                            <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                    type="checkbox" value="" id="checkDefault">Yourself</label>
+                            <label class="form-check-label" for="exempYoursef"><input class="form-check-input"
+                                    type="checkbox" value="" name="exempYoursef" id="exempYoursef">Yourself</label>
 
 
                             <p>b</p>
-                            <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                    type="checkbox" value="" id="checkDefault">Spouse</label>
+                            <label class="form-check-label" for="exempSp"><input class="form-check-input"
+                                    type="checkbox" value="" name="exempSp" id="exempSp">Spouse</label>
 
 
 
-                            <label class="form-check-label" for="checkDefault"><input class="form-control" id="nbxc"
+                            <label class="form-check-label" for="nbxc"><input class="form-control" id="nbxc"
                                     name="nbxc" type="number">Number of boxes checked on 6a and
                                 6b</label>
 
@@ -946,8 +945,8 @@
 
                                     <p>(a)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input
-                                                class="form-check-input" type="checkbox" value="" id="checkDefault">You
+                                        <label class="form-check-label" for="claimDiffPerson"><input
+                                                class="form-check-input" type="checkbox" value="" name="claimDiffPerson" id="claimDiffPerson">You
                                             can be
                                             claimed on
                                             another
@@ -961,9 +960,9 @@
 
                                     <p>(b)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input
+                                        <label class="form-check-label" for="fS2DiffPersonSp"><input
                                                 class="form-check-input" type="checkbox" value=""
-                                                id="checkDefault">Filing status 2
+                                               name="fS2DiffPersonSp" id="fS2DiffPersonSp">Filing status 2
                                             and
                                             spouse
                                             can be claimed on another person's return </label>
@@ -975,8 +974,8 @@
                                 <div class="box container-fluid">
                                     <p>(c)</p>
                                     <div class="form-check">
-                                        <label class="form-check-label" for="checkDefault"><input
-                                                class="form-check-input" type="checkbox" value="" id="checkDefault">You
+                                        <label class="form-check-label" for="fS4nonrSp"><input
+                                                class="form-check-input" type="checkbox" value="" name="fS4nonrSp" id="fS4nonrSp">You
                                             are using
                                             filing
                                             status 4
@@ -1018,8 +1017,8 @@
                             <p><strong>DEPENDENTS / NON-DEPENDENTS</strong></p>
                             <div class="box container-fluid">
                                 <div class="form-check">
-                                    <label class="form-check-label" for="checkDefault"><input class="form-check-input"
-                                            type="checkbox" value="" id="checkDefault">
+                                    <label class="form-check-label" for="flatFeePerD"><input class="form-check-input"
+                                            type="checkbox" value="" name="flatFeePerD" id="flatFeePerD">
                                         Check here to charge a flat
                                         fee
                                         for dependent instead of a fee per dependent.</label>
@@ -1106,13 +1105,13 @@
                                                 <td><input class="form-control" id="dcode" name="dcode" type="number">
                                                 </td>
                                                 <td><input class="form-check-input" type="checkbox" value=""
-                                                        id="checkDefault"></td>
+                                                        ></td>
                                                 <td><input class="form-check-input" type="checkbox" value=""
-                                                        id="checkDefault"></td>
+                                                        ></td>
                                                 <td><input class="form-check-input" type="checkbox" value=""
-                                                        id="checkDefault"></td>
+                                                        ></td>
                                                 <td><input class="form-check-input" type="checkbox" value=""
-                                                        id="checkDefault"></td>
+                                                        ></td>
                                                 <td><input class="form-control" id="ditpin" name="ditpin" type="number">
                                                 </td>
                                             </tr>
@@ -1122,13 +1121,13 @@
                                             <td><input class="form-control" id="dcode" name="dcode" type="number">
                                             </td>
                                             <td><input class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault"></td>
+                                                    ></td>
                                             <td><input class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault"></td>
+                                                    ></td>
                                             <td><input class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault"></td>
+                                                    ></td>
                                             <td><input class="form-check-input" type="checkbox" value=""
-                                                    id="checkDefault"></td>
+                                                    ></td>
                                             <td><input class="form-control" id="ditpin" name="ditpin" type="number">
                                             </td>
                                             </tr>

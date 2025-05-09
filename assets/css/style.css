@@ -265,7 +265,7 @@ input.form-control[type="date"] {
     font-size: 110%;
 }
 
-button#vage {
+button#vage, button#svage {
     border: none;
     color: var(--third-color);
     background-color: var(--bgFbk-color);
@@ -275,7 +275,7 @@ button#vage {
     text-align: center;
 }
 
-button#vage:hover {
+button#vage:hover, button#svage:hover {
     border: none;
     color: var(--bgFbk-color);
     background-color: var(--third-color);

@@ -1,28 +1,28 @@
 /*Main Information*/
 document.addEventListener("DOMContentLoaded",
   function () {
-    let giFormElement = document.getElementById("gi-form");
-    giFormElement.addEventListener("submit", handleSubmit);
+    let myFormElement = document.getElementById("my-form");
+    myFormElement.addEventListener("submit", handleSubmit);
 
     function handleSubmit(e) {
       e.preventDefault();
-      let giFormData = e.target;
+      let myFormData = e.target;
 
       /*General Information*/
-      const fname = giFormData.fName.value.trim();
+      const fname = myFormData.fName.value.trim();
       /*Get initial from first name*/
       const fnamei = fname ? fname.charAt(0).toUpperCase() : "";
       document.getElementById("fnamei").value = fnamei;
 
-      const lname = giFormData.lName.value;
-      const lnamesu = giFormData.lNameSu.value;
-      let email = giFormData.email.value;
+      const lname = myFormData.lName.value;
+      const lnamesu = myFormData.lNameSu.value;
+      let email = myFormData.email.value;
       let emailFbk = document.getElementById("emailFbk");
 
 
       //SSN
-      const ssn = giFormData.ssn.value.replace(/\D/g, "");
-      const cssn = giFormData.cssn.value.replace(/\D/g, "");
+      const ssn = myFormData.ssn.value.replace(/\D/g, "");
+      const cssn = myFormData.cssn.value.replace(/\D/g, "");
       let ssnFbk = document.getElementById("ssnFbk");
       let cssnFbk = document.getElementById("cssnFbk");
       
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded",
       }
           
 
-          const form = document.getElementById('gi-form');
+          const form = document.getElementById('my-form');
           const ssnInput = document.getElementById('ssn');
           const cssnInput = document.getElementById('cssn');
 
@@ -192,14 +192,14 @@ document.addEventListener("DOMContentLoaded",
       
 
       /*Joint Information*/
-      const sfname = giFormData.sfName.value.trim();
+      const sfname = myFormData.sfName.value.trim();
       /*Get initial from spouse first name*/
       const sfnamei = sfname ? sfname.charAt(0).toUpperCase() : "";
       document.getElementById("sfnamei").value = sfnamei;
 
-      const slname = giFormData.slName.value;
-      const slnamesu = giFormData.slNameSu.value;
-      let semail = giFormData.sEmail.value;
+      const slname = myFormData.slName.value;
+      const slnamesu = myFormData.slNameSu.value;
+      let semail = myFormData.sEmail.value;
       let sEmailFbk = document.getElementById("sEmailFbk");
 
 
@@ -208,8 +208,8 @@ document.addEventListener("DOMContentLoaded",
 
       //Spouse SSN
       
-      const sssn = giFormData.sSsn.value.replace(/\D/g, "");
-      const csssn = giFormData.csSsn.value.replace(/\D/g, "");
+      const sssn = myFormData.sSsn.value.replace(/\D/g, "");
+      const csssn = myFormData.csSsn.value.replace(/\D/g, "");
       // Spouse SSN Feedback Elements
       let sssnFbk = document.getElementById("sssnFbk");
       let csssnFbk = document.getElementById("csssnFbk");
@@ -373,18 +373,19 @@ form.addEventListener('submit', (e) => {
 
       /*Mailing Address*/
       //If zipcode doesn't have 5 digits
-      let zipcode = giFormData.zipCode.value;
+      let zipcode = myFormData.zipCode.value;
       if (/^\d{5}$/.test(zipcode)) {
         zipcodeFbk.innerText = ``;
         console.log(zipcode);
       } else {
         zipcodeFbk.innerText = `5 digits zipcode`;
+        zipcodeFbk.className = 'error';
       }
 
 
 
       /*Phone Number*/
-      let phone = giFormData.phone.value.replace(/\D/g, "");
+      let phone = myFormData.phone.value.replace(/\D/g, "");
       const phoneInput = document.getElementById("phone");
       const phoneFbk = document.getElementById("phoneFbk");
       
@@ -449,7 +450,7 @@ form.addEventListener('submit', (e) => {
 
 
       /*Spouse Phone Number*/
-      let sphone = giFormData.sPhone.value.replace(/\D/g, "");
+      let sphone = myFormData.sPhone.value.replace(/\D/g, "");
       const sphoneInput = document.getElementById("sphone");
       const sphoneFbk = document.getElementById("sphoneFbk");
       
@@ -588,7 +589,7 @@ idPhotoInput.addEventListener("change", function (event) {
 });
 
 /*Save forms*/
-document.getElementById("gi-form").addEventListener("submit", function (event) {
+document.getElementById("my-form").addEventListener("submit", function (event) {
   event.preventDefault();
   // Prevent the default form submission
   const giData = new giData(this);
