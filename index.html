@@ -46,14 +46,14 @@
                                 <div class="form-check">
 
                                     <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                            type="radio" name="radioDefault" id="radioDefault1" value="">
+                                            type="radio" name="filed1040" id="filed1040Yes" value="yes">
                                         Spanish forms on the screen and printed
                                     </label>
                                 </div>
                                 <div class="form-check">
 
                                     <label class="form-check-label" for="radioDefault2"><input class="form-check-input"
-                                            type="radio" name="radioDefault" id="radioDefault2" value="">
+                                            type="radio" name="filed1040" id="filed1040No" value="no">
                                         Spanish forms printed only
                                     </label>
 
@@ -70,8 +70,10 @@
     <section id="Fs" class="container section">
         <div class="row justify-content-center text-center">
             <div class="col-12 text-left">
-                <h4 class="">Main Information Sheet</h4>
-                <form action="/submit-data" id="gi-form" action="success.html" method="get">
+            <form action="/submit-data"  action="success.html" method="get">
+                <div id="gi-form">
+                    <h4 class="">Main Information Sheet</h4>
+                
                     <fieldset>
                         <legend>General Information</legend>
 
@@ -393,37 +395,6 @@
                                 <button onclick="isSUnder18()" id="vage">Verify Age</button>
                             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
                     </fieldset>
 
@@ -485,80 +456,51 @@
                             </div>
                         </div>
                     </fieldset>
+                </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                
 
-            </div>
-        </div>
-    </section>
-    <br>
-
-    <section id="Ss" class="container section">
-        <div class="row justify-content-center text-center">
-            <div class="col-12 text-left">
-                <h4>Taxpayer Information</h4>
-                <form action="/submit-data" id="tpi-form" action="success.html" method="get">
+                <div id="tpi-form">
+                    <h4>Taxpayer Information</h4>
 
                     <fieldset>
                         <div class="box container-fluid">
                             <p>Special processing</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="yes">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
+                                <input class="form-check-input" type="radio" name="specialProcessing" id="specialYes" value="yes">
+                                <label class="form-check-label" for="specialYes">Yes</label>
                             </div>
                             <div class="form-check">
-
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="no">
-                                <label class="form-check-label" for="radioDefault1">
-                                    No
-                                </label>
+                                <input class="form-check-input" type="radio" name="specialProcessing" id="specialNo" value="no">
+                                <label class="form-check-label" for="specialNo">No</label>
                             </div>
                         </div>
                     </fieldset>
-
+                    
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Did the taxpayer's address changed since last year's return?</p>
+                            <p>Did the taxpayer's address change since last year's return?</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="yes">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
+                                <input class="form-check-input" type="radio" name="addressChanged" id="addressYes" value="yes">
+                                <label class="form-check-label" for="addressYes">Yes</label>
                             </div>
                             <div class="form-check">
-
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="no">
-                                <label class="form-check-label" for="radioDefault1">
-                                    No
-                                </label>
+                                <input class="form-check-input" type="radio" name="addressChanged" id="addressNo" value="no">
+                                <label class="form-check-label" for="addressNo">No</label>
                             </div>
                         </div>
                     </fieldset>
-
+                    
                     <fieldset>
                         <div class="box container-fluid">
-                            <p>Are you excluding Pueto Rico income this tax return?</p>
+                            <p>Are you excluding Puerto Rico income this tax return?</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="yes">
-                                <label class="form-check-label" for="radioDefault1">
-                                    Yes
-                                </label>
+                                <input class="form-check-input" type="radio" name="excludePR" id="excludeYes" value="yes">
+                                <label class="form-check-label" for="excludeYes">Yes</label>
                             </div>
                             <div class="form-check">
-
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
-                                    value="no">
-                                <label class="form-check-label" for="radioDefault1">
-                                    No
-                                </label>
+                                <input class="form-check-input" type="radio" name="excludePR" id="excludeNo" value="no">
+                                <label class="form-check-label" for="excludeNo">No</label>
                             </div>
 
 
@@ -579,7 +521,7 @@
                                 Form-8962</p>
                             <p></p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
+                                <input class="form-check-input" type="radio" name="receiveMarketplace" id="receiveMarketplaceYes"
                                     value="yes">
                                 <label class="form-check-label" for="radioDefault1">
                                     Yes
@@ -587,7 +529,7 @@
                             </div>
                             <div class="form-check">
 
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
+                                <input class="form-check-input" type="radio" name="receiveMarketplace" id="receiveMarketplaceNo"
                                     value="no">
                                 <label class="form-check-label" for="radioDefault1">
                                     No
@@ -698,6 +640,7 @@
                             </div>
                         </div>
                     </fieldset>
+                </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -718,7 +661,7 @@
                             <p>1</p>
                             <div class="form-check">
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                        type="radio" name="radioDefault" id="radioDefault1">Single
+                                        type="radio" name="single" id="single">Single
                                 </label>
 
                             </div>
@@ -728,7 +671,7 @@
                             <p>2</p>
                             <div class="form-check">
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                        type="radio" name="radioDefault" id="radioDefault1" value="">Married filing
+                                        type="radio" name="marriedFJointly" id="marriedFJointly" value="">Married filing
                                     jointly (even
                                     if only
                                     one had income)
@@ -741,7 +684,7 @@
                             <p>3</p>
                             <div class="form-check">
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                        type="radio" name="radioDefault" id="radioDefault1" value="">Married filing
+                                        type="radio" name="marriedFSeparately" id="marriedFSeparately" value="">Married filing
                                     separately
                                 </label>
                             </div>
@@ -782,16 +725,16 @@
                                         <p>Did your spouse ever live with you in 2024?</p>
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="yes">
+                                            <input class="form-check-input" type="radio" name="spWyou2024"
+                                                id="spWyou2024Yes" value="yes">
                                             <label class="form-check-label" for="radioDefault1">
                                                 Yes
                                             </label>
                                         </div>
                                         <div class="form-check">
 
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="no">
+                                            <input class="form-check-input" type="radio" name="spWyou2024"
+                                                id="spWyou2024No" value="no">
                                             <label class="form-check-label" for="radioDefault1">
                                                 No
                                             </label>
@@ -804,16 +747,16 @@
                                         </p>
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="yes">
+                                            <input class="form-check-input" type="radio" name="afterJune302024"
+                                                id="afterJune302024Yes" value="yes">
                                             <label class="form-check-label" for="radioDefault1">
                                                 Yes
                                             </label>
                                         </div>
                                         <div class="form-check">
 
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="no">
+                                            <input class="form-check-input" type="radio" name="afterJune302024"
+                                                id="afterJune302024No" value="no">
                                             <label class="form-check-label" for="radioDefault1">
                                                 No
                                             </label>
@@ -825,7 +768,7 @@
 
                                     <div id="comm-m">
                                         <p>Married filing separately, only. If the state in the address above is a
-                                            community property stte (AZ, CA, ID, LA, NV, NM, TX, WA, WI), or a
+                                            community property state (AZ, CA, ID, LA, NV, NM, TX, WA, WI), or a
                                             return is
                                             being
                                             filed to one of these states, answer the follow questions</p>
@@ -833,16 +776,16 @@
                                         <p>If "Yes", fill in Form 8958</p>
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="yes">
+                                            <input class="form-check-input" type="radio" name="commPropertyState"
+                                                id="commPropertyStateYes" value="yes">
                                             <label class="form-check-label" for="radioDefault1">
                                                 Yes
                                             </label>
                                         </div>
                                         <div class="form-check">
 
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="no">
+                                            <input class="form-check-input" type="radio" name="commPropertyState"
+                                                id="commPropertyStateNo" value="no">
                                             <label class="form-check-label" for="radioDefault1">
                                                 No
                                             </label>
@@ -856,16 +799,16 @@
                                             return.</p>
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="yes">
+                                            <input class="form-check-input" type="radio" name="residetOfCommSte"
+                                                id="residetOfCommSteYes" value="yes">
                                             <label class="form-check-label" for="radioDefault1">
                                                 Yes
                                             </label>
                                         </div>
                                         <div class="form-check">
 
-                                            <input class="form-check-input" type="radio" name="radioDefault"
-                                                id="radioDefault1" value="no">
+                                            <input class="form-check-input" type="radio" name="residetOfCommSte"
+                                                id="residetOfCommSteNo" value="no">
                                             <label class="form-check-label" for="radioDefault1">
                                                 No
                                             </label>
@@ -912,7 +855,7 @@
                             <div class="form-check">
 
                                 <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                        type="radio" name="radioDefault" id="radioDefault1">Qualifying surviving spouse
+                                        type="radio" name="qualifyingSurvSp" id="qualifyingSurvSp">Qualifying surviving spouse
                                     (with
                                     qualifying child)
                                 </label>

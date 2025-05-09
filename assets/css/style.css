@@ -117,8 +117,8 @@ form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 div.container-fluid {
@@ -195,12 +195,7 @@ fieldset div {
     align-items: left;
 }
 
-#Fs fieldset {
-    background-color: var(--highlight-color-light);
-    display: flex;
-}
-
-#Ss fieldset {
+#Fs fieldset, #Ss fieldset{
     background-color: var(--highlight-color-light);
     display: flex;
 }
