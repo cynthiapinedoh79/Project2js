@@ -572,6 +572,22 @@ document.addEventListener("DOMContentLoaded",
 
 
 
+    /*To border 2px the required input fields after submit that weren't filled*/
+    const form = document.getElementById('my-form');
+    form.addEventListener('submit', function(event) {
+      if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+
+  });
+
+
+
+
+
+
 
 
 
