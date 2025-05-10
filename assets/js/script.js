@@ -545,8 +545,146 @@ document.addEventListener("DOMContentLoaded",
 
 
     }
+    /*Taxpayer Information*/
+
+    /*Check if Blind*/
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const blind = document.getElementById("blind");
+      const blindSp = document.getElementById("blindSp");
+    
+      if (!blind.checked && !blindSp.checked) {
+        e.preventDefault();
+        alert("Please check at least one option for blindness (Taxpayer or Spouse).");
+      }
+    });
+    /*Presidential Election Campain*/    
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const filingJoint3 = document.getElementById("filingJoint3");
+      const filingJoint3Sp = document.getElementById("filingJoint3Sp");
+    
+      if (!filingJoint3.checked && !filingJoint3Sp.checked) {
+        e.preventDefault();
+        alert("Please check at least one box for the Presidential Election Campaign.");
+      }
+    });
+    
+
+
 
     /*Filing Status and Exemptions*/
+
+        /*If Filing Status is Married Filing Separately*/
+        document.getElementById("my-form").addEventListener("submit", function (e) {
+          const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
+          const isSeparate = filingStatus && filingStatus.value === "separate";
+        
+          // Spouse Info fields
+          const spfname = document.getElementById("spfname");
+          const splname = document.getElementById("splname");
+          const ssn = document.getElementById("ssn");
+        
+          // Set required if filing separately
+          if (isSeparate) {
+            let valid = true;
+        
+            if (!spfname.value.trim()) {
+              spfname.classList.add("is-invalid");
+              valid = false;
+            } else {
+              spfname.classList.remove("is-invalid");
+            }
+        
+            if (!splname.value.trim()) {
+              splname.classList.add("is-invalid");
+              valid = false;
+            } else {
+              splname.classList.remove("is-invalid");
+            }
+        
+            if (!/^\d{9}$/.test(ssn.value)) {
+              ssn.classList.add("is-invalid");
+              valid = false;
+            } else {
+              ssn.classList.remove("is-invalid");
+            }
+        
+            if (!valid) {
+              e.preventDefault();
+              alert("Please fill in all required spouse fields for 'Married filing separately'.");
+            }
+          }
+        });
+
+        /*Exemptions*/    
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const exempYoursef = document.getElementById("exempYoursef");
+      const exempSp = document.getElementById("exempSp");
+    
+      if (!exempYoursef.checked && !exempSp.checked) {
+        e.preventDefault();
+        alert("Please check at least one box for exemptions.");
+      }
+    });
+
+    /*Check If (c)
+    If You are using filing status 4 and claiminng nonresident alien spouse*/
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const checkboxC = document.getElementById("fS4nonrSp");
+      const sfname = document.getElementById("s4-sfname");
+      const slname = document.getElementById("s4-slname");
+      const sssn = document.getElementById("s4-sssn");
+    
+      let valid = true;
+    
+      if (checkboxC.checked) {
+        // Check if required spouse fields are filled
+        if (!sfname.value.trim()) {
+          sfname.classList.add("is-invalid");
+          valid = false;
+        } else {
+          sfname.classList.remove("is-invalid");
+        }
+    
+        if (!slname.value.trim()) {
+          slname.classList.add("is-invalid");
+          valid = false;
+        } else {
+          slname.classList.remove("is-invalid");
+        }
+    
+        if (!/^\d{9}$/.test(sssn.value)) {
+          sssn.classList.add("is-invalid");
+          valid = false;
+        } else {
+          sssn.classList.remove("is-invalid");
+        }
+    
+        if (!valid) {
+          e.preventDefault();
+          alert("Please fill in all required spouse info for status 4 with nonresident spouse.");
+        }
+      } else {
+        // Clean up if unchecked
+        sfname.classList.remove("is-invalid");
+        slname.classList.remove("is-invalid");
+        sssn.classList.remove("is-invalid");
+      }
+    });
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // References to the elements
     const exempYoursef = document.getElementById('exempYoursef');
