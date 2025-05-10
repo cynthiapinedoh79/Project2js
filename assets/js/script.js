@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded",
     let myFormElement = document.getElementById("my-form");
     myFormElement.addEventListener("submit", handleSubmit);
 
+    /*General Information*/
     function handleSubmit(e) {
       e.preventDefault();
       let myFormData = e.target;
 
-      /*General Information*/
+
       const fname = myFormData.fName.value.trim();
       /*Get initial from first name*/
       const fnamei = fname ? fname.charAt(0).toUpperCase() : "";
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded",
       const lnamesu = myFormData.lNameSu.value;
       let email = myFormData.email.value;
       let emailFbk = document.getElementById("emailFbk");
+
 
 
       //SSN
@@ -43,7 +45,6 @@ document.addEventListener("DOMContentLoaded",
         cssnFbk.innerText = 'SSN must be 9 digits.';
         cssnFbk.className = 'error';
       }
-
 
       const form = document.getElementById('my-form');
       const ssnInput = document.getElementById('ssn');
@@ -81,30 +82,30 @@ document.addEventListener("DOMContentLoaded",
         }
 
         // Check both are valid length
-  if (ssnRaw.length === 9 && cssnRaw.length === 9) {
-    if (ssnRaw === cssnRaw) {
-      if (!fromSubmit) { // <- only set "Valid SSN" during typing, NOT after submit
-      cssnFbk.innerText = 'Valid SSN';
-      cssnFbk.className = 'success';
-    }
-   } else {
-      cssnFbk.innerText = 'SSN and confirmation do not match.';
-      cssnFbk.className = 'error';
-    }
+        if (ssnRaw.length === 9 && cssnRaw.length === 9) {
+          if (ssnRaw === cssnRaw) {
+            if (!fromSubmit) { // <- only set "Valid SSN" during typing, NOT after submit
+              cssnFbk.innerText = 'Valid SSN';
+              cssnFbk.className = 'success';
+            }
+          } else {
+            cssnFbk.innerText = 'SSN and confirmation do not match.';
+            cssnFbk.className = 'error';
+          }
 
 
-  } else if (cssnRaw.length === 9 && ssnRaw.length !== 9) {
-    // Keep showing individual error if one is still incomplete
-    cssnFbk.innerText = '';
-    cssnFbk.className = '';
-  } else if (ssnRaw.length === 9 && cssnRaw.length !== 9) {
-    cssnFbk.innerText = '';
-    cssnFbk.className = '';
-  } else {
-    // Neither field ready for comparison: clear compare message
-    cssnFbk.innerText = '';
-    cssnFbk.className = '';
-  }
+        } else if (cssnRaw.length === 9 && ssnRaw.length !== 9) {
+          // Keep showing individual error if one is still incomplete
+          cssnFbk.innerText = '';
+          cssnFbk.className = '';
+        } else if (ssnRaw.length === 9 && cssnRaw.length !== 9) {
+          cssnFbk.innerText = '';
+          cssnFbk.className = '';
+        } else {
+          // Neither field ready for comparison: clear compare message
+          cssnFbk.innerText = '';
+          cssnFbk.className = '';
+        }
       }
 
       // Event listeners for SSN
@@ -192,32 +193,6 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       /*Joint Information*/
       const sfname = myFormData.sfName.value.trim();
       /*Get initial from spouse first name*/
@@ -228,7 +203,6 @@ document.addEventListener("DOMContentLoaded",
       const slnamesu = myFormData.slNameSu.value;
       let semail = myFormData.sEmail.value;
       let sEmailFbk = document.getElementById("sEmailFbk");
-
 
 
 
@@ -256,7 +230,6 @@ document.addEventListener("DOMContentLoaded",
         csssnFbk.innerText = 'SSN must be 9 digits.';
         csssnFbk.className = 'error';
       }
-
 
       // Spouse SSN Input Elements
       const sssnInput = document.getElementById('sssn');
@@ -296,28 +269,28 @@ document.addEventListener("DOMContentLoaded",
         }
 
         // Check both are valid length
-  if (sssnRaw.length === 9 && csssnRaw.length === 9) {
-    if (sssnRaw === csssnRaw) {
-      if (!fromSubmit) { // <- only set "Valid SSN" during typing, NOT after submit
-      csssnFbk.innerText = 'Valid Spouse SSN';
-      csssnFbk.className = 'success';
-    }
-   } else {
-      csssnFbk.innerText = 'SSN and confirmation do not match.';
-      csssnFbk.className = 'error';
-    }
-  } else if (csssnRaw.length === 9 && sssnRaw.length !== 9) {
-    // Keep showing individual error if one is still incomplete
-    csssnFbk.innerText = '';
-    csssnFbk.className = '';
-  } else if (sssnRaw.length === 9 && csssnRaw.length !== 9) {
-    csssnFbk.innerText = '';
-    csssnFbk.className = '';
-  } else {
-    // Neither field ready for comparison: clear compare message
-    csssnFbk.innerText = '';
-    csssnFbk.className = '';
-  }
+        if (sssnRaw.length === 9 && csssnRaw.length === 9) {
+          if (sssnRaw === csssnRaw) {
+            if (!fromSubmit) { // <- only set "Valid SSN" during typing, NOT after submit
+              csssnFbk.innerText = 'Valid Spouse SSN';
+              csssnFbk.className = 'success';
+            }
+          } else {
+            csssnFbk.innerText = 'SSN and confirmation do not match.';
+            csssnFbk.className = 'error';
+          }
+        } else if (csssnRaw.length === 9 && sssnRaw.length !== 9) {
+          // Keep showing individual error if one is still incomplete
+          csssnFbk.innerText = '';
+          csssnFbk.className = '';
+        } else if (sssnRaw.length === 9 && csssnRaw.length !== 9) {
+          csssnFbk.innerText = '';
+          csssnFbk.className = '';
+        } else {
+          // Neither field ready for comparison: clear compare message
+          csssnFbk.innerText = '';
+          csssnFbk.className = '';
+        }
 
       }
 
@@ -407,21 +380,6 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       /*Mailing Address*/
       //If zipcode doesn't have 5 digits
       const zipcodeFbk = document.getElementById("zipcodeFbk");
@@ -436,7 +394,7 @@ document.addEventListener("DOMContentLoaded",
       }
 
       const zipInput = document.getElementById("zipcode");
-  
+
 
       zipInput.addEventListener("input", function (e) {
         const input = e.target.value.replace(/\D/g, ""); // Remove non-digits
@@ -458,24 +416,13 @@ document.addEventListener("DOMContentLoaded",
           e.preventDefault();
           zipcodeFbk.innerText = "Zip Code must be 5 digits.";
           zipcodeFbk.className = 'error';
+        } else {
+          zipcodeFbk.innerText = "Valid Zip Code";
+          zipcodeFbk.className = 'success';
         }
-      }); 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      });
 
 
 
@@ -540,10 +487,6 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
-
-
-
       /*Spouse Phone Number*/
       let sphone = myFormData.sPhone.value.replace(/\D/g, "");
       const sphoneInput = document.getElementById("sphone");
@@ -601,8 +544,48 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
     }
+
+    /*Filing Status and Exemptions*/
+
+            // References to the elements
+      const exempYoursef = document.getElementById('exempYoursef');
+      const exempSp = document.getElementById('exempSp');
+      const nbxc = document.getElementById('nbxc');
+
+      function updateNbxc() {
+        let count = 0;
+        if (exempYoursef.checked) count++;
+        if (exempSp.checked) count++;
+        document.getElementById("nbxc").value = count;
+      }
+
+      // Listen for changes on the checkboxes
+      exempYoursef.addEventListener('change', updateNbxc);
+      exempSp.addEventListener('change', updateNbxc);
+
+      // Initialize value when page loads
+      updateNbxc();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -687,44 +670,11 @@ idPhotoInput.addEventListener("change", function (event) {
 document.getElementById("my-form").addEventListener("submit", function (event) {
   event.preventDefault();
   // Prevent the default form submission
-  const giData = new giData(this);
+  const formData = new FormData(this);
   // Create a FormData object from the form
   fetch("/submit-data", {
       method: "POST",
-      body: giData,
-    })
-    // Send the form data to the server
-    .then(response => response.json())
-    .then(data => console.log("Success:", data))
-    // Handle the response from the server
-    .catch(error => console.error("Error:", error));
-});
-
-
-document.getElementById("tpi-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  // Prevent the default form submission
-  const tpiData = new tpiData(this);
-  // Create a FormData object from the form
-  fetch("/submit-data", {
-      method: "POST",
-      body: tpiData,
-    })
-    // Send the form data to the server
-    .then(response => response.json())
-    .then(data => console.log("Success:", data))
-    // Handle the response from the server
-    .catch(error => console.error("Error:", error));
-});
-
-document.getElementById("fsae").addEventListener("submit", function (event) {
-  event.preventDefault();
-  // Prevent the default form submission
-  const fsaeData = new fsaeData(this);
-  // Create a FormData object from the form
-  fetch("/submit-data", {
-      method: "POST",
-      body: fsaeData,
+      body: formData,
     })
     // Send the form data to the server
     .then(response => response.json())
