@@ -324,8 +324,7 @@ span {
 #fnameFbk,
 #mnameiFbk,
 #emailFbk,
-#phoneFbk,
-#zipFbk {
+ {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -334,7 +333,8 @@ span {
     text-align: center;
     text-align: left;
 }
-
+#phoneFbk,
+#zipFbk,
 #ssnFbk,
 #cssnFbk,
 #dobFbk  {
@@ -352,7 +352,7 @@ span {
 #sfnameFbk,
 #smnameiFbk,
 #semailFbk,
-#sphoneFbk {
+ {
     color: var(--fourth-color);
     background-color: var(--bgFbk-color);
     width: fit-content;
@@ -361,7 +361,7 @@ span {
     text-align: center;
     text-align: left;
 }
-
+#sphoneFbk,
 #sssnFbk,
 #csssnFbk, 
 #sdobFbk
