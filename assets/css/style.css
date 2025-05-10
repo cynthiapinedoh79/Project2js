@@ -180,6 +180,7 @@ form label {
 
 input.form-control {
     border: 0.5px solid var(--border-input);
+    width: auto;
 }
 
 input#expr.form-control {
@@ -271,6 +272,28 @@ fieldset div {
 #fsae fieldset{
     background-color: var(--highlight-color-light);
 }
+
+#fsae fieldset,
+#fsae .box.container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: left;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+#fsae .form-check,
+#fsae .form-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
 
 legend {
     position: relative;
@@ -613,6 +636,73 @@ hr {
 
 }
 
+div#atti.upload-section {
+    border: none;
+    /* FLEX PARENT PROPERTIES */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* SPACING PROPERTIES */
+    align-items: left;
+    gap: 10px;
+    flex-basis: auto;
+    height: auto;
+    margin-bottom: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Align everything in the upload section to the left */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .upload-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .upload-label {
+    font-weight: 600;
+    color: var(--primary-color); /* or adjust to match your style */
+    text-align: left;
+  }
+  
+  .upload-block input[type="file"] {
+    width: 100%;        /* Ensure it fills the block */
+    max-width: 100%;    /* Prevent overflow */
+    box-sizing: border-box; /* Includes padding and border in width */
+  }
+  
+  
+  .upload-block img {
+    display: block;
+    max-width: 350px; /* Adjust as needed */
+    height: auto;
+    border: 1px solid var(--border-input);
+    margin-top: 5px;
+  }
+/*Success card after submited form*/
+  div.card-body{
+    background-color: var(--primary-color);
+    text-align: center;
+  }
+  .card-text{
+    color: var(--secondary-text-color);
+    text-align: center;
+  }
+
+  .card-title{
+    font-weight: 600;
+  }
+  
+  
 
 @media screen (min-width: 768px) {}
 

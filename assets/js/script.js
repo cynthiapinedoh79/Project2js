@@ -548,24 +548,24 @@ document.addEventListener("DOMContentLoaded",
 
     /*Filing Status and Exemptions*/
 
-            // References to the elements
-      const exempYoursef = document.getElementById('exempYoursef');
-      const exempSp = document.getElementById('exempSp');
-      const nbxc = document.getElementById('nbxc');
+    // References to the elements
+    const exempYoursef = document.getElementById('exempYoursef');
+    const exempSp = document.getElementById('exempSp');
+    const nbxc = document.getElementById('nbxc');
 
-      function updateNbxc() {
-        let count = 0;
-        if (exempYoursef.checked) count++;
-        if (exempSp.checked) count++;
-        document.getElementById("nbxc").value = count;
-      }
+    function updateNbxc() {
+      let count = 0;
+      if (exempYoursef.checked) count++;
+      if (exempSp.checked) count++;
+      document.getElementById("nbxc").value = count;
+    }
 
-      // Listen for changes on the checkboxes
-      exempYoursef.addEventListener('change', updateNbxc);
-      exempSp.addEventListener('change', updateNbxc);
+    // Listen for changes on the checkboxes
+    exempYoursef.addEventListener('change', updateNbxc);
+    exempSp.addEventListener('change', updateNbxc);
 
-      // Initialize value when page loads
-      updateNbxc();
+    // Initialize value when page loads
+    updateNbxc();
 
 
 
@@ -574,19 +574,31 @@ document.addEventListener("DOMContentLoaded",
 
     /*To border 2px the required input fields after submit that weren't filled*/
     const form = document.getElementById('my-form');
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
       if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
+        event.preventDefault();
+        event.stopPropagation();
       }
       form.classList.add('was-validated');
 
-  });
+    });
 
 
 
 
-
+    document.getElementById("my-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop form from submitting
+      const form = event.target;
+    
+      if (form.checkValidity()) {
+        document.getElementById("successCard").style.display = "block"; // Show success message
+        form.classList.remove("was-validated"); // optional reset
+        form.reset(); // clear form
+      } else {
+        form.classList.add("was-validated"); // Trigger Bootstrap validation styles
+      }
+    });
+    
 
 
 
@@ -614,6 +626,16 @@ document.addEventListener("DOMContentLoaded",
 
 
   }
+
+
+
+
+
+
+
+
+
+
 );
 
 
