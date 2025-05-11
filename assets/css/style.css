@@ -188,73 +188,70 @@ input#expr.form-control {
     border: 0.5px solid var(--border-input);
 }
 
-/*Validation styles*/
-.form-control.is-valid {
-    border-color: var(--border-input);
-    background-image:none;
+/* Valid state for inputs */
+input.form-control.is-valid,
+.was-validated input.form-control:valid {
+  border: 1px solid var(--border-input);
+  background-image: none;
 }
 
-.form-control.is-valid, .was-validated .form-control:valid {
-    border: 1px solid var(--border-input);
-    background-image: none;
+/* Invalid state for inputs */
+input.form-control.is-invalid,
+.was-validated input.form-control:invalid {
+  border: 1.5px solid var(--fourth-color) !important;
+  outline: 0.5px solid var(--fourth-color);
+  outline-offset: 0px;
 }
 
-input:required:invalid {
-    border: 2px solid var(--border-input);
+/* Valid state for checkboxes */
+.form-check-input.is-valid,
+.was-validated .form-check-input:valid {
+  border-color: var(--highlight-color);
 }
 
-.form-check-input.is-valid, .was-validated .form-check-input:valid {
-    border-color: var(--highlight-color);
+/* Invalid state for checkboxes */
+.form-check-input.is-invalid,
+.was-validated .form-check-input:invalid {
+  border: 1.5px solid var(--fourth-color) !important;
+  outline: 0.5px solid var(--fourth-color);
 }
 
-.form-check-input.is-invalid, .was-validated .form-check-input:invalid {
-    border: 1.5px solid var(--fourth-color) !important;
-    outline: 0.5px solid var(--fourth-color);
-    outline-offset: 0px; /* optional, to push the outline outside */
+/* Valid checkbox label color */
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: var(--highlight-color);
 }
 
-
-.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
-    color: var(--highlight-color);
+/* Checked valid checkbox background */
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+  background-color: var(--secondary-color);
 }
 
-.form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked {
-    background-color: var(--secondary-color);
+/* Valid state for selects */
+.form-select.is-valid,
+.was-validated .form-select:valid {
+  border: 1px solid var(--border-input);
 }
 
-.form-select.is-invalid, .was-validated .form-select:invalid {
-    border: 2px solid var(--fourth-color) !important;
+.form-select.is-invalid,
+.was-validated .form-select:invalid {
+  border: 2px solid var(--fourth-color) !important;
 }
 
-.form-check-input.is-valid:focus .was-validated .form-select:valid:focus {
-    border-color: var(---bs form-valid-border-color);
-    box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
-}
-
-.form-check-input.is-valid:focus .was-validated .form-select:valid:focus {
-    border-color: var(---bs form-valid-border-color);
-    box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
-}
-
-/* Only style required inputs after validation */
-.was-validated input:required:valid::after {
-    border: 2px solid var(--border-input);
+.is-invalid input[type="checkbox"] {
+    border: 1.5px solid var(--fourth-color) !important;;
+  outline: 0.5px solid var(--fourth-color)!important;
   }
 
-.was-validated input:required:invalid {
-    border: 1.5px solid var(--fourth-color) !important;
-    outline: 0.5px solid var(--fourth-color);
-    outline-offset: 0px; /* optional, to push the outline outside */
-}
-input.form-control.is-valid{
-    border: 1px solid var(--border-input);
-}
 
-input.form-control.is-invalid{
-    border: 1.5px solid var(--fourth-color) !important;
-    outline: 0.5px solid var(--fourth-color);
-    outline-offset: 0px; /* optional, to push the outline outside */
-}
+
+
+
+
+
+
+
 
 fieldset {
     border: none;

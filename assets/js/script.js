@@ -1,3 +1,6 @@
+/* jshint esversion: 6 */
+
+
 /*Main Information*/
 document.addEventListener("DOMContentLoaded",
   function () {
@@ -14,11 +17,6 @@ document.addEventListener("DOMContentLoaded",
       /*Get initial from first name*/
       const fnamei = fname ? fname.charAt(0).toUpperCase() : "";
       document.getElementById("fnamei").value = fnamei;
-
-      const lname = myFormData.lName.value;
-      const lnamesu = myFormData.lNameSu.value;
-      let email = myFormData.email.value;
-      let emailFbk = document.getElementById("emailFbk");
 
 
 
@@ -199,14 +197,6 @@ document.addEventListener("DOMContentLoaded",
       const sfnamei = sfname ? sfname.charAt(0).toUpperCase() : "";
       document.getElementById("sfnamei").value = sfnamei;
 
-      const slname = myFormData.slName.value;
-      const slnamesu = myFormData.slNameSu.value;
-      let semail = myFormData.sEmail.value;
-      let sEmailFbk = document.getElementById("sEmailFbk");
-
-
-
-
       //Spouse SSN
 
       const sssn = myFormData.sSsn.value.replace(/\D/g, "");
@@ -236,18 +226,18 @@ document.addEventListener("DOMContentLoaded",
       const csssnInput = document.getElementById('csssn');
 
       // Utility Functions
-      function getRawSSN(value) {
+      function getRawSSSN(value) {
         return value.replace(/\D/g, '').slice(0, 9);
       }
 
-      function maskSSN(raw) {
+      function maskSSSN(raw) {
         return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
       }
 
       // Validation Function
       function validateSSSNFields(fromSubmit = false) {
-        const sssnRaw = getRawSSN(sssnInput.dataset.raw || '');
-        const csssnRaw = getRawSSN(csssnInput.dataset.raw || '');
+        const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
+        const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
 
         // Clear previous messages
         if (!fromSubmit) {
@@ -296,25 +286,25 @@ document.addEventListener("DOMContentLoaded",
 
       // Spouse SSN - Input Events
       sssnInput.addEventListener('focus', () => {
-        sssnInput.value = getRawSSN(sssnInput.dataset.raw || '');
+        sssnInput.value = getRawSSSN(sssnInput.dataset.raw || '');
       });
 
       sssnInput.addEventListener('input', () => {
-        const raw = getRawSSN(sssnInput.value);
+        const raw = getRawSSSN(sssnInput.value);
         sssnInput.dataset.raw = raw;
         sssnInput.value = raw; // Ensures raw is visible during typing
         validateSSSNFields();
       });
 
       sssnInput.addEventListener('blur', () => {
-        const raw = getRawSSN(sssnInput.dataset.raw || '');
+        const raw = getRawSSSN(sssnInput.dataset.raw || '');
         sssnInput.dataset.raw = raw;
         sssnInput.value = maskSSN(raw);
       });
 
       // Spouse Confirm SSN - Input Events
       csssnInput.addEventListener('focus', () => {
-        csssnInput.value = getRawSSN(csssnInput.dataset.raw || '');
+        csssnInput.value = getRawSSSN(csssnInput.dataset.raw || '');
       });
 
       csssnInput.addEventListener('input', () => {
@@ -325,7 +315,7 @@ document.addEventListener("DOMContentLoaded",
       });
 
       csssnInput.addEventListener('blur', () => {
-        const raw = getRawSSN(csssnInput.dataset.raw || '');
+        const raw = getRawSSSN(csssnInput.dataset.raw || '');
         csssnInput.dataset.raw = raw;
         csssnInput.value = maskSSN(raw);
       });
@@ -374,8 +364,8 @@ document.addEventListener("DOMContentLoaded",
         validateSSSNFields(true);
 
         // Mask values after submit
-        sssnInput.value = maskSSN(sssnRaw);
-        csssnInput.value = maskSSN(csssnRaw);
+        sssnInput.value = maskSSSN(sssnRaw);
+        csssnInput.value = maskSSSN(csssnRaw);
       });
 
 
@@ -488,53 +478,61 @@ document.addEventListener("DOMContentLoaded",
 
 
       /*Spouse Phone Number*/
-      let sphone = myFormData.sPhone.value.replace(/\D/g, "");
+      let sphone = myFormData.phone.value.replace(/\D/g, "");
       const sphoneInput = document.getElementById("sphone");
       const sphoneFbk = document.getElementById("sphoneFbk");
 
 
+      if (phone.length < 10) {
+        sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${sphone.length} digits.`;
+        sphoneFbk.className = "error";
+      } else {
+        sphoneFbk.innerText = "";
+        sphoneFbk.className = "";
+      }
+
       // Real-time validation
       sphoneInput.addEventListener("input", function (e) {
-        let sInput = e.target.value.replace(/\D/g, ""); // Only digits
-        sInput = sInput.substring(0, 10); // Max 10 digits
+        let input = e.target.value.replace(/\D/g, ""); // Only digits
+        input = input.substring(0, 10); // Max 10 digits
 
-        let sFormattedInput = "";
-        if (sInput.length > 0) {
-          sFormattedInput += "(" + sInput.substring(0, 3);
+        let formattedInput = "";
+        if (input.length > 0) {
+          formattedInput += "(" + input.substring(0, 3);
         }
-        if (sInput.length > 3) {
-          sFormattedInput += ") " + sInput.substring(3, 6);
+        if (input.length > 3) {
+          formattedInput += ") " + input.substring(3, 6);
         }
-        if (sInput.length >= 7) {
-          sFormattedInput += "-" + sInput.substring(6, 10);
+        if (input.length >= 7) {
+          formattedInput += "-" + input.substring(6, 10);
         }
 
-        e.target.value = sFormattedInput;
+        e.target.value = formattedInput;
 
         // Real-time feedback
-        if (sInput.length < 10) {
-          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${sInput.length} digits.`;
+        if (input.length < 10) {
+          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${input.length} digits.`;
           sphoneFbk.className = "error";
         } else {
-          sphoneFbk.innerText = "Valid Spouse Phone Number";
+          sphoneFbk.innerText = "Valid Phone Number";
           sphoneFbk.className = "success";
         }
       });
 
       // Submit validation
       form.addEventListener("submit", function (e) {
-        const sPhoneInput = sPhoneInput.value.replace(/\D/g, ""); // Always re-read latest value
+        const input = sphoneInput.value.replace(/\D/g, ""); // Always re-read latest value
 
-        if (sInput.length < 10) {
+        if (input.length < 10) {
           e.preventDefault(); // Stop form submission
-          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${sInput.length} digits.`;
+          sphoneFbk.innerText = `Phone must be 10 digits. Currently: ${input.length} digits.`;
           sphoneFbk.className = "error";
         } else {
-          sphoneFbk.innerText = "Valid Spouse Phone Number";
+          sphoneFbk.innerText = "Valid Phone Number";
           sphoneFbk.className = "success";
           // Optional: format again in case user cleared the field
-          let sFormattedInput = `(${sInput.substring(0, 3)}) ${sInput.substring(3, 6)}-${sInput.substring(6, 10)}`;
-          sPhoneInput.value = sFormattedInput;
+          let formattedInput = `(${input.substring(0, 3)}) ${input.substring(3, 6)}-${input.substring(6, 10)}`;
+          sphoneInput.value = formattedInput;
         }
       });
 
@@ -548,187 +546,207 @@ document.addEventListener("DOMContentLoaded",
     /*Taxpayer Information*/
 
 
-    /*Presidential Election Campain*/    
+    /*Presidential Election Campain*/
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const filingJoint3 = document.getElementById("filingJoint3");
       const filingJoint3Sp = document.getElementById("filingJoint3Sp");
       const filingJoint3Fbk = document.getElementById("filingJoint3Fbk");
+      const pec = document.getElementById("pec");
+
+      // Clear previous state
       filingJoint3Fbk.innerText = "";
       filingJoint3Fbk.className = "";
+      pec.classList.remove("is-invalid");
 
-    
+       // Validation
       if (!filingJoint3.checked && !filingJoint3Sp.checked) {
         e.preventDefault();
         filingJoint3Fbk.innerText = "Please check at least one box for the Presidential Election Campaign.";
         filingJoint3Fbk.className = "error";
+        pec.classList.add("is-invalid");
       }
     });
-    
+
 
 
 
     /*Filing Status and Exemptions*/
-        /*If Filing Status is not selected*/
-        document.getElementById("my-form").addEventListener("submit", function (e) {
-          const selectedStatus = document.querySelector('input[name="filingStatus"]:checked');
+    /*If Filing Status is not selected*/
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const selectedStatus = document.querySelector('input[name="filingStatus"]:checked');
 
-          const filingStatusFbk = document.getElementById("filingStatusFbk");
-          filingStatusFbk.innerText = "";
-          filingStatusFbk.className = "";
-        
-          if (!selectedStatus) {
-            e.preventDefault();
-            filingStatusFbk.innerText = "Please select a Filing Status.";
-            filingStatusFbk.className = "error";
-          }
-        });
-        
+      const filingStatusFbk = document.getElementById("filingStatusFbk");
+      filingStatusFbk.innerText = "";
+      filingStatusFbk.className = "";
+
+      if (!selectedStatus) {
+        e.preventDefault();
+        filingStatusFbk.innerText = "Please select a Filing Status.";
+        filingStatusFbk.className = "error";
+      }
+    });
 
 
-        /*If Filing Status is Married Filing Separately*/
 
-        /*Required inputs if Filing Status is Married Filing Separately is Checked*/
-        document.getElementById("my-form").addEventListener("submit", function (e) {
-          const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
-          const isSeparate = filingStatus && filingStatus.value === "separate";
-          
-    
-        
-          // Spouse Info fields
-          const separatelyspfname = document.getElementById("separatelyspfname");
-          const separatelysplname = document.getElementById("separatelysplname");
-          const separatelyspssn = document.getElementById("separatelyspssn");
+    /*If Filing Status is Married Filing Separately*/
 
-          const marriedFSeparatelyFbk = document.getElementById("marriedFSeparatelyFbk");
-          marriedFSeparatelyFbk.innerText = "";
-          marriedFSeparatelyFbk.className = "";
-        
-          // Set required if filing separately
-          if (isSeparate) {
-            let valid = true;
-        
-            if (!separatelyspfname.value.trim()) {
-              separatelyspfname.classList.add("is-invalid");
-              valid = false;
-            } else {
-              separatelyspfname.classList.remove("is-invalid");
-            }
-        
-            if (!separatelysplname.value.trim()) {
-              separatelysplname.classList.add("is-invalid");
-              valid = false;
-            } else {
-              separatelysplname.classList.remove("is-invalid");
-            }
-        
-            if (!/^\d{9}$/.test(separatelyspssn.value)) {
-              separatelyspssn.classList.add("is-invalid");
-              valid = false;
-            } else {
-              separatelyspssn.classList.remove("is-invalid");
-            }
-        
-            if (!valid) {
-              e.preventDefault();
+    /*Required inputs if Filing Status is Married Filing Separately is Checked*/
+    document.getElementById("my-form").addEventListener("submit", function (e) {
+      const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
+      const isSeparate = filingStatus && filingStatus.value === "separate";
 
-              marriedFSeparatelyFbk.innerText = "Please fill in all required spouse fields for 'Married filing separately'.";
-              marriedFSeparatelyFbk.className = "error";
-            }
-          }
-        });
 
-        // Spouse SSN for Married Filing Separately
-        //---------------------------------------------------------------------------
-        // Spouse SSN Input & Feedback Elements
-const form = document.getElementById("my-form");
-const separatelyspssnInput = document.getElementById('separatelyspssn');
-const separatelyspssnFbk = document.getElementById("separatelyspssnFbk");
 
-// Utility Functions
-function getRawSeparatelyspssn(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
+      // Spouse Info fields
+      const separatelyspfname = document.getElementById("separatelyspfname");
+      const separatelysplname = document.getElementById("separatelysplname");
+      const separatelyspssn = document.getElementById("separatelyspssn");
 
-function maskSeparatelyspssn(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
+      const marriedFSeparatelyFbk = document.getElementById("marriedFSeparatelyFbk");
+      marriedFSeparatelyFbk.innerText = "";
+      marriedFSeparatelyFbk.className = "";
 
-// Validation Function
-function validateSeparatelyspssnFields(fromSubmit = false) {
-  const separatelyspssnRaw = getRawSeparatelyspssn(separatelyspssnInput.dataset.raw || '');
+      // Set required if filing separately
+      if (isSeparate) {
+        let valid = true;
 
-  // Clear previous messages if not submitting
-  if (!fromSubmit) {
-    separatelyspssnFbk.innerText = '';
-    separatelyspssnFbk.className = '';
-  }
+        if (!separatelyspfname.value.trim()) {
+          separatelyspfname.classList.add("is-invalid");
+          separatelyspfname.classList.remove("is-valid");
+          valid = false;
+        } else {
+          separatelyspfname.classList.remove("is-invalid");
+          separatelyspfname.classList.add("is-valid");
+        }
 
-  // Show error if incomplete SSN
-  if (separatelyspssnRaw.length > 0 && separatelyspssnRaw.length < 9) {
-    separatelyspssnFbk.innerText = 'Spouse SSN must be 9 digits.';
-    separatelyspssnFbk.className = 'error';
-  }
-}
+        if (!separatelysplname.value.trim()) {
+          separatelysplname.classList.add("is-invalid");
+          separatelysplname.classList.remove("is-valid");
+          valid = false;
+        } else {
+          separatelysplname.classList.remove("is-invalid");
+          separatelysplname.classList.add("is-valid");
+        }
 
-// Input Events
-separatelyspssnInput.addEventListener('focus', () => {
-  separatelyspssnInput.value = separatelyspssnInput.dataset.raw || '';
-});
+        if (!/^\d{9}$/.test(separatelyspssn.value)) {
+          separatelyspssn.classList.add("is-invalid");
+          separatelyspssn.classList.remove("is-valid"); // <-- in case it was previously valid
+          valid = false;
+          valid = false;
+        } else {
+          separatelyspssn.classList.remove("is-invalid"); // <-- this line fixes the issue
+          separatelyspssn.classList.add("is-valid"); // <-- this line applies the green/valid styling
+          separatelyspssnFbk.innerText = 'Valid Spouse SSN';
+          separatelyspssnFbk.className = 'success';
+        }
 
-separatelyspssnInput.addEventListener('input', () => {
-  const raw = getRawSeparatelyspssn(separatelyspssnInput.value);
-  separatelyspssnInput.dataset.raw = raw;
-  separatelyspssnInput.value = raw; // Show raw input while typing
-  validateSeparatelyspssnFields();
-});
 
-separatelyspssnInput.addEventListener('blur', () => {
-  const raw = getRawSeparatelyspssn(separatelyspssnInput.dataset.raw || '');
-  separatelyspssnInput.dataset.raw = raw;
-  separatelyspssnInput.value = maskSeparatelyspssn(raw);
-});
+        if (!valid) {
+          e.preventDefault();
 
-// Submit Handler
-form.addEventListener('submit', (e) => {
-  e.preventDefault(); // Prevent form submission until validated
+          marriedFSeparatelyFbk.innerText = "Please fill in all required spouse fields for 'Married filing separately'.";
+          marriedFSeparatelyFbk.className = "error";
+        }
+      }
+    });
 
-  const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
-  const isSeparate = filingStatus && filingStatus.value === "separate";
+    // Spouse SSN for Married Filing Separately
+    //---------------------------------------------------------------------------
+    // Spouse SSN Input & Feedback Elements
+    const form = document.getElementById("my-form");
+    const separatelyspssnInput = document.getElementById('separatelyspssn');
+    const separatelyspssnFbk = document.getElementById("separatelyspssnFbk");
 
-  let separatelyValid = true;
-
-  // Clear previous feedback
-  separatelyspssnFbk.innerText = '';
-  separatelyspssnFbk.className = '';
-
-  if (isSeparate) {
-    const separatelyspssnRaw = separatelyspssnInput.dataset.raw || '';
-
-    if (separatelyspssnRaw.length !== 9) {
-      separatelyspssnFbk.innerText = 'SSN must be 9 digits.';
-      separatelyspssnFbk.className = 'error';
-      separatelyValid = false;
-    } else {
-      separatelyspssnFbk.innerText = 'Valid Spouse SSN';
-      separatelyspssnFbk.className = 'success';
+    // Utility Functions
+    function getRawSeparatelyspssn(value) {
+      return value.replace(/\D/g, '').slice(0, 9);
     }
 
-    validateSeparatelyspssnFields(true);
-    separatelyspssnInput.value = maskSeparatelyspssn(separatelyspssnRaw);
+    function maskSeparatelyspssn(raw) {
+      return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+    }
 
-    // Mask values after submit
-    separatelyspssnInput.value = maskSeparatelyspssn(separatelyspssnRaw);
-  }
+    // Validation Function
+    function validateSeparatelyspssnFields(fromSubmit = false) {
+      const separatelyspssnRaw = getRawSeparatelyspssn(separatelyspssnInput.dataset.raw || '');
 
-  
-});
+      // Clear previous messages if not submitting
+      if (!fromSubmit) {
+        separatelyspssnFbk.innerText = '';
+        separatelyspssnFbk.className = '';
+      }
 
+      // Show error if incomplete SSN
+      if (separatelyspssnRaw.length === 9) {
+        separatelyspssnFbk.innerText = 'Valid Spouse SSN';
+        separatelyspssnFbk.className = 'success';
+      } else if (separatelyspssnRaw.length > 0 && separatelyspssnRaw.length < 9) {
+        separatelyspssnFbk.innerText = 'Spouse SSN must be 9 digits.';
+        separatelyspssnFbk.className = 'error';
+      }
+
+    }
+
+    // Input Events
+    separatelyspssnInput.addEventListener('focus', () => {
+      separatelyspssnInput.value = separatelyspssnInput.dataset.raw || '';
+    });
+
+    separatelyspssnInput.addEventListener('input', () => {
+      const raw = getRawSeparatelyspssn(separatelyspssnInput.value);
+      separatelyspssnInput.dataset.raw = raw;
+      separatelyspssnInput.value = raw; // Show raw input while typing
+      validateSeparatelyspssnFields();
+    });
+
+    separatelyspssnInput.addEventListener('blur', () => {
+      const raw = getRawSeparatelyspssn(separatelyspssnInput.dataset.raw || '');
+      separatelyspssnInput.dataset.raw = raw;
+      separatelyspssnInput.value = maskSeparatelyspssn(raw);
+    });
+
+    // Submit Handler
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent form submission until validated
+
+      const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
+      const isSeparate = filingStatus && filingStatus.value === "separate";
+
+      let separatelyValid = true;
+
+      // Clear previous feedback
+      separatelyspssnFbk.innerText = '';
+      separatelyspssnFbk.className = '';
+
+      if (isSeparate) {
+        const separatelyspssnRaw = separatelyspssnInput.dataset.raw || '';
+
+        if (separatelyspssnRaw.length !== 9) {
+          separatelyspssnInput.classList.add("is-invalid");
+          separatelyspssnInput.classList.remove("is-valid");
+          separatelyspssnFbk.innerText = 'Spouse SSN must be 9 digits.';
+          separatelyspssnFbk.className = 'error';
+          separatelyValid = false;
+        } else {
+          separatelyspssnInput.classList.remove("is-invalid");
+          separatelyspssnInput.classList.add("is-valid");
+          separatelyspssnFbk.innerText = 'Valid Spouse SSN';
+          separatelyspssnFbk.className = 'success';
+        }
         
 
 
 
 
-      
+        validateSeparatelyspssnFields(true);
+        separatelyspssnInput.value = maskSeparatelyspssn(separatelyspssnRaw);
+
+        // Mask values after submit
+        separatelyspssnInput.value = maskSeparatelyspssn(separatelyspssnRaw);
+      }
+
+
+    });
 
 
 
@@ -745,10 +763,17 @@ form.addEventListener('submit', (e) => {
 
 
 
-//---------------------------------------------------------------------------
 
 
-        /*Exemptions*/    
+
+
+
+
+
+    //---------------------------------------------------------------------------
+
+
+    /*Exemptions*/
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const exempYoursef = document.getElementById("exempYoursef");
       const exempSp = document.getElementById("exempSp");
@@ -756,7 +781,7 @@ form.addEventListener('submit', (e) => {
       const exempFbk = document.getElementById("exempFbk");
       exempFbk.innerText = "";
       exempFbk.className = "";
-    
+
       if (!exempYoursef.checked && !exempSp.checked) {
         e.preventDefault();
 
@@ -776,9 +801,9 @@ form.addEventListener('submit', (e) => {
       const chks4Fbk = document.getElementById("chks4Fbk");
       chks4Fbk.innerText = "";
       chks4Fbk.className = "";
-    
+
       let valid = true;
-    
+
       if (checkboxC.checked) {
         // Check if required spouse fields are filled
         if (!s4sfname.value.trim()) {
@@ -787,21 +812,21 @@ form.addEventListener('submit', (e) => {
         } else {
           s4sfname.classList.remove("is-invalid");
         }
-    
+
         if (!s4slname.value.trim()) {
           s4slname.classList.add("is-invalid");
           valid = false;
         } else {
           s4slname.classList.remove("is-invalid");
         }
-    
+
         if (!/^\d{9}$/.test(s4sssn.value)) {
           s4sssn.classList.add("is-invalid");
           valid = false;
         } else {
           s4sssn.classList.remove("is-invalid");
         }
-    
+
         if (!valid) {
           e.preventDefault();
           chks4Fbk.innerText = "Please fill in all required spouse info for status 4 with nonresident spouse.";
@@ -814,8 +839,8 @@ form.addEventListener('submit', (e) => {
         s4sssn.classList.remove("is-invalid");
       }
     });
-    
-        
+
+
 
 
 
@@ -833,7 +858,6 @@ form.addEventListener('submit', (e) => {
     // References to the elements
     const exempYoursef = document.getElementById('exempYoursef');
     const exempSp = document.getElementById('exempSp');
-    const nbxc = document.getElementById('nbxc');
 
     function updateNbxc() {
       let count = 0;
@@ -870,37 +894,37 @@ form.addEventListener('submit', (e) => {
 
     document.getElementById("my-form").addEventListener("submit", function (event) {
       event.preventDefault(); // Stop form from submitting
-    
+
       const form = event.target;
       const isValid = form.checkValidity();
-    
+
       if (!isValid) {
         form.classList.add("was-validated"); // Show validation styles
         return;
       }
-    
+
       // If form is valid
       form.classList.remove("was-validated");
       form.reset(); // Clears all native input fields inside the form
-    
+
       // Manually clear custom or JS-set fields if needed
       document.getElementById("ssnFbk").innerText = "";
       document.getElementById("cssnFbk").innerText = "";
       document.getElementById("ssnPreview").style.display = "none";
       document.getElementById("idPreview").style.display = "none";
-    
+
       // Show the success message card
       const successCard = document.getElementById("successCard");
       successCard.style.display = "block";
-    
+
       // Auto-hide the success message and allow refilling
       setTimeout(() => {
         successCard.style.display = "none";
       }, 3000);
     });
-    
-    
-    
+
+
+
 
 
 
