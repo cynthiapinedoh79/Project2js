@@ -244,10 +244,15 @@ input.form-control.is-invalid,
   outline: 0.5px solid var(--fourth-color)!important;
   }
 
+  /* Example: hide checkmark in custom select */
+.select-with-check::after {
+    display: none !important;
+  }
 
-
-
-
+  select:valid {
+    background-image: none !important; /* hide default checkmark */
+    box-shadow: none !important;       /* remove any green glow */
+  }
 
 
 
