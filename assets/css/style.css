@@ -206,6 +206,14 @@ input:required:invalid {
 .form-check-input.is-valid, .was-validated .form-check-input:valid {
     border-color: var(--highlight-color);
 }
+
+.form-check-input.is-invalid, .was-validated .form-check-input:invalid {
+    border: 1.5px solid var(--fourth-color) !important;
+    outline: 0.5px solid var(--fourth-color);
+    outline-offset: 0px; /* optional, to push the outline outside */
+}
+
+
 .form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
     color: var(--highlight-color);
 }
