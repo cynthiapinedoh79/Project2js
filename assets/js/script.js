@@ -551,20 +551,35 @@ document.addEventListener("DOMContentLoaded",
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const blind = document.getElementById("blind");
       const blindSp = document.getElementById("blindSp");
+      const blindFbk = document.getElementById("blindFbk");
+      const blindSpFbk = document.getElementById("blindSpFbk");
+      blindFbk.innerText = "";
+      blindSpFbk.innerText = "";
+      blindFbk.className = "";
+      blindSpFbk.className = "";
     
       if (!blind.checked && !blindSp.checked) {
         e.preventDefault();
-        alert("Please check at least one option for blindness (Taxpayer or Spouse).");
+        blindFbk.innerText = "Please check at least one option for blindness (Taxpayer or Spouse).";
+        blindFbk.className = "error";
       }
     });
     /*Presidential Election Campain*/    
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const filingJoint3 = document.getElementById("filingJoint3");
       const filingJoint3Sp = document.getElementById("filingJoint3Sp");
+      const filingJoint3Fbk = document.getElementById("filingJoint3Fbk");
+      const filingJoint3SpFbk = document.getElementById("filingJoint3SpFbk");
+      filingJoint3Fbk.innerText = "";
+      filingJoint3SpFbk.innerText = "";
+      filingJoint3Fbk.className = "";
+      filingJoint3SpFbk.className = "";
+
     
       if (!filingJoint3.checked && !filingJoint3Sp.checked) {
         e.preventDefault();
-        alert("Please check at least one box for the Presidential Election Campaign.");
+        filingJoint3Fbk.innerText = "Please check at least one box for the Presidential Election Campaign.";
+        filingJoint3Fbk.className = "error";
       }
     });
     
@@ -572,45 +587,69 @@ document.addEventListener("DOMContentLoaded",
 
 
     /*Filing Status and Exemptions*/
+        /*If Filing Status is not selected*/
+        document.getElementById("my-form").addEventListener("submit", function (e) {
+          const selectedStatus = document.querySelector('input[name="filingStatus"]:checked');
+
+          const filingStatusFbk = document.getElementById("filingStatusFbk");
+          filingStatusFbk.innerText = "";
+          filingStatusFbk.className = "";
+        
+          if (!selectedStatus) {
+            e.preventDefault();
+            filingStatusFbk.innerText = "Please select a Filing Status.";
+            filingStatusFbk.className = "error";
+          }
+        });
+        
+
 
         /*If Filing Status is Married Filing Separately*/
         document.getElementById("my-form").addEventListener("submit", function (e) {
           const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
           const isSeparate = filingStatus && filingStatus.value === "separate";
+          
+    
         
           // Spouse Info fields
-          const spfname = document.getElementById("spfname");
-          const splname = document.getElementById("splname");
-          const ssn = document.getElementById("ssn");
+          const separatelyspfname = document.getElementById("separatelyspfname");
+          const separatelysplname = document.getElementById("separatelysplname");
+          const separatelyspssn = document.getElementById("separatelyspssn");
+
+          const marriedFSeparatelyFbk = document.getElementById("marriedFSeparatelyFbk");
+          marriedFSeparatelyFbk.innerText = "";
+          marriedFSeparatelyFbk.className = "";
         
           // Set required if filing separately
           if (isSeparate) {
             let valid = true;
         
-            if (!spfname.value.trim()) {
-              spfname.classList.add("is-invalid");
+            if (!separatelyspfname.value.trim()) {
+              separatelyspfname.classList.add("is-invalid");
               valid = false;
             } else {
-              spfname.classList.remove("is-invalid");
+              separatelyspfname.classList.remove("is-invalid");
             }
         
-            if (!splname.value.trim()) {
-              splname.classList.add("is-invalid");
+            if (!separatelysplname.value.trim()) {
+              separatelysplname.classList.add("is-invalid");
               valid = false;
             } else {
-              splname.classList.remove("is-invalid");
+              separatelysplname.classList.remove("is-invalid");
             }
         
-            if (!/^\d{9}$/.test(ssn.value)) {
-              ssn.classList.add("is-invalid");
+            if (!/^\d{9}$/.test(separatelyspssn.value)) {
+              separatelyspssn.classList.add("is-invalid");
               valid = false;
             } else {
-              ssn.classList.remove("is-invalid");
+              separatelyspssn.classList.remove("is-invalid");
             }
         
             if (!valid) {
               e.preventDefault();
-              alert("Please fill in all required spouse fields for 'Married filing separately'.");
+
+              marriedFSeparatelyFbk.innerText = "Please fill in all required spouse fields for 'Married filing separately'.";
+              marriedFSeparatelyFbk.className = "error";
             }
           }
         });
@@ -619,10 +658,16 @@ document.addEventListener("DOMContentLoaded",
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const exempYoursef = document.getElementById("exempYoursef");
       const exempSp = document.getElementById("exempSp");
+
+      const exempFbk = document.getElementById("exempFbk");
+      exempFbk.innerText = "";
+      exempFbk.className = "";
     
       if (!exempYoursef.checked && !exempSp.checked) {
         e.preventDefault();
-        alert("Please check at least one box for exemptions.");
+
+        exempFbk.innerText = "Please check at least one box for exemptions.";
+        exempFbk.className = "error";
       }
     });
 
@@ -630,44 +675,49 @@ document.addEventListener("DOMContentLoaded",
     If You are using filing status 4 and claiminng nonresident alien spouse*/
     document.getElementById("my-form").addEventListener("submit", function (e) {
       const checkboxC = document.getElementById("fS4nonrSp");
-      const sfname = document.getElementById("s4-sfname");
-      const slname = document.getElementById("s4-slname");
-      const sssn = document.getElementById("s4-sssn");
+      const s4sfname = document.getElementById("s4sfname");
+      const s4slname = document.getElementById("s4slname");
+      const s4sssn = document.getElementById("s4sssn");
+
+      const chks4Fbk = document.getElementById("chks4Fbk");
+      chks4Fbk.innerText = "";
+      chks4Fbk.className = "";
     
       let valid = true;
     
       if (checkboxC.checked) {
         // Check if required spouse fields are filled
-        if (!sfname.value.trim()) {
-          sfname.classList.add("is-invalid");
+        if (!s4sfname.value.trim()) {
+          s4sfname.classList.add("is-invalid");
           valid = false;
         } else {
-          sfname.classList.remove("is-invalid");
+          s4sfname.classList.remove("is-invalid");
         }
     
-        if (!slname.value.trim()) {
-          slname.classList.add("is-invalid");
+        if (!s4slname.value.trim()) {
+          s4slname.classList.add("is-invalid");
           valid = false;
         } else {
-          slname.classList.remove("is-invalid");
+          s4slname.classList.remove("is-invalid");
         }
     
-        if (!/^\d{9}$/.test(sssn.value)) {
-          sssn.classList.add("is-invalid");
+        if (!/^\d{9}$/.test(s4sssn.value)) {
+          s4sssn.classList.add("is-invalid");
           valid = false;
         } else {
-          sssn.classList.remove("is-invalid");
+          s4sssn.classList.remove("is-invalid");
         }
     
         if (!valid) {
           e.preventDefault();
-          alert("Please fill in all required spouse info for status 4 with nonresident spouse.");
+          chks4Fbk.innerText = "Please fill in all required spouse info for status 4 with nonresident spouse.";
+          chks4Fbk.className = "error";
         }
       } else {
         // Clean up if unchecked
-        sfname.classList.remove("is-invalid");
-        slname.classList.remove("is-invalid");
-        sssn.classList.remove("is-invalid");
+        s4sfname.classList.remove("is-invalid");
+        s4slname.classList.remove("is-invalid");
+        s4sssn.classList.remove("is-invalid");
       }
     });
     

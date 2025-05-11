@@ -238,6 +238,15 @@ input:required:invalid {
     outline: 0.5px solid var(--fourth-color);
     outline-offset: 0px; /* optional, to push the outline outside */
 }
+input.form-control.is-valid{
+    border: 1px solid var(--border-input);
+}
+
+input.form-control.is-invalid{
+    border: 1.5px solid var(--fourth-color) !important;
+    outline: 0.5px solid var(--fourth-color);
+    outline-offset: 0px; /* optional, to push the outline outside */
+}
 
 fieldset {
     border: none;
@@ -700,10 +709,14 @@ div#atti.upload-section {
 
   .card-title{
     font-weight: 600;
+    text-align: center;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
   }
 
-
-  .is-invalid {
+  .card{
+    border: 0;
+    padding: 0;
   }
   
   
