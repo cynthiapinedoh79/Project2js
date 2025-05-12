@@ -19,17 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
     resultDiv.classList.remove("hidden");
     resultDiv.classList.add("show");
-    
-    resultDiv.innerText = `Your Score: ${totalScore} / 10`;
 
-    if (totalScore >= 6) {
-      resultDiv.innerText += "\nYou might benefit from bookkeeping help. Redirecting...";
-      setTimeout(() => {
-        window.location.href = "feedback.html";
-      }, 3000);
-    } else {
-      resultDiv.innerText += "\nYou're doing great! Keep it up.";
-    }
+    resultDiv.innerHTML = `
+  <div class="score-line">Your Score: ${totalScore} / 10</div>
+`;
+
+if (totalScore >= 6) {
+  resultDiv.innerHTML += `
+    <div class="feedback-line">You might benefit from bookkeeping help.<br>Redirecting...</div>
+  `;
+  setTimeout(() => {
+    window.location.href = "feedback.html";
+  }, 5000);
+} else {
+  resultDiv.innerHTML += `
+    <div class="feedback-line">You're doing great! Keep it up.</div>
+  `;
+}
 
     resultDiv.classList.add("alert", "alert-info", "mt-3");
   });

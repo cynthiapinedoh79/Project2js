@@ -68,24 +68,9 @@ body.feedback-wrapper {
 }
 
 .quiz-wrapper button:hover {
-  background-color: #21005f;
+  background-color:#9E0059;
+  color: white;
 }
-
-.quiz-wrapper #result {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    color: #33008a;
-    background-color: #f0f0ff;
-    padding: 1rem;
-    border-radius: 10px;
-    border: 2px solid #33008a;
-    opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  }
-  .quiz-wrapper #result.show {
-    opacity: 1;
-  }
 
 
 .feedback-wrapper .button {
@@ -101,7 +86,8 @@ body.feedback-wrapper {
 }
 
 .feedback-wrapper .button:hover {
-  background-color: #21005f;
+  background-color:#9E0059;
+  color: white;
 }
 
 .quiz-wrapper div.card p,
@@ -130,4 +116,37 @@ body.feedback-wrapper {
 .feedback-wrapper .card ul {
   list-style: disc inside;
   padding-left: 0;
+}
+
+
+.quiz-wrapper #result {
+  background-color: #f3f1ff;
+  border: 2px solid #33008a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #33008a;
+  max-width: 600px;
+  margin: 1rem auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.quiz-wrapper #result .score-line {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-wrapper #result .feedback-line {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.quiz-wrapper #result {
+  display: none; /* Hide initially */
+}
+
+.quiz-wrapper #result.show {
+  display: block; /* Show when JavaScript adds .show class */
 }
