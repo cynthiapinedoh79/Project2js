@@ -3,6 +3,7 @@
 
 /*Main Information*/
 document.addEventListener("DOMContentLoaded",
+
   function () {
     let myFormElement = document.getElementById("my-form");
     myFormElement.addEventListener("submit", handleSubmit);
@@ -1037,34 +1038,35 @@ document.addEventListener("DOMContentLoaded",
 
     document.getElementById("my-form").addEventListener("submit", function (event) {
       event.preventDefault(); // Stop form from submitting
-
+    
       const form = event.target;
       const isValid = form.checkValidity();
-
+    
       if (!isValid) {
         form.classList.add("was-validated"); // Show validation styles
         return;
       }
-
+    
       // If form is valid
       form.classList.remove("was-validated");
-      form.reset(); // Clears all native input fields inside the form
-
-      // Manually clear custom or JS-set fields if needed
-      document.getElementById("ssnFbk").innerText = "";
-      document.getElementById("cssnFbk").innerText = "";
-      document.getElementById("ssnPreview").style.display = "none";
-      document.getElementById("idPreview").style.display = "none";
-
+    
       // Show the success message card
       const successCard = document.getElementById("successCard");
       successCard.style.display = "block";
-
-      // Auto-hide the success message and allow refilling
+    
+      // Wait 3 seconds before clearing the form
       setTimeout(() => {
         successCard.style.display = "none";
+    
+        // Now clear the form and custom fields
+        form.reset();
+        document.getElementById("ssnFbk").innerText = "";
+        document.getElementById("cssnFbk").innerText = "";
+        document.getElementById("ssnPreview").style.display = "none";
+        document.getElementById("idPreview").style.display = "none";
       }, 3000);
     });
+    
 
 
 
@@ -1074,68 +1076,7 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-
-
-
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Attach SSN to the form*/
+    /*Attach SSN to the form*/
 const ssnPhotoInput = document.getElementById("ssnPhoto");
 const ssnPreviewImage = document.getElementById("ssnPreview");
 
@@ -1189,3 +1130,36 @@ document.getElementById("my-form").addEventListener("submit", function (event) {
     // Handle the response from the server
     .catch(error => console.error("Error:", error));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+);
+
+
