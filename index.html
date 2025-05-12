@@ -42,14 +42,14 @@
                         <div>
                             <div id="f1040">
                                 <div>
-                                    <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
+                                    <label class="form-check-label" for="filed1040Yes"><input class="form-check-input"
                                             type="radio" name="filed1040" id="filed1040Yes" value="yes">
                                         Spanish forms on the screen and printed
                                     </label>
                                 </div>
                                 <div>
 
-                                    <label class="form-check-label" for="radioDefault2"><input class="form-check-input"
+                                    <label class="form-check-label" for="filed1040No"><input class="form-check-input"
                                             type="radio" name="filed1040" id="filed1040No" value="no">
                                         Spanish forms printed only
                                     </label>
@@ -117,7 +117,7 @@
                         </fieldset>
                         <!--Joint Information-->
                         <fieldset>
-                            <legend id="b-legend-left">Joint Information</legend>
+                            <legend class="b-legend-left">Joint Information</legend>
                             <div>
                                 <script>
                                     function displayJointInfo() {
@@ -403,7 +403,7 @@
                         </fieldset>
                         <!--Foreign Address-->
                         <fieldset>
-                            <legend id="b-legend-left">Foreign Address</legend>
+                            <legend class="b-legend-left">Foreign Address</legend>
                             <div>
                                 <script>
                                     function fAddInfo() {
@@ -560,7 +560,7 @@
                                         <label class="form-check-label" for="blind"><input class="form-check-input"
                                                 type="checkbox" value="" name="blind" id="blind">Taxpayer</label>
 
-                                            
+
                                     </div>
                                     <div>
                                         <label class="form-check-label" for="blindSp"><input class="form-check-input"
@@ -656,19 +656,21 @@
                             <div class="box container-fluid">
                                 <p>1</p>
                                 <div class="form-check">
-                                    <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
+                                    <label class="form-check-label" for="single"><input class="form-check-input"
                                             type="radio" name="filingStatus" id="single" value="single" required>Single
                                     </label>
 
                                 </div>
+                            </div>
                         </fieldset>
                         <!--Part 2-->
                         <fieldset>
                             <div class="box container-fluid">
                                 <p>2</p>
                                 <div class="form-check">
-                                    <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                            type="radio" name="filingStatus" id="marriedFJointly" value="">Married
+                                    <label class="form-check-label" for="marriedFJointly"><input
+                                            class="form-check-input" type="radio" name="filingStatus"
+                                            id="marriedFJointly" value="">Married
                                         filing
                                         jointly (even
                                         if only
@@ -682,9 +684,9 @@
                             <div id="mfs" class="box container-fluid">
                                 <p>3</p>
                                 <div class="form-check">
-                                    <label class="form-check-label" for="radioDefault1"><input class="form-check-input"
-                                            type="radio" name="filingStatus" id="marriedFSeparately"
-                                            value="separate">Married
+                                    <label class="form-check-label" for="marriedFSeparately"><input
+                                            class="form-check-input" type="radio" name="filingStatus"
+                                            id="marriedFSeparately" value="separate">Married
                                         filing
                                         separately
                                     </label>
@@ -695,17 +697,20 @@
                                     <div class="box container-fluid">
                                         <div class="form-check">
                                             <label for="separatelyspfname" class="form-label">Spouse First Name</label>
-                                            <input class="form-control" id="separatelyspfname" name="separatelyspfname" type="text">
+                                            <input class="form-control" id="separatelyspfname" name="separatelyspfname"
+                                                type="text">
                                         </div>
 
                                         <div class="form-check">
                                             <label for="separatelysplname" class="form-label">Spouse Last Name</label>
-                                            <input class="form-control" id="separatelysplname" name="separatelysplname" type="text">
+                                            <input class="form-control" id="separatelysplname" name="separatelysplname"
+                                                type="text">
                                         </div>
 
                                         <div class="form-check">
                                             <label for="separatelyspssn" class="form-label">Spouse SSN</label>
-                                            <input class="form-control" id="separatelyspssn" name="separatelyspssn" maxlength="11" type="text">
+                                            <input class="form-control" id="separatelyspssn" name="separatelyspssn"
+                                                maxlength="11" type="text">
                                             <p id="separatelyspssnFbk"></p>
                                         </div>
                                     </div>
@@ -719,6 +724,7 @@
                                                 is a nonresident alien</label>
 
                                         </div>
+                                    </div>
                                 </fieldset>
 
                                 <fieldset>
@@ -730,7 +736,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="spWyou2024"
                                                     id="spWyou2024Yes" value="yes">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="spWyou2024Yes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -738,7 +744,7 @@
 
                                                 <input class="form-check-input" type="radio" name="spWyou2024"
                                                     id="spWyou2024No" value="no">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="spWyou2024No">
                                                     No
                                                 </label>
                                             </div>
@@ -752,7 +758,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="afterJune302024"
                                                     id="afterJune302024Yes" value="yes">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="afterJune302024Yes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -760,11 +766,12 @@
 
                                                 <input class="form-check-input" type="radio" name="afterJune302024"
                                                     id="afterJune302024No" value="no">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="afterJune302024No">
                                                     No
                                                 </label>
                                             </div>
                                         </div>
+                                    </div>
                                 </fieldset>
                                 <fieldset>
                                     <div class="box container-fluid">
@@ -781,7 +788,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="commPropertyState"
                                                     id="commPropertyStateYes" value="yes">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="commPropertyStateYes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -789,7 +796,7 @@
 
                                                 <input class="form-check-input" type="radio" name="commPropertyState"
                                                     id="commPropertyStateNo" value="no">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="commPropertyStateNo">
                                                     No
                                                 </label>
                                             </div>
@@ -804,7 +811,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="residetOfCommSte"
                                                     id="residetOfCommSteYes" value="yes">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="residetOfCommSteYes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -812,7 +819,7 @@
 
                                                 <input class="form-check-input" type="radio" name="residetOfCommSte"
                                                     id="residetOfCommSteNo" value="no">
-                                                <label class="form-check-label" for="radioDefault1">
+                                                <label class="form-check-label" for="residetOfCommSteNo">
                                                     No
                                                 </label>
                                             </div>
@@ -823,39 +830,39 @@
                         </fieldset>
                         <!--Part 4-->
                         <fieldset>
-                            <div d="hohQualifying">
-                            <div class="box container-fluid">
-                                <p>4</p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="headOfHousehold"
-                                        id="headOfHousehold">
-                                    <label class="form-check-label" for="headOfHousehold">Head of household (with
-                                        qualifying
-                                        person).
-                                    </label>
-                                </div>
-                            </div>
-
-                            <fieldset>
+                            <div id="hohQualifying">
                                 <div class="box container-fluid">
-                                    <p>If the qualifying person is a child but <strong>NOT</strong> your dependent,
-                                        enter
-                                        the
-                                        child's name and
-                                        social security number.</p>
+                                    <p>4</p>
                                     <div class="form-check">
-                                        <label for="childName" class="form-label">Child's Name</label>
-                                        <input class="form-control" id="childName" name="childName" type="text">
+                                        <input class="form-check-input" type="radio" name="headOfHousehold"
+                                            id="headOfHousehold">
+                                        <label class="form-check-label" for="headOfHousehold">Head of household (with
+                                            qualifying
+                                            person).
+                                        </label>
                                     </div>
-                                    <div class="form-check">
-                                        <label for="childSsn" class="form-label">Child's SSN</label>
-                                        <input class="form-control" id="childSsn" name="childSsn" maxlength="11" type="text"
-                                            placeholder="Child's SSN">
-                                        <p id="childSsnFbk"></p>
-                                    </div>
-                                    <p>A self-supportive child who lives with you IS NOT a qualifying person</p>
                                 </div>
-                            </fieldset>
+
+                                <fieldset>
+                                    <div class="box container-fluid">
+                                        <p>If the qualifying person is a child but <strong>NOT</strong> your dependent,
+                                            enter
+                                            the
+                                            child's name and
+                                            social security number.</p>
+                                        <div class="form-check">
+                                            <label for="childName" class="form-label">Child's Name</label>
+                                            <input class="form-control" id="childName" name="childName" type="text">
+                                        </div>
+                                        <div class="form-check">
+                                            <label for="childSsn" class="form-label">Child's SSN</label>
+                                            <input class="form-control" id="childSsn" name="childSsn" maxlength="11"
+                                                type="text" placeholder="Child's SSN">
+                                            <p id="childSsnFbk"></p>
+                                        </div>
+                                        <p>A self-supportive child who lives with you IS NOT a qualifying person</p>
+                                    </div>
+                                </fieldset>
                             </div>
                         </fieldset>
 
@@ -866,7 +873,7 @@
                                     <p>5</p>
                                     <div class="form-check">
 
-                                        <label class="form-check-label" for="radioDefault1"><input
+                                        <label class="form-check-label" for="qualifyingSurvSp"><input
                                                 class="form-check-input" type="radio" name="qualifyingSurvSp"
                                                 id="qualifyingSurvSp">Qualifying surviving
                                             spouse
@@ -880,8 +887,7 @@
                                         <div class="form-check">
                                             <label for="ysd" class="form-label">Year spouse died (2022 or 2023
                                                 only)</label>
-                                            <input class="form-control" id="ysd" name="ysd" type="date"
-                                                placeholder="2022 or 2023 only">
+                                            <input class="form-control" id="ysd" name="ysd" type="date">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -897,18 +903,18 @@
                                         </div>
                                         <div class="form-check">
                                             <label for="sdchnd-ssn" class="form-label">Child's SSN</label>
-                                            <input class="form-control" id="sdchnd-ssn" name="sdchnd-ssn" type="number"
-                                                placeholder="Child's SSN">
+                                            <input class="form-control" id="sdchnd-ssn" name="sdchnd-ssn" maxlength="11"
+                                                type="text" placeholder="Child's SSN">
                                         </div>
                                     </div>
                                 </fieldset>
 
                                 <fieldset>
-                                    <div id="pec" class="box container-fluid">
+                                    <div id="nonrSp" class="box container-fluid">
                                         <div class="form-check">
-                                            <label class="form-check-label" for="nonr-dualSp"><input
-                                                    class="form-check-input" type="checkbox" value="" name="nonr-dualSp"
-                                                    id="nonr-dualSp">Check here if
+                                            <label class="form-check-label" for="nonrOrDualSp"><input
+                                                    class="form-check-input" type="checkbox" value=""
+                                                    name="nonrOrDualSp" id="nonrOrDualSp">Check here if
                                                 treating a
                                                 nonresident alien or dual-status alien spouse as a U.S.
                                                 resident for the entire tax year</label>
@@ -1003,13 +1009,13 @@
                                             <div class="form-check">
                                                 <label class="form-check-label" for="fS4nonrSp"><input
                                                         class="form-check-input" type="checkbox" value="4"
-                                                        name="fS4nonrSp" id="fS4nonrSp" value="4">You
+                                                        name="fS4nonrSp" id="fS4nonrSp">You
                                                     are using
                                                     filing
                                                     status 4
                                                     and claiminng nonresident alien spouse </label>
                                             </div>
-                                            <div class="container-fluid" id="j-info">
+                                            <div class="container-fluid" id="exemfs4">
                                                 <div class="form-check">
                                                     <label for="s4sfname" class="form-label">First Name</label>
                                                     <input class="form-control" id="s4sfname" name="s4sfname"
@@ -1024,8 +1030,8 @@
 
                                                 <div class="form-check">
                                                     <label for="s4sssn" class="form-label">SSN</label>
-                                                    <input class="form-control" id="s4sssn" name="s4sssn"
-                                                        type="number">
+                                                    <input class="form-control" id="s4sssn" name="s4sssn" maxlength="11"
+                                                        type="text">
                                                 </div>
 
                                             </div>
@@ -1064,7 +1070,7 @@
                                             CTC checkbox and uncheck the box.</p>
                                     </div>
 
-                                    <div id="dp-ndp" class="box container-fluid">
+                                    <div id="exemDpNdp" class="box container-fluid">
                                         <div class="table-responsive">
                                             <table class="table table-hover table-bordered">
                                                 <thead class="table-light">
@@ -1080,40 +1086,45 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th>1</th>
-                                                        <td><input class="form-control" id="dfname" name="dfname"
-                                                                type="text">
+                                                        <td>1</td>
+                                                        <td><input class="form-control" id="exempDpfname"
+                                                                name="exempDpfname" type="text">
                                                         </td>
-                                                        <td><input class="form-control" id="dlname" name="dlname"
-                                                                type="text">
+                                                        <td><input class="form-control" id="exempDplname"
+                                                                name="exempDplname" type="text">
                                                         </td>
-                                                        <td><input class="form-control" id="ddob" name="ddob"
-                                                                type="date"></td>
-                                                        <td><input class="form-control" id="dage" name="dage"
-                                                                type="number">
+                                                        <td><input class="form-control" id="exempDpdob"
+                                                                name="exempDpdob" type="date"></td>
+                                                        <td><input class="form-control" id="exempDpage"
+                                                                name="exempDpage" type="number">
                                                         </td>
-                                                        <td><input class="form-control" id="dssn" name="dssn"
-                                                                type="number">
+                                                        <td><input class="form-control" id="exempDpSsn"
+                                                                name="exempDpSsn" maxlength="11" type="text">
                                                         </td>
-                                                        <td><input class="form-control" id="drelation" name="drelation"
-                                                                type="text">
+                                                        <td><input class="form-control" id="exempDpRelation"
+                                                                name="exempDpRelation" type="text">
                                                         </td>
 
                                                     </tr>
-                                                    <th>2</th>
-                                                    <td><input class="form-control" id="dfname" name="dfname"
-                                                            type="text"></td>
-                                                    <td><input class="form-control" id="dlname" name="dlname"
-                                                            type="text"></td>
-                                                    <td><input class="form-control" id="ddob" name="ddob" type="date">
-                                                    </td>
-                                                    <td><input class="form-control" id="dage" name="dage" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="dssn" name="dssn" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="drelation" name="drelation"
-                                                            type="text">
-                                                    </td>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><input class="form-control" id="exempDpfname2"
+                                                                name="exempDpfname2" type="text">
+                                                        </td>
+                                                        <td><input class="form-control" id="exempDplname2"
+                                                                name="exempDplname2" type="text">
+                                                        </td>
+                                                        <td><input class="form-control" id="exempDpdob2"
+                                                                name="exempDpdob2" type="date"></td>
+                                                        <td><input class="form-control" id="exempDpage2"
+                                                                name="exempDpage2" type="number">
+                                                        </td>
+                                                        <td><input class="form-control" id="exempDpSsn2"
+                                                                name="exempDpSsn2" maxlength="11" type="text">
+                                                        </td>
+                                                        <td><input class="form-control" id="exempDpRelation2"
+                                                                name="exempDpRelation2" type="text">
+                                                        </td>
 
                                                     </tr>
                                                 </tbody>
@@ -1152,19 +1163,25 @@
                                                                 type="number">
                                                         </td>
                                                     </tr>
-                                                    <th>2</th>
-                                                    <td><input class="form-control" id="dmih" name="dmih" type="number">
-                                                    </td>
-                                                    <td><input class="form-control" id="dcode" name="dcode"
-                                                            type="number">
-                                                    </td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""></td>
-                                                    <td><input class="form-check-input" type="checkbox" value=""></td>
-                                                    <td><input class="form-control" id="ditpin" name="ditpin"
-                                                            type="number">
-                                                    </td>
+                                                    <tr>
+                                                        <th>2</th>
+                                                        <td><input class="form-control" id="dmih2" name="dmih2"
+                                                                type="number">
+                                                        </td>
+                                                        <td><input class="form-control" id="dcode2" name="dcode2"
+                                                                type="number">
+                                                        </td>
+                                                        <td><input class="form-check-input" type="checkbox" value="">
+                                                        </td>
+                                                        <td><input class="form-check-input" type="checkbox" value="">
+                                                        </td>
+                                                        <td><input class="form-check-input" type="checkbox" value="">
+                                                        </td>
+                                                        <td><input class="form-check-input" type="checkbox" value="">
+                                                        </td>
+                                                        <td><input class="form-control" id="ditpin2" name="ditpin2"
+                                                                type="number">
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1289,7 +1306,7 @@
                                                 <option>WI</option>
                                                 <option>WY</option>
                                             </select>
-                                            <label for="dm2sol" class="form-label">,</span></label>
+                                            <label for="dm2sol" class="form-label">,</label>
                                             <select id="dm2sol" class="form-select form-control" name="dm2sol">
                                                 <option value="" selected>Select</option>
                                                 <option>AL</option>

@@ -22,160 +22,163 @@ document.addEventListener("DOMContentLoaded",
 
       //SSN
       const form = document.getElementById('my-form');
-const ssnInput = document.getElementById('ssn');
-const cssnInput = document.getElementById('cssn');
-const ssnFbk = document.getElementById('ssnFbk');
-const cssnFbk = document.getElementById('cssnFbk');
+      const ssnInput = document.getElementById('ssn');
+      const cssnInput = document.getElementById('cssn');
+      const ssnFbk = document.getElementById('ssnFbk');
+      const cssnFbk = document.getElementById('cssnFbk');
 
-// Utility Functions
-function getRawSSN(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
-function getRawCSSN(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
-function maskSSN(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
-function maskCSSN(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
+      // Utility Functions
+      function getRawSSN(value) {
+        return value.replace(/\D/g, '').slice(0, 9);
+      }
 
-// Validation Function
-function validateSSNFields(fromSubmit = false) {
-  const ssnRaw = getRawSSN(ssnInput.dataset.raw || '');
-  const cssnRaw = getRawCSSN(cssnInput.dataset.raw || '');
+      function getRawCSSN(value) {
+        return value.replace(/\D/g, '').slice(0, 9);
+      }
 
-  if (!fromSubmit) {
-    ssnFbk.innerText = '';
-    cssnFbk.innerText = '';
-    ssnFbk.className = '';
-    cssnFbk.className = '';
-  }
+      function maskSSN(raw) {
+        return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+      }
 
-  // SSN Field
-  if (ssnRaw.length === 9) {
-    ssnFbk.innerText = 'Valid SSN';
-    ssnFbk.className = 'success';
-    ssnInput.classList.remove('is-invalid');
-    ssnInput.classList.add('is-valid');
-  } else if (ssnRaw.length > 0 && ssnRaw.length < 9) {
-    ssnFbk.innerText = 'SSN must be 9 digits.';
-    ssnFbk.className = 'error';
-    ssnInput.classList.remove('is-valid');
-    ssnInput.classList.add('is-invalid');
-  }
+      function maskCSSN(raw) {
+        return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+      }
 
-  // Confirm SSN Field
-  if (cssnRaw.length === 9) {
-    cssnFbk.innerText = 'Valid Confirmation SSN';
-    cssnFbk.className = 'success';
-    cssnInput.classList.remove('is-invalid');
-    cssnInput.classList.add('is-valid');
-  } else if (cssnRaw.length > 0 && cssnRaw.length < 9) {
-    cssnFbk.innerText = 'Confirmation SSN must be 9 digits.';
-    cssnFbk.className = 'error';
-    cssnInput.classList.remove('is-valid');
-    cssnInput.classList.add('is-invalid');
-  }
+      // Validation Function
+      function validateSSNFields(fromSubmit = false) {
+        const ssnRaw = getRawSSN(ssnInput.dataset.raw || '');
+        const cssnRaw = getRawCSSN(cssnInput.dataset.raw || '');
 
-  // Matching
-  if (ssnRaw.length === 9 && cssnRaw.length === 9) {
-    if (ssnRaw !== cssnRaw) {
-      cssnFbk.innerText = 'SSN and confirmation do not match.';
-      cssnFbk.className = 'error';
-      cssnInput.classList.remove('is-valid');
-      cssnInput.classList.add('is-invalid');
-    }
-  }
-}
+        if (!fromSubmit) {
+          ssnFbk.innerText = '';
+          cssnFbk.innerText = '';
+          ssnFbk.className = '';
+          cssnFbk.className = '';
+        }
 
-// Event listeners — SSN
-ssnInput.addEventListener('focus', () => {
-  ssnInput.value = getRawSSN(ssnInput.dataset.raw || '');
-});
-ssnInput.addEventListener('input', () => {
-  const raw = getRawSSN(ssnInput.value);
-  ssnInput.dataset.raw = raw;
-  ssnInput.value = raw;
-  validateSSNFields();
-});
-ssnInput.addEventListener('blur', () => {
-  const raw = getRawSSN(ssnInput.dataset.raw || '');
-  ssnInput.dataset.raw = raw;
-  ssnInput.value = maskSSN(raw);
-});
+        // SSN Field
+        if (ssnRaw.length === 9) {
+          ssnFbk.innerText = 'Valid SSN';
+          ssnFbk.className = 'success';
+          ssnInput.classList.remove('is-invalid');
+          ssnInput.classList.add('is-valid');
+        } else if (ssnRaw.length > 0 && ssnRaw.length < 9) {
+          ssnFbk.innerText = 'SSN must be 9 digits.';
+          ssnFbk.className = 'error';
+          ssnInput.classList.remove('is-valid');
+          ssnInput.classList.add('is-invalid');
+        }
 
-// Event listeners — Confirm SSN
-cssnInput.addEventListener('focus', () => {
-  cssnInput.value = getRawCSSN(cssnInput.dataset.raw || '');
-});
-cssnInput.addEventListener('input', () => {
-  const raw = getRawCSSN(cssnInput.value);
-  cssnInput.dataset.raw = raw;
-  cssnInput.value = raw;
-  validateSSNFields();
-});
-cssnInput.addEventListener('blur', () => {
-  const raw = getRawCSSN(cssnInput.dataset.raw || '');
-  cssnInput.dataset.raw = raw;
-  cssnInput.value = maskCSSN(raw);
-});
+        // Confirm SSN Field
+        if (cssnRaw.length === 9) {
+          cssnFbk.innerText = 'Valid Confirmation SSN';
+          cssnFbk.className = 'success';
+          cssnInput.classList.remove('is-invalid');
+          cssnInput.classList.add('is-valid');
+        } else if (cssnRaw.length > 0 && cssnRaw.length < 9) {
+          cssnFbk.innerText = 'Confirmation SSN must be 9 digits.';
+          cssnFbk.className = 'error';
+          cssnInput.classList.remove('is-valid');
+          cssnInput.classList.add('is-invalid');
+        }
 
-// Submit handler
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+        // Matching
+        if (ssnRaw.length === 9 && cssnRaw.length === 9) {
+          if (ssnRaw !== cssnRaw) {
+            cssnFbk.innerText = 'SSN and confirmation do not match.';
+            cssnFbk.className = 'error';
+            cssnInput.classList.remove('is-valid');
+            cssnInput.classList.add('is-invalid');
+          }
+        }
+      }
 
-  const ssnRaw = getRawSSN(ssnInput.dataset.raw || '');
-  const cssnRaw = getRawCSSN(cssnInput.dataset.raw || '');
+      // Event listeners — SSN
+      ssnInput.addEventListener('focus', () => {
+        ssnInput.value = getRawSSN(ssnInput.dataset.raw || '');
+      });
+      ssnInput.addEventListener('input', () => {
+        const raw = getRawSSN(ssnInput.value);
+        ssnInput.dataset.raw = raw;
+        ssnInput.value = raw;
+        validateSSNFields();
+      });
+      ssnInput.addEventListener('blur', () => {
+        const raw = getRawSSN(ssnInput.dataset.raw || '');
+        ssnInput.dataset.raw = raw;
+        ssnInput.value = maskSSN(raw);
+      });
 
-  ssnFbk.innerText = '';
-  cssnFbk.innerText = '';
-  ssnFbk.className = '';
-  cssnFbk.className = '';
-  ssnInput.classList.remove('is-invalid', 'is-valid');
-  cssnInput.classList.remove('is-invalid', 'is-valid');
+      // Event listeners — Confirm SSN
+      cssnInput.addEventListener('focus', () => {
+        cssnInput.value = getRawCSSN(cssnInput.dataset.raw || '');
+      });
+      cssnInput.addEventListener('input', () => {
+        const raw = getRawCSSN(cssnInput.value);
+        cssnInput.dataset.raw = raw;
+        cssnInput.value = raw;
+        validateSSNFields();
+      });
+      cssnInput.addEventListener('blur', () => {
+        const raw = getRawCSSN(cssnInput.dataset.raw || '');
+        cssnInput.dataset.raw = raw;
+        cssnInput.value = maskCSSN(raw);
+      });
 
-  let valid = true;
+      // Submit handler
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-  if (ssnRaw.length !== 9) {
-    ssnFbk.innerText = 'SSN must be 9 digits.';
-    ssnFbk.className = 'error';
-    ssnInput.classList.add('is-invalid');
-    valid = false;
-  } else {
-    ssnInput.classList.add('is-valid');
-  }
+        const ssnRaw = getRawSSN(ssnInput.dataset.raw || '');
+        const cssnRaw = getRawCSSN(cssnInput.dataset.raw || '');
 
-  if (cssnRaw.length !== 9) {
-    cssnFbk.innerText = 'Confirm SSN must be 9 digits.';
-    cssnFbk.className = 'error';
-    cssnInput.classList.add('is-invalid');
-    valid = false;
-  } else {
-    cssnInput.classList.add('is-valid');
-  }
+        ssnFbk.innerText = '';
+        cssnFbk.innerText = '';
+        ssnFbk.className = '';
+        cssnFbk.className = '';
+        ssnInput.classList.remove('is-invalid', 'is-valid');
+        cssnInput.classList.remove('is-invalid', 'is-valid');
 
-  if (ssnRaw.length === 9 && cssnRaw.length === 9 && ssnRaw !== cssnRaw) {
-    cssnFbk.innerText = '❌ SSN and confirmation do not match.';
-    cssnFbk.className = 'error';
-    cssnInput.classList.remove('is-valid');
-    cssnInput.classList.add('is-invalid');
-    valid = false;
-  }
+        let valid = true;
 
-  if (valid) {
-    cssnFbk.innerText = '✅ SSN successfully matched.';
-    cssnFbk.className = 'success';
-  }
+        if (ssnRaw.length !== 9) {
+          ssnFbk.innerText = 'SSN must be 9 digits.';
+          ssnFbk.className = 'error';
+          ssnInput.classList.add('is-invalid');
+          valid = false;
+        } else {
+          ssnInput.classList.add('is-valid');
+        }
 
-  // Final validation display
-  validateSSNFields(true);
+        if (cssnRaw.length !== 9) {
+          cssnFbk.innerText = 'Confirm SSN must be 9 digits.';
+          cssnFbk.className = 'error';
+          cssnInput.classList.add('is-invalid');
+          valid = false;
+        } else {
+          cssnInput.classList.add('is-valid');
+        }
 
-  // Remask both fields
-  ssnInput.value = maskSSN(ssnRaw);
-  cssnInput.value = maskCSSN(cssnRaw);
-});
+        if (ssnRaw.length === 9 && cssnRaw.length === 9 && ssnRaw !== cssnRaw) {
+          cssnFbk.innerText = '❌ SSN and confirmation do not match.';
+          cssnFbk.className = 'error';
+          cssnInput.classList.remove('is-valid');
+          cssnInput.classList.add('is-invalid');
+          valid = false;
+        }
+
+        if (valid) {
+          cssnFbk.innerText = '✅ SSN successfully matched.';
+          cssnFbk.className = 'success';
+        }
+
+        // Final validation display
+        validateSSNFields(true);
+
+        // Remask both fields
+        ssnInput.value = maskSSN(ssnRaw);
+        cssnInput.value = maskCSSN(cssnRaw);
+      });
 
 
 
@@ -190,154 +193,154 @@ form.addEventListener('submit', (e) => {
       //Spouse SSN
 
       const sssnInput = document.getElementById('sssn');
-const csssnInput = document.getElementById('csssn');
-const sssnFbk = document.getElementById('sssnFbk');
-const csssnFbk = document.getElementById('csssnFbk');
+      const csssnInput = document.getElementById('csssn');
+      const sssnFbk = document.getElementById('sssnFbk');
+      const csssnFbk = document.getElementById('csssnFbk');
 
-// Utility functions
-function getRawSSSN(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
+      // Utility functions
+      function getRawSSSN(value) {
+        return value.replace(/\D/g, '').slice(0, 9);
+      }
 
-function maskCSSSN(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
+      function maskCSSSN(raw) {
+        return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+      }
 
-// Validation function
-function validateSSSNFields(fromSubmit = false) {
-  const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
-  const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
+      // Validation function
+      function validateSSSNFields(fromSubmit = false) {
+        const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
+        const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
 
-  if (!fromSubmit) {
-    sssnFbk.innerText = '';
-    csssnFbk.innerText = '';
-    sssnFbk.className = '';
-    csssnFbk.className = '';
-  }
+        if (!fromSubmit) {
+          sssnFbk.innerText = '';
+          csssnFbk.innerText = '';
+          sssnFbk.className = '';
+          csssnFbk.className = '';
+        }
 
-  // SSN
-  if (sssnRaw.length === 9) {
-    sssnFbk.innerText = 'Valid Spouse SSN';
-    sssnFbk.className = 'success';
-    sssnInput.classList.remove('is-invalid');
-    sssnInput.classList.add('is-valid');
-  } else if (sssnRaw.length > 0 && sssnRaw.length < 9) {
-    sssnFbk.innerText = 'SSN must be 9 digits.';
-    sssnFbk.className = 'error';
-    sssnInput.classList.remove('is-valid');
-    sssnInput.classList.add('is-invalid');
-  }
+        // SSN
+        if (sssnRaw.length === 9) {
+          sssnFbk.innerText = 'Valid Spouse SSN';
+          sssnFbk.className = 'success';
+          sssnInput.classList.remove('is-invalid');
+          sssnInput.classList.add('is-valid');
+        } else if (sssnRaw.length > 0 && sssnRaw.length < 9) {
+          sssnFbk.innerText = 'SSN must be 9 digits.';
+          sssnFbk.className = 'error';
+          sssnInput.classList.remove('is-valid');
+          sssnInput.classList.add('is-invalid');
+        }
 
-  // Confirm SSN
-  if (csssnRaw.length === 9) {
-    csssnFbk.innerText = 'Valid Confirmation SSN';
-    csssnFbk.className = 'success';
-    csssnInput.classList.remove('is-invalid');
-    csssnInput.classList.add('is-valid');
-  } else if (csssnRaw.length > 0 && csssnRaw.length < 9) {
-    csssnFbk.innerText = 'Confirm SSN must be 9 digits.';
-    csssnFbk.className = 'error';
-    csssnInput.classList.remove('is-valid');
-    csssnInput.classList.add('is-invalid');
-  }
+        // Confirm SSN
+        if (csssnRaw.length === 9) {
+          csssnFbk.innerText = 'Valid Confirmation SSN';
+          csssnFbk.className = 'success';
+          csssnInput.classList.remove('is-invalid');
+          csssnInput.classList.add('is-valid');
+        } else if (csssnRaw.length > 0 && csssnRaw.length < 9) {
+          csssnFbk.innerText = 'Confirm SSN must be 9 digits.';
+          csssnFbk.className = 'error';
+          csssnInput.classList.remove('is-valid');
+          csssnInput.classList.add('is-invalid');
+        }
 
-  // Compare if both are valid
-  if (sssnRaw.length === 9 && csssnRaw.length === 9) {
-    if (sssnRaw !== csssnRaw) {
-      csssnFbk.innerText = 'SSN and confirmation do not match.';
-      csssnFbk.className = 'error';
-      csssnInput.classList.remove('is-valid');
-      csssnInput.classList.add('is-invalid');
-    }
-  }
-}
+        // Compare if both are valid
+        if (sssnRaw.length === 9 && csssnRaw.length === 9) {
+          if (sssnRaw !== csssnRaw) {
+            csssnFbk.innerText = 'SSN and confirmation do not match.';
+            csssnFbk.className = 'error';
+            csssnInput.classList.remove('is-valid');
+            csssnInput.classList.add('is-invalid');
+          }
+        }
+      }
 
-// Event listeners – Spouse SSN
-sssnInput.addEventListener('focus', () => {
-  sssnInput.value = getRawSSSN(sssnInput.dataset.raw || '');
-});
+      // Event listeners – Spouse SSN
+      sssnInput.addEventListener('focus', () => {
+        sssnInput.value = getRawSSSN(sssnInput.dataset.raw || '');
+      });
 
-sssnInput.addEventListener('input', () => {
-  const raw = getRawSSSN(sssnInput.value);
-  sssnInput.dataset.raw = raw;
-  sssnInput.value = raw;
-  validateSSSNFields();
-});
+      sssnInput.addEventListener('input', () => {
+        const raw = getRawSSSN(sssnInput.value);
+        sssnInput.dataset.raw = raw;
+        sssnInput.value = raw;
+        validateSSSNFields();
+      });
 
-sssnInput.addEventListener('blur', () => {
-  const raw = getRawSSSN(sssnInput.dataset.raw || '');
-  sssnInput.dataset.raw = raw;
-  sssnInput.value = maskCSSSN(raw);
-});
+      sssnInput.addEventListener('blur', () => {
+        const raw = getRawSSSN(sssnInput.dataset.raw || '');
+        sssnInput.dataset.raw = raw;
+        sssnInput.value = maskCSSSN(raw);
+      });
 
-// Event listeners – Confirm SSN
-csssnInput.addEventListener('focus', () => {
-  csssnInput.value = getRawSSSN(csssnInput.dataset.raw || '');
-});
+      // Event listeners – Confirm SSN
+      csssnInput.addEventListener('focus', () => {
+        csssnInput.value = getRawSSSN(csssnInput.dataset.raw || '');
+      });
 
-csssnInput.addEventListener('input', () => {
-  const raw = getRawSSSN(csssnInput.value);
-  csssnInput.dataset.raw = raw;
-  csssnInput.value = raw;
-  validateSSSNFields();
-});
+      csssnInput.addEventListener('input', () => {
+        const raw = getRawSSSN(csssnInput.value);
+        csssnInput.dataset.raw = raw;
+        csssnInput.value = raw;
+        validateSSSNFields();
+      });
 
-csssnInput.addEventListener('blur', () => {
-  const raw = getRawSSSN(csssnInput.dataset.raw || '');
-  csssnInput.dataset.raw = raw;
-  csssnInput.value = maskCSSSN(raw);
-});
+      csssnInput.addEventListener('blur', () => {
+        const raw = getRawSSSN(csssnInput.dataset.raw || '');
+        csssnInput.dataset.raw = raw;
+        csssnInput.value = maskCSSSN(raw);
+      });
 
-// Submit handler for Spouse SSNs
-form.addEventListener('submit', (e) => {
-  const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
-  const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
+      // Submit handler for Spouse SSNs
+      form.addEventListener('submit', (e) => {
+        const sssnRaw = getRawSSSN(sssnInput.dataset.raw || '');
+        const csssnRaw = getRawSSSN(csssnInput.dataset.raw || '');
 
-  sssnFbk.innerText = '';
-  csssnFbk.innerText = '';
-  sssnFbk.className = '';
-  csssnFbk.className = '';
-  sssnInput.classList.remove('is-invalid', 'is-valid');
-  csssnInput.classList.remove('is-invalid', 'is-valid');
+        sssnFbk.innerText = '';
+        csssnFbk.innerText = '';
+        sssnFbk.className = '';
+        csssnFbk.className = '';
+        sssnInput.classList.remove('is-invalid', 'is-valid');
+        csssnInput.classList.remove('is-invalid', 'is-valid');
 
-  let sValid = true;
+        let sValid = true;
 
-  if (sssnRaw.length !== 9) {
-    sssnFbk.innerText = 'SSN must be 9 digits.';
-    sssnFbk.className = 'error';
-    sssnInput.classList.add('is-invalid');
-    sValid = false;
-  } else {
-    sssnInput.classList.add('is-valid');
-  }
+        if (sssnRaw.length !== 9) {
+          sssnFbk.innerText = 'SSN must be 9 digits.';
+          sssnFbk.className = 'error';
+          sssnInput.classList.add('is-invalid');
+          sValid = false;
+        } else {
+          sssnInput.classList.add('is-valid');
+        }
 
-  if (csssnRaw.length !== 9) {
-    csssnFbk.innerText = 'Confirm SSN must be 9 digits.';
-    csssnFbk.className = 'error';
-    csssnInput.classList.add('is-invalid');
-    sValid = false;
-  } else {
-    csssnInput.classList.add('is-valid');
-  }
+        if (csssnRaw.length !== 9) {
+          csssnFbk.innerText = 'Confirm SSN must be 9 digits.';
+          csssnFbk.className = 'error';
+          csssnInput.classList.add('is-invalid');
+          sValid = false;
+        } else {
+          csssnInput.classList.add('is-valid');
+        }
 
-  if (sssnRaw.length === 9 && csssnRaw.length === 9 && sssnRaw !== csssnRaw) {
-    csssnFbk.innerText = '❌ SSN and confirmation do not match.';
-    csssnFbk.className = 'error';
-    csssnInput.classList.remove('is-valid');
-    csssnInput.classList.add('is-invalid');
-    sValid = false;
-  }
+        if (sssnRaw.length === 9 && csssnRaw.length === 9 && sssnRaw !== csssnRaw) {
+          csssnFbk.innerText = '❌ SSN and confirmation do not match.';
+          csssnFbk.className = 'error';
+          csssnInput.classList.remove('is-valid');
+          csssnInput.classList.add('is-invalid');
+          sValid = false;
+        }
 
-  if (sValid) {
-    csssnFbk.innerText = '✅ SSN successfully matched.';
-    csssnFbk.className = 'success';
-  }
+        if (sValid) {
+          csssnFbk.innerText = '✅ SSN successfully matched.';
+          csssnFbk.className = 'success';
+        }
 
-  validateSSSNFields(true);
+        validateSSSNFields(true);
 
-  sssnInput.value = maskCSSSN(sssnRaw);
-  csssnInput.value = maskCSSSN(csssnRaw);
-});
+        sssnInput.value = maskCSSSN(sssnRaw);
+        csssnInput.value = maskCSSSN(csssnRaw);
+      });
 
 
 
@@ -530,7 +533,7 @@ form.addEventListener('submit', (e) => {
       filingJoint3Fbk.className = "";
       pec.classList.remove("is-invalid");
 
-       // Validation
+      // Validation
       if (!filingJoint3.checked && !filingJoint3Sp.checked) {
         e.preventDefault();
         filingJoint3Fbk.innerText = "Please check at least one box for the Presidential Election Campaign.";
@@ -706,7 +709,7 @@ form.addEventListener('submit', (e) => {
           separatelyspssnFbk.innerText = 'Valid Spouse SSN';
           separatelyspssnFbk.className = 'success';
         }
-        
+
 
 
 
@@ -725,75 +728,75 @@ form.addEventListener('submit', (e) => {
 
     //---------------------------------------------------------------------------
 
-// If Head of household (with qualifying person) is checked then required ChildSsn and childName
-const hohRadio = document.getElementById("hohQualifying");
-const childNameInput = document.getElementById("childName");
-const childSsnInput = document.getElementById("childSsn");
-const childSsnFbk = document.getElementById("childSsnFbk");
+    // If Head of household (with qualifying person) is checked then required ChildSsn and childName
+    const hohRadio = document.getElementById("hohQualifying");
+    const childNameInput = document.getElementById("childName");
+    const childSsnInput = document.getElementById("childSsn");
+    const childSsnFbk = document.getElementById("childSsnFbk");
 
-// Utility functions
-function getRawChildSsn(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
-
-function maskChildSsn(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
-
-// Input & blur formatting
-childSsnInput.addEventListener("input", () => {
-  const raw = getRawChildSsn(childSsnInput.value);
-  childSsnInput.dataset.raw = raw;
-  childSsnInput.value = raw;
-});
-
-childSsnInput.addEventListener("blur", () => {
-  const raw = getRawChildSsn(childSsnInput.dataset.raw || '');
-  childSsnInput.dataset.raw = raw;
-  childSsnInput.value = maskChildSsn(raw);
-});
-
-// Final validation on submit
-form.addEventListener("submit", function (e) {
-  const isHeadOfHousehold = hohRadio.checked;
-  let isValid = true;
-
-  // Reset child inputs
-  childNameInput.classList.remove("is-invalid", "is-valid");
-  childSsnInput.classList.remove("is-invalid", "is-valid");
-  childSsnFbk.innerText = "";
-  childSsnFbk.className = "";
-
-  if (isHeadOfHousehold) {
-    // Validate child name
-    if (!childNameInput.value.trim()) {
-      childNameInput.classList.add("is-invalid");
-      isValid = false;
-    } else {
-      childNameInput.classList.add("is-valid");
+    // Utility functions
+    function getRawChildSsn(value) {
+      return value.replace(/\D/g, '').slice(0, 9);
     }
 
-    // Validate SSN
-    const raw = getRawChildSsn(childSsnInput.dataset.raw || "");
-    if (raw.length !== 9) {
-      childSsnInput.classList.add("is-invalid");
-      childSsnFbk.innerText = "Child SSN must be 9 digits.";
-      childSsnFbk.className = "error";
-      isValid = false;
-    } else {
-      childSsnInput.classList.add("is-valid");
-      childSsnFbk.innerText = "Valid Child SSN";
-      childSsnFbk.className = "success";
+    function maskChildSsn(raw) {
+      return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
+    }
+
+    // Input & blur formatting
+    childSsnInput.addEventListener("input", () => {
+      const raw = getRawChildSsn(childSsnInput.value);
+      childSsnInput.dataset.raw = raw;
+      childSsnInput.value = raw;
+    });
+
+    childSsnInput.addEventListener("blur", () => {
+      const raw = getRawChildSsn(childSsnInput.dataset.raw || '');
+      childSsnInput.dataset.raw = raw;
       childSsnInput.value = maskChildSsn(raw);
-    }
-  }
+    });
 
-  // Trigger full form validation feedback if invalid
-  if (!isValid) {
-    e.preventDefault();
-    form.classList.add("was-validated");
-  }
-});
+    // Final validation on submit
+    form.addEventListener("submit", function (e) {
+      const isHeadOfHousehold = hohRadio.checked;
+      let isValid = true;
+
+      // Reset child inputs
+      childNameInput.classList.remove("is-invalid", "is-valid");
+      childSsnInput.classList.remove("is-invalid", "is-valid");
+      childSsnFbk.innerText = "";
+      childSsnFbk.className = "";
+
+      if (isHeadOfHousehold) {
+        // Validate child name
+        if (!childNameInput.value.trim()) {
+          childNameInput.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          childNameInput.classList.add("is-valid");
+        }
+
+        // Validate SSN
+        const raw = getRawChildSsn(childSsnInput.dataset.raw || "");
+        if (raw.length !== 9) {
+          childSsnInput.classList.add("is-invalid");
+          childSsnFbk.innerText = "Child SSN must be 9 digits.";
+          childSsnFbk.className = "error";
+          isValid = false;
+        } else {
+          childSsnInput.classList.add("is-valid");
+          childSsnFbk.innerText = "Valid Child SSN";
+          childSsnFbk.className = "success";
+          childSsnInput.value = maskChildSsn(raw);
+        }
+      }
+
+      // Trigger full form validation feedback if invalid
+      if (!isValid) {
+        e.preventDefault();
+        form.classList.add("was-validated");
+      }
+    });
 
 
 
@@ -801,89 +804,82 @@ form.addEventListener("submit", function (e) {
 
 
 
-//---------------------------------------------------------------------------
-// Child SSN Input & Feedback Elements
+    //---------------------------------------------------------------------------
+    // Child SSN Input & Feedback Elements
 
-// Utility Functions
-function getRawChildSsn(value) {
-  return value.replace(/\D/g, '').slice(0, 9);
-}
+    // Utility Functions defined previously
 
-function maskChildSsn(raw) {
-  return raw.length === 9 ? '***-**-' + raw.slice(-4) : raw;
-}
+    // Validation Function
+    function validateChildSsnFields(fromSubmit = false) {
+      const childSsnRaw = getRawChildSsn(childSsnInput.dataset.raw || '');
 
-// Validation Function
-function validateChildSsnFields(fromSubmit = false) {
-  const childSsnRaw = getRawChildSsn(childSsnInput.dataset.raw || '');
+      if (!fromSubmit) {
+        childSsnFbk.innerText = '';
+        childSsnFbk.className = '';
+      }
 
-  if (!fromSubmit) {
-    childSsnFbk.innerText = '';
-    childSsnFbk.className = '';
-  }
-
-  if (childSsnRaw.length === 9) {
-    childSsnFbk.innerText = 'Valid Child SSN';
-    childSsnFbk.className = 'success';
-  } else if (childSsnRaw.length > 0 && childSsnRaw.length < 9) {
-    childSsnFbk.innerText = 'Child SSN must be 9 digits.';
-    childSsnFbk.className = 'error';
-  }
-}
-
-// Input Events
-childSsnInput.addEventListener('focus', () => {
-  childSsnInput.value = childSsnInput.dataset.raw || '';
-});
-
-childSsnInput.addEventListener('input', () => {
-  const raw = getRawChildSsn(childSsnInput.value);
-  childSsnInput.dataset.raw = raw;
-  childSsnInput.value = raw;
-  validateChildSsnFields();
-});
-
-childSsnInput.addEventListener('blur', () => {
-  const raw = getRawChildSsn(childSsnInput.dataset.raw || '');
-  childSsnInput.dataset.raw = raw;
-  childSsnInput.value = maskChildSsn(raw);
-});
-
-// Submit Handler
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
-  const isSeparate = filingStatus && filingStatus.value === "separate";
-
-  let childValid = true;
-
-  childSsnFbk.innerText = '';
-  childSsnFbk.className = '';
-
-  if (isSeparate) {
-    const childSsnRaw = childSsnInput.dataset.raw || '';
-
-    if (childSsnRaw.length !== 9) {
-      childSsnInput.classList.add("is-invalid");
-      childSsnInput.classList.remove("is-valid");
-      childSsnFbk.innerText = 'Child SSN must be 9 digits.';
-      childSsnFbk.className = 'error';
-      childValid = false;
-    } else {
-      childSsnInput.classList.remove("is-invalid");
-      childSsnInput.classList.add("is-valid");
-      childSsnFbk.innerText = 'Valid Child SSN';
-      childSsnFbk.className = 'success';
+      if (childSsnRaw.length === 9) {
+        childSsnFbk.innerText = 'Valid Child SSN';
+        childSsnFbk.className = 'success';
+      } else if (childSsnRaw.length > 0 && childSsnRaw.length < 9) {
+        childSsnFbk.innerText = 'Child SSN must be 9 digits.';
+        childSsnFbk.className = 'error';
+      }
     }
 
-    validateChildSsnFields(true);
-    childSsnInput.value = maskChildSsn(childSsnRaw);
-  }
-});
+    // Input Events
+    childSsnInput.addEventListener('focus', () => {
+      childSsnInput.value = childSsnInput.dataset.raw || '';
+    });
+
+    childSsnInput.addEventListener('input', () => {
+      const raw = getRawChildSsn(childSsnInput.value);
+      childSsnInput.dataset.raw = raw;
+      childSsnInput.value = raw;
+      validateChildSsnFields();
+    });
+
+    childSsnInput.addEventListener('blur', () => {
+      const raw = getRawChildSsn(childSsnInput.dataset.raw || '');
+      childSsnInput.dataset.raw = raw;
+      childSsnInput.value = maskChildSsn(raw);
+    });
+
+    // Submit Handler
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const filingStatus = document.querySelector('input[name="filingStatus"]:checked');
+      const isSeparate = filingStatus && filingStatus.value === "separate";
+
+      let childValid = true;
+
+      childSsnFbk.innerText = '';
+      childSsnFbk.className = '';
+
+      if (isSeparate) {
+        const childSsnRaw = childSsnInput.dataset.raw || '';
+
+        if (childSsnRaw.length !== 9) {
+          childSsnInput.classList.add("is-invalid");
+          childSsnInput.classList.remove("is-valid");
+          childSsnFbk.innerText = 'Child SSN must be 9 digits.';
+          childSsnFbk.className = 'error';
+          childValid = false;
+        } else {
+          childSsnInput.classList.remove("is-invalid");
+          childSsnInput.classList.add("is-valid");
+          childSsnFbk.innerText = 'Valid Child SSN';
+          childSsnFbk.className = 'success';
+        }
+
+        validateChildSsnFields(true);
+        childSsnInput.value = maskChildSsn(childSsnRaw);
+      }
+    });
 
 
-//---------------------------------------------------------------------------
+    //---------------------------------------------------------------------------
 
 
 
