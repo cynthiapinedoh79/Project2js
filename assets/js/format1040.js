@@ -2,11 +2,13 @@
 
 
 /*Main Information*/
-document.addEventListener("DOMContentLoaded",
+document.addEventListener("DOMContentLoaded", function () {
+  let myFormElement = document.getElementById("my-form");
+  myFormElement.addEventListener("submit", handleSubmit);
 
-  function () {
-    let myFormElement = document.getElementById("my-form");
-    myFormElement.addEventListener("submit", handleSubmit);
+
+
+  
 
     /*General Information*/
     function handleSubmit(e) {
