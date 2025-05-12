@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let [key, value] of formData.entries()) {
       totalScore += parseInt(value, 10);
     }
-
+    
     resultDiv.classList.remove("hidden");
+    resultDiv.classList.add("show");
+    
     resultDiv.innerText = `Your Score: ${totalScore} / 10`;
 
     if (totalScore >= 6) {
@@ -29,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
       resultDiv.innerText += "\nYou're doing great! Keep it up.";
     }
 
-    resultDiv.classList.remove("hidden");
     resultDiv.classList.add("alert", "alert-info", "mt-3");
   });
 });
