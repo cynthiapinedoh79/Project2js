@@ -105,8 +105,14 @@ h3 {
     border: none;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
+    padding: 1rem;
     text-align: left;
+    overflow:scroll;
+    max-width: 100%;
+    overflow-x: auto;;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 
@@ -122,6 +128,8 @@ h3 {
     justify-content: left;
     align-content:flex-start;
     align-items: flex-start;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .format1040-wrapper div#f1040 {
@@ -139,6 +147,8 @@ h3 {
     vertical-align: middle;
     margin: 0;
     padding: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -180,7 +190,9 @@ h3 {
 
 .format1040-wrapper input.form-control {
     border: 0.5px solid var(--border-input);
-    width: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .format1040-wrapper input#expr.form-control {
@@ -278,7 +290,7 @@ input.form-control.is-invalid,
     border-radius: 5px;
     width: 100%;
     margin-bottom: 0.5rem;
-    padding: 5px;
+    padding: 0.75rem;
     position: relative;
     text-align: left;
     justify-items: left;
@@ -295,11 +307,13 @@ input.form-control.is-invalid,
 .format1040-wrapper #gi-form fieldset{
     background-color: var(--highlight-color-light);
     display: flex;
+    width: 100%;
 }
 .format1040-wrapper
 #tpi-form fieldset{
     background-color: var(--highlight-color-light);
     display: flex;
+    width: 100%;
 }
 .format1040-wrapper
 #fsae fieldset{
@@ -315,6 +329,8 @@ input.form-control.is-invalid,
     align-items:flex-start;
     justify-content: flex-start;
     margin-bottom: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .format1040-wrapper
@@ -545,6 +561,7 @@ button#vage:hover, button#svage:hover {
 
 .format1040-wrapper #tpi-form {
     text-align: left;
+    width: 100%;
 }
 
 .format1040-wrapper #tpi-form p {
@@ -557,6 +574,8 @@ button#vage:hover, button#svage:hover {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
 
     /* SPACING PROPERTIES */
     align-items: center;

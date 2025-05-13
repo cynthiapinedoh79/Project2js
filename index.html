@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quick Quiz Intro</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #1a006f1f;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       flex-direction: column;
+
+      background-image: url("assets/images/quiz.bg.png");
+      /* adjust path as needed */
+      background-size: cover;
+      /* cover entire area */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      /* optional: scrolls with content or stays fixed */
     }
 
     h1 {
@@ -41,6 +50,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Needs Bookkeeping?</h1>
   <button class="btn" onclick="startQuiz()">Quick Quiz</button>
@@ -56,4 +66,5 @@
     }
   </script>
 </body>
+
 </html>
