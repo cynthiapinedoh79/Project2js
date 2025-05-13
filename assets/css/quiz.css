@@ -3,7 +3,6 @@
 body.quiz-wrapper,
 body.feedback-wrapper {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to right, #33008a, #9E0059);
   color: white;
   margin: 10px;
   padding: 2rem;
@@ -12,6 +11,15 @@ body.feedback-wrapper {
   align-items: flex-start;
   min-height: 100vh;
   max-width: 100%;
+}
+
+body.quiz-wrapper {
+  background: url("/assets/images/money.png") no-repeat center center fixed;
+  background-size: cover;
+}
+body.feedback-wrapper {
+  background: url("/assets/images/coffee.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 
@@ -154,4 +162,9 @@ body.feedback-wrapper {
 
 .quiz-wrapper #result.show {
   display: block; /* Show when JavaScript adds .show class */
+}
+
+.quiz-wrapper input[type="radio"]:checked {
+  accent-color: #9E0059;
+  transform: scale(1.5);
 }
