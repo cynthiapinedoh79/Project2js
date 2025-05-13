@@ -177,3 +177,10 @@ body.feedback-wrapper {
 .quiz-wrapper label{
   padding-left: 20px;;
 }
+
+.quiz-wrapper .quiz-page {
+  display: none;
+}
+.quiz-wrapper .quiz-page.active {
+  display: block;
+}
