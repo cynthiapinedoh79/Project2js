@@ -41,7 +41,7 @@ body.feedback-wrapper {
   background-color: white;
   color: #333;
   max-width: 600px;
-  width: 75%;
+  min-width: none;
   margin-top: 50px;
   padding: 2rem;
   border-radius: 15px;
@@ -167,4 +167,13 @@ body.feedback-wrapper {
 .quiz-wrapper input[type="radio"]:checked {
   accent-color: #9E0059;
   transform: scale(1.5);
+}
+
+.quiz-wrapper input[type="radio"] {
+  accent-color: #9E0059;
+  transform: scale(1.25);
+}
+
+.quiz-wrapper label{
+  padding-left: 20px;;
 }

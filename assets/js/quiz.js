@@ -30,7 +30,7 @@ if (totalScore >= 6) {
   `;
   setTimeout(() => {
     window.location.href = "feedback.html";
-  }, 5000);
+  }, 4000);
 } else {
   resultDiv.innerHTML += `
     <div class="feedback-line">You're doing great! Keep it up.</div>
