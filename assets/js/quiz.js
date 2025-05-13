@@ -61,25 +61,25 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "What is Bookkeping?",
         content: "It is the process of recording financial transactions and keeping track of a company's financial health.",
-        imageURL: "assets/images/bokkepInfo.png",
+        imageURL: "assets/images/bookk.png",
         imageAlt: "Bookkeeping information"
       },
       {
         title: "Tired of paperwork?",
         content: "Bookkeeping can be tedious and time-consuming, but it is essential for a business's success.",
-        imageURL: "assets/images/paperwork.webp",
+        imageURL: "assets/images/paperwork.png",
         imageAlt: "Paperwork"
       },
       {
         title: "Numbers didn't match",
         content: "Inaccurate bookkeeping can lead to financial discrepancies and mismanagement.",
-        imageURL: "assets/images/frustration.webp",
+        imageURL: "assets/images/frustration.png",
         imageAlt: "Frustration"
       },
       {
         title: "Invoices",
         content: "Invoices are a crucial part of bookkeeping, as they document sales and purchases.",
-        imageURL: "assets/images/invoice.png",
+        imageURL: "assets/images/invoiceC.png",
         imageAlt: "Invoice"
       },
       {
