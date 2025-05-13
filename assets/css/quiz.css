@@ -184,3 +184,67 @@ body.feedback-wrapper {
 .quiz-wrapper .quiz-page.active {
   display: block;
 }
+
+
+
+/*Check This! Bottom ---------------------------------------------*/
+
+body.checkThis-Wrapper .fact-card{
+  font-family: 'Roboto', sans-serif;
+}
+
+.checkThis-Wrapper h2 {
+  color: #9E0059;
+  margin: 5px;
+}
+
+.checkThis-Wrapper .btn {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+  border: 1px solid lightgrey;
+}
+
+.checkThis-Wrapper .btn-darkred {
+  background-color: #9E0059;
+}
+
+.checkThis-Wrapper .btn-blue {
+  background-color: #33008a;
+}
+
+.checkThis-Wrapper .container {
+  padding-top: 20px;
+}
+
+.checkThis-Wrapper .fact-card {
+  text-align: center;
+  width: 200px;
+  height: 325px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.checkThis-Wrapper .fact-card h2 {
+  color: #d63a3a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+.checkThis-Wrapper .fact-card > p {
+  color: #4a4a4f;
+}
+
+.checkThis-Wrapper .fact-card img {
+  height: 150px;
+}
