@@ -23,12 +23,23 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
-      background-color: #1a006f1f;
+      background-image: url("assets/images/invoice.png") no-repeat center center fixed;
       background-size: cover;
       /* cover entire area */
     }
 
+    #coverText {
+      background-color: #1a006f1f;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #33008a;
+    }
+
     h1 {
+      margin-top: 75px;
       font-size: 3rem;
       color: #33008a;
       margin-bottom: 2rem;
@@ -55,10 +66,13 @@
 </head>
 
 <body>
+  <div id="bgQuickQuiz">
+    <div id="coverText">
   <h1>Needs Bookkeeping?</h1>
   <button class="btn" onclick="startQuiz()">Quick Quiz</button>
   <button class="btn" onclick="showScores()">High Scores</button>
-
+      </div>
+    </div>
   <script>
     function startQuiz() {
       window.location.href = "quiz.html"; // Replace with your actual quiz file
