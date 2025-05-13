@@ -188,9 +188,10 @@ body.feedback-wrapper {
 
 
 /*Check This! Bottom ---------------------------------------------*/
-
-body.checkThis-Wrapper .fact-card{
+body.checkThis-Wrapper{
   font-family: 'Roboto', sans-serif;
+  background-image: url("assets/images/calculator.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .checkThis-Wrapper h2 {
@@ -209,11 +210,11 @@ body.checkThis-Wrapper .fact-card{
   border: 1px solid lightgrey;
 }
 
-.checkThis-Wrapper .btn-darkred {
+.checkThis-Wrapper .btn-darkRed {
   background-color: #9E0059;
 }
 
-.checkThis-Wrapper .btn-blue {
+.checkThis-Wrapper .btn-purple {
   background-color: #33008a;
 }
 
@@ -221,10 +222,11 @@ body.checkThis-Wrapper .fact-card{
   padding-top: 20px;
 }
 
+
 .checkThis-Wrapper .fact-card {
   text-align: center;
-  width: 350px;
-  height: 255px;
+  width: 450px;
+  height: 400px;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -232,12 +234,15 @@ body.checkThis-Wrapper .fact-card{
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
+  background-color: white; 
 }
 
 .checkThis-Wrapper .fact-card h2 {
   color: #d63a3a;
   font-size: 18px;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 
@@ -246,5 +251,13 @@ body.checkThis-Wrapper .fact-card{
 }
 
 .checkThis-Wrapper .fact-card img {
-  height: 150px;
+  height: 225px;
+}
+
+.checkThis-Wrapper .facts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
 }

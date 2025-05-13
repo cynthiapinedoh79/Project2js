@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let factsIndex = 0;
   const factsContainer = document.getElementById("facts-container");
   const btnsContainer = document.getElementById("buttons-container");
-  const newFactBtn = document.querySelector(".btn-orange");
-  const clearBtn = document.querySelector(".btn-blue");
+  const newFactBtn = document.querySelector(".btn-darkRed");
+  const clearBtn = document.querySelector(".btn-purple");
 
   if (factsContainer && btnsContainer && newFactBtn && clearBtn) {
     const facts = [
