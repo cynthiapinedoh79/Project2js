@@ -12,10 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const radios = page1.querySelectorAll("input[type='radio']");
       const questions = [...new Set([...radios].map(r => r.name))];
       const answered = questions.every(name => quizForm.querySelector(`input[name="${name}"]:checked`));
+      
+      const alertCard = document.getElementById("alert-card");
+      
       if (!answered) {
-        alert("Please answer all questions before continuing.");
+        alertCard.classList.add("show");
+        setTimeout(() => alertCard.classList.remove("show"), 4000);
         return;
       }
+
+      // Hide alert if previously shown
+    alertCard.classList.remove("show");
 
       page1.classList.remove("active");
       page2.classList.add("active");
@@ -85,13 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "Unorganized",
         content: "Keeping track of receipts and invoices can be overwhelming, especially if they are not organized properly.",
-        imageURL: "assets/images/unorganized.png",
+        imageURL: "assets/images/coffee.png",
         imageAlt: "Unorganized"
       },
       {
         title: "Gross, net, and taxable income",
         content: "Gross income is the total revenue before expenses, net income is the profit after expenses, and taxable income is the amount subject to taxes.",
-        imageURL: "assets/images/coffee.png",
+        imageURL: "assets/images/calculator.png",
         imageAlt: "Calculating income"
       }
     ];

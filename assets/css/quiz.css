@@ -16,16 +16,49 @@ body.feedback-wrapper {
 body.quiz-wrapper {
   background: url("/assets/images/money.png") no-repeat center center fixed;
   background-size: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 body.feedback-wrapper {
   background: url("/assets/images/coffee.png") no-repeat center center fixed;
   background-size: cover;
 }
 
+.quiz-wrapper .custom-alert {
+  background-color: #ffeeba7d;
+  color: rgb(228, 3, 3);
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  text-align: center;
+  justify-content: center;
+  max-width: 500px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.quiz-wrapper #alert-card p {
+  padding: 0.5rem;
+  margin: 0;
+  size: small;
+  font-weight: 500;
+}
+
+
+.quiz-wrapper .hidden {
+  display: none;
+}
+
+.quiz-wrapper .custom-alert.show {
+  display: block;
+}
 
 
 .feedback-wrapper .container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.938);
   color: #333;
   max-width: 600px;
   width: 90%;
@@ -38,7 +71,7 @@ body.feedback-wrapper {
 }
 
 .quiz-wrapper .quiz-container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.938);
   color: #333;
   max-width: 600px;
   min-width: none;
@@ -47,6 +80,13 @@ body.feedback-wrapper {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 100%;
+}
+
+.quickQuizWrapper div#coverText{
+margin-right: 200px;
+margin-bottom:0px;
+align-items: center;
+justify-items:center;
 }
 
 .quiz-wrapper h1,
@@ -107,6 +147,7 @@ body.feedback-wrapper {
 .feedback-wrapper div.card p {
   font-size: 1.2rem;
 }
+
 
 .quiz-wrapper .card,
 .feedback-wrapper .card {
@@ -188,10 +229,15 @@ body.feedback-wrapper {
 
 
 /*Check This! Bottom ---------------------------------------------*/
+
 body.checkThis-Wrapper{
+  background: #f3f1ff;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
-  background-image: url("assets/images/calculator.png") no-repeat center center fixed;
-  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkThis-Wrapper h2 {
@@ -200,38 +246,69 @@ body.checkThis-Wrapper{
 }
 
 .checkThis-Wrapper .btn {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
-  width: 100px;
+  width: 150px;
   border: 1px solid lightgrey;
 }
 
 .checkThis-Wrapper .btn-darkRed {
-  background-color: #9E0059;
+  color: #9E0059;
+  background-color: #9e005a2a;
 }
 
 .checkThis-Wrapper .btn-purple {
+  background-color: #1a006f1f;
+  color: #33008a;
+}
+
+.checkThis-Wrapper .btn-darkRed:hover {
+  background-color: #9E0059;
+  color: rgb(254, 243, 243);
+}
+
+.checkThis-Wrapper .btn-purple:hover {
   background-color: #33008a;
+  color: rgb(243, 238, 245);
 }
 
 .checkThis-Wrapper .container {
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;;
+}
+
+.checkThis-Wrapper #buttons-container{
+  display: flex;
+ justify-content: center; /* center horizontally */
+ gap: 20px;               /* space between buttons */
+ margin: 10px;
+}
+
+.checkThis-Wrapper h1 {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
 }
 
 
 .checkThis-Wrapper .fact-card {
+  flex: 1 1 30%; /* grow, shrink, base 30% */
+  max-width: 375px;
+  min-width: 300px;
   text-align: center;
-  width: 450px;
-  height: 400px;
+  height: 425px;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  display: inline-block;
   vertical-align: top;
   font-size: 14px;
   background-color: white; 
@@ -248,10 +325,14 @@ body.checkThis-Wrapper{
 
 .checkThis-Wrapper .fact-card > p {
   color: #4a4a4f;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: medium;
 }
 
 .checkThis-Wrapper .fact-card img {
   height: 225px;
+  width: 100%;
 }
 
 .checkThis-Wrapper .facts-container {
@@ -259,5 +340,7 @@ body.checkThis-Wrapper{
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  gap: 20px;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 25px;
 }
