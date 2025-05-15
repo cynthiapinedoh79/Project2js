@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         title: "Gross, net, and taxable income",
-        content: "Gross income is the total revenue before expenses, net income is the profit after expenses, and taxable income is the amount subject to taxes.",
+        content: "Gross income: total revenue before expenses. Net income: profit after expenses. Taxable income: amount subject to taxes.",
         imageURL: "assets/images/calculator.png",
         imageAlt: "Calculating income"
       }

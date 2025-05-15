@@ -1,5 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+
+/* Start CSS for "Quick Quiz" (index.html)  -------------------------------------------------------------------------- */
+body.quickQuizWrapper {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: url("/assets/images/invoiceC.png") no-repeat center center fixed;
+  background-size: cover;
+  /* cover entire area */
+}
+
+.quickQuizWrapper h1 {
+  margin-top: 0px;
+  font-size: 3rem;
+  color: #33008a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quickQuizWrapper button {
+  display: inline-block;
+  /* or just remove any display:block if present */
+  padding: 0.75rem 2rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: #33008a;
+  border: 3px solid #33008a;
+  background-color: rgba(185, 182, 245, 0.549);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.quickQuizWrapper div#coverText.button-group {
+  justify-content: center;
+  gap: 1rem;
+  /* space between buttons */
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.quickQuizWrapper button:hover {
+  background-color: #33008a;
+  color: rgb(222, 220, 255);
+}
+
+.quickQuizWrapper div#bgQuickQuiz {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.quickQuizWrapper div#coverText {
+  margin-top: 45px;
+  background: rgba(255, 255, 255, 0.179);
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Ending section for "Quick Quiz" (index.html)  -------------------------------------------------------------------------- */
+
+
+
+/* Started CSS for "Quiz" (quiz.html) and "feedback" (feedback.html) -------------------------------------------------------------------------- */
 body.quiz-wrapper,
 body.feedback-wrapper {
   font-family: 'Inter', sans-serif;
@@ -14,14 +89,15 @@ body.feedback-wrapper {
 }
 
 body.quiz-wrapper {
-  background: url("/assets/images/money.png") no-repeat center center fixed;
+  background: url("/assets/images/1.jpg") no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
 body.feedback-wrapper {
-  background: url("/assets/images/coffee.png") no-repeat center center fixed;
+  background: url("/assets/images/dued.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -58,7 +134,7 @@ body.feedback-wrapper {
 
 
 .feedback-wrapper .container {
-  background-color: rgba(255, 255, 255, 0.938);
+  background-color: rgba(255, 255, 255, 0.86);
   color: #333;
   max-width: 600px;
   width: 90%;
@@ -82,12 +158,7 @@ body.feedback-wrapper {
   max-width: 100%;
 }
 
-.quickQuizWrapper div#coverText{
-margin-right: 200px;
-margin-bottom:0px;
-align-items: center;
-justify-items:center;
-}
+
 
 .quiz-wrapper h1,
 .feedback-wrapper h1 {
@@ -107,8 +178,8 @@ justify-items:center;
   cursor: pointer;
 }
 
-.quiz-wrapper button{
-  background-color: #33008a;
+.quiz-wrapper button {
+  background-color: rgba(173, 92, 70, 0.813);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -121,7 +192,7 @@ justify-items:center;
 }
 
 .quiz-wrapper button:hover {
-  background-color:#9E0059;
+  background-color: rgb(132, 29, 0);
   color: white;
 }
 
@@ -139,7 +210,7 @@ justify-items:center;
 }
 
 .feedback-wrapper .button:hover {
-  background-color:#9E0059;
+  background-color: #9E0059;
   color: white;
 }
 
@@ -174,12 +245,12 @@ justify-items:center;
 
 
 .quiz-wrapper #result {
-  background-color: #f3f1ff;
-  border: 2px solid #33008a;
+  background-color: rgba(227, 199, 164, 0.706);
+  border: 2px solid rgba(255, 255, 255, 0.838);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
-  color: #33008a;
+  color: rgb(184, 92, 67);
   max-width: 600px;
   margin: 1rem auto;
   font-family: 'Inter', sans-serif;
@@ -198,11 +269,13 @@ justify-items:center;
 }
 
 .quiz-wrapper #result {
-  display: none; /* Hide initially */
+  display: none;
+  /* Hide initially */
 }
 
 .quiz-wrapper #result.show {
-  display: block; /* Show when JavaScript adds .show class */
+  display: block;
+  /* Show when JavaScript adds .show class */
 }
 
 .quiz-wrapper input[type="radio"]:checked {
@@ -215,23 +288,47 @@ justify-items:center;
   transform: scale(1.25);
 }
 
-.quiz-wrapper label{
-  padding-left: 20px;;
+.quiz-wrapper label {
+  padding-left: 20px;
+  ;
 }
 
 .quiz-wrapper .quiz-page {
   display: none;
 }
+
 .quiz-wrapper .quiz-page.active {
   display: block;
 }
 
+/* Ending section for "Quiz" (quiz.html) and "feedback" (feedback.html) -------------------------------------------------------------------------- */
 
 
-/*Check This! Bottom ---------------------------------------------*/
 
-body.checkThis-Wrapper{
-  background: #f3f1ff;
+/* Started CSS for "Check This" (checkThis.html) -------------------------------------------------------------------------- */
+
+body.checkThis-wrapper::before {
+  content: "";
+  position: fixed; /* Change from absolute to fixed for full coverage */
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.842); /* Cambia la opacidad aquí */
+  z-index: 0; /* Keep it behind everything */
+  pointer-events: none;
+}
+
+
+
+body.checkThis-wrapper {
+  position: relative; /* Needed for ::before layering */
+  z-index: 1; /* Ensure content is above the background. */
+  background-image: url("/assets/images/saveMoney.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -240,12 +337,12 @@ body.checkThis-Wrapper{
   align-items: center;
 }
 
-.checkThis-Wrapper h2 {
+.checkThis-wrapper h2 {
   color: #9E0059;
   margin: 5px;
 }
 
-.checkThis-Wrapper .btn {
+.checkThis-wrapper .btn {
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -256,65 +353,70 @@ body.checkThis-Wrapper{
   border: 1px solid lightgrey;
 }
 
-.checkThis-Wrapper .btn-darkRed {
+.checkThis-wrapper .btn-darkRed {
   color: #9E0059;
   background-color: #9e005a2a;
 }
 
-.checkThis-Wrapper .btn-purple {
+.checkThis-wrapper .btn-purple {
   background-color: #1a006f1f;
   color: #33008a;
 }
 
-.checkThis-Wrapper .btn-darkRed:hover {
+.checkThis-wrapper .btn-darkRed:hover {
   background-color: #9E0059;
   color: rgb(254, 243, 243);
 }
 
-.checkThis-Wrapper .btn-purple:hover {
+.checkThis-wrapper .btn-purple:hover {
   background-color: #33008a;
   color: rgb(243, 238, 245);
 }
 
-.checkThis-Wrapper .container {
-  padding-top: 20px;
-  display: flex;
+.checkThis-wrapper .container {
+  position: relative; /* Needed for ::before layering */
+  z-index: 3; /* Ensure content is above the background. */
+  background-color: transparent;
+  padding-top: 10px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;;
+  margin-bottom: 25px;
 }
 
-.checkThis-Wrapper #buttons-container{
+.checkThis-wrapper #buttons-container {
   display: flex;
- justify-content: center; /* center horizontally */
- gap: 20px;               /* space between buttons */
- margin: 10px;
+  justify-content: center;
+  /* center horizontally */
+  gap: 20px;
+  /* space between buttons */
+  margin: 10px;
 }
 
-.checkThis-Wrapper h1 {
+.checkThis-wrapper h1 {
   margin-top: 20px;
   text-align: center;
   width: 100%;
 }
 
 
-.checkThis-Wrapper .fact-card {
-  flex: 1 1 30%; /* grow, shrink, base 30% */
+.checkThis-wrapper .fact-card {
+  flex: 1 1 30%;
+  /* grow, shrink, base 30% */
   max-width: 375px;
-  min-width: 300px;
+  min-width: 275px;
   text-align: center;
-  height: 425px;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   vertical-align: top;
   font-size: 14px;
-  background-color: white; 
+  background-color: white;
+  justify-content: center;
 }
 
-.checkThis-Wrapper .fact-card h2 {
+.checkThis-wrapper .fact-card h2 {
   color: #d63a3a;
   font-size: 18px;
   margin-bottom: 10px;
@@ -323,19 +425,37 @@ body.checkThis-Wrapper{
 }
 
 
-.checkThis-Wrapper .fact-card > p {
+.checkThis-wrapper .fact-card>p {
   color: #4a4a4f;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: medium;
+  padding: 0px;
+  font-size: small;
 }
 
-.checkThis-Wrapper .fact-card img {
-  height: 225px;
+.checkThis-wrapper .fact-card img {
+  height: 200px;
   width: 100%;
 }
 
-.checkThis-Wrapper .facts-container {
+.checkThis-wrapper .facts-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85); /* white with transparency */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+}
+
+
+.checkThis-wrapper .facts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -344,3 +464,67 @@ body.checkThis-Wrapper{
   max-width: 1200px;
   margin: 25px;
 }
+
+.checkThis-wrapper div#facts-container.container {
+background-color: rgba(255, 255, 255, 0.179);
+border: none;
+box-shadow: none;
+}
+
+/* Ending section for "Check This" (checkThis.html) -------------------------------------------------------------------------- */
+
+
+
+/* Responsive Design */
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  .checkThis-Wrapper .fact-card {
+    height: 325x;
+  }
+
+  .quickQuizWrapper div#coverText {
+    margin-right: 0px;
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (max-width: 768px) {
+      .checkThis-Wrapper .fact-card {
+        height: 335px;
+      }
+
+      .quickQuizWrapper div#coverText {
+        margin-right: 0px;
+      }
+
+      /* Large devices (desktops, 992px and up) */
+      @media (max-width: 992px) {
+        .checkThis-Wrapper .fact-card {
+          height: 315px;
+        }
+
+        .quickQuizWrapper div#coverText {
+          margin-right: 0px;
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (max-width: 1200px) {
+          .checkThis-Wrapper .fact-card {
+            height: 335px;
+            padding: 10px;
+            margin: 10px;
+          }
+
+          .quickQuizWrapper div#coverText {
+            margin-right: 0px;
+          }
+
+          /* Extra extra large devices (larger desktops, 1400px and up) */
+          @media (max-width: 1400px) {
+            .checkThis-Wrapper .fact-card {
+              height: 350px;
+              padding: 10px;
+              margin: 10px;
+            }
+
+            .quickQuizWrapper div#coverText {
+              margin-right: 0px;
+            }
