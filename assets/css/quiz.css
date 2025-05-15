@@ -13,7 +13,7 @@ body.quickQuizWrapper {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: url("/assets/images/invoiceC.png") no-repeat center center fixed;
+  background: url("../images/invoiceC.png") no-repeat center center fixed;
   background-size: cover;
   /* cover entire area */
 }
@@ -89,7 +89,7 @@ body.feedback-wrapper {
 }
 
 body.quiz-wrapper {
-  background: url("/assets/images/1.jpg") no-repeat center center fixed;
+  background: url("../images/1.jpg") no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   margin: 0;
@@ -97,7 +97,7 @@ body.quiz-wrapper {
 }
 
 body.feedback-wrapper {
-  background: url("/assets/images/dued.png") no-repeat center center fixed;
+  background: url("../images/dued.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -324,7 +324,7 @@ body.checkThis-wrapper::before {
 body.checkThis-wrapper {
   position: relative; /* Needed for ::before layering */
   z-index: 1; /* Ensure content is above the background. */
-  background-image: url("/assets/images/saveMoney.png");
+  background-image: url("../images/saveMoney.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
