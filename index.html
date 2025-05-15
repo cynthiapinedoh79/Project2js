@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bookkeeping Quiz" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bookkeeping Quiz">
   <title>Quick Quiz Intro</title>
 
   <!-- Bootstrap & Fonts -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous&display=swap" rel="stylesheet">
 
   <!-- Quiz-specific CSS -->
-  <link rel="stylesheet" href="assets/css/quiz.css" />
+  <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
 
 <body class="quickQuizWrapper">
   <div id="bgQuickQuiz">
-    <div id="coverText" class="button.group">
+    <div id="coverText" class="button-group">
       <h1>Needs Bookkeeping?</h1>
       <button class="btn" onclick="startQuiz()">Quick Quiz</button>
       <button id="checkThis-btn" class="btn" onclick="checkThis()">Check this!</button>
       <button id="prize-btn" class="btn" onclick="prize()">Get A Prize!</button>
-      
-    <script>
-      function startQuiz() {
-        window.location.href = "quiz.html"; // Replace with your actual quiz file
-      }
-    </script>
-    <script class="checkThis-Wrapper">
-      function checkThis() {
-        window.location.href = "checkThis.html"; // Create a scores page if needed
-      }
-    </script>
-    <script>
-      function prize() {
-        window.location.href = "prize.html"; // Replace with your actual prize file
-      }
-    </script>
-    <script src="https://kit.fontawesome.com/2055840f51.js" crossorigin="anonymous"></script>
+    </div>
+  </div>
 
+  <!-- Scripts placed at end for better loading -->
+  <script>
+    function startQuiz() {
+      window.location.href = "quiz.html";
+    }
+
+    function checkThis() {
+      window.location.href = "checkThis.html";
+    }
+
+    function prize() {
+      window.location.href = "prize.html";
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/2055840f51.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
