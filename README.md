@@ -2,7 +2,7 @@
 
 ## Code Institute - First Milestone Project: User Centric Frontend Development.
 # Table of Contents
-- [Potato](#Bookkepping-P2-)
+- [Bookk](#Bookkepping-P2-)
   - [Code Institute - First Milestone Project: User Centric Frontend Development.](#code-institute---first-milestone-project-user-centric-frontend-development)
 - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
@@ -38,53 +38,62 @@
 
 ![Responsive devices -recipes](assets/images/readme/resp-b.webp)
 
-### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Potato-P1-/)
+### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/
+)
 
 
 ## UX
-This website is designed for anyone interested in learning more about potatoes, from history and research to purchasing them or taking cooking classes.
-Anyone who wants to learn more about potatoes, from history and research, purchasing them or taking cooking classes, will find this website useful.
+This website is designed for individuals and businesses interested in professional bookkeeping services — from tax return support to general accounting solutions.
 
-The site contains a small portion of content that has a clear and illustrated informational purpose.
-The purposes of this site are
-1.	Create Online Presence
-2.	Promote our services
-3.	Attract new customers
-4.	Customers interaction (appointments, comments & reviews)
-5.	Increase rating.
-6.	In a future plan add e-commerce.
+Visitors can explore summarized information about our offerings, take a quick quiz to evaluate whether they need bookkeeping support, or even win a special prize such as a bookkeeping bonus or discount!
+
+The site serves as an engaging introduction to bookkeeping services, using clear, visual content with the purpose of informing and inviting users to take action.
+
+Main Goals of This Site:
+1.	Establish a strong online presence
+2.	Promote our bookkeeping and tax-related services
+3.	Attract and convert new clients
+4.	Encourage visitor interaction through a fun quiz and prize feature
+5.	Present key service highlights through "Check This!" Bookkeeping Fact Cards
+6.  Offer a ready-to-fill IRS Form 1040 as part of our service suite
+7.	(Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
+8.  (Coming Soon) To provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, easy-to-understand content.
 
 ## User stories
-My goal as the sole developer of this website is to give you access to accurate and valuable potatoes information, including their history, diversity, and most commonly used varieties, nutritional value, and recipes.
+- My Goal as Developer:
+As the sole developer of this website, my mission is to provide you with an enjoyable and user-friendly experience while delivering clear, concise, and accurate information about our services — sparking your interest in what we offer.
 
-For users, I have established the following points:
+- User Experience Objectives:
+From the user’s perspective, I’ve built this site with the following priorities in mind:
 
-- In my role as a user, I aim to quickly and easily comprehend the purpose of this website.
-- I desire to navigate this website effortlessly using a mouse, keyboard, or touchscreen as a user.
-- I am seeking high-quality and concise information about potato-related topics as a user.
-- As an end user, I am looking for a way to contact this website.
+- I want to navigate this website quickly and easily.
+- I should be able to use a mouse, keyboard, or touchscreen effortlessly.
+- I value high-quality, well-organized information that I can consume in just a few minutes.
+- As a user, I need a simple and clear way to get in touch with you.
 
-  #### First Time Visitor Goals
+  #### First-Time Visitor Goals
 
-    - As a First Time Visitor:
-      1. My objective is to easily comprehend the main purpose of the site and learn more about the organization or company.
-      2. I want to be able to easily navigate through the site to find content that interests me.
-      3. I want to look for testimonials or reviews to understand if they are trusted. 
-      4. I also want to locate their social media links to see their posts, their followings and determine how trusted and known they are.
+    - As a First Visitor Goals:
+      1. To quickly understand the main purpose of the site and discover what your company offers.
+      2. To navigate the site effortlessly and find content that captures my interest.
+      3. To be visually engaged by an attractive and inviting website that encourages me to explore further.
+      4. To easily locate your contact information — ideally supported by testimonials or customer reviews to build trust.
 
-  #### Returning Visitor Goals
+ #### Returning Visitor Goals
 
     - As a Returning Visitor, 
-       1. I want to find more information about the services that they provide and working hours.
-       2. I want to find the best way to get in contact with the organisation with any questions I may have.
+       1. To find more detailed information about the services provided, including working hours.
+       2. To easily discover the best way to contact the organization for any questions or support.
+       3. To understand the available methods of communication — whether through Zoom, Skype, phone, or in-person meetings.
 
   #### Frequent User Goals
     - As a Frequent User,
-       1. I want to schedule an apointment.
+       1. To conveniently access and fill out IRS Form 1040 directly through the site.
+       2. To view brief and clear comparisons — such as LLC vs. S-Corp — to help make informed decisions.
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours are black and yellow to contrast.
+        -   The two main colours are Purple, DarkRed, to contrast.
     -   #### Typography
         -   Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
     -   #### Imagery
