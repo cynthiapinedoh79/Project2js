@@ -1,9 +1,9 @@
-# Potato-P1-
+# Project2js
 
 ## Code Institute - First Milestone Project: User Centric Frontend Development.
 # Table of Contents
-- [Bookk](#Bookkepping-P2-)
-  - [Code Institute - First Milestone Project: User Centric Frontend Development.](#code-institute---first-milestone-project-user-centric-frontend-development)
+- [Bookk](# Project2js)
+  - [Code Institute - Second Milestone Project: Java Script.](#code-institute---second-milestone-project-user-centric-frontend-development)
 - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
     - [A live demo to the website can be found here](#a-live-demo-to-the-website-can-be-found-here)
@@ -28,19 +28,27 @@
     - [Acknowledgements](#acknowledgements)
 
 ## Demo
-![Responsive devices -home](assets/images/readme/resp-h.webp)
 
-![Responsive devices -home](assets/images/readme/resp-v.webp)
+![Responsive devices -home](assets/images/readme/ Need Bookkepping?.png)
 
-![Responsive devices -home](assets/images/readme/resp-r1.webp)
+![Responsive devices -home](assets/images/readme/ Quiz-p1.png)
 
-![Responsive devices -home](assets/images/readme/resp-r2.webp)
+![Responsive devices -home](assets/images/readme/ Quiz-p2.png)
 
-![Responsive devices -recipes](assets/images/readme/resp-b.webp)
+![Responsive devices -home](assets/images/readme/ Quiz-p2a.png)
+
+![Responsive devices -home](assets/images/readme/ Feedback.png)
+
+![Responsive devices -home](assets/images/readme/ Form-1040.png)
+
+![Responsive devices -home](assets/images/readme/ Booking Facts.png)
+
+
+
+![Responsive devices -recipes](assets/images/readme/Get a Prize!)
 
 ### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/
 )
-
 
 ## UX
 This website is designed for individuals and businesses interested in professional bookkeeping services — from tax return support to general accounting solutions.
@@ -50,14 +58,14 @@ Visitors can explore summarized information about our offerings, take a quick qu
 The site serves as an engaging introduction to bookkeeping services, using clear, visual content with the purpose of informing and inviting users to take action.
 
 Main Goals of This Site:
-1.	Establish a strong online presence
-2.	Promote our bookkeeping and tax-related services
-3.	Attract and convert new clients
-4.	Encourage visitor interaction through a fun quiz and prize feature
-5.	Present key service highlights through "Check This!" Bookkeeping Fact Cards
+1.  Establish a strong online presence
+2.  Promote our bookkeeping and tax-related services
+3.  Attract and convert new clients
+4.  Encourage visitor interaction through a fun quiz and prize feature
+5.  Present key service highlights through "Check This!" Bookkeeping Fact Cards
 6.  Offer a ready-to-fill IRS Form 1040 as part of our service suite
-7.	(Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
-8.  (Coming Soon) To provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, easy-to-understand content.
+7.  (Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
+8.  (Coming Soon) Match Game- to provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, brief, and easy-to-understand content.
 
 ## User stories
 - My Goal as Developer:
@@ -71,35 +79,104 @@ From the user’s perspective, I’ve built this site with the following priorit
 - I value high-quality, well-organized information that I can consume in just a few minutes.
 - As a user, I need a simple and clear way to get in touch with you.
 
-  #### First-Time Visitor Goals
+  ### First-Time Visitor Goals
 
-    - As a First Visitor Goals:
+  - As a First Visitor Goals:
       1. To quickly understand the main purpose of the site and discover what your company offers.
       2. To navigate the site effortlessly and find content that captures my interest.
       3. To be visually engaged by an attractive and inviting website that encourages me to explore further.
       4. To easily locate your contact information — ideally supported by testimonials or customer reviews to build trust.
 
- #### Returning Visitor Goals
+  ### Returning Visitor Goals
 
-    - As a Returning Visitor, 
+  - As a Returning Visitor, 
        1. To find more detailed information about the services provided, including working hours.
        2. To easily discover the best way to contact the organization for any questions or support.
        3. To understand the available methods of communication — whether through Zoom, Skype, phone, or in-person meetings.
 
-  #### Frequent User Goals
-    - As a Frequent User,
+  ### Frequent User Goals
+  - As a Frequent User,
        1. To conveniently access and fill out IRS Form 1040 directly through the site.
        2. To view brief and clear comparisons — such as LLC vs. S-Corp — to help make informed decisions.
 
--   ### Design
-    -   #### Colour Scheme
-        -   The two main colours are Purple, DarkRed, to contrast.
-    -   #### Typography
-        -   Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
-    -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It has style, fashion and class.
-    -   #### Description        
-        -   This website is for actual customers or new customers, users can navigate through different pages.
+  ### Design
+  #### Colour Scheme
+  #### 1. index.html (Main Page / Home)
+        
+  - Background: 
+  A blurred photo of financial charts and a blue pen (soft blue, red, beige tones)
+
+  - Text: Dark purple for "Needs Bookkeeping?"
+  - Buttons: Quick Quiz, Check this! and Get A Prize!
+    - Background Color: Purple.
+    - Hover: DarkRed.
+  - Color Mood: Professional, calm, and trustworthy (purple conveys reliability and creativity).
+
+  #### 2. quiz.html (Quiz Page - Page 1)
+
+  - Background: A soft focus image of hands joined in teamwork (brown, beige, and gray tones).
+
+  - Card Background: Semi-transparent white.
+  - Text: Black.
+  - Button: Next, Submit Quiz.
+    - Background Color: Muted Brown.
+    - Hover: Dark Brown.
+
+  - Alert Score: 
+    - Background: Light beige or cream color.
+    - Font Color: Medium to dark brown/red.
+    - Background Color: Muted Brown.
+    - Hover: Dark Brown.
+
+  - Color Mood:Professional, calm, and trustworthy (purple conveys reliability and creativity)
+
+  #### 3. feedback.html (Results Page "You May Need Help With Your Bookkeeping")
+  - Background: A real-life business photo (blue jeans, papers) — neutral tones with blue and tan
+  - Header: Dark gray/black
+  - Card background: Soft white with subtle shadow
+  - Call-to-action buttons: IRS Form-1040, Consultation.
+    - Background Color: Deep purple
+    - Hover: Dark Red.
+
+  - Overall Color Mood: Trustworthy and clean with modern neutrality, purple buttons continue your branding identity.
+
+  #### 4. form1040.html (IRS Form-1040 Page)
+  - Background: Solid white background
+
+  - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
+  - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
+  - Field validation labels like “required!”, Error messages (e.g., “SSN must be 9 digits”): Red
+  - Required fields with valid inputs: Green.
+  - "Verify Age" and "Verify Spouse Age" buttons: 
+    - Text color: Magenta 
+    - Hover:Magenta
+  - Form background section boxes: Light Purple Background
+  - Invalid or empty required fields will show a border after submission: bold orange
+  - Submit Button: background-hover: Yellow Accent
+  - Text: Standard black/dark gray
+  - Accent Color: Bright orange for headers like “THIS RETURN CAN BE FILED…”
+  - Form Field Background: Light lavender/grayish purple — this maintains good contrast without looking too stark
+  - Overall Color Mood: Professional and structured — balancing bold emphasis (orange) with institutional calm (lavender + purple)
+  #### 5. checkThis.html (Bookkeeping Facts Page)
+  - Background: Lightly visible money-themed image (dollar bills) as a faded background
+  - Titles/Headers: Red shades (#C62828-like)
+  - Text: Black
+  - Button: Purple
+  - Card Borders and Text: Varying tones of red, black, gray
+  - Color Mood: More attention-grabbing and informational (reds for urgency, purple for brand consistency)
+  #### 6. prize.html (Prize Page)
+  - Background: Bright, abstract art (orange, blue, white swirls)
+
+  - Title Text: Purple
+  - Button: Bold magenta/dark pink
+  - Color Mood: Energetic and playful — encourages participation and feels exciting
+
+  #### Typography
+  Inter, Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
+  #### Imagery
+  Clear and attractive images support the theme and maintain strong contrast with text for optimal readability.
+  #### Description        
+  This website is designed for visitors and new customers to explore, learn, win rewards, and enjoy an engaging experience while navigating through different pages.
 
 ## Five planes UXD
 
