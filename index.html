@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,28 +13,27 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap" rel="stylesheet">
 
   <!-- Quiz-specific CSS -->
-  <link rel="stylesheet" href="assets/css/quiz.css"/>
+  <link rel="stylesheet" href="assets/css/quiz.css" />
 </head>
 
 <body class="quickQuizWrapper">
   <div id="bgQuickQuiz">
     <div id="coverText" class="button.group">
       <h1>Needs Bookkeeping?</h1>
-  <button class="btn" onclick="startQuiz()">Quick Quiz</button>
-  <button id="checkThis-btn" class="btn" onclick="checkThis()">Check this!</button>
-      </div>
-    </div>
-  <script>
-    function startQuiz() {
-      window.location.href = "quiz.html"; // Replace with your actual quiz file
-    }
-  </script>
-  <script class="checkThis-Wrapper">
-    function checkThis() {
-      window.location.href = "checkThis.html"; // Create a scores page if needed
-    }
-  </script>
-<script src="https://kit.fontawesome.com/2055840f51.js" crossorigin="anonymous"></script>
+      <button class="btn" onclick="startQuiz()">Quick Quiz</button>
+      <button id="checkThis-btn" class="btn" onclick="checkThis()">Check this!</button>
+      <button id="prize-btn" class="btn" onclick="prize()">Get A Prize!</button>
+    <script>
+      function startQuiz() {
+        window.location.href = "quiz.html"; // Replace with your actual quiz file
+      }
+    </script>
+    <script class="checkThis-Wrapper">
+      function checkThis() {
+        window.location.href = "checkThis.html"; // Create a scores page if needed
+      }
+    </script>
+    <script src="https://kit.fontawesome.com/2055840f51.js" crossorigin="anonymous"></script>
 
 </body>
 
