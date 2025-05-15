@@ -32,9 +32,9 @@ body.quickQuizWrapper {
   padding: 0.75rem 2rem;
   margin: 0.5rem;
   font-size: 1.2rem;
-  color: #33008a;
-  border: 3px solid #33008a;
-  background-color: rgba(185, 182, 245, 0.549);
+  border: none;
+  background-color: #33008a;;
+  color: rgba(248, 248, 255, 0.827);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -50,8 +50,8 @@ body.quickQuizWrapper {
 }
 
 .quickQuizWrapper button:hover {
-  background-color: #33008a;
-  color: rgb(222, 220, 255);
+  background-color: #9E0059;
+  color: rgb(254, 243, 243);
 }
 
 .quickQuizWrapper div#bgQuickQuiz {
@@ -314,12 +314,12 @@ body.checkThis-wrapper::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.842); /* Cambia la opacidad aquí */
+  background: rgba(255, 255, 255, 0.774); /* Cambia la opacidad aquí */
   z-index: 0; /* Keep it behind everything */
   pointer-events: none;
 }
 
-
+ 
 
 body.checkThis-wrapper {
   position: relative; /* Needed for ::before layering */
@@ -350,27 +350,27 @@ body.checkThis-wrapper {
   padding: 5px;
   margin: 5px;
   width: 150px;
-  border: 1px solid lightgrey;
+  border: none;
 }
 
 .checkThis-wrapper .btn-darkRed {
-  color: #9E0059;
-  background-color: #9e005a2a;
-}
-
-.checkThis-wrapper .btn-purple {
-  background-color: #1a006f1f;
-  color: #33008a;
-}
-
-.checkThis-wrapper .btn-darkRed:hover {
   background-color: #9E0059;
   color: rgb(254, 243, 243);
 }
 
-.checkThis-wrapper .btn-purple:hover {
+.checkThis-wrapper .btn-purple {
   background-color: #33008a;
   color: rgb(243, 238, 245);
+}
+
+.checkThis-wrapper .btn-darkRed:hover {
+  background-color: #ff5400;
+  color: rgba(254, 249, 243, 0.978);
+}
+
+.checkThis-wrapper .btn-purple:hover {
+  background-color: #217d00;
+  color: rgb(239, 245, 238);
 }
 
 .checkThis-wrapper .container {
@@ -466,7 +466,7 @@ body.checkThis-wrapper {
 }
 
 .checkThis-wrapper div#facts-container.container {
-background-color: rgba(146, 192, 208, 0.179);
+background-color: rgba(186, 215, 224, 0.065);
 border: none;
 box-shadow: none;
 }
@@ -598,8 +598,9 @@ body.prize-wrapper {
 }
 
 .prize-wrapper .card-back img {
-  width: 125px;
-  max-height: 60px;
+  width: 140px;
+  height:auto;
+  max-height: 125;
   border-radius: 10px;
   margin-bottom: 10px;
 }

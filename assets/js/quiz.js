@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "Tired of paperwork?",
         content: "Bookkeeping can be tedious and time-consuming, but it is essential for a business's success.",
-        imageURL: "assets/images/paperwork.png",
+        imageURL: "assets/images/2.jpg",
         imageAlt: "Paperwork"
       },
       {
@@ -87,13 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "Invoices",
         content: "Invoices are a crucial part of bookkeeping, as they document sales and purchases.",
-        imageURL: "assets/images/invoiceC.png",
+        imageURL: "assets/images/invoice.jpg",
         imageAlt: "Invoice"
       },
       {
         title: "Unorganized",
         content: "Keeping track of receipts and invoices can be overwhelming, especially if they are not organized properly.",
-        imageURL: "assets/images/coffee.png",
+        imageURL: "assets/images/paperwork.png",
         imageAlt: "Unorganized"
       },
       {
@@ -139,8 +139,16 @@ const revealBtn = document.getElementById("revealBtn");
   const backBtn = document.getElementById("backBtn");
   const cards = document.querySelectorAll(".card");
   const cardContainer = document.querySelector(".card-container");
-
-  if (!revealBtn || !backBtn || !cardContainer) return; 
+  
+    if (!revealBtn || !backBtn || !cardContainer) {
+      console.warn("Missing elements:", revealBtn, backBtn, cardContainer);
+      return;
+    }
+  
+    backBtn.addEventListener("click", () => {
+      window.history.back(-2);
+    });
+  
   
   revealBtn.addEventListener("click", () => {
     cardContainer.classList.remove("hidden");
