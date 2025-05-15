@@ -1,5 +1,6 @@
 /* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function () {
+
   // --- Quiz Logic ---
   const page1 = document.getElementById("page-1");
   const page2 = document.getElementById("page-2");
@@ -132,4 +133,40 @@ document.addEventListener("DOMContentLoaded", function () {
     newFactBtn.addEventListener("click", addFact);
     clearBtn.addEventListener("click", clearAllFacts);
   }
+// --- Prize Logic ---
+
+const revealBtn = document.getElementById("revealBtn");
+  const backBtn = document.getElementById("backBtn");
+  const cards = document.querySelectorAll(".card");
+  const cardContainer = document.querySelector(".card-container");
+
+  if (!revealBtn || !backBtn || !cardContainer) return; 
+  
+  revealBtn.addEventListener("click", () => {
+    cardContainer.classList.remove("hidden");
+    revealBtn.style.display = "none";
+    backBtn.style.display = "inline-block";
+  });
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      if (document.querySelector(".card.flipped")) return;
+      card.classList.add("flipped");
+    });
+  });
+
+  backBtn.addEventListener("click", () => {
+    // Reset UI
+    cardContainer.classList.add("hidden");
+    revealBtn.style.display = "inline-block";
+    revealBtn.disabled = false;
+    backBtn.style.display = "none";
+
+    // Reset all cards
+    cards.forEach(card => card.classList.remove("flipped"));
+  });
+
+// ENDING--- Prize Logic ---
+
+
 });
