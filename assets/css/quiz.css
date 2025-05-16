@@ -12,7 +12,7 @@ body.quickQuizWrapper {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: url("../images/invoiceC.png") no-repeat center center fixed;
+  background: url("../images/invoiceC.png") no-repeat center -125px fixed;
   background-size: cover;
   /* cover entire area */
 }

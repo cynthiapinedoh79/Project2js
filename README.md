@@ -29,19 +29,19 @@
 
 ## Demo
 
-![Responsive devices -home](assets/images/readme/ Need Bookkepping?.png)
+![Responsive devices -home](assets/images/readme/amIR/AMR-Home.png)
 
-![Responsive devices -home](assets/images/readme/ Quiz-p1.png)
+![Responsive devices -home](assets/images/readme/amIR/AMR-Quiz-pg1.png)
 
-![Responsive devices -home](assets/images/readme/ Quiz-p2.png)
+![Responsive devices -home](assets/images/readme/amIR/AMR-Quiz-p2a.png)
 
-![Responsive devices -home](assets/images/readme/ Quiz-p2a.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
 
-![Responsive devices -home](assets/images/readme/ Feedback.png)
+![Responsive devices -home](assets/images/readme/amIR/AMR-Form-1040.png)
 
-![Responsive devices -home](assets/images/readme/ Form-1040.png)
+![Responsive devices -home](assets/images/readme/amIR/)
 
-![Responsive devices -home](assets/images/readme/ Booking Facts.png)
+![Responsive devices -home](assets/images/readme/amIR/AMR-Play%20&%20Save!.png)
 
 
 
@@ -439,7 +439,7 @@ Consistent card layout with bold titles and brief content.
 ![checkThis!_page](assets/images/readme/booking.checkThis!.png)
 
 
-#### Get a Prize!
+#### Play & Save!
 Try Your Luck! – Interactive Prize Game
 An engaging and gamified feature that rewards users for exploring your services.
 
@@ -520,204 +520,304 @@ The game will deliver practical, easy-to-understand content that helps users mak
 8. [Visual Studio Code:](https://code.visualstudio.com/)
     - Visual Studio Code for code editor with AI.
 9. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
-10. [Balsamiq:](https://balsamiq.com/)
+    - Photoshop was used for editing photos for the website.
+10. [Squoosh:]( https://squoosh.app/)
+    - Sqoosh App to resize or compress image files, and change file extension for the website.
+11. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://balsamiq.cloud/s45whoh/p56wz1i/r2278) during the design process.
-11. [Responsive Screenshots](https://ui.dev/amiresponsive)
+12. [Responsive Screenshots](https://ui.dev/amiresponsive)
     - To able to get responsive screenshoots from different devices.
-12. [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/?fcolor=CDA37C&bcolor=FFFF00)
+13. [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/?fcolor=CDA37C&bcolor=FFFF00)
     - Webaim Contrast Checker.
-13. Lighthouse by Google-Inspect
+14. [Coolorshttps://coolors.co/)
+    - Coolors App is a pallet generator & pallet visualizer.
+
+15. Lighthouse by Google-Inspect
     - Generate a Lighthouse report by Google: Performance, Accesibility, Best Practices, and SEO.
-14. W3C MArkup Validator
+16. W3C MArkup Validator
     -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-15. W3C CSS Validator
+17. W3C CSS Validator
     -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-16. Sqoosh App to resize or compress image files
+18. Sqoosh App to resize or compress image files
     -   [Sqoosh app](https://squoosh.app/)
-17. Youtube
+19. Youtube
     -   [Youtube](https://www.youtube.com/)
+20. Pexels
+    -   [Pexels]( https://www.pexels.com/)
+    - Coolors App is a pallet generator & pallet visualizer.
+21. W3 Schools
+    -   [W3 Schools]( https://www.w3schools.com/)
+
 
 
 ## Testing
-* I tested the site, and it works in different web browsers: Chrome, Firefox, Safari and Microsoft Edge.
-* On mobile devices, I tested the site on Pixel 7 XL Pro.
-* I confirmed that the site is responsive and functions on different screen sizes using the devtools device toolbar.
-* I confirmed that the navigation, pages and differents sections are readable and easy to understand.
-* I confirmed that the form works: it requires entries in the most important fields, only accepts an email in the email format, and the submit buttons work.
+- I tested the site across major web browsers: Chrome, Firefox, Safari, and Microsoft Edge, and confirmed it functions properly on all of them.
+-  On mobile devices, I tested the site on iPhone 13 Mini and Pixel 7 Pro.
+-  On laptops, I tested on both MacBook Pro 14” and MacBook Pro 16”.
+-  I verified the site is responsive across various screen sizes using the DevTools device toolbar.
+-  The navigation, pages, and content sections are clear, readable, and easy to navigate.
+- The form validation works correctly: required fields enforce input, email fields only accept valid formats, and the submit buttons function as expected.
+**The W3C Markup Validator**, **W3C CSS Validator**, and **JSHint**were used to validate the HTML, CSS, and JavaScript code, respectively. These tools ensured that all pages were free of syntax errors and followed best coding practices.
+All pages were designed with **Responsive Design** to provide a consistent experience across various screen sizes and devices.
 
-**The W3C Markup Validator** and **W3C CSS Validator** Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
-**Header**. NAV Menu allows to access to each individual page successfully.
-
-**Footer**. Social Media allows to new pages with successful link.
-
-**Responsive Design** for all pages.
 
 ### Validator Testing
+
 ## HTML
-All pages passed through the official W3C validator with no errors.
+All pages have passed the official W3C Markup Validator with no errors.
 
-  #### Home: index.html
-  ![Home](assets/images/readme/W3C-index.html.png)
+### Main Page and Quiz Flow
+
+#### Home Page: [`index.html`](index.html)
+
+This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
+![Home Page](assets/images/readme/W3C-index.html.png)
+
+---
+
+#### Quiz Pages: [`quiz.html`](quiz.html)
+
+After clicking the **"Quiz"** button, users are guided through interactive questions to assess their bookkeeping needs.
+
+- **Quiz Page 1**
+  ![Quiz Page 1](assets/images/readme/W3C-quiz.html(pg-1).png)
+
+- **Quiz Page 2**
+  ![Quiz Page 2](assets/images/readme/W3C-quiz.html(pg-2).png)
+
+---
+
+#### Feedback Page: [`feedback.html`](feedback.html)
+
+Based on the quiz answers, users receive tailored feedback and helpful suggestions.
+
+![Home Page](assets/images/readme/W3C-feedback.html.png)
 
 
-  #### Variety: variety.html
-  ![Variety](assets/images/readme/W3C-variety.html.png)
+### Page After Clicking "Check This!"
 
+#### Informational Page: [`checkThis.html`](checkThis.html)
 
-  #### Recipes: recipes.html
-  ![Recipes](assets/images/readme/W3C-recipes.html.png)
+This page appears after clicking the **"Check This!"** button. It presents engaging facts or financial tips in a visually dynamic layout.
+![Screenshot of checkThis.html](assets/images/readme/W3C-checkThis.html.png)
 
+### Page After Clicking "Play & Save!"
 
-  #### Booking: booking.html
-  ![Booking](assets/images/readme/W3C-booking.html.png)
+#### Prize Game Page: [`prize.html`](prize.html)
+
+This interactive page is loaded after users click the **"Play & Save!"** button. It reveals a fun and engaging prize game that may offer discounts or perks.
+![Screenshot of prize.html](assets/images/readme/W3C-prize.html.png)
+
 
 
 ## CSS
-CSS code passed through the official (Jigsaw) W3C validator with no errors.
+All pages have passed the official W3C CSS Validator with no errors.
 
-  #### CSS: style.css
-  ![CSS](assets/images/readme/W3C-style.css.png)
+#### Format-1040
+#### Informational Page: [`format1040.css `]( format1040.css)
+  ![CSS](assets/images/readme/W3C-format1040.css.png)
+
+#### Quiz
+#### Informational Page: [`quiz.css `]( quiz.css)
+  ![CSS](assets/images/readme/W3C-quiz.css.png)
+
+
+## JS
+All pages have passed the official JSHint with no errors.
+
+#### Format-1040
+#### Informational Page: [`format1040.js `]( format1040.js)
+  ![CSS](assets/images/readme/JSH-format1040.js.png)
+
+#### Quiz
+#### Informational Page: [`quiz.js `]( quiz.js)
+  ![CSS](assets/images/readme/JSH-quiz.css.png)
 
   
 * **Accessibility**
   * Lighthouse DevTools by Google
 
-  ![Lighthouse DevTools Home](assets/images/readme/hlh.webp)
-  ![Lighthouse DevTools Variety](assets/images/readme/vlh.webp)
-  ![Lighthouse DevTools Recipes](assets/images/readme/rlh.webp)
-  ![Lighthouse DevTools Booking](assets/images/readme/blh.webp)
+### Main Page and Quiz Flow
 
-  ### Testing User Stories from User Experience (UX) Section
+#### Home Page: [`index.html`](index.html)
+![Lighthouse DevTools Home](assets/images/readme/LH-index.html.png)
 
-   #### First Time Visitor Goals
+#### Quiz Pages: [`quiz.html`](quiz.html)
+![Lighthouse DevTools Home](assets/images/readme/LH-quiz.html(pg-1).png)
+![Lighthouse DevTools Home](assets/images/readme/LH-quiz.html(pg-2).png)
 
-    1. As a First Time Visitor, my objective is to easily comprehend the main purpose of the site and learn more about the organization or company.
-        * Upon entering the site, users access to a clean and easily readable navigation bar to go to the page of their choice.
-        * The main pages are made with a background images and atractive colors, easy to read.
-        * The user call to action throught buttons.
+#### Feedback Page: [`quiz.html`](quiz.html)
+![Lighthouse DevTools Home](assets/images/readme/LH-feedback.html.png)
 
-    2. I want to be able to easily navigate through the site to find content that interests me.
-        * The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean fixed navigation bar.
-        * Each page has a distinct subject matter with distinct subsections of categories of information.
+---
 
-    3. I want to look for testimonials to understand if they are trusted. 
-        * The new visitor can read reviews.
-    
-    4. I also want to locate their social media links to see their posts, their followings and determine how trusted and known they are.
-        * The user can find at the bottom of any page the social media links in the footer.
+#### Check This! Page: [`checkThis!.html`]( checkThis.html)
+![Lighthouse DevTools Home](assets/images/readme/LH-checkThis.html.png)
 
-   #### Returning Visitor Goals
+---
 
-    1. As a Returning Visitor, I want to find more information about the services that they provide and working hours.
-        * These are shown in Contact us seccion on home page.
-
-    2. I want to find the best way to get in contact with the organisation with any questions I may have.
-        * The navigation bar clearly highlights the "Contact Us" seccion.
-        * User can find our information like address, phone number and email to be able to contac us for any question.
-        * Here they can fill out the form on the Booking page or are told that alternatively they can message the organisation on social media.
-        * The footer contains links to the organisations Facebook, Twitter, Instagram, LinkedIn, Pinterest, YouTube pages, etc
-        * Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        * The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
+#### Save & Play! Page: [`quiz.html`]( quiz.html)
+![Lighthouse DevTools Home](assets/images/readme/LH-prize.html.png)
 
 
-  #### Frequent User Goals
+### Testing User Stories – User Experience (UX) Evaluation
 
-    1. As a Frecuent User, I want to schedule an apointment.
-        * On the Booking page, the user can schedule an appointment by filling the form.
+#### First-Time Visitor Goals
+
+1. **Understand the Site's Purpose and Offerings Quickly**
+   - Upon arrival, users are greeted with a clean layout featuring clearly labeled buttons and intuitive navigation.
+   - The site uses visually appealing background images, a vibrant color palette, and strong contrast for optimal readability.
+   - Calls-to-action (CTAs) are prominently placed, encouraging users to begin exploring key services or features.
+
+2. **Navigate Effortlessly and Discover Relevant Content**
+   - The site structure is fluid and user-friendly, allowing seamless transitions between pages.
+   - Each section is purpose-driven, with dynamic content that aligns with the user's needs or interests.
+
+3. **Feel Visually Engaged and Motivated to Explore**
+   - First-time users encounter a visually compelling design that captures attention and invites exploration.
+   - Interactive elements and engaging content foster curiosity and encourage deeper engagement with the site.
+
+4. **Easily Find Contact Information and Trust Signals**
+   - Contact options are clearly presented and accessible across all pages.
+   - Customer testimonials or reviews are integrated to build credibility and foster trust with new visitors.
+
+
+#### Returning Visitor Goals
+
+As a Returning Visitor, I want to:
+
+1. **Access More Detailed Information About Services**
+   - Gain deeper insights into the services offered, including descriptions, pricing, and available packages.
+   - View updated details such as business hours, availability, and seasonal offerings.
+
+2. **Quickly Find the Best Way to Get in Touch**
+   - Locate contact methods without effort, whether it's through a dedicated contact page, live chat, or email.
+   - Know who to reach out to for specific inquiries or support needs.
+
+3. **Understand Available Communication Options**
+   - Clearly see if meetings or consultations are offered via Zoom, Skype, phone calls, or in-person appointments.
+   - Choose the most convenient method for follow-ups or service discussions.
+
+---
+
+#### Frequent User Goals
+
+As a Frequent User, I want to:
+
+1. **Easily Access and Submit IRS Form 1040**
+   - Fill out and submit the IRS Form 1040 through a simple and secure on-site form.
+   - Save progress if needed and return to the form later.
+
+2. **View Helpful Financial Comparisons for Smarter Decisions**
+   - Quickly review side-by-side comparisons such as **LLC vs. S-Corp** structures with graphics.
+   - Use this information to make informed decisions about taxes, bookkeeping needs, or business structure changes.
+
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+- The website was thoroughly tested across major web browsers, including **Google Chrome**, **Safari**, **Microsoft Edge**, and even **Internet Explorer** to ensure cross-browser compatibility.
+- Device testing was conducted on a range of platforms, including **desktop and laptop computers**, as well as mobile devices such as **iPhone 7, iPhone 8, and iPhone X**.
+- Comprehensive internal testing was performed to confirm that **all internal and external links functioned correctly**, and that navigation between pages was smooth and intuitive.
+- Usability testing involved feedback from **friends and family members**, who were invited to explore the site and identify any bugs, broken functionality, or areas of improvement from a user experience (UX) perspective.
 
 ### Bugs
- **Solved bugs**
-  * A lot of bugs but all eventually resolved.
-  * Some misspelled words were corrected.
+### Solved Bugs
 
-  **Unsolved bugs**
-  * The webpage needs improvement, such as using images with less capacity but maintaining the same quality.
-  * Remove the CSS code that is no longer needed or used.
-  * Webpage on Performance Lighthouse by Google has a few issues to fix.
+- Significant bugs were identified and resolved across all major development areas, including **HTML5**, **CSS3**, and **JavaScript**.
+- Several **spelling and grammar issues** were corrected throughout the project to improve clarity and professionalism.
+
+---
+
+### Unsolved Bugs / Areas for Improvement
+
+- **Form 1040 validation**: The final section still requires refinement to ensure complete input validation and proper feedback handling.
+- **CSS cleanup**: Some unused or redundant CSS rules should be removed to reduce file size and improve maintainability.
+- **Code optimization**: Grouping and organizing code by section or page can make it easier to deploy, reduce the likelihood of bugs, and improve performance.
+- **Lighthouse Performance**: The site's performance metrics (as measured by Google's Lighthouse tool) can be improved by further optimizing code, assets, and loading behavior.
 
 ## Deployment
 
-  ### GitHub Pages
+### GitHub Pages Deployment
 
-The project was deployed to GitHub Pages using the following steps...
+The project was successfully deployed to **GitHub Pages** using the steps below:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Under General, navigate to Code and Automation on the left column and select 'Pages'.
-4. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-5. Under "Source", click the dropdown called "None" and select "Master Branch".
-6. The page will automatically refresh.
-7. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+1. Log in to GitHub and open your project’s [repository](https://github.com/).
+2. At the top of the repository (below the repo name, not the site header), click on the **"Settings"** tab.
+   - Alternatively, view a GIF tutorial by clicking [here](https://raw.githubusercontent.com/).
+3. In the left-hand sidebar under **"Code and Automation"**, click on **"Pages"**.
+4. On the GitHub Pages screen, scroll down to the **"Source"** section.
+5. Click the dropdown that says **"None"** and select **"Master Branch"** (or **"main"**, if that's your default).
+6. The page will refresh automatically and display the deployment status.
+7. Scroll down again to find the live URL of your published site under the **"GitHub Pages"** section.
+   - Example: [https://your-username.github.io/your-repo-name](https://github.com)
+
+You can now access your project live on the web using the provided GitHub Pages URL.
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+Forking a GitHub repository allows you to create a personal copy of the original project in your own GitHub account. This enables you to freely explore, modify, or contribute without affecting the original codebase. Follow these steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Log in to GitHub and open the target [GitHub Repository](https://github.com/).
+2. At the top-right corner of the repository page (just above the "Settings" tab), click the **"Fork"** button.
+3. GitHub will create a copy of the repository under your own account.
+4. You can now freely edit, update, and experiment within your forked version without impacting the original repository.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+Follow these steps to create a local copy of the repository on your machine:
 
+1. Log in to GitHub and navigate to the target [GitHub Repository](https://github.com/).
+2. Below the repository name, click the **"Code"** button (formerly "Clone or download").
+3. Under **"Clone with HTTPS"**, copy the provided URL.
+4. Open **Git Bash** (or your terminal of choice).
+5. Change the current working directory to the location where you want the cloned project to reside.
+6. Type the following command and paste the URL you copied in Step 3:
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    ```
+7. Press Enter. Git will create a full local clone of the repository:
 ```
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+Cloning into 'project-folder'or `CI-Clone`...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 1), reused 10 (delta 1)
+Unpacking objects: 100% (10/10), done.
 ```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
+📎 For additional guidance and visual steps, visit GitHub’s official help guide:
+Cloning a repository – GitHub Docs
 
 ## Credits
 * Code Institute
-* Inspiration from [Potatoegoodness](https://potatogoodness.com/)
-* Peru: Instagram and website [peru.travel](https://www.peru.travel/es/masperu/papa)
-* Great Big Story - Channel from Youtube [youtube](hhttps://www.youtube.com/watch?v=p9qWJ89m-hY)
-* pamperedchef.com
-* olivado.com
-* cuban-recipes/boniatillo
-* mybartender.com/recipe
+* Dette Bookkeeping: Website [Dette Bookkeeping & More, LLC]( https://dette-bookkeeping.com/)
 
-### Code
+### Code, Resources & References
 
--   [StackOverflow post](https://stackoverflow.com)
-
--   [Bootstrap 5.3.3:](https://getbootstrap.com/docs/5.3/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-
-
+- [Stack Overflow](https://stackoverflow.com)  
+  Used for troubleshooting and researching common development issues during the project.
+- [Bootstrap 5.3.3 Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
+  Bootstrap library was used throughout the project to create a responsive layout using the Bootstrap Grid System.
+- [Google](https://www.google.com)  
+  Utilized for general development research, code examples, and technical clarification.
 ### Content
-* I used as example from the Code Institute's [Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode/tree/main) project.
-[the last one](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode/tree/main) project.
+* I used as example from the Code Institute's [Fun Coding Facts]
+* I used as example from the Code Institute's [Love Maths]( https://github.com/cynthiapinedoh79/Love-Maths) project.
 
--   All content was written by the developer.
+-   Content was written by developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+-   Free Color Psychology Resources
+1.	Color Psychology
+→ In-depth guide on how colors affect behavior, mood, and decision-making.
+2.	Canva – Color Meanings
+→ Visual and practical breakdown of color symbolism in design and branding.
+3.	Color Matters
+→ Educational resource on color symbolism, theory, and real-world impact.
+4.	Psychological Properties of Colours – Academia.edu
+→ A scholarly article on color psychology by Angela Wright.
+5.	Verywell Mind – Color Psychology
+→ Psychology-backed overview on how color influences emotions and perception.
+
 
 ### Media
 
@@ -726,10 +826,10 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - [unsplash](https://unsplash.com/)
 - [pexels](https://pexels.com/)
 
-### Acknowledgements
+### 🙏 Acknowledgements
 
-* The the Code Institute tutor support team for helping me with the correct guidance.
-* My mentor, Medale Oluwafemi, for his meanful advices and continuous helpful feedback.
-* Tutor support at Code Institute for their support.
-* Code Institute for the invaluable course.
-* I received inspiration for this project from learning about the different example projects from Code Institute.
+- Special thanks to the **Code Institute tutor support team** for their consistent guidance and encouragement throughout the development process.
+- I am especially grateful to my mentor, **Medale Oluwafemi**, for his meaningful advice, constructive feedback, and support.
+- Appreciation to the **Code Institute tutor community** for their assistance and insights during challenges.
+- A heartfelt thanks to **Code Institute** for providing an invaluable course that built the foundation for this project.
+- I drew inspiration for this project from exploring the many example projects showcased by **Code Institute**, which helped spark ideas and refine my goals.
