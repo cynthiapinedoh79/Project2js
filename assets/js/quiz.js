@@ -76,13 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
         title: "Tired of paperwork?",
         content: "Bookkeeping can be tedious and time-consuming, but it is essential for a business's success.",
         imageURL: "assets/images/2.jpg",
-        imageAlt: "Paperwork"
+        imageAlt: "Frustration"
       },
       {
         title: "Numbers didn't match",
         content: "Inaccurate bookkeeping can lead to financial discrepancies and mismanagement.",
-        imageURL: "assets/images/frustration.png",
-        imageAlt: "Frustration"
+        imageURL: "assets/images/coffee.png",
+        imageAlt: "Receipts & calculator"
       },
       {
         title: "Invoices",

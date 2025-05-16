@@ -257,12 +257,15 @@ To create a pleasing and understandable view, I opt for natural colors such as e
 [Tested the contrast](https://coolors.co/contrast-checker/33008a-f8f8ff)
 
 _Main color palette_
-![Main color Palette](assets/images/readme/colors.webp)
+![Main color Palette](assets/images/readme/PalletColors.png)
 
 ## Technologies
-1. HTML - To create a basic site
-2. CSS - To create a nice, standout front-end and to give a great user experience
-3. Balsamiq - To create a wireframe
+1. HTML - Used to build the basic structure of the website.
+2. CSS - Styles the front-end to create a visually appealing design and enhance user experience.
+3. Balsamiq - Used to design wireframes and plan the layout of the site before development.
+4. JS -  Adds interactivity to the website, making the experience more dynamic and engaging for users.
+
+
 
 ## Features
 ### Existing Features
