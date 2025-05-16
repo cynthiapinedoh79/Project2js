@@ -186,21 +186,46 @@ Our objective is to create a website that is both professional and functional. O
 ![Strategy](assets/images/readme/strategy.webp)
 
 ### 2. Scope
-The site is targeted towards three primary categories of users: young adults (15-24), adults (25-64) and seniors (65 and older).
+The site is designed for two main user groups:
+1.	Visitors, who can enjoy interactive games, helpful tips, new information, and practical advice.
+2.	Potential new customers, who can explore special offers like a bookkeeping bonus award, contact us easily, or quickly access the Form 1040 submission link.
 
 ![Scope pg1](assets/images/readme/scope1.webp)
 
 ![Scope pg2](assets/images/readme/scope2.webp)
 
 ### 3. Structure
-The website is designed with 4 pages, with fixed top navigation and redirection to the contact section on the home page from any of them.
+The website is designed with HTML5, CSS3 and JS.
+
+#### HTML Files Overview
+1. Index.html. Entry point of the site. Asks: “Need Bookkeeping?”
+
+2. Quiz.html. A short quiz to help users determine if they need assistance with taxes, finances, or bookkeeping.
+
+3. Feedback.html. Displays feedback based on quiz results. High scores lead to a message with two action buttons:
+    - Fill Form 1040 Now
+    -	Contact Us via Website
+
+4. CheckThis.html Linked from the main page; presents interesting Bookkeeping Facts.
+5. Prize.html A fun interactive page where users can “Try Your Luck!” to win a discount or special offer.
+
+#### CCS Files
+1. quiz.css – Provides the styling for all site sections except the Form 1040 page.
+
+2. format1040.css – Specifically styles the IRS Form 1040 section. It includes rules for showing and hiding elements, hover effects, alerts, error and success messages, and validation feedback. It also visually highlights input fields, checkboxes, and radio buttons when submitted data is invalid.
+
+#### JS Files.
+1. quiz.css – Contains the JavaScript code for all site functionality except the Form 1040.
+
+2. format1040.css – This file handles the JavaScript for the Form 1040. Due to the form's complexity, the script is extensive and focuses specifically on validating the format and content of the entered data.
+
 
 **Website Pages:**
-1. **_Home:_** Potato's introduction, history and contact section.
-2. **_Variety:_** Diverrsity and potatoes variety.
-3. **_Recipes:_** Introduction and recipes.
-4. **_Booking:_** Map and make an appointment.
-6. **_Footer:_** At the bottom of the website with social media links.
+1. **_Needs Bookkepping?:_** Main page with three buttons (Quiz, Check This! and Get a Prize!)
+2. **_Quiz:_** A brief quiz with a few questions that are scored to assess user needs.
+3. **_Feedback:_** A feedback message is shown if your answers indicate that you may need our help or services. It includes a link to fill out Form 1040 and a direct link to contact us through our website.
+4. **_CheckThis:_** Displays Bookkeeping Fact Cards with useful information.
+6. **_Prize:_** Try Your Luck! Win a special prize or bookkeeping bonus—just reach out to claim your reward!
 
 ![Structure](assets/images/readme/structure.webp)
 
@@ -228,15 +253,10 @@ To create a pleasing and understandable view, I opt for natural colors such as e
 
 *Webaim
 [Tested the contrast](https://webaim.org/resources/contrastchecker/)
-![](assets/images/readme/rcc1.webp)
-![](assets/images/readme/rcc2.webp)
-![](assets/images/readme/rcc3.webp)
-![](assets/images/readme/rcc4.webp)
-![](assets/images/readme/rcc5.webp)
-![](assets/images/readme/rcc6.webp)
+*Coolors
+[Tested the contrast](https://coolors.co/contrast-checker/33008a-f8f8ff)
 
 _Main color palette_
-
 ![Main color Palette](assets/images/readme/colors.webp)
 
 ## Technologies
