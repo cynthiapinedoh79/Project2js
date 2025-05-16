@@ -12,15 +12,17 @@ body.quickQuizWrapper {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: url("../images/invoiceC.png") no-repeat center -125px fixed;
+  background: url("../images/HCover.png") no-repeat center center fixed;
   background-size: cover;
   /* cover entire area */
+  height: 100vh;
+  width: 100vw;
 }
 
 .quickQuizWrapper h1 {
   margin-top: 0px;
   font-size: 3rem;
-  color: #0a2300;
+  color: #000000;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -33,7 +35,7 @@ body.quickQuizWrapper {
   font-size: 1.2rem;
   border: none;
   background-color: #33008a;
-  color: rgba(248, 248, 255, 0.827);
+  color: rgba(248, 248, 255, 0.746);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -62,7 +64,7 @@ body.quickQuizWrapper {
 
 .quickQuizWrapper div#coverText {
   margin-top: 45px;
-  background: rgba(255, 255, 255, 0.179);
+  background: #bca2868c;
   align-content: center;
   align-items: center;
   justify-content: center;

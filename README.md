@@ -29,19 +29,19 @@
 
 ## Demo
 
-![Responsive devices -home](assets/images/readme/amIR/AMR-Home.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Home.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AMR-Quiz-pg1.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-pg1.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AMR-Quiz-p2a.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-p2a.png)
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AMR-Form-1040.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Form-1040.png)
 
-![Responsive devices -home](assets/images/readme/amIR/)
+![Responsive devices -home](assets/images/readme/amIR/AIR-CheckThis!.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AMR-Play%20&%20Save!.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Play%20&%20Save!.png)
 
 
 
