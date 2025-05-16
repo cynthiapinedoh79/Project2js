@@ -273,7 +273,7 @@ _Main color palette_
 
 Headline Prompt:
 
-- "Needs Bookkeeping?" – A clear, central question targeting the user’s intent.
+- HOME: "Needs Bookkeeping?" – A clear, central question targeting the user’s intent.
 
 - Background Image: A professional, finance-related image (charts and a hand with a pen) that supports the bookkeeping theme.
 
@@ -293,7 +293,7 @@ Headline Prompt:
 
 - Transparent background or slight blur behind text for better readability on the image.
   
-![quickQuiz_page](assets/images/readme/quickQuiz.png)
+![quickQuiz_page](assets/images/readme/Webpgs/home.png)
 
 
 #### Quiz
@@ -314,8 +314,8 @@ If the score suggests the user might need help (> 6 pts), they are redirected to
 The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
 
-![quiz_page1](assets/images/readme/quiz-p1.png)
-![quiz_page2](assets/images/readme/quiz-p2a.png)
+![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
+![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
 
 #### Feedback
 
@@ -343,7 +343,7 @@ A supportive summary that explains the result:
   - Clear visual hierarchy with bold headlines, informative content, and strong CTAs.
   - Colorful, accessible buttons for quick action.
 
-![feedback_page](assets/images/readme/feedback.png)
+![feedback_page](assets/images/readme/Webpgs/feedback.png)
 
 #### Format 1040
 
@@ -387,15 +387,24 @@ Submission Feedback
 - Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
 - Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
 
-![Format 1040_page](assets/images/readme/f.png)
-![Format 1040_page](assets/images/readme/f1.png)
-![Format 1040_page](assets/images/readme/f2.png)
-![Format 1040_page](assets/images/readme/f3.png)
-![Format 1040_page](assets/images/readme/f4.png)
-![Format 1040_page](assets/images/readme/f5.png)
-![Format 1040_page](assets/images/readme/f6.png)
-![Format 1040_page](assets/images/readme/f7.png)
+![Format 1040_page](assets/images/readme/fF1040/format1040.png)
+![Format 1040_page](assets/images/readme/fF1040/fi.png)
+![Format 1040_page](assets/images/readme/fF1040/fi2.png)
 
+![Format 1040_page](assets/images/readme/fF1040/fsvsi.png)
+![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
+![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
+![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
+
+![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
+
+![Format 1040_page](assets/images/readme/fF1040/fdob.png)
+
+![Format 1040_page](assets/images/readme/fF1040/fzr.png)
+![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
+
+![Format 1040_page](assets/images/readme/fF1040/fv.png)
+![Format 1040_page](assets/images/readme/fF1040/fs.png)
 
 
 #### Check This!
