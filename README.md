@@ -142,7 +142,6 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   #### 4. form1040.html (IRS Form-1040 Page)
   - Background: Solid white background
-
   - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
   - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
   - Field validation labels like “required!”, Error messages (e.g., “SSN must be 9 digits”): Red
@@ -270,73 +269,235 @@ _Main color palette_
 ## Features
 ### Existing Features
 
-* **Navigation Bar**
-  * The navigation bar is fixed to the right side of the top. The logo is in the left-hand corner of the navigation.
-  * The font color is in contrast with the navigation background color. The hover effect is used for navigation, so the user can know which page they are on. 
+#### Needs Bookkeeping?
 
--   Navbar with responsive design (Hamburguer Icon).
--   Responsive on all device sizes
--   Interactive elements
--   Simple animations on cover Images for pages.
+Headline Prompt:
+
+- "Needs Bookkeeping?" – A clear, central question targeting the user’s intent.
+
+- Background Image: A professional, finance-related image (charts and a hand with a pen) that supports the bookkeeping theme.
+
+- Call-to-Action (CTA) Buttons:
+
+  - Quick Quiz – Likely leads to an interactive assessment to evaluate bookkeeping needs.
+
+  - Check This! – Possibly redirects to a page with useful bookkeeping facts or tips.
+
+  - Get A Prize! – An engaging gamified option to win discounts or special offers.
+
+- Visual Styling: High contrast between button text (white) and button background (dark purple).
+
+- Ver dark green header text that draws attention.
+
+- Central alignment of all content for focus and simplicity.
+
+- Transparent background or slight blur behind text for better readability on the image.
   
-![navigation_bar](assets/images/readme/nav.webp)
+![quickQuiz_page](assets/images/readme/quickQuiz.png)
 
 
-#### Home
-  - As the background image, we use cover text to welcome to the site.
-  - There is a brief introduction and history info.
-  
-![home_page](assets/images/readme/home.webp)
+#### Quiz
+
+This interactive quiz helps users determine whether they may need bookkeeping support. It consists of two short sections:
+
+1. Bookkeeping Habits – Questions focused on time spent, disorganization, and tracking issues.
+
+2. Tax Season Challenges – Questions related to stress during tax season and recordkeeping for deductions.
+
+Each question offers Yes / Sometimes / No options. Based on the user’s responses:
+
+  - A score out of 10 is calculated.
+  - A personalized feedback message is shown.
+
+If the score suggests the user might need help (> 6 pts), they are redirected to relevant services like Form 1040 submission or contact options.
+
+The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
 
-#### Variety
-  * This page display the most commun potatoes types.
+![quiz_page1](assets/images/readme/quiz-p1.png)
+![quiz_page2](assets/images/readme/quiz-p2a.png)
 
-![variety_page](assets/images/readme/variety.webp)
+#### Feedback
+
+Bookkeeping Assessment Result: After completing the quiz, users who score within a certain range are shown a feedback message:
+
+Headline: You May Need Help With Your Bookkeeping.
+
+Message: 
+A supportive summary that explains the result:  
+- "Based on your responses, it appears you could benefit from professional bookkeeping assistance."
+
+- What the Service Includes:
+  - A bullet-point list highlights the key benefits:
+  - Organization of overdue books
+  - Tax preparation and deduction planning
+  - Income and expense tracking
+  - Personalized tax advice
+
+- Call-to-Action Buttons:
+  - IRS Form-1040 – Directs the user to begin completing the official tax form with us.
+  - Request a Free Consultation offering an easy way to reach out and get help.
+
+- Design Notes:
+  - Clean, transparent card UI over a background image related to finance/taxes.
+  - Clear visual hierarchy with bold headlines, informative content, and strong CTAs.
+  - Colorful, accessible buttons for quick action.
+
+![feedback_page](assets/images/readme/feedback.png)
+
+#### Format 1040
+
+Page Header
+- Title: Bold and clear – “IRS FORM-1040 2024”
+
+- Spanish Forms Print Options:
+  - On screen and printed
+  - Printed only
+
+Form Sections and Features
+- Main Information Sheet
+
+- Cleanly organized into collapsible sections
+
+- Required fields marked with red asterisks and inline validation (e.g., “SSN must be 9 digits”)
+
+- Real-time feedback with color-coded borders (red = error, green = valid)
+
+- Joint Information
+
+- Clearly labeled call-to-action button: "Click here if filing a JOINT return..."
+
+- Mailing Address
+
+- Zip and phone inputs validated with live success messages
+
+- Dropdown menus for state selection
+
+- Phone Number and Type
+
+- Validated with specific format (e.g., (909) 372-5197
+
+- Includes time-of-day type preference
+
+- Birth Date Section (labeled as “Bird Date”)
+
+- Age verification with visual feedback
+
+Submission Feedback
+- Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
+- Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
+
+![Format 1040_page](assets/images/readme/f.png)
+![Format 1040_page](assets/images/readme/f1.png)
+![Format 1040_page](assets/images/readme/f2.png)
+![Format 1040_page](assets/images/readme/f3.png)
+![Format 1040_page](assets/images/readme/f4.png)
+![Format 1040_page](assets/images/readme/f5.png)
+![Format 1040_page](assets/images/readme/f6.png)
+![Format 1040_page](assets/images/readme/f7.png)
 
 
-#### Recipes
-  * Recipes using potatoe as first protagonist.
-  *This page introduce the chef of the month with a daily different recipe per day, that includes: Appetizer, Soup, Dinner, Dessert and Drink.
 
-![recipes_page](assets/images/readme/recipes.webp)
+#### Check This!
+Bookkeeping Facts – Informational Section
+This interactive panel provides users with quick, digestible insights into bookkeeping essentials. Each fact is visually supported with a relevant image and a concise explanation.
+
+Card Topics:
+- What is Bookkeeping? 
+Explains the core definition and purpose of recording financial transactions.
+
+- Tired of Paperwork?
+Acknowledges the burden of bookkeeping while reinforcing its importance for business success.
+
+- Numbers Didn't Match
+Highlights the consequences of inaccurate bookkeeping such as discrepancies and poor financial management.
+
+- Invoices
+Emphasizes the importance of invoices in tracking sales and purchases.
+
+- Unorganized
+Stresses how disorganized records can become overwhelming and lead to errors.
+
+- Gross, Net, and Taxable Income
+Educates users on key income terms:
+
+  - Gross Income = total revenue before expenses
+
+  - Net Income = profit after expenses
+
+  - Taxable Income = income subject to tax
+
+- Design Highlights:
+Consistent card layout with bold titles and brief content.
+
+- Visually engaging with contextual images to aid understanding.
+
+- A "Clear facts" button for interactivity (possibly resets or filters facts).
+
+- Background includes a money-themed image for subtle visual relevance.
+
+![checkThis!_page](assets/images/readme/booking.checkThis!.png)
 
 
-#### Booking
-  - In this section, information is focused on four categories.
-  - _Expertise:_ skills that I have learned during the past few years by working in different industries and jobs. I believe that these top few skills that I have listed will help me as a developer in the field of IT.
-  - _Language skills (human):_ these are the languages that I am able to use for communication (read, write, and speak).
-  - _Tools:_ some technological tools that I am familiar with.
-  - _Tech Languages:_ these are some tech languages that I have some basic understanding of and have started to learn deeper with the Code Institute.
+#### Get a Prize!
+Try Your Luck! – Interactive Prize Game
+An engaging and gamified feature that rewards users for exploring your services.
 
-![Booking_page](assets/images/readme/booking.webp)
+How It Works:
+Users are presented with four mystery cards.
 
+Each card is styled with a golden gradient and a ? mark to indicate a hidden offer.
 
-#### Contact
-  - In the Contact Me section, give the user the main contact details that they can use to reach me (Anjalee Kulasinghe). This section is divided into two main sections.
-  - On the left-hand side, there is a picture of me, which will help the user remember who I am if they see me in an interview. Below the profile image, my name (first and last names), what positions I am currently capable of, my email address, my mobile number and my postal address are listed. 
-  - On the left-hand side, a form is given where the users will have the ability to contact me directly by entering their name and email address along with a message. The user will be asked to include their first name, last name, email, and message. The submit and reset buttons are placed at the end of the form.
+Upon clicking one card, it flips over to reveal a special reward (e.g., “50% OFF on Your First Consultation”).
 
-![contact_section](assets/images/readme/contact.webp)
+A “Back” button allows users to return to the main site.
 
+Design Highlights:
+- Modern, colorful background with abstract art for visual impact.
 
-#### Footer
-  - This section includes the social media links.
+- Hover and flip effects make the interaction feel dynamic and responsive.
 
-![footer](assets/images/readme/footer.webp)
+- Centered card layout keeps the user’s focus on the reward selection.
+
+Purpose:
+- Boosts user engagement.
+
+- Provides an incentive to try services.
+
+- Encourages users to contact you or schedule a consultation.
+
+![contact_section](assets/images/readme/prize.webp)
 
 
 ### Features Left to Implement
 Towards the future,
-* My objective is to expand the uses of potatoes, beyond their culinary applications, to include industrial uses, which can involve creating plastics, adhesives, paper, and other materials; and medicinal uses that include incorporating them as an ingredient in products designed to alleviate inflammation and minor burns.
-* A PDF page that contains nutritional facts for the main types of potatoes would be added, but I left a generalized one because the variation is minimal.
-* It would be beneficial to include a page that provides basic information for farmers, including simplified information on the suitable climate and altitude for planting potatoes, as well as their distribution, marketing and contacts.
 * I would like to improve the performance of the website.
+
+1. Tax Structure Comparison Tool
+An interactive feature that helps users compare LLC vs. S-Corp structures in terms of:
+
+  -Tax savings potential
+  -Liability protection
+  -Administrative requirements
+  -Suitability based on business type or income level
+
+This tool will assist small business owners in choosing the right entity type to maximize financial efficiency and minimize tax burden.
+
+2. Financial Match Game
+A fun, educational mini-game designed to reinforce key financial tips.
+Users will match cards that highlight:
+
+  - Best practices for bookkeeping
+  - Smart tax strategies
+
+Business structure insights (LLC, S-Corp, Sole Prop, etc.)
+The game will deliver practical, easy-to-understand content that helps users make smarter business and tax decisions, all while keeping the learning experience enjoyable.
 
 ### Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5) Hypertext Markup Language.
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) Cascading Style Sheets.
+-   [JS](https://en.wikipedia.org/wiki/JavaScript) JavaScript.
 
 ## Technologies Used
 
