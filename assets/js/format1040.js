@@ -1066,7 +1066,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("cssnFbk").innerText = "";
         document.getElementById("ssnPreview").style.display = "none";
         document.getElementById("idPreview").style.display = "none";
-      }, 4000);
+      }, 5000);
     });
     
 

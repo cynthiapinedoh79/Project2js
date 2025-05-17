@@ -1,33 +1,63 @@
-# Project2js
+# 📊 Project2js – Bookkeeping Interactive Web App
 
-## Code Institute - First Milestone Project: User Centric Frontend Development.
-# Table of Contents
-- [Bookk](# Project2js)
-  - [Code Institute - Second Milestone Project: Java Script.](#code-institute---second-milestone-project-user-centric-frontend-development)
-- [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-    - [A live demo to the website can be found here](#a-live-demo-to-the-website-can-be-found-here)
-  - [UX](#ux)
-  - [User stories](#user-stories)
-    - [Strategy](#strategy)
-    - [Scope](#scope)
-    - [Structure](#structure)
-    - [Skeleton](#skeleton)
-    - [Surface](#surface)
-  - [Technologies](#technologies)
-  - [Features](#features)
-    - [Existing Features](#existing-features)
-    - [Features Left to Implement](#features-left-to-implement)
-  - [Testing](#testing)
-    - [Validator Testing](#validator-testing)
-    - [Bugs](#bugs)
-  - [Deployment](#deployment)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Acknowledgements](#acknowledgements)
+## Code Institute - First Milestone Project: User-Centric Frontend Development
 
-## Demo
+## 🔗 Live Demo  
+[👉 Try the live website](https://cynthiapinedoh79.github.io/Project2js/)  
+
+![Main Screenshots](assets/images/readme/amIR/AIR-Home.png)
+
+---
+
+# 📋 Table of Contents
+- [🧾 Project Overview](#🧾-project-overview)
+- [📱 Am I Responsive? - Demo](#📱-am-i-responsive---demo)
+- [🎯 UX](#🎯-ux)
+- [🧑‍💼 User Stories](#🧑‍💼-user-stories)
+- [🎨 Design Choices](#🎨-design-choices)
+- [📐 Five Planes UXD](#📐-five-planes-uxd)
+  - [📌 Strategy](#📌-strategy)
+  - [📐 Scope](#📐-scope)
+  - [🏗️ Structure](#🏗️-structure)
+  - [🦴 Skeleton](#🦴-skeleton)
+  - [🎨 Surface](#🎨-surface)
+- [🛠️ Technologies & Design Choices](#🛠️-technologies--design-choices)
+- [✨ Features](#✨-features)
+  - [🚀 Existing Features](#🚀-existing-features)
+  - [🔮 Features Left to Implement](#🔮-features-left-to-implement)
+  - [🧑‍💻 Languages Used](#🧑‍💻-languages-used)
+  - [🧰 Frameworks, Libraries & Programs Used](#🧰-frameworks-libraries--programs-used)
+- [🧪 Testing & Validation](#🧪-testing--validation)
+  - [✅ Browser & Device Testing](#✅-browser--device-testing)
+  - [✅ Validator Testing](#✅-validator-testing)
+  - [✅ Accessibility Testing](#✅-accessibility-testing)
+  - [🧑‍💻 Testing User Stories – User Experience (UX) Evaluation](#🧑‍💻-testing-user-stories--user-experience-ux-evaluation)
+
+  - [🐞 Bugs](#🐞-bugs)
+- [📥 Deployment](#📥-deployment)
+  - [🌐 GitHub Pages Deployment](#🌐-github-pages-deployment)
+  - [🍴 Forking the GitHub Repository](#🍴-forking-the-github-repository)
+  - [📂 Making a Local Clone](#📂-making-a-local-clone)
+- [🙏 Credits & Acknowledgements](#🙏-credits--acknowledgements)
+
+
+---
+
+## 🧾 Project Overview
+
+This site offers a fun and engaging way to learn about professional bookkeeping services through:  
+- A quick interactive quiz
+-Format 1040
+- Bookkeeping fact cards  
+- A reward-based “Try Your Luck” game  
+- A fully interactive IRS Form 1040  
+
+It targets individuals and small businesses looking for better tax and financial management.
+
+---
+
+## 📱 Am I Responsive? - Demo
+All pages were designed with **Responsive Design** to provide a consistent experience across various screen sizes and devices.
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Home.png)
 
@@ -47,10 +77,11 @@
 
 ![Responsive devices -recipes](assets/images/readme/Get a Prize!)
 
-### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/
-)
+### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/)
 
-## UX
+---
+
+## 🎯 UX
 This website is designed for individuals and businesses interested in professional bookkeeping services — from tax return support to general accounting solutions.
 
 Visitors can explore summarized information about our offerings, take a quick quiz to evaluate whether they need bookkeeping support, or even win a special prize such as a bookkeeping bonus or discount!
@@ -67,7 +98,10 @@ Main Goals of This Site:
 7.  (Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
 8.  (Coming Soon) Match Game- to provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, brief, and easy-to-understand content.
 
-## User stories
+---
+
+
+## 🧑‍💼 User Stories
 - My Goal as Developer:
 As the sole developer of this website, my mission is to provide you with an enjoyable and user-friendly experience while delivering clear, concise, and accurate information about our services — sparking your interest in what we offer.
 
@@ -99,9 +133,26 @@ From the user’s perspective, I’ve built this site with the following priorit
        1. To conveniently access and fill out IRS Form 1040 directly through the site.
        2. To view brief and clear comparisons — such as LLC vs. S-Corp — to help make informed decisions.
 
-  ### Design
-  #### Colour Scheme
-  #### 1. index.html (Main Page / Home)
+---
+
+
+## 🎨 Design Choices
+### Color Palette & Typography  
+  - **Fonts:** Roboto, Inter – clean and modern  
+  - **Colors:**  
+    - Purple: trust and creativity  
+    - Red/Orange: urgency and emphasis  
+    - Muted tones: professionalism  
+  - [Contrast checked with WebAIM](https://webaim.org/resources/contrastchecker/)  
+
+  ### Imagery  
+- Financial and office-themed backgrounds  
+- High contrast text overlays for readability  
+
+---
+
+
+  ### 1. index.html (Main Page / Home)
         
   - Background: 
   A blurred photo of financial charts and a blue pen (soft blue, red, beige tones)
@@ -112,7 +163,7 @@ From the user’s perspective, I’ve built this site with the following priorit
     - Hover: DarkRed.
   - Color Mood: Professional, calm, and trustworthy (purple conveys reliability and creativity).
 
-  #### 2. quiz.html (Quiz Page - Page 1)
+  ### 2. quiz.html (Quiz Page - Page 1)
 
   - Background: A soft focus image of hands joined in teamwork (brown, beige, and gray tones).
 
@@ -130,7 +181,7 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   - Color Mood:Professional, calm, and trustworthy (purple conveys reliability and creativity)
 
-  #### 3. feedback.html (Results Page "You May Need Help With Your Bookkeeping")
+  ### 3. feedback.html (Results Page "You May Need Help With Your Bookkeeping")
   - Background: A real-life business photo (blue jeans, papers) — neutral tones with blue and tan
   - Header: Dark gray/black
   - Card background: Soft white with subtle shadow
@@ -140,7 +191,7 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   - Overall Color Mood: Trustworthy and clean with modern neutrality, purple buttons continue your branding identity.
 
-  #### 4. form1040.html (IRS Form-1040 Page)
+  ### 4. form1040.html (IRS Form-1040 Page)
   - Background: Solid white background
   - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
   - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
@@ -156,35 +207,39 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Accent Color: Bright orange for headers like “THIS RETURN CAN BE FILED…”
   - Form Field Background: Light lavender/grayish purple — this maintains good contrast without looking too stark
   - Overall Color Mood: Professional and structured — balancing bold emphasis (orange) with institutional calm (lavender + purple)
-  #### 5. checkThis.html (Bookkeeping Facts Page)
+
+  ### 5. checkThis.html (Bookkeeping Facts Page)
   - Background: Lightly visible money-themed image (dollar bills) as a faded background
   - Titles/Headers: Red shades (#C62828-like)
   - Text: Black
   - Button: Purple
   - Card Borders and Text: Varying tones of red, black, gray
   - Color Mood: More attention-grabbing and informational (reds for urgency, purple for brand consistency)
-  #### 6. prize.html (Prize Page)
+
+  ### 6. prize.html (Prize Page)
   - Background: Bright, abstract art (orange, blue, white swirls)
 
   - Title Text: Purple
   - Button: Bold magenta/dark pink
   - Color Mood: Energetic and playful — encourages participation and feels exciting
 
-  #### Typography
+  ## Typography
   Inter, Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
-  #### Imagery
+
+  ## Imagery
   Clear and attractive images support the theme and maintain strong contrast with text for optimal readability.
-  #### Description        
+
+  ## Description        
   This website is designed for visitors and new customers to explore, learn, win rewards, and enjoy an engaging experience while navigating through different pages.
 
-## Five planes UXD
+## 📐 Five planes UXD
 
-### 1. Strategy
+### 📌 Strategy
 Our objective is to create a website that is both professional and functional. Our focus is on design that is both intuitive and creative.
 
 ![Strategy](assets/images/readme/strategy.webp)
 
-### 2. Scope
+### 📐 Scope
 The site is designed for two main user groups:
 1.	Visitors, who can enjoy interactive games, helpful tips, new information, and practical advice.
 2.	Potential new customers, who can explore special offers like a bookkeeping bonus award, contact us easily, or quickly access the Form 1040 submission link.
@@ -193,7 +248,7 @@ The site is designed for two main user groups:
 
 ![Scope pg2](assets/images/readme/scope2.webp)
 
-### 3. Structure
+### 🏗️ Structure
 The website is designed with HTML5, CSS3 and JS.
 
 #### HTML Files Overview
@@ -228,7 +283,7 @@ The website is designed with HTML5, CSS3 and JS.
 
 ![Structure](assets/images/readme/structure.webp)
 
-### 4. Skeleton
+### 🦴 Skeleton
 The website is designed to be clear and simple. And the site has a simple tree structure with hierarchical flows from top to bottom.
 
 **Wireframe**
@@ -247,8 +302,16 @@ The wireframe is designed using Balsamiq software
 #### Booking
 ![Booking](assets/images/readme/wb.png)
 
-### 5. Surface
+### 🎨 Surface
 To create a pleasing and understandable view, I opt for natural colors such as earth, green, and a range of tones that complement and contrast each other.
+
+---
+
+## 🛠️ Technologies & Design Choices
+1. HTML - Used to build the basic structure of the website.
+2. CSS - Styles the front-end to create a visually appealing design and enhance user experience.
+3. Balsamiq - Used to design wireframes and plan the layout of the site before development.
+4. JS -  Adds interactivity to the website, making the experience more dynamic and engaging for users.
 
 *Webaim
 [Tested the contrast](https://webaim.org/resources/contrastchecker/)
@@ -258,45 +321,38 @@ To create a pleasing and understandable view, I opt for natural colors such as e
 _Main color palette_
 ![Main color Palette](assets/images/readme/PalletColors.png)
 
-## Technologies
-1. HTML - Used to build the basic structure of the website.
-2. CSS - Styles the front-end to create a visually appealing design and enhance user experience.
-3. Balsamiq - Used to design wireframes and plan the layout of the site before development.
-4. JS -  Adds interactivity to the website, making the experience more dynamic and engaging for users.
+---
 
+## ✨ Features
 
+### 🚀 Existing Features
+  #### 1. Home Page 
 
-## Features
-### Existing Features
+  Headline Prompt:
 
-#### Needs Bookkeeping?
+  - HOME: "Needs Bookkeeping?" – A clear, central question targeting the user’s intent.
 
-Headline Prompt:
+  - Background Image: A professional, finance-related image (charts and a hand with a pen) that supports the bookkeeping theme.
 
-- HOME: "Needs Bookkeeping?" – A clear, central question targeting the user’s intent.
+  - Call-to-Action (CTA) Buttons:
 
-- Background Image: A professional, finance-related image (charts and a hand with a pen) that supports the bookkeeping theme.
+    - Quick Quiz – Likely leads to an interactive assessment to evaluate bookkeeping needs.
 
-- Call-to-Action (CTA) Buttons:
+    - Check This! – Possibly redirects to a page with useful bookkeeping facts or tips.
 
-  - Quick Quiz – Likely leads to an interactive assessment to evaluate bookkeeping needs.
+    - Get A Prize! – An engaging gamified option to win discounts or special offers.
 
-  - Check This! – Possibly redirects to a page with useful bookkeeping facts or tips.
+  - Visual Styling: High contrast between button text (white) and button background (dark purple).
 
-  - Get A Prize! – An engaging gamified option to win discounts or special offers.
+  - Ver dark green header text that draws attention.
 
-- Visual Styling: High contrast between button text (white) and button background (dark purple).
+  - Central alignment of all content for focus and simplicity.
 
-- Ver dark green header text that draws attention.
+  - Transparent background or slight blur behind text for better readability on the image.
+    
+  ![quickQuiz_page](assets/images/readme/Webpgs/home.png)
 
-- Central alignment of all content for focus and simplicity.
-
-- Transparent background or slight blur behind text for better readability on the image.
-  
-![quickQuiz_page](assets/images/readme/Webpgs/home.png)
-
-
-#### Quiz
+  #### 2. Quiz
 
 This interactive quiz helps users determine whether they may need bookkeeping support. It consists of two short sections:
 
@@ -315,9 +371,10 @@ The clean UI, transparent card background, and motivating CTA buttons make the e
 
 
 ![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
+![quiz_page2](assets/images/readme/Webpgs/quiz-P2.png)
 ![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
 
-#### Feedback
+  #### 3. Feedback
 
 Bookkeeping Assessment Result: After completing the quiz, users who score within a certain range are shown a feedback message:
 
@@ -344,17 +401,18 @@ A supportive summary that explains the result:
   - Colorful, accessible buttons for quick action.
 
 ![feedback_page](assets/images/readme/Webpgs/feedback.png)
+![feedback_page](assets/images/readme/Webpgs/feedbackh.png)
 
-#### Format 1040
+    ### 4. Format 1040
 
-Page Header
+*Page Header*
 - Title: Bold and clear – “IRS FORM-1040 2024”
 
 - Spanish Forms Print Options:
   - On screen and printed
   - Printed only
 
-Form Sections and Features
+*Form Sections and Features*
 - Main Information Sheet
 
 - Cleanly organized into collapsible sections
@@ -383,35 +441,62 @@ Form Sections and Features
 
 - Age verification with visual feedback
 
-Submission Feedback
+*Submission Feedback*
 - Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
 - Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
 
 ![Format 1040_page](assets/images/readme/fF1040/format1040.png)
+
+
+If submit without information.
+
 ![Format 1040_page](assets/images/readme/fF1040/fi.png)
 ![Format 1040_page](assets/images/readme/fF1040/fi2.png)
+
+Social Security Number Validation
+- Should be 9 digits, if not an error message appears.
+- If requiere SSN confirmation, they must match.
 
 ![Format 1040_page](assets/images/readme/fF1040/fsvsi.png)
 ![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
 ![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
-![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
+
+Phone Number Validation
+- Should be 10 digits, if not an error message appears.
 
 ![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
+![Format 1040_page](assets/images/readme/fF1040/fpv.png)
+
+Birth of Date
+- Verify Age allows to know if is older than 18 the Age or if is younger indicates.
 
 ![Format 1040_page](assets/images/readme/fF1040/fdob.png)
 
+Zip Code Validation
+- Should be 5 digits, if not an error message appears.
+
 ![Format 1040_page](assets/images/readme/fF1040/fzr.png)
 ![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
+
+
+Authomaticlly Number of boxes is filled based on answers.
+
+![Format 1040_page](assets/images/readme/fF1040/fex1.png)
+
+Submit bottom hover with nice color.
+
+![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
 
 ![Format 1040_page](assets/images/readme/fF1040/fv.png)
 ![Format 1040_page](assets/images/readme/fF1040/fs.png)
 
 
-#### Check This!
-Bookkeeping Facts – Informational Section
+  #### 4. Bookkeeping Fact Cards (Check This!)  
 This interactive panel provides users with quick, digestible insights into bookkeeping essentials. Each fact is visually supported with a relevant image and a concise explanation.
+- Illustrated cards with bite-sized facts  
+- Reset functionality 
 
-Card Topics:
+*Card Topics:*
 - What is Bookkeeping? 
 Explains the core definition and purpose of recording financial transactions.
 
@@ -445,12 +530,15 @@ Consistent card layout with bold titles and brief content.
 
 - Background includes a money-themed image for subtle visual relevance.
 
-![checkThis!_page](assets/images/readme/booking.checkThis!.png)
+![checkThis!_page](assets/images/readme/Webpgs/checkThis.png)
 
 
-#### Play & Save!
+##### 5. Prize Page (Play & Save!) 
 Try Your Luck! – Interactive Prize Game
 An engaging and gamified feature that rewards users for exploring your services.
+- Flip-one-card game  
+- Reveal a surprise reward  
+- High visual contrast and animation effects  
 
 How It Works:
 Users are presented with four mystery cards.
@@ -475,10 +563,11 @@ Purpose:
 
 - Encourages users to contact you or schedule a consultation.
 
-![contact_section](assets/images/readme/prize.webp)
+![contact_section](assets/images/readme/Webpgs/Play%20&%20Save!.png)
 
+---
 
-### Features Left to Implement
+### 🔮 Features Left to Implement
 Towards the future,
 * I would like to improve the performance of the website.
 
@@ -492,7 +581,7 @@ An interactive feature that helps users compare LLC vs. S-Corp structures in ter
 
 This tool will assist small business owners in choosing the right entity type to maximize financial efficiency and minimize tax burden.
 
-2. Financial Match Game
+2. Financial Match Game (memory-style)
 A fun, educational mini-game designed to reinforce key financial tips.
 Users will match cards that highlight:
 
@@ -502,15 +591,20 @@ Users will match cards that highlight:
 Business structure insights (LLC, S-Corp, Sole Prop, etc.)
 The game will deliver practical, easy-to-understand content that helps users make smarter business and tax decisions, all while keeping the learning experience enjoyable.
 
-### Languages Used
+---
+
+
+## 🧑‍💻 Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5) Hypertext Markup Language.
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) Cascading Style Sheets.
 -   [JS](https://en.wikipedia.org/wiki/JavaScript) JavaScript.
 
-## Technologies Used
 
-### Frameworks, Libraries & Programs Used
+---
+
+
+## 🧰 Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 5.3.3:](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website. This framework helps designing websites. It includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels, etc. It also gives you support for JavaScript plugins. 
@@ -557,119 +651,112 @@ The game will deliver practical, easy-to-understand content that helps users mak
 21. W3 Schools
     -   [W3 Schools]( https://www.w3schools.com/)
 
+---
 
-
-## Testing
-- I tested the site across major web browsers: Chrome, Firefox, Safari, and Microsoft Edge, and confirmed it functions properly on all of them.
--  On mobile devices, I tested the site on iPhone 13 Mini and Pixel 7 Pro.
--  On laptops, I tested on both MacBook Pro 14” and MacBook Pro 16”.
--  I verified the site is responsive across various screen sizes using the DevTools device toolbar.
+## 🧪 Testing & Validation
+### ✅ Browser & Device Testing  
+- Web browsers: Chrome, Firefox, Safari, and Microsoft Edge.
+-  On mobile devices: iPhone 13 Mini, Pixel 7 Pro.
+-  On laptops: MacBook Pro 14”, MacBook Pro 16”.
+- DevTools used for responsive checks 
 -  The navigation, pages, and content sections are clear, readable, and easy to navigate.
 - The form validation works correctly: required fields enforce input, email fields only accept valid formats, and the submit buttons function as expected.
-**The W3C Markup Validator**, **W3C CSS Validator**, and **JSHint**were used to validate the HTML, CSS, and JavaScript code, respectively. These tools ensured that all pages were free of syntax errors and followed best coding practices.
-All pages were designed with **Responsive Design** to provide a consistent experience across various screen sizes and devices.
 
 
-### Validator Testing
+### ✅ Validator Testing
+- HTML: W3C Markup Validator  
+- CSS: W3C CSS Validator  
+- JavaScript: JSHint – no errors  
 
-## HTML
-All pages have passed the official W3C Markup Validator with no errors.
+These tools ensured that all pages were free of syntax errors and followed best coding practices.
+
+### HTML
+  All pages have passed the official W3C Markup Validator with no errors.
 
 ### Main Page and Quiz Flow
 
-#### Home Page: [`index.html`](index.html)
+  #### Home Page: [`index.html`](index.html)
 
-This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
-![Home Page](assets/images/readme/W3C-index.html.png)
-
----
-
-#### Quiz Pages: [`quiz.html`](quiz.html)
-
-After clicking the **"Quiz"** button, users are guided through interactive questions to assess their bookkeeping needs.
-
-- **Quiz Page 1**
-  ![Quiz Page 1](assets/images/readme/W3C-quiz.html(pg-1).png)
-
-- **Quiz Page 2**
-  ![Quiz Page 2](assets/images/readme/W3C-quiz.html(pg-2).png)
-
----
-
-#### Feedback Page: [`feedback.html`](feedback.html)
-
-Based on the quiz answers, users receive tailored feedback and helpful suggestions.
-
-![Home Page](assets/images/readme/W3C-feedback.html.png)
+  This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
+      ![Home Page](assets/images/readme/W3C-Markup/W3C-index.html%20(quickquiz).png)
 
 
-### Page After Clicking "Check This!"
+  #### Quiz Pages: [`quiz.html`](quiz.html)
 
-#### Informational Page: [`checkThis.html`](checkThis.html)
+  After clicking the **"Quiz"** button, users are guided through interactive questions to assess their bookkeeping needs.
 
-This page appears after clicking the **"Check This!"** button. It presents engaging facts or financial tips in a visually dynamic layout.
-![Screenshot of checkThis.html](assets/images/readme/W3C-checkThis.html.png)
+   - **Quiz**
+      ![Quiz Page 1](assets/images/readme/W3C-Markup/W3C-quiz.html.png)
 
-### Page After Clicking "Play & Save!"
 
-#### Prize Game Page: [`prize.html`](prize.html)
+  #### Feedback Page: [`feedback.html`](feedback.html)
 
-This interactive page is loaded after users click the **"Play & Save!"** button. It reveals a fun and engaging prize game that may offer discounts or perks.
-![Screenshot of prize.html](assets/images/readme/W3C-prize.html.png)
+  Based on the quiz answers, users receive tailored feedback and helpful suggestions.
+
+      ![Home Page](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
+
+
+  ### Page After Clicking "Check This!"
+
+  #### Informational Page: [`checkThis.html`](checkThis.html)
+
+  This page appears after clicking the **"Check This!"** button. It presents engaging facts or financial tips in a visually dynamic layout.
+  ![Screenshot of checkThis.html](assets/images/readme/W3C-Markup/W3C-checkThis.html.png)
+
+  ### Page After Clicking "Play & Save!"
+
+  #### Prize Game Page: [`prize.html`](prize.html)
+
+  This interactive page is loaded after users click the **"Play & Save!"** button. It reveals a fun and engaging prize game that may offer discounts or perks.
+  ![Screenshot of prize.html](assets/images/readme/W3C-Markup/W3C-prize.html.png)
 
 
 
-## CSS
+### CSS
 All pages have passed the official W3C CSS Validator with no errors.
-
 #### Format-1040
 #### Informational Page: [`format1040.css `]( format1040.css)
-  ![CSS](assets/images/readme/W3C-format1040.css.png)
+    ![CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
 
 #### Quiz
 #### Informational Page: [`quiz.css `]( quiz.css)
-  ![CSS](assets/images/readme/W3C-quiz.css.png)
+    ![CSS](assets/images/readme/W3-CSS/W3C-quiz.css.png)
 
 
-## JS
+### JS
 All pages have passed the official JSHint with no errors.
 
 #### Format-1040
 #### Informational Page: [`format1040.js `]( format1040.js)
-  ![CSS](assets/images/readme/JSH-format1040.js.png)
+  ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
 
 #### Quiz
 #### Informational Page: [`quiz.js `]( quiz.js)
-  ![CSS](assets/images/readme/JSH-quiz.css.png)
+  ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
 
-  
-* **Accessibility**
-  * Lighthouse DevTools by Google
-
+### ✅ Accessibility Testing
+- Lighthouse DevTools by Google
 ### Main Page and Quiz Flow
+  #### Home Page: [`index.html`](index.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-index.html.png)
 
-#### Home Page: [`index.html`](index.html)
-![Lighthouse DevTools Home](assets/images/readme/LH-index.html.png)
+  #### Quiz Pages: [`quiz.html`](quiz.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-1).png)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-2).png)
 
-#### Quiz Pages: [`quiz.html`](quiz.html)
-![Lighthouse DevTools Home](assets/images/readme/LH-quiz.html(pg-1).png)
-![Lighthouse DevTools Home](assets/images/readme/LH-quiz.html(pg-2).png)
+  #### Feedback Page: [`quiz.html`](quiz.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-feedback.html.png)
 
-#### Feedback Page: [`quiz.html`](quiz.html)
-![Lighthouse DevTools Home](assets/images/readme/LH-feedback.html.png)
+
+  #### Check This! Page: [`checkThis!.html`]( checkThis.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-checkThis.html.png)
+
+  #### Save & Play! Page: [`quiz.html`]( quiz.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-prize.html.png)
 
 ---
 
-#### Check This! Page: [`checkThis!.html`]( checkThis.html)
-![Lighthouse DevTools Home](assets/images/readme/LH-checkThis.html.png)
-
----
-
-#### Save & Play! Page: [`quiz.html`]( quiz.html)
-![Lighthouse DevTools Home](assets/images/readme/LH-prize.html.png)
-
-
-### Testing User Stories – User Experience (UX) Evaluation
+### 🧑‍💻 Testing User Stories – User Experience (UX) Evaluation
 
 #### First-Time Visitor Goals
 
@@ -722,21 +809,22 @@ As a Frequent User, I want to:
    - Use this information to make informed decisions about taxes, bookkeeping needs, or business structure changes.
 
 
-### Further Testing
+#### Further Testing
 
 - The website was thoroughly tested across major web browsers, including **Google Chrome**, **Safari**, **Microsoft Edge**, and even **Internet Explorer** to ensure cross-browser compatibility.
 - Device testing was conducted on a range of platforms, including **desktop and laptop computers**, as well as mobile devices such as **iPhone 7, iPhone 8, and iPhone X**.
 - Comprehensive internal testing was performed to confirm that **all internal and external links functioned correctly**, and that navigation between pages was smooth and intuitive.
 - Usability testing involved feedback from **friends and family members**, who were invited to explore the site and identify any bugs, broken functionality, or areas of improvement from a user experience (UX) perspective.
 
-### Bugs
+---
+
+### 🐞 Bugs
 ### Solved Bugs
 
 - Significant bugs were identified and resolved across all major development areas, including **HTML5**, **CSS3**, and **JavaScript**.
 - Several **spelling and grammar issues** were corrected throughout the project to improve clarity and professionalism.
 
 ---
-
 ### Unsolved Bugs / Areas for Improvement
 
 - **Form 1040 validation**: The final section still requires refinement to ensure complete input validation and proper feedback handling.
@@ -744,9 +832,11 @@ As a Frequent User, I want to:
 - **Code optimization**: Grouping and organizing code by section or page can make it easier to deploy, reduce the likelihood of bugs, and improve performance.
 - **Lighthouse Performance**: The site's performance metrics (as measured by Google's Lighthouse tool) can be improved by further optimizing code, assets, and loading behavior.
 
-## Deployment
+---
 
-### GitHub Pages Deployment
+
+## 📥 Deployment
+### 🌐 GitHub Pages Deployment
 
 The project was successfully deployed to **GitHub Pages** using the steps below:
 
@@ -762,7 +852,7 @@ The project was successfully deployed to **GitHub Pages** using the steps below:
 
 You can now access your project live on the web using the provided GitHub Pages URL.
 
-### Forking the GitHub Repository
+### 🍴 Forking the GitHub Repository
 
 Forking a GitHub repository allows you to create a personal copy of the original project in your own GitHub account. This enables you to freely explore, modify, or contribute without affecting the original codebase. Follow these steps:
 
@@ -771,7 +861,7 @@ Forking a GitHub repository allows you to create a personal copy of the original
 3. GitHub will create a copy of the repository under your own account.
 4. You can now freely edit, update, and experiment within your forked version without impacting the original repository.
 
-### Making a Local Clone
+### 📂 Making a Local Clone
 
 Follow these steps to create a local copy of the repository on your machine:
 
@@ -797,7 +887,10 @@ Unpacking objects: 100% (10/10), done.
 📎 For additional guidance and visual steps, visit GitHub’s official help guide:
 Cloning a repository – GitHub Docs
 
-## Credits
+---
+
+
+## 🙏 Credits & Acknowledgements
 * Code Institute
 * Dette Bookkeeping: Website [Dette Bookkeeping & More, LLC]( https://dette-bookkeeping.com/)
 
@@ -809,6 +902,7 @@ Cloning a repository – GitHub Docs
   Bootstrap library was used throughout the project to create a responsive layout using the Bootstrap Grid System.
 - [Google](https://www.google.com)  
   Utilized for general development research, code examples, and technical clarification.
+
 ### Content
 * I used as example from the Code Institute's [Fun Coding Facts]
 * I used as example from the Code Institute's [Love Maths]( https://github.com/cynthiapinedoh79/Love-Maths) project.
@@ -842,3 +936,6 @@ Cloning a repository – GitHub Docs
 - Appreciation to the **Code Institute tutor community** for their assistance and insights during challenges.
 - A heartfelt thanks to **Code Institute** for providing an invaluable course that built the foundation for this project.
 - I drew inspiration for this project from exploring the many example projects showcased by **Code Institute**, which helped spark ideas and refine my goals.
+
+---
+
