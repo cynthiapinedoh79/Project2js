@@ -339,8 +339,8 @@ _Main color palette_
 
   Each question offers Yes / Sometimes / No options. Based on the user’s responses:
 
-    - A score out of 10 is calculated.
-    - A personalized feedback message is shown.
+  - A score out of 10 is calculated.
+  - A personalized feedback message is shown.
 
   If the score suggests the user might need help (> 6 pts), they are redirected to relevant services like Form 1040 submission or contact options.
 
@@ -425,15 +425,44 @@ _Main color palette_
   - Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
   - Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
 
+  ---
+
+  ### Format 1040 - Empty
+
   ![Format 1040_page](assets/images/readme/fF1040/format1040.png)
+  ![Format 1040_page](assets/images/readme/fF1040/form1040-2.png)
+  ![Format 1040_page](assets/images/readme/fF1040/format1040-3.png)
+  ![Format 1040_page](assets/images/readme/fF1040/format1040-4.png)
+  ![Format 1040_page](assets/images/readme/fF1040/format1040-5.png)
 
 
-  If submit without information.
+  ---
 
-  ![Format 1040_page](assets/images/readme/fF1040/fi.png)
+  ### Collapsible Sections
+  Hover to reveal and complete the required fields.
+  - Joint Information
+  - Forein Address
+  
+  ![Format 1040_page](assets/images/readme/fF1040/fJointH.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fForeinAH.png)
+
+  ---
+
+  ### Invalid or Missing Information
+
+  ![Format 1040_page](assets/images/readme/fF1040/fi1.png)
   ![Format 1040_page](assets/images/readme/fF1040/fi2.png)
 
-  Social Security Number Validation
+
+  ---
+
+  ### Incomplete Form Submitted
+  ![Format 1040_page](assets/images/readme/fF1040/fi&v.png)
+
+
+  ---
+
+  ### SSN Validation
   - Should be 9 digits, if not an error message appears.
   - If requiere SSN confirmation, they must match.
 
@@ -441,35 +470,49 @@ _Main color palette_
   ![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
   ![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
 
-   Phone Number Validation
+
+  ---
+
+  ### Phone Number Validation
   - Should be 10 digits, if not an error message appears.
 
   ![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fpv.png)
 
-  Birth of Date
+
+  ---
+
+  ### Birth of Date Validation
   - Verify Age allows to know if is older than 18 the Age or if is younger indicates.
 
   ![Format 1040_page](assets/images/readme/fF1040/fdob.png)
 
-   Zip Code Validation
-    - Should be 5 digits, if not an error message appears.
+
+  --- 
+  
+  ### Zip Code Validation
+  - Should be 5 digits, if not an error message appears.
 
   ![Format 1040_page](assets/images/readme/fF1040/fzr.png)
   ![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
 
 
-  Authomaticlly Number of boxes is filled based on answers.
+  ---
 
-  ![Format 1040_page](assets/images/readme/fF1040/fex1.png)
-
+  ### Number of boxes auto-filled based on answers
+  ![Format 1040_page](assets/images/readme/fF1040/fex.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fex2.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fex3.png)
   Submit bottom hover with nice color.
 
   ![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
+  
+  ---
 
+  ### Displays success message after submission.
   ![Format 1040_page](assets/images/readme/fF1040/fv.png)
   ![Format 1040_page](assets/images/readme/fF1040/fs.png)    
 
+--- 
 
   ### 5. Bookkeeping Fact Cards (Check This!): checkThis.html
   Linked from the main page; presents interesting Bookkeeping Facts.
@@ -514,6 +557,7 @@ _Main color palette_
 
   ![checkThis!_page](assets/images/readme/Webpgs/checkThis.png)
 
+---
 
   ### 6. Prize Page (Play & Save!): prize.html
   A fun interactive page where users can win a discount or special offer.
@@ -555,6 +599,8 @@ _Main color palette_
 1. quiz.css – Provides the styling for all site sections except the Form 1040 page.
 
 2. format1040.css – Specifically styles the IRS Form 1040 section. It includes rules for showing and hiding elements, hover effects, alerts, error and success messages, and validation feedback. It also visually highlights input fields, checkboxes, and radio buttons when submitted data is invalid.
+
+---
 
 ### JS Files.
 1. quiz.css – Contains the JavaScript code for all site functionality except the Form 1040.
@@ -659,6 +705,7 @@ The game will deliver practical, easy-to-understand content that helps users mak
 -  The navigation, pages, and content sections are clear, readable, and easy to navigate.
 - The form validation works correctly: required fields enforce input, email fields only accept valid formats, and the submit buttons function as expected.
 
+---
 
 ### ✅ Validator Testing
 - HTML: W3C Markup Validator  
@@ -667,7 +714,9 @@ The game will deliver practical, easy-to-understand content that helps users mak
 
 These tools ensured that all pages were free of syntax errors and followed best coding practices.
 
-### HTML
+---
+
+## HTML
   All pages have passed the official W3C Markup Validator with no errors.
 
 ### Main Page and Quiz Flow
@@ -676,17 +725,25 @@ These tools ensured that all pages were free of syntax errors and followed best 
   This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
   ![Home Page](assets/images/readme/W3C-Markup/W3C-index.html%20(quickquiz).png)
 
+---
+
   #### Quiz Pages: [`quiz.html`](quiz.html)
   After clicking the **"Quiz"** button, users are guided through interactive questions to assess their bookkeeping needs.
-
-   **Quiz**
   ![Quiz Page 1](assets/images/readme/W3C-Markup/W3C-quiz.html.png)
-  ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
 
+---
 
   #### Feedback Page: [`feedback.html`](feedback.html)
   Based on the quiz answers, users receive tailored feedback and helpful suggestions.
   ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
+
+---
+
+  ##### Formato-1040: [`form1040.html`](form1040.html)
+  After clicking the **"Format 1040"** button, users are guided through interactive formulary.
+  ![Formato 1040 Page](assets/images/readme/W3C-Markup/W3C-form1040.html.png)
+
+---
 
   ### Page After Clicking "Check This!"
 
@@ -694,36 +751,45 @@ These tools ensured that all pages were free of syntax errors and followed best 
   This page appears after clicking the **"Check This!"** button. It presents engaging facts or financial tips in a visually dynamic layout.
   ![checkThis.html](assets/images/readme/W3C-Markup/W3C-checkThis.html.png)
 
+---
+
   ### Page After Clicking "Play & Save!"
 
   #### Prize Game Page: [`prize.html`](prize.html)
   This interactive page is loaded after users click the **"Play & Save!"** button. It reveals a fun and engaging prize game that may offer discounts or perks.
   ![prize.html](assets/images/readme/W3C-Markup/W3C-prize.html.png)
 
+---
 
-
-### CSS
+## CSS
 All pages have passed the official W3C CSS Validator with no errors.
   #### Format-1040
   #### Informational Page: [`format1040.css`](format1040.css)
       
   ![Format-1040 CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
 
+---
+
   #### Quiz
   #### Informational Page: [`quiz.css`](quiz.css)
   ![quiz CSS](assets/images/readme/W3-CSS/W3C-quiz.css.png)
 
+---
 
-### JS
+## JS
 All pages have passed the official JSHint with no errors.
 
   #### Format-1040
-  #### Informational Page: [`format1040.js `](format1040.js)
-  ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
+  #### Informational Page: [`format1040.js`](format1040.js)
+  ![JS](assets/images/readme/JSHint/JSH-form1040.js.png)
+
+---
 
   #### Quiz
   #### Informational Page: [`quiz.js `](quiz.js)
   ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
+
+---
 
 ### ✅ Accessibility Testing
 - Lighthouse DevTools by Google
@@ -731,16 +797,28 @@ All pages have passed the official JSHint with no errors.
   #### Home Page: [`index.html`](index.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-index.html.png)
 
+  ---
+
   #### Quiz Pages: [`quiz.html`](quiz.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-1).png)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-2).png)
 
+  ---
+
   #### Feedback Page: [`feedback.html`](quiz.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-feedback.html.png)
+   
+  ---
 
+  #### Format 1040 Page: [`form1040.html`](form.html)
+  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-format1040.png)
+
+  ---
 
   #### Check This! Page: [`checkThis!.html`]( checkThis.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-checkThis.html.png)
+
+  ---
 
   #### Save & Play! Page: [`quiz.html`]( quiz.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-prize.html.png)
