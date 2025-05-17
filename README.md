@@ -74,9 +74,6 @@ All pages were designed with **Responsive Design** to provide a consistent exper
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Play%20&%20Save!.png)
 
 
-
-![Responsive devices -recipes](assets/images/readme/Get a Prize!)
-
 ### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/)
 
 ---
@@ -137,22 +134,33 @@ From the user’s perspective, I’ve built this site with the following priorit
 
 
 ## 🎨 Design Choices
-### Color Palette & Typography  
+  ### Description        
+  This website is designed for visitors and new customers to explore, learn, win rewards, and enjoy an engaging experience while navigating through different pages.
+
+  ### Typography
+  Inter, Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
+
+### Color Palette 
   - **Fonts:** Roboto, Inter – clean and modern  
   - **Colors:**  
     - Purple: trust and creativity  
     - Red/Orange: urgency and emphasis  
     - Muted tones: professionalism  
-  - [Contrast checked with WebAIM](https://webaim.org/resources/contrastchecker/)  
+  - [Contrast checked with WebAIM](https://webaim.org/resources/contrastchecker/)
+
+  ### Colour Psychology
+  ![Colour Psicology](assets/images/readme/PsColor.png)
+  ![Contrast checked with WebAIM](assets/images/readme/PsColor1.png)
 
   ### Imagery  
+  Clear and attractive images support the theme and maintain strong contrast with text for optimal readability.
 - Financial and office-themed backgrounds  
 - High contrast text overlays for readability  
 
 ---
 
 
-  ### 1. index.html (Main Page / Home)
+  ### 1. Home: index.html
         
   - Background: 
   A blurred photo of financial charts and a blue pen (soft blue, red, beige tones)
@@ -163,7 +171,7 @@ From the user’s perspective, I’ve built this site with the following priorit
     - Hover: DarkRed.
   - Color Mood: Professional, calm, and trustworthy (purple conveys reliability and creativity).
 
-  ### 2. quiz.html (Quiz Page - Page 1)
+  ### 2. Quiz: quiz.html
 
   - Background: A soft focus image of hands joined in teamwork (brown, beige, and gray tones).
 
@@ -181,7 +189,7 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   - Color Mood:Professional, calm, and trustworthy (purple conveys reliability and creativity)
 
-  ### 3. feedback.html (Results Page "You May Need Help With Your Bookkeeping")
+  ### 3. Results Page "You May Need Help With Your Bookkeeping": feedback.html
   - Background: A real-life business photo (blue jeans, papers) — neutral tones with blue and tan
   - Header: Dark gray/black
   - Card background: Soft white with subtle shadow
@@ -191,7 +199,7 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   - Overall Color Mood: Trustworthy and clean with modern neutrality, purple buttons continue your branding identity.
 
-  ### 4. form1040.html (IRS Form-1040 Page)
+  ### 4. IRS Form-1040 Page: form1040.html
   - Background: Solid white background
   - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
   - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
@@ -208,7 +216,7 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Form Field Background: Light lavender/grayish purple — this maintains good contrast without looking too stark
   - Overall Color Mood: Professional and structured — balancing bold emphasis (orange) with institutional calm (lavender + purple)
 
-  ### 5. checkThis.html (Bookkeeping Facts Page)
+  ### 5. Bookkeeping Facts Page: checkThis.html
   - Background: Lightly visible money-themed image (dollar bills) as a faded background
   - Titles/Headers: Red shades (#C62828-like)
   - Text: Black
@@ -216,21 +224,13 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Card Borders and Text: Varying tones of red, black, gray
   - Color Mood: More attention-grabbing and informational (reds for urgency, purple for brand consistency)
 
-  ### 6. prize.html (Prize Page)
+  ### 6. Play & Save Page: prize.html
   - Background: Bright, abstract art (orange, blue, white swirls)
-
   - Title Text: Purple
   - Button: Bold magenta/dark pink
   - Color Mood: Energetic and playful — encourages participation and feels exciting
 
-  ## Typography
-  Inter, Roboto family font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in programming, so it is both attractive and appropriate.
 
-  ## Imagery
-  Clear and attractive images support the theme and maintain strong contrast with text for optimal readability.
-
-  ## Description        
-  This website is designed for visitors and new customers to explore, learn, win rewards, and enjoy an engaging experience while navigating through different pages.
 
 ## 📐 Five planes UXD
 
@@ -250,29 +250,6 @@ The site is designed for two main user groups:
 
 ### 🏗️ Structure
 The website is designed with HTML5, CSS3 and JS.
-
-#### HTML Files Overview
-1. Index.html. Entry point of the site. Asks: “Need Bookkeeping?”
-
-2. Quiz.html. A short quiz to help users determine if they need assistance with taxes, finances, or bookkeeping.
-
-3. Feedback.html. Displays feedback based on quiz results. High scores lead to a message with two action buttons:
-    - Fill Form 1040 Now
-    -	Contact Us via Website
-
-4. CheckThis.html Linked from the main page; presents interesting Bookkeeping Facts.
-5. Prize.html A fun interactive page where users can “Try Your Luck!” to win a discount or special offer.
-
-#### CCS Files
-1. quiz.css – Provides the styling for all site sections except the Form 1040 page.
-
-2. format1040.css – Specifically styles the IRS Form 1040 section. It includes rules for showing and hiding elements, hover effects, alerts, error and success messages, and validation feedback. It also visually highlights input fields, checkboxes, and radio buttons when submitted data is invalid.
-
-#### JS Files.
-1. quiz.css – Contains the JavaScript code for all site functionality except the Form 1040.
-
-2. format1040.css – This file handles the JavaScript for the Form 1040. Due to the form's complexity, the script is extensive and focuses specifically on validating the format and content of the entered data.
-
 
 **Website Pages:**
 1. **_Needs Bookkepping?:_** Main page with three buttons (Quiz, Check This! and Get a Prize!)
@@ -326,7 +303,8 @@ _Main color palette_
 ## ✨ Features
 
 ### 🚀 Existing Features
-  #### 1. Home Page 
+### HTML Files
+  ### 1. Home Page: index.html
 
   Headline Prompt:
 
@@ -352,241 +330,261 @@ _Main color palette_
     
   ![quickQuiz_page](assets/images/readme/Webpgs/home.png)
 
-  #### 2. Quiz
+  ### 2. Quiz: quiz.html
+  This interactive quiz helps users determine whether they may need taxes, finances, or bookkeeping support. It consists of two short sections:
 
-This interactive quiz helps users determine whether they may need bookkeeping support. It consists of two short sections:
+  1. Bookkeeping Habits – Questions focused on time spent, disorganization, and tracking issues.
 
-1. Bookkeeping Habits – Questions focused on time spent, disorganization, and tracking issues.
+  2. Tax Season Challenges – Questions related to stress during tax season and recordkeeping for deductions.
 
-2. Tax Season Challenges – Questions related to stress during tax season and recordkeeping for deductions.
+  Each question offers Yes / Sometimes / No options. Based on the user’s responses:
 
-Each question offers Yes / Sometimes / No options. Based on the user’s responses:
+    - A score out of 10 is calculated.
+    - A personalized feedback message is shown.
 
-  - A score out of 10 is calculated.
-  - A personalized feedback message is shown.
+  If the score suggests the user might need help (> 6 pts), they are redirected to relevant services like Form 1040 submission or contact options.
 
-If the score suggests the user might need help (> 6 pts), they are redirected to relevant services like Form 1040 submission or contact options.
+  The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
-The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
+  ![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
+  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2.png)
+  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
 
-![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
-![quiz_page2](assets/images/readme/Webpgs/quiz-P2.png)
-![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
+  ### 3. Feedback: feedback.html
+  Displays feedback based on quiz results. High scores lead to a message with two action buttons:
+    - Fill Form 1040 Now
+    -	Contact Us via Website
 
-  #### 3. Feedback
+  Bookkeeping Assessment Result: After completing the quiz, users who score within a certain range are shown a feedback message:
 
-Bookkeeping Assessment Result: After completing the quiz, users who score within a certain range are shown a feedback message:
+  Headline: You May Need Help With Your Bookkeeping.
 
-Headline: You May Need Help With Your Bookkeeping.
+  Message: 
+  A supportive summary that explains the result:  
+  - "Based on your responses, it appears you could benefit from professional bookkeeping assistance."
 
-Message: 
-A supportive summary that explains the result:  
-- "Based on your responses, it appears you could benefit from professional bookkeeping assistance."
+  - What the Service Includes:
+    - A bullet-point list highlights the key benefits:
+    - Organization of overdue books
+    - Tax preparation and deduction planning
+    - Income and expense tracking
+    - Personalized tax advice
 
-- What the Service Includes:
-  - A bullet-point list highlights the key benefits:
-  - Organization of overdue books
-  - Tax preparation and deduction planning
-  - Income and expense tracking
-  - Personalized tax advice
+  - Call-to-Action Buttons:
+    - IRS Form-1040 – Directs the user to begin completing the official tax form with us.
+    - Request a Free Consultation offering an easy way to reach out and get help.
 
-- Call-to-Action Buttons:
-  - IRS Form-1040 – Directs the user to begin completing the official tax form with us.
-  - Request a Free Consultation offering an easy way to reach out and get help.
+  - Design Notes:
+    - Clean, transparent card UI over a background image related to finance/taxes.
+    - Clear visual hierarchy with bold headlines, informative content, and strong CTAs.
+    - Colorful, accessible buttons for quick action.
 
-- Design Notes:
-  - Clean, transparent card UI over a background image related to finance/taxes.
-  - Clear visual hierarchy with bold headlines, informative content, and strong CTAs.
-  - Colorful, accessible buttons for quick action.
+  ![feedback_page](assets/images/readme/Webpgs/feedback.png)
+  ![feedback_page](assets/images/readme/Webpgs/feedbackh.png)
 
-![feedback_page](assets/images/readme/Webpgs/feedback.png)
-![feedback_page](assets/images/readme/Webpgs/feedbackh.png)
+  ### 4. Format 1040: format1040.html
 
-    ### 4. Format 1040
+  *Page Header*
+  - Title: Bold and clear – “IRS FORM-1040 2024”
 
-*Page Header*
-- Title: Bold and clear – “IRS FORM-1040 2024”
+  - Spanish Forms Print Options:
+    - On screen and printed
+    - Printed only
 
-- Spanish Forms Print Options:
-  - On screen and printed
-  - Printed only
+  *Form Sections and Features*
+  - Main Information Sheet
 
-*Form Sections and Features*
-- Main Information Sheet
+  - Cleanly organized into collapsible sections
 
-- Cleanly organized into collapsible sections
+  - Required fields marked with red asterisks and inline validation (e.g., “SSN must be 9 digits”)
 
-- Required fields marked with red asterisks and inline validation (e.g., “SSN must be 9 digits”)
+  - Real-time feedback with color-coded borders (red = error, green = valid)
 
-- Real-time feedback with color-coded borders (red = error, green = valid)
+  - Joint Information
 
-- Joint Information
+  - Clearly labeled call-to-action button: "Click here if filing a JOINT return..."
 
-- Clearly labeled call-to-action button: "Click here if filing a JOINT return..."
+  - Mailing Address
 
-- Mailing Address
+  - Zip and phone inputs validated with live success messages
 
-- Zip and phone inputs validated with live success messages
+  - Dropdown menus for state selection
 
-- Dropdown menus for state selection
+  - Phone Number and Type
 
-- Phone Number and Type
+  - Validated with specific format (e.g., (909) 372-5197
 
-- Validated with specific format (e.g., (909) 372-5197
+  - Includes time-of-day type preference
 
-- Includes time-of-day type preference
+  - Birth Date Section (labeled as “Bird Date”)
 
-- Birth Date Section (labeled as “Bird Date”)
+  - Age verification with visual feedback
 
-- Age verification with visual feedback
+  *Submission Feedback*
+  - Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
+  - Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
 
-*Submission Feedback*
-- Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
-- Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
+  ![Format 1040_page](assets/images/readme/fF1040/format1040.png)
 
-![Format 1040_page](assets/images/readme/fF1040/format1040.png)
 
+  If submit without information.
 
-If submit without information.
+  ![Format 1040_page](assets/images/readme/fF1040/fi.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fi2.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fi.png)
-![Format 1040_page](assets/images/readme/fF1040/fi2.png)
+  Social Security Number Validation
+  - Should be 9 digits, if not an error message appears.
+  - If requiere SSN confirmation, they must match.
 
-Social Security Number Validation
-- Should be 9 digits, if not an error message appears.
-- If requiere SSN confirmation, they must match.
+  ![Format 1040_page](assets/images/readme/fF1040/fsvsi.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fsvsi.png)
-![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
-![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
+   Phone Number Validation
+  - Should be 10 digits, if not an error message appears.
 
-Phone Number Validation
-- Should be 10 digits, if not an error message appears.
+  ![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fpv.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
-![Format 1040_page](assets/images/readme/fF1040/fpv.png)
+  Birth of Date
+  - Verify Age allows to know if is older than 18 the Age or if is younger indicates.
 
-Birth of Date
-- Verify Age allows to know if is older than 18 the Age or if is younger indicates.
+  ![Format 1040_page](assets/images/readme/fF1040/fdob.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fdob.png)
+   Zip Code Validation
+    - Should be 5 digits, if not an error message appears.
 
-Zip Code Validation
-- Should be 5 digits, if not an error message appears.
+  ![Format 1040_page](assets/images/readme/fF1040/fzr.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fzr.png)
-![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
 
+  Authomaticlly Number of boxes is filled based on answers.
 
-Authomaticlly Number of boxes is filled based on answers.
+  ![Format 1040_page](assets/images/readme/fF1040/fex1.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fex1.png)
+  Submit bottom hover with nice color.
 
-Submit bottom hover with nice color.
+  ![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
 
-![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fv.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fs.png)    
 
-![Format 1040_page](assets/images/readme/fF1040/fv.png)
-![Format 1040_page](assets/images/readme/fF1040/fs.png)
 
+  ### 5. Bookkeeping Fact Cards (Check This!): checkThis.html
+  Linked from the main page; presents interesting Bookkeeping Facts.
 
-  #### 4. Bookkeeping Fact Cards (Check This!)  
-This interactive panel provides users with quick, digestible insights into bookkeeping essentials. Each fact is visually supported with a relevant image and a concise explanation.
-- Illustrated cards with bite-sized facts  
-- Reset functionality 
+  This interactive panel provides users with quick, digestible insights into bookkeeping essentials. Each fact is visually supported with a relevant image and a concise explanation.
+  - Illustrated cards with bite-sized facts  
+  - Reset functionality 
 
-*Card Topics:*
-- What is Bookkeeping? 
-Explains the core definition and purpose of recording financial transactions.
+  *Card Topics:*
+  - What is Bookkeeping? 
+  Explains the core definition and purpose of recording financial transactions.
 
-- Tired of Paperwork?
-Acknowledges the burden of bookkeeping while reinforcing its importance for business success.
+  - Tired of Paperwork?
+  Acknowledges the burden of bookkeeping while reinforcing its importance for business success.
 
-- Numbers Didn't Match
-Highlights the consequences of inaccurate bookkeeping such as discrepancies and poor financial management.
+  - Numbers Didn't Match
+  Highlights the consequences of inaccurate bookkeeping such as discrepancies and poor financial management.
 
-- Invoices
-Emphasizes the importance of invoices in tracking sales and purchases.
+  - Invoices
+  Emphasizes the importance of invoices in tracking sales and purchases.
 
-- Unorganized
-Stresses how disorganized records can become overwhelming and lead to errors.
+  - Unorganized
+  Stresses how disorganized records can become overwhelming and lead to errors.
 
-- Gross, Net, and Taxable Income
-Educates users on key income terms:
+  - Gross, Net, and Taxable Income
+  Educates users on key income terms:
 
-  - Gross Income = total revenue before expenses
+    - Gross Income = total revenue before expenses
 
-  - Net Income = profit after expenses
+    - Net Income = profit after expenses
 
-  - Taxable Income = income subject to tax
+    - Taxable Income = income subject to tax
 
-- Design Highlights:
-Consistent card layout with bold titles and brief content.
+  - Design Highlights:
+  Consistent card layout with bold titles and brief content.
 
-- Visually engaging with contextual images to aid understanding.
+  - Visually engaging with contextual images to aid understanding.
 
-- A "Clear facts" button for interactivity (possibly resets or filters facts).
+  - A "Clear facts" button for interactivity (possibly resets or filters facts).
 
-- Background includes a money-themed image for subtle visual relevance.
+  - Background includes a money-themed image for subtle visual relevance.
 
-![checkThis!_page](assets/images/readme/Webpgs/checkThis.png)
+  ![checkThis!_page](assets/images/readme/Webpgs/checkThis.png)
 
 
-##### 5. Prize Page (Play & Save!) 
-Try Your Luck! – Interactive Prize Game
-An engaging and gamified feature that rewards users for exploring your services.
-- Flip-one-card game  
-- Reveal a surprise reward  
-- High visual contrast and animation effects  
+  ### 6. Prize Page (Play & Save!): prize.html
+  A fun interactive page where users can win a discount or special offer.
 
-How It Works:
-Users are presented with four mystery cards.
+  Try Your Luck! – Interactive Prize Game
+  An engaging and gamified feature that rewards users for exploring your services.
+  - Flip-one-card game  
+  - Reveal a surprise reward  
+  - High visual contrast and animation effects  
 
-Each card is styled with a golden gradient and a ? mark to indicate a hidden offer.
+  How It Works:
+  Users are presented with four mystery cards.
 
-Upon clicking one card, it flips over to reveal a special reward (e.g., “50% OFF on Your First Consultation”).
+  Each card is styled with a golden gradient and a ? mark to indicate a hidden offer.
 
-A “Back” button allows users to return to the main site.
+  Upon clicking one card, it flips over to reveal a special reward (e.g., “50% OFF on Your First Consultation”).
 
-Design Highlights:
-- Modern, colorful background with abstract art for visual impact.
+  A “Back” button allows users to return to the main site.
 
-- Hover and flip effects make the interaction feel dynamic and responsive.
+  Design Highlights:
+  - Modern, colorful background with abstract art for visual impact.
 
-- Centered card layout keeps the user’s focus on the reward selection.
+  - Hover and flip effects make the interaction feel dynamic and responsive.
 
-Purpose:
-- Boosts user engagement.
+  - Centered card layout keeps the user’s focus on the reward selection.
 
-- Provides an incentive to try services.
+  Purpose:
+  - Boosts user engagement.
 
-- Encourages users to contact you or schedule a consultation.
+  - Provides an incentive to try services.
 
-![contact_section](assets/images/readme/Webpgs/Play%20&%20Save!.png)
+  - Encourages users to contact you or schedule a consultation.
+
+  ![contact_section](assets/images/readme/Webpgs/Play%20&%20Save!.png)
+
+---
+
+### CCS Files
+1. quiz.css – Provides the styling for all site sections except the Form 1040 page.
+
+2. format1040.css – Specifically styles the IRS Form 1040 section. It includes rules for showing and hiding elements, hover effects, alerts, error and success messages, and validation feedback. It also visually highlights input fields, checkboxes, and radio buttons when submitted data is invalid.
+
+### JS Files.
+1. quiz.css – Contains the JavaScript code for all site functionality except the Form 1040.
+
+2. format1040.css – This file handles the JavaScript for the Form 1040. Due to the form's complexity, the script is extensive and focuses specifically on validating the format and content of 
+the entered data.
 
 ---
 
 ### 🔮 Features Left to Implement
 Towards the future,
-* I would like to improve the performance of the website.
+1. I would like to improve the performance of the website.
 
-1. Tax Structure Comparison Tool
-An interactive feature that helps users compare LLC vs. S-Corp structures in terms of:
+2. Tax Structure Comparison Tool
 
-  -Tax savings potential
-  -Liability protection
-  -Administrative requirements
-  -Suitability based on business type or income level
+    An interactive feature that helps users compare LLC vs. S-Corp structures in terms of:
 
-This tool will assist small business owners in choosing the right entity type to maximize financial efficiency and minimize tax burden.
+    -Tax savings potential
+    -Liability protection
+    -Administrative requirements
+    -Suitability based on business type or income level
 
-2. Financial Match Game (memory-style)
-A fun, educational mini-game designed to reinforce key financial tips.
-Users will match cards that highlight:
+    This tool will assist small business owners in choosing the right entity type to maximize financial efficiency and minimize tax burden.
 
-  - Best practices for bookkeeping
-  - Smart tax strategies
+3. Financial Match Game (memory-style)
+    A fun, educational mini-game designed to reinforce key financial tips.
+    
+    Users will match cards that highlight:
+    - Best practices for bookkeeping
+    - Smart tax strategies
 
 Business structure insights (LLC, S-Corp, Sole Prop, etc.)
 The game will deliver practical, easy-to-understand content that helps users make smarter business and tax decisions, all while keeping the learning experience enjoyable.
@@ -632,24 +630,23 @@ The game will deliver practical, easy-to-understand content that helps users mak
     - To able to get responsive screenshoots from different devices.
 13. [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/?fcolor=CDA37C&bcolor=FFFF00)
     - Webaim Contrast Checker.
-14. [Coolorshttps://coolors.co/)
+14. [Coolors](Coolorshttps://coolors.co/)
     - Coolors App is a pallet generator & pallet visualizer.
-
 15. Lighthouse by Google-Inspect
     - Generate a Lighthouse report by Google: Performance, Accesibility, Best Practices, and SEO.
-16. W3C MArkup Validator
-    -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-17. W3C CSS Validator
-    -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-18. Sqoosh App to resize or compress image files
-    -   [Sqoosh app](https://squoosh.app/)
-19. Youtube
-    -   [Youtube](https://www.youtube.com/)
-20. Pexels
-    -   [Pexels]( https://www.pexels.com/)
-    - Coolors App is a pallet generator & pallet visualizer.
-21. W3 Schools
-    -   [W3 Schools]( https://www.w3schools.com/)
+16. [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - W3C MArkup Validator
+17. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- W3C CSS Validator
+18. [Sqoosh app](https://squoosh.app/)
+- Sqoosh App to resize or compress image files
+
+19. [Youtube](https://www.youtube.com/)
+- YouTube
+20. [Pexels]( https://www.pexels.com/)
+- Pexels
+21. [W3 Schools]( https://www.w3schools.com/)
+- W3 Schools
 
 ---
 
@@ -693,7 +690,7 @@ These tools ensured that all pages were free of syntax errors and followed best 
 
   Based on the quiz answers, users receive tailored feedback and helpful suggestions.
 
-      ![Home Page](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
+      ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
 
 
   ### Page After Clicking "Check This!"
@@ -701,7 +698,7 @@ These tools ensured that all pages were free of syntax errors and followed best 
   #### Informational Page: [`checkThis.html`](checkThis.html)
 
   This page appears after clicking the **"Check This!"** button. It presents engaging facts or financial tips in a visually dynamic layout.
-  ![Screenshot of checkThis.html](assets/images/readme/W3C-Markup/W3C-checkThis.html.png)
+      ![checkThis.html](assets/images/readme/W3C-Markup/W3C-checkThis.html.png)
 
   ### Page After Clicking "Play & Save!"
 
@@ -715,11 +712,11 @@ These tools ensured that all pages were free of syntax errors and followed best 
 ### CSS
 All pages have passed the official W3C CSS Validator with no errors.
 #### Format-1040
-#### Informational Page: [`format1040.css `]( format1040.css)
+#### Informational Page: [`format1040.css`](format1040.css)
     ![CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
 
 #### Quiz
-#### Informational Page: [`quiz.css `]( quiz.css)
+#### Informational Page: [`quiz.css`](quiz.css)
     ![CSS](assets/images/readme/W3-CSS/W3C-quiz.css.png)
 
 
@@ -727,11 +724,11 @@ All pages have passed the official W3C CSS Validator with no errors.
 All pages have passed the official JSHint with no errors.
 
 #### Format-1040
-#### Informational Page: [`format1040.js `]( format1040.js)
+#### Informational Page: [`format1040.js `](format1040.js)
   ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
 
 #### Quiz
-#### Informational Page: [`quiz.js `]( quiz.js)
+#### Informational Page: [`quiz.js `](quiz.js)
   ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
 
 ### ✅ Accessibility Testing
@@ -744,7 +741,7 @@ All pages have passed the official JSHint with no errors.
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-1).png)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-2).png)
 
-  #### Feedback Page: [`quiz.html`](quiz.html)
+  #### Feedback Page: [`feedback.html`](quiz.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-feedback.html.png)
 
 
@@ -854,36 +851,38 @@ You can now access your project live on the web using the provided GitHub Pages 
 
 ### 🍴 Forking the GitHub Repository
 
-Forking a GitHub repository allows you to create a personal copy of the original project in your own GitHub account. This enables you to freely explore, modify, or contribute without affecting the original codebase. Follow these steps:
+  Forking a GitHub repository allows you to create a personal copy of the original project in your own GitHub account. This enables you to freely explore, modify, or contribute without affecting the original codebase. Follow these steps:
 
-1. Log in to GitHub and open the target [GitHub Repository](https://github.com/).
-2. At the top-right corner of the repository page (just above the "Settings" tab), click the **"Fork"** button.
-3. GitHub will create a copy of the repository under your own account.
-4. You can now freely edit, update, and experiment within your forked version without impacting the original repository.
+  1. Log in to GitHub and open the target [GitHub Repository](https://github.com/).
+  2. At the top-right corner of the repository page (just above the "Settings" tab), click the **"Fork"** button.
+  3. GitHub will create a copy of the repository under your own account.
+  4. You can now freely edit, update, and experiment within your forked version without impacting the original repository.
 
 ### 📂 Making a Local Clone
 
-Follow these steps to create a local copy of the repository on your machine:
+  Follow these steps to create a local copy of the repository on your machine:
+   
+  1. Log in to GitHub and navigate to the target [GitHub Repository](https://github.com/).
+  2. Below the repository name, click the **"Code"** button (formerly "Clone or download").
+  3. Under **"Clone with HTTPS"**, copy the provided URL.
+  4. Open **Git Bash** (or your terminal of choice).
+  5. Change the current working directory to the location where you want the cloned project to reside.
+  6. Type the following command and paste the URL you copied in Step 3:
+  
+    git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
-1. Log in to GitHub and navigate to the target [GitHub Repository](https://github.com/).
-2. Below the repository name, click the **"Code"** button (formerly "Clone or download").
-3. Under **"Clone with HTTPS"**, copy the provided URL.
-4. Open **Git Bash** (or your terminal of choice).
-5. Change the current working directory to the location where you want the cloned project to reside.
-6. Type the following command and paste the URL you copied in Step 3:
+  7. Press Enter. Git will create a full local clone of the repository:
 
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-    ```
-7. Press Enter. Git will create a full local clone of the repository:
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-Cloning into 'project-folder'or `CI-Clone`...
-remote: Counting objects: 10, done.
-remote: Compressing objects: 100% (8/8), done.
-remote: Total 10 (delta 1), reused 10 (delta 1)
-Unpacking objects: 100% (10/10), done.
-```
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+
+  Cloning into 'project-folder'or `CI-Clone`...
+  remote: Counting objects: 10, done.
+  remote: Compressing objects: 100% (8/8), done.
+  remote: Total 10 (delta 1), reused 10 (delta 1)
+  Unpacking objects: 100% (10/10), done.
+  
+
 📎 For additional guidance and visual steps, visit GitHub’s official help guide:
 Cloning a repository – GitHub Docs
 
