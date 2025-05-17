@@ -673,25 +673,21 @@ These tools ensured that all pages were free of syntax errors and followed best 
 ### Main Page and Quiz Flow
 
   #### Home Page: [`index.html`](index.html)
-
   This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
       ![Home Page](assets/images/readme/W3C-Markup/W3C-index.html%20(quickquiz).png)
 
-
   #### Quiz Pages: [`quiz.html`](quiz.html)
-
   After clicking the **"Quiz"** button, users are guided through interactive questions to assess their bookkeeping needs.
 
-   - **Quiz**
+   **Quiz**
       ![Quiz Page 1](assets/images/readme/W3C-Markup/W3C-quiz.html.png)
+      ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
 
 
   #### Feedback Page: [`feedback.html`](feedback.html)
 
   Based on the quiz answers, users receive tailored feedback and helpful suggestions.
-
       ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
-
 
   ### Page After Clicking "Check This!"
 
@@ -705,31 +701,31 @@ These tools ensured that all pages were free of syntax errors and followed best 
   #### Prize Game Page: [`prize.html`](prize.html)
 
   This interactive page is loaded after users click the **"Play & Save!"** button. It reveals a fun and engaging prize game that may offer discounts or perks.
-  ![Screenshot of prize.html](assets/images/readme/W3C-Markup/W3C-prize.html.png)
+  ![prize.html](assets/images/readme/W3C-Markup/W3C-prize.html.png)
 
 
 
 ### CSS
 All pages have passed the official W3C CSS Validator with no errors.
-#### Format-1040
-#### Informational Page: [`format1040.css`](format1040.css)
-    ![CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
+  #### Format-1040
+  #### Informational Page: [`format1040.css`](format1040.css)
+      ![CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
 
-#### Quiz
-#### Informational Page: [`quiz.css`](quiz.css)
-    ![CSS](assets/images/readme/W3-CSS/W3C-quiz.css.png)
+  #### Quiz
+  #### Informational Page: [`quiz.css`](quiz.css)
+      ![CSS](assets/images/readme/W3-CSS/W3C-quiz.css.png)
 
 
 ### JS
 All pages have passed the official JSHint with no errors.
 
-#### Format-1040
-#### Informational Page: [`format1040.js `](format1040.js)
-  ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
+  #### Format-1040
+  #### Informational Page: [`format1040.js `](format1040.js)
+    ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
 
-#### Quiz
-#### Informational Page: [`quiz.js `](quiz.js)
-  ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
+  #### Quiz
+  #### Informational Page: [`quiz.js `](quiz.js)
+    ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
 
 ### ✅ Accessibility Testing
 - Lighthouse DevTools by Google
