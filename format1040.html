@@ -83,7 +83,7 @@
                                 </div>
                                 <div>
                                     <label for="lnamesu" class="form-label">Suffix</label>
-                                    <select id="lnamesu" class="form-select form-control" name="lNameSu">
+                                    <select id="lnamesu" class="form-select form-control" name="lNameSu" aria-label="Suffix">
                                         <option value="" selected>Select</option>
                                         <option>Miss</option>
                                         <option>Mrs.</option>
@@ -151,7 +151,7 @@
 
                                     <div>
                                         <label for="slnamesu" class="form-label">Suffix</label>
-                                        <select id="slnamesu" class="form-select form-control" name="slNameSu">
+                                        <select id="slnamesu" class="form-select form-control" name="slNameSu" aria-label="Suffix">
                                             <option value="" selected>Select</option>
                                             <option>Miss</option>
                                             <option>Mrs.</option>
@@ -208,7 +208,7 @@
                                 <div>
                                     <label for="state" class="form-label">State<span>
                                             required!</span></label>
-                                    <select id="state" class="form-select form-control" name="state" required>
+                                    <select id="state" class="form-select form-control" name="state" aria-label="State" required>
                                         <option value="" selected>Select</option>
                                         <option>AL</option>
                                         <option>AK</option>
@@ -278,7 +278,7 @@
 
                                     <label for="callh" class="form-label">Type<span>
                                             required!</span></label>
-                                    <select id="callh" class="form-select form-control" name="callh" required>
+                                    <select id="callh" class="form-select form-control" name="callh" aria-label="Type" required>
                                         <option value="" selected>Select</option>
                                         <option>Morning</option>
                                         <option>Afernoon</option>
@@ -291,7 +291,7 @@
                                     <p id="sphoneFbk"></p>
 
                                     <label for="scallh" class="form-label">Type</label>
-                                    <select id="scallh" class="form-select form-control" name="scallh">
+                                    <select id="scallh" class="form-select form-control" name="scallh" aria-label="Type">
                                         <option value="" selected>Select</option>
                                         <option>Morning</option>
                                         <option>Afernoon</option>
@@ -1073,117 +1073,75 @@
                                         <div class="table-responsive">
                                             <table class="table table-hover table-bordered">
                                                 <thead class="table-light">
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>First Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>Date of bird</th>
-                                                        <th>Age</th>
-                                                        <th>SSN</th>
-                                                        <th>Relation to you</th>
-                                                    </tr>
+                                                  <tr>
+                                                    <th>#</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Age</th>
+                                                    <th>SSN</th>
+                                                    <th>Relation to you</th>
+                                                  </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td><input class="form-control" id="exempDpfname"
-                                                                name="exempDpfname" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDplname"
-                                                                name="exempDplname" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpdob"
-                                                                name="exempDpdob" type="date"></td>
-                                                        <td><input class="form-control" id="exempDpage"
-                                                                name="exempDpage" type="number">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpSsn"
-                                                                name="exempDpSsn" maxlength="11" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpRelation"
-                                                                name="exempDpRelation" type="text">
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td><input class="form-control" id="exempDpfname2"
-                                                                name="exempDpfname2" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDplname2"
-                                                                name="exempDplname2" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpdob2"
-                                                                name="exempDpdob2" type="date"></td>
-                                                        <td><input class="form-control" id="exempDpage2"
-                                                                name="exempDpage2" type="number">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpSsn2"
-                                                                name="exempDpSsn2" maxlength="11" type="text">
-                                                        </td>
-                                                        <td><input class="form-control" id="exempDpRelation2"
-                                                                name="exempDpRelation2" type="text">
-                                                        </td>
-
-                                                    </tr>
+                                                  <tr>
+                                                    <td>1</td>
+                                                    <td><input class="form-control" id="exempDpfname" name="exempDpfname" type="text" aria-label="First Name"></td>
+                                                    <td><input class="form-control" id="exempDplname" name="exempDplname" type="text" aria-label="Last Name"></td>
+                                                    <td><input class="form-control" id="exempDpdob" name="exempDpdob" type="date" aria-label="Date of Birth"></td>
+                                                    <td><input class="form-control" id="exempDpage" name="exempDpage" type="number" aria-label="Age"></td>
+                                                    <td><input class="form-control" id="exempDpSsn" name="exempDpSsn" maxlength="11" type="text" aria-label="SSN"></td>
+                                                    <td><input class="form-control" id="exempDpRelation" name="exempDpRelation" type="text" aria-label="Relation to you"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>2</td>
+                                                    <td><input class="form-control" id="exempDpfname2" name="exempDpfname2" type="text" aria-label="First Name"></td>
+                                                    <td><input class="form-control" id="exempDplname2" name="exempDplname2" type="text" aria-label="Last Name"></td>
+                                                    <td><input class="form-control" id="exempDpdob2" name="exempDpdob2" type="date" aria-label="Date of Birth"></td>
+                                                    <td><input class="form-control" id="exempDpage2" name="exempDpage2" type="number" aria-label="Age"></td>
+                                                    <td><input class="form-control" id="exempDpSsn2" name="exempDpSsn2" maxlength="11" type="text" aria-label="SSN"></td>
+                                                    <td><input class="form-control" id="exempDpRelation2" name="exempDpRelation2" type="text" aria-label="Relation to you"></td>
+                                                  </tr>
                                                 </tbody>
-                                            </table>
-                                            <table class="table table-hover table-bordered">
+                                              </table>
+                                              
+                                              <table class="table table-hover table-bordered">
                                                 <thead class="table-light">
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Mos in home</th>
-                                                        <th>Code</th>
-                                                        <th>DC</th>
-                                                        <th>EIC</th>
-                                                        <th>CTC</th>
-                                                        <th>ODC</th>
-                                                        <th>Identity theft PIN</th>
-                                                    </tr>
+                                                  <tr>
+                                                    <th>#</th>
+                                                    <th>Mos in home</th>
+                                                    <th>Code</th>
+                                                    <th>DC</th>
+                                                    <th>EIC</th>
+                                                    <th>CTC</th>
+                                                    <th>ODC</th>
+                                                    <th>Identity theft PIN</th>
+                                                  </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <th>1</th>
-                                                        <td><input class="form-control" id="dmih" name="dmih"
-                                                                type="number">
-                                                        </td>
-                                                        <td><input class="form-control" id="dcode" name="dcode"
-                                                                type="number">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-control" id="ditpin" name="ditpin"
-                                                                type="number">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>2</th>
-                                                        <td><input class="form-control" id="dmih2" name="dmih2"
-                                                                type="number">
-                                                        </td>
-                                                        <td><input class="form-control" id="dcode2" name="dcode2"
-                                                                type="number">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-check-input" type="checkbox" value="">
-                                                        </td>
-                                                        <td><input class="form-control" id="ditpin2" name="ditpin2"
-                                                                type="number">
-                                                        </td>
-                                                    </tr>
+                                                  <tr>
+                                                    <th>1</th>
+                                                    <td><input class="form-control" id="dmih" name="dmih" type="number" aria-label="Months in home"></td>
+                                                    <td><input class="form-control" id="dcode" name="dcode" type="number" aria-label="Code"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="DC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="EIC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="CTC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="ODC"></td>
+                                                    <td><input class="form-control" id="ditpin" name="ditpin" type="number" aria-label="Identity theft PIN"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th>2</th>
+                                                    <td><input class="form-control" id="dmih2" name="dmih2" type="number" aria-label="Months in home"></td>
+                                                    <td><input class="form-control" id="dcode2" name="dcode2" type="number" aria-label="Code"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="DC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="EIC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="CTC"></td>
+                                                    <td><input class="form-check-input" type="checkbox" value="" aria-label="ODC"></td>
+                                                    <td><input class="form-control" id="ditpin2" name="ditpin2" type="number" aria-label="Identity theft PIN"></td>
+                                                  </tr>
                                                 </tbody>
-                                            </table>
+                                              </table>
+                                              
                                         </div>
                                     </div>
 
@@ -1191,7 +1149,7 @@
                                     <fieldset>
                                         <div id="stol" class="box container-fluid">
                                             <label for="dsol" class="form-label">State of living</label>
-                                            <select id="dsol" class="form-select form-control" name="dsol">
+                                            <select id="dsol" class="form-select form-control" name="dsol" aria-label="State of living">
                                                 <option value="" selected>Select</option>
                                                 <option>AL</option>
                                                 <option>AK</option>
@@ -1252,7 +1210,7 @@
                                             Which</p>
                                         <div id="dmsol" class="box container-fluid">
                                             <label for="dm1sol" class="form-label"></label>
-                                            <select id="dm1sol" class="form-select form-control" name="dm1sol">
+                                            <select id="dm1sol" class="form-select form-control" name="dm1sol" aria-label="dmsol">
                                                 <option value="" selected>Select</option>
                                                 <option>AL</option>
                                                 <option>AK</option>
