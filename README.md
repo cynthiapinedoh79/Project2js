@@ -67,7 +67,7 @@ All pages were designed with **Responsive Design** to provide a consistent exper
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Form-1040.png)
+![Responsive devices -home](assets/images/readme/amIR/AIR-Format-1040.png)
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-CheckThis!.png)
 
@@ -166,9 +166,9 @@ From the user’s perspective, I’ve built this site with the following priorit
   A blurred photo of financial charts and a blue pen (soft blue, red, beige tones)
 
   - Text: Dark purple for "Needs Bookkeeping?"
-  - Buttons: Quick Quiz, Check this! and Get A Prize!
+  - Buttons: Quick Quiz, Check this! and Play & Save!
     - Background Color: Purple.
-    - Hover: DarkRed.
+    - Hover: Dark Red.
   - Color Mood: Professional, calm, and trustworthy (purple conveys reliability and creativity).
 
   ### 2. Quiz: quiz.html
@@ -193,13 +193,13 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Background: A real-life business photo (blue jeans, papers) — neutral tones with blue and tan
   - Header: Dark gray/black
   - Card background: Soft white with subtle shadow
-  - Call-to-action buttons: IRS Form-1040, Consultation.
+  - Call-to-action buttons: IRS Format-1040, Consultation.
     - Background Color: Deep purple
     - Hover: Dark Red.
 
   - Overall Color Mood: Trustworthy and clean with modern neutrality, purple buttons continue your branding identity.
 
-  ### 4. IRS Form-1040 Page: form1040.html
+  ### 4. IRS Format-1040 Page: format1040.html
   - Background: Solid white background
   - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
   - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
@@ -237,47 +237,51 @@ From the user’s perspective, I’ve built this site with the following priorit
 ### 📌 Strategy
 Our objective is to create a website that is both professional and functional. Our focus is on design that is both intuitive and creative.
 
-![Strategy](assets/images/readme/strategy.webp)
+![Strategy](assets/images/readme/fivePlanes/strategy.png)
 
 ### 📐 Scope
 The site is designed for two main user groups:
 1.	Visitors, who can enjoy interactive games, helpful tips, new information, and practical advice.
 2.	Potential new customers, who can explore special offers like a bookkeeping bonus award, contact us easily, or quickly access the Form 1040 submission link.
 
-![Scope pg1](assets/images/readme/scope1.webp)
+![Scope pg1](assets/images/readme/fivePlanes/scope1.png)
 
-![Scope pg2](assets/images/readme/scope2.webp)
+![Scope pg2](assets/images/readme/fivePlanes/scope2.png)
 
 ### 🏗️ Structure
 The website is designed with HTML5, CSS3 and JS.
 
 **Website Pages:**
-1. **_Needs Bookkepping?:_** Main page with three buttons (Quiz, Check This! and Get a Prize!)
+1. **_Needs Bookkepping?:_** Main page with three buttons (Quiz, Check This! and Play & Save!)
 2. **_Quiz:_** A brief quiz with a few questions that are scored to assess user needs.
 3. **_Feedback:_** A feedback message is shown if your answers indicate that you may need our help or services. It includes a link to fill out Form 1040 and a direct link to contact us through our website.
 4. **_CheckThis:_** Displays Bookkeeping Fact Cards with useful information.
 6. **_Prize:_** Try Your Luck! Win a special prize or bookkeeping bonus—just reach out to claim your reward!
 
-![Structure](assets/images/readme/structure.webp)
+![Structure](assets/images/readme/fivePlanes/structure.png)
 
 ### 🦴 Skeleton
 The website is designed to be clear and simple. And the site has a simple tree structure with hierarchical flows from top to bottom.
 
 **Wireframe**
 The wireframe is designed using Balsamiq software 
-[Balsamic](https://balsamiq.cloud/s45whoh/p56wz1i/r2278)
+[Balsamic](https://balsamiq.cloud/ss26tqg/p4441iq/rD01A)
 
 #### Home
-![Home](assets/images/readme/wh.png)
+![Home](assets/images/readme/Bals/Bals-Home.png)
 
-#### Variety
-![Variety](assets/images/readme/wv.png)
+#### Quiz
+![Quiz Pg1](assets/images/readme/Bals/Bals-Quiz1.png)
+![Quiz Pg2](assets/images/readme/Bals/Bals-Quiz2.png)
 
-#### Recipes
-![Recipes](assets/images/readme/wr.png)
+#### Format-1040
+![Format-1040](assets/images/readme/Bals/Bals-Format1040.png)
 
-#### Booking
-![Booking](assets/images/readme/wb.png)
+#### Check This!
+![Booking](assets/images/readme/Bals/Bals-CheckThis!.png)
+
+#### Play & Save!
+![Booking](assets/images/readme/Bals/Bals-Play&Save!.png)
 
 ### 🎨 Surface
 To create a pleasing and understandable view, I opt for natural colors such as earth, green, and a range of tones that complement and contrast each other.
@@ -318,7 +322,7 @@ _Main color palette_
 
     - Check This! – Possibly redirects to a page with useful bookkeeping facts or tips.
 
-    - Get A Prize! – An engaging gamified option to win discounts or special offers.
+    - Play & Save! – An engaging gamified option to win discounts or special offers.
 
   - Visual Styling: High contrast between button text (white) and button background (dark purple).
 
@@ -372,7 +376,7 @@ _Main color palette_
     - Personalized tax advice
 
   - Call-to-Action Buttons:
-    - IRS Form-1040 – Directs the user to begin completing the official tax form with us.
+    - IRS Format-1040 – Directs the user to begin completing the official tax form with us.
     - Request a Free Consultation offering an easy way to reach out and get help.
 
   - Design Notes:
@@ -386,7 +390,7 @@ _Main color palette_
   ### 4. Format 1040: format1040.html
 
   *Page Header*
-  - Title: Bold and clear – “IRS FORM-1040 2024”
+  - Title: Bold and clear – “IRS Format-1040 2024”
 
   - Spanish Forms Print Options:
     - On screen and printed
@@ -430,7 +434,7 @@ _Main color palette_
   ### Format 1040 - Empty
 
   ![Format 1040_page](assets/images/readme/fF1040/format1040.png)
-  ![Format 1040_page](assets/images/readme/fF1040/form1040-2.png)
+  ![Format 1040_page](assets/images/readme/fF1040/format1040-2.png)
   ![Format 1040_page](assets/images/readme/fF1040/format1040-3.png)
   ![Format 1040_page](assets/images/readme/fF1040/format1040-4.png)
   ![Format 1040_page](assets/images/readme/fF1040/format1040-5.png)
@@ -739,9 +743,9 @@ These tools ensured that all pages were free of syntax errors and followed best 
 
 ---
 
-  ##### Formato-1040: [`form1040.html`](form1040.html)
+  ##### Formato-1040: [`format1040.html`](format1040.html)
   After clicking the **"Format 1040"** button, users are guided through interactive formulary.
-  ![Formato 1040 Page](assets/images/readme/W3C-Markup/W3C-form1040.html.png)
+  ![Formato 1040 Page](assets/images/readme/W3C-Markup/W3C-format1040.html.png)
 
 ---
 
@@ -781,7 +785,7 @@ All pages have passed the official JSHint with no errors.
 
   #### Format-1040
   #### Informational Page: [`format1040.js`](format1040.js)
-  ![JS](assets/images/readme/JSHint/JSH-form1040.js.png)
+  ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
 
 ---
 
@@ -810,7 +814,7 @@ All pages have passed the official JSHint with no errors.
    
   ---
 
-  #### Format 1040 Page: [`form1040.html`](form.html)
+  #### Format 1040 Page: [`format1040.html`](form.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-format1040.png)
 
   ---
