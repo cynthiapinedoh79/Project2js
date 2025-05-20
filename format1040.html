@@ -834,11 +834,12 @@
                                     <p>4</p>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="headOfHousehold"
-                                            id="headOfHousehold">
+                                            id="headOfHousehold" value="headOfH">
                                         <label class="form-check-label" for="headOfHousehold">Head of household (with
                                             qualifying
                                             person).
                                         </label>
+                                        <p id="headOfHouseholdFbk"></p>
                                     </div>
                                 </div>
 
@@ -850,14 +851,15 @@
                                             child's name and
                                             social security number.</p>
                                         <div class="form-check">
-                                            <label for="childName" class="form-label">Child's Name</label>
-                                            <input class="form-control" id="childName" name="childName" type="text">
+                                            <label for="hOHchildName" class="form-label">Child's Name</label>
+                                            <input class="form-control" id="hOHchildName" name="hOHchildName" type="text">
+                                            <p id="hOHchildNameFbk"></p>
                                         </div>
                                         <div class="form-check">
-                                            <label for="childSsn" class="form-label">Child's SSN</label>
-                                            <input class="form-control" id="childSsn" name="childSsn" maxlength="11"
+                                            <label for="hOHchildSsn" class="form-label">Child's SSN</label>
+                                            <input class="form-control" id="hOHchildSsn" name="hOHchildSsn" maxlength="11"
                                                 type="text" placeholder="Child's SSN">
-                                            <p id="childSsnFbk"></p>
+                                            <p id="hOHchildSsnFbk"></p>
                                         </div>
                                         <p>A self-supportive child who lives with you IS NOT a qualifying person</p>
                                     </div>
@@ -887,6 +889,7 @@
                                             <label for="ysd" class="form-label">Year spouse died (2022 or 2023
                                                 only)</label>
                                             <input class="form-control" id="ysd" name="ysd" type="date">
+                                            <p id="ysdFbk"></p>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -899,11 +902,13 @@
                                         <div class="form-check">
                                             <label for="sdchnd-name" class="form-label">Child's Name</label>
                                             <input class="form-control" id="sdchnd-name" name="sdchnd-name" type="text">
+                                            <p id="sdchndNameFbk"></p>
                                         </div>
                                         <div class="form-check">
                                             <label for="sdchnd-ssn" class="form-label">Child's SSN</label>
                                             <input class="form-control" id="sdchnd-ssn" name="sdchnd-ssn" maxlength="11"
                                                 type="text" placeholder="Child's SSN">
+                                                <p id="sdchndSsnFbk"></p>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -954,13 +959,13 @@
 
 
                                     <p>b</p>
-                                    <label class="form-check-label" for="exempSp"><input class="form-check-input"
-                                            type="checkbox" value="" name="exempSp" id="exempSp">Spouse</label>
+                                    <label class="form-check-label" for="exempSpouse"><input class="form-check-input"
+                                            type="checkbox" value="" name="exempSpouse" id="exempSpouse">Spouse</label>
 
 
 
-                                    <label class="form-check-label" for="nbxc">Number of boxes checked on 6a and
-                                        6b<input class="form-control" id="nbxc" name="nbxc" type="number"
+                                    <label class="form-check-label" for="exempTotal">Number of boxes checked on 6a and
+                                        6b<input class="form-control" id="exempTotal" name="exempTotal" type="number"
                                             readonly></label>
 
                                 </div>
@@ -1019,18 +1024,21 @@
                                                     <label for="s4sfname" class="form-label">First Name</label>
                                                     <input class="form-control" id="s4sfname" name="s4sfname"
                                                         type="text">
+                                                        <p id="s4sfnameFbk"></p>
                                                 </div>
 
                                                 <div class="form-check">
                                                     <label for="s4slname" class="form-label">Last Name</label>
                                                     <input class="form-control" id="s4slname" name="s4slname"
                                                         type="text">
+                                                        <p id="s4slnameFbk"></p>
                                                 </div>
 
                                                 <div class="form-check">
                                                     <label for="s4sssn" class="form-label">SSN</label>
                                                     <input class="form-control" id="s4sssn" name="s4sssn" maxlength="11"
                                                         type="text">
+                                                        <p id="s4sssnFbk"></p>
                                                 </div>
 
                                             </div>

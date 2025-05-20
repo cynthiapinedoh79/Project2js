@@ -1,7 +1,10 @@
 /* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function () {
 
-  // --- Quiz Logic ---
+  // ----------------------------------------------------------------------------------------
+  // Quiz Logic
+  // -----------------------------------------------------------------------------------------
+
   const page1 = document.getElementById("page-1");
   const page2 = document.getElementById("page-2");
   const nextBtn = document.getElementById("next-btn");
@@ -57,7 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Fact Logic ---
+  // -----------------------------------------------------------------------------------------
+  // Fact Logic (Check This!)
+  // -----------------------------------------------------------------------------------------
+
   let factsIndex = 0;
   const factsContainer = document.getElementById("facts-container");
   const btnsContainer = document.getElementById("buttons-container");
@@ -117,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
       factsContainer.appendChild(newFactElement);
       factsIndex++;
 
+      // Update feedback below the button
+      factsFbk.innerText = (factsIndex === facts.length)
+        ? "See Facts!"
+        : "Click to add another fact";
+    
+
       if (factsIndex === facts.length) {
         btnsContainer.removeChild(newFactBtn);
       }
@@ -133,7 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
     newFactBtn.addEventListener("click", addFact);
     clearBtn.addEventListener("click", clearAllFacts);
   }
-// --- Prize Logic ---
+  // -----------------------------------------------------------------------------------------
+  // Prize Logic (Play & Save!)
+  // -----------------------------------------------------------------------------------------
 
 const revealBtn = document.getElementById("revealBtn");
   const backBtn = document.getElementById("backBtn");

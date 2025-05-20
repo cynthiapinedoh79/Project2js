@@ -399,25 +399,25 @@ _Main color palette_
   *Form Sections and Features*
   - Main Information Sheet
 
-  - Cleanly organized into collapsible sections
+  - Cleanly organized into sections
 
   - Required fields marked with red asterisks and inline validation (e.g., “SSN must be 9 digits”)
+  
+  - Each SSN input has a unique name and associated properties for storage.
 
   - Real-time feedback with color-coded borders (red = error, green = valid)
 
-  - Joint Information
+  - Joint Information and Forein Address are collapsible sections
 
   - Clearly labeled call-to-action button: "Click here if filing a JOINT return..."
 
-  - Mailing Address
-
-  - Zip and phone inputs validated with live success messages
+  - Mailing Address with zip code input validated
 
   - Dropdown menus for state selection
 
-  - Phone Number and Type
+  - Phone number input validated with live success messages
 
-  - Validated with specific format (e.g., (909) 372-5197
+  - Validated with specific format (e.g., (909) 372-5197)
 
   - Includes time-of-day type preference
 
@@ -504,8 +504,8 @@ _Main color palette_
 
   ### Number of boxes auto-filled based on answers
   ![Format 1040_page](assets/images/readme/fF1040/fex.png)
+  ![Format 1040_page](assets/images/readme/fF1040/fex1.png)
   ![Format 1040_page](assets/images/readme/fF1040/fex2.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fex3.png)
   Submit bottom hover with nice color.
 
   ![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
@@ -559,7 +559,9 @@ _Main color palette_
 
   - Background includes a money-themed image for subtle visual relevance.
 
-  ![checkThis!_page](assets/images/readme/Webpgs/checkThis.png)
+  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!.png)
+  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!1.png)
+  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!2.png)
 
 ---
 
