@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const radios = page1.querySelectorAll("input[type='radio']");
       const questions = [...new Set([...radios].map(r => r.name))];
       const answered = questions.every(name => quizForm.querySelector(`input[name="${name}"]:checked`));
-      
+
       const alertCard = document.getElementById("alert-card");
-      
+
       if (!answered) {
         alertCard.classList.add("show");
         setTimeout(() => alertCard.classList.remove("show"), 4000);
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Hide alert if previously shown
-    alertCard.classList.remove("show");
+      alertCard.classList.remove("show");
 
       page1.classList.remove("active");
       page2.classList.add("active");
@@ -71,8 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearBtn = document.querySelector(".btn-purple");
 
   if (factsContainer && btnsContainer && newFactBtn && clearBtn) {
-    const facts = [
-      {
+    const facts = [{
         title: "What is Bookkeping?",
         content: "It is the process of recording financial transactions and keeping track of a company's financial health.",
         imageURL: "assets/images/bookk.png",
@@ -124,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
       factsIndex++;
 
       // Update feedback below the button
-      factsFbk.innerText = (factsIndex === facts.length)
-        ? "See Facts!"
-        : "Click to add another fact";
-    
+      factsFbk.innerText = (factsIndex === facts.length) ?
+        "See Facts!" :
+        "Click to add another fact";
+
 
       if (factsIndex === facts.length) {
         btnsContainer.removeChild(newFactBtn);
@@ -149,21 +148,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prize Logic (Play & Save!)
   // -----------------------------------------------------------------------------------------
 
-const revealBtn = document.getElementById("revealBtn");
+  const revealBtn = document.getElementById("revealBtn");
   const backBtn = document.getElementById("backBtn");
   const cards = document.querySelectorAll(".card");
   const cardContainer = document.querySelector(".card-container");
-  
-    if (!revealBtn || !backBtn || !cardContainer) {
-      console.warn("Missing elements:", revealBtn, backBtn, cardContainer);
-      return;
-    }
-  
-    backBtn.addEventListener("click", () => {
-      window.history.back(-2);
-    });
-  
-  
+
+  if (!revealBtn || !backBtn || !cardContainer) {
+    console.warn("Missing elements:", revealBtn, backBtn, cardContainer);
+    return;
+  }
+
+  backBtn.addEventListener("click", () => {
+    window.history.back(-2);
+  });
+
+
   revealBtn.addEventListener("click", () => {
     cardContainer.classList.remove("hidden");
     revealBtn.style.display = "none";
@@ -188,7 +187,7 @@ const revealBtn = document.getElementById("revealBtn");
     cards.forEach(card => card.classList.remove("flipped"));
   });
 
-// ENDING--- Prize Logic ---
+  // ENDING--- Prize Logic ---
 
 
 });
