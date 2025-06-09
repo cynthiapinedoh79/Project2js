@@ -364,6 +364,11 @@ body.checkThis-wrapper {
   color: rgb(254, 243, 243);
 }
 
+.checkThis-wrapper .btn-darkRed {
+  background-color: #9E0059;
+  color: rgb(254, 243, 243);
+}
+
 .checkThis-wrapper .btn-purple {
   background-color: #33008a;
   color: rgb(243, 238, 245);
@@ -372,6 +377,11 @@ body.checkThis-wrapper {
 .checkThis-wrapper .btn-darkRed:hover {
   background-color: #ff5400;
   color: rgba(254, 249, 243, 0.978);
+}
+
+.checkThis-wrapper .btn-purple:hover {
+  background-color: #217d00;
+  color: rgb(239, 245, 238);
 }
 
 .checkThis-wrapper .btn-purple:hover {

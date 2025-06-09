@@ -53,7 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
           window.location.href = "./feedback.html";
         }, 3000);
       } else {
-        resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.</div>`;
+        resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.<br>Back to Home...</div>`;
+        setTimeout(() => {
+          window.location.href = "./index.html";
+        }, 3000);
       }
 
       resultDiv.classList.add("alert", "alert-info", "mt-3");
@@ -68,9 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const factsContainer = document.getElementById("facts-container");
   const btnsContainer = document.getElementById("buttons-container");
   const newFactBtn = document.querySelector(".btn-darkRed");
+  const backCTBtn = document.getElementById("backCTBtn");
+
   const clearBtn = document.querySelector(".btn-purple");
 
-  if (factsContainer && btnsContainer && newFactBtn && clearBtn) {
+  if (factsContainer && btnsContainer && newFactBtn && clearBtn && backCTBtn) {
     const facts = [{
         title: "What is Bookkeping?",
         content: "It is the process of recording financial transactions and keeping track of a company's financial health.",
@@ -114,36 +119,48 @@ document.addEventListener("DOMContentLoaded", function () {
       const newFactElement = document.createElement("div");
       newFactElement.classList.add("fact-card");
       newFactElement.innerHTML = `
-          <h2>${fact.title}</h2>
-          <p>${fact.content}</p>
-          <img src="${fact.imageURL}" alt="${fact.imageAlt}">
+        <h2>${fact.title}</h2>
+        <p>${fact.content}</p>
+        <img src="${fact.imageURL}" alt="${fact.imageAlt}">
       `;
 
       factsContainer.appendChild(newFactElement);
       factsIndex++;
 
-      // Update feedback below the button
-      factsFbk.innerText = (factsIndex === facts.length) ?
-        "See Facts!" :
-        "Click to add another fact";
-
+      factsFbk.innerText = (factsIndex === facts.length)
+        ? "See Facts!"
+        : "Click to add another fact";
 
       if (factsIndex === facts.length) {
         btnsContainer.removeChild(newFactBtn);
+        if (backCTBtn) backCTBtn.style.display = "inline-block";
       }
     }
 
     function clearAllFacts() {
       factsContainer.innerHTML = "";
       if (!btnsContainer.contains(newFactBtn)) {
-        btnsContainer.appendChild(newFactBtn);
+        btnsContainer.appendChild(newFactBtn); // ✅ safer
       }
       factsIndex = 0;
+      factsFbk.innerText = "Click to add another fact";
+      if (backCTBtn) backCTBtn.style.display = "none";
     }
 
     newFactBtn.addEventListener("click", addFact);
     clearBtn.addEventListener("click", clearAllFacts);
+
+    if (backCTBtn) {
+      backCTBtn.addEventListener("click", () => {
+        window.location.href = "./index.html";
+      });
+    }
   }
+    
+
+
+
+
   // -----------------------------------------------------------------------------------------
   // Prize Logic (Play & Save!)
   // -----------------------------------------------------------------------------------------
