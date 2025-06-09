@@ -1,0 +1,46 @@
+/* jshint esversion: 6 */
+document.addEventListener("DOMContentLoaded", function () {
+
+    // -----------------------------------------------------------------------------------------
+    // Prize Logic (Play & Save!)
+    // -----------------------------------------------------------------------------------------
+
+    // Grab DOM elements
+  const revealBtn = document.getElementById("revealBtn");
+  const backBtn = document.getElementById("backBtn");
+  const cardContainer = document.querySelector(".card-container");
+
+  // If any essential element is missing, stop execution
+  if (!revealBtn || !backBtn || !cardContainer) {
+    console.warn("❌ Missing elements:", revealBtn, backBtn, cardContainer);
+    return;
+  }
+
+  console.log("✅ All prize elements found, script is running...");
+
+  // Reveal button logic
+  revealBtn.addEventListener("click", () => {
+    cardContainer.classList.remove("hidden");
+    revealBtn.style.display = "none";
+    backBtn.style.display = "inline-block";
+  });
+
+  // Back button logic
+  backBtn.addEventListener("click", () => {
+    cardContainer.classList.add("hidden");
+    revealBtn.style.display = "inline-block";
+    revealBtn.disabled = false;
+    backBtn.style.display = "none";
+    document.querySelectorAll(".card").forEach(card =>
+      card.classList.remove("flipped")
+    );
+  });
+
+  // Card click logic
+  document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+      if (document.querySelector(".card.flipped")) return;
+      card.classList.add("flipped");
+    });
+  });
+});
