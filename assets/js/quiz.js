@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
         resultDiv.innerHTML += `<div class="feedback-line">You might benefit from bookkeeping help.<br>Redirecting...</div>`;
         setTimeout(() => {
           window.location.href = "./feedback.html";
-        }, 3000);
+        }, 12000);
       } else {
         resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.<br>Back to Home...</div>`;
         setTimeout(() => {
           window.location.href = "./index.html";
-        }, 3000);
+        }, 12000);
       }
 
       resultDiv.classList.add("alert", "alert-info", "mt-3");

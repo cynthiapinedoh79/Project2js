@@ -67,8 +67,6 @@ All pages were designed with **Responsive Design** to provide a consistent exper
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Format-1040.png)
-
 ![Responsive devices -home](assets/images/readme/amIR/AIR-CheckThis!.png)
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Play%20&%20Save!.png)
@@ -91,7 +89,7 @@ Main Goals of This Site:
 3.  Attract and convert new clients
 4.  Encourage visitor interaction through a fun quiz and prize feature
 5.  Present key service highlights through "Check This!" Bookkeeping Fact Cards
-6.  Offer a ready-to-fill IRS Form 1040 as part of our service suite
+6.  Offer a ready-to-fill IRS Form 1040 pdf as part of our service suite
 7.  (Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
 8.  (Coming Soon) Match Game- to provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, brief, and easy-to-understand content.
 
@@ -193,30 +191,13 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Background: A real-life business photo (blue jeans, papers) — neutral tones with blue and tan
   - Header: Dark gray/black
   - Card background: Soft white with subtle shadow
-  - Call-to-action buttons: IRS Format-1040, Consultation.
+  - Call-to-action buttons: IRS Format-1040 pdf(IRS link), Consultation (link to website) and Home(Back to main page).
     - Background Color: Deep purple
     - Hover: Dark Red.
 
   - Overall Color Mood: Trustworthy and clean with modern neutrality, purple buttons continue your branding identity.
 
-  ### 4. IRS Format-1040 Page: format1040.html
-  - Background: Solid white background
-  - Primary Action,  Section Headers & "SUCCESS" message background: Deep purple background bars with white fields as input.
-  - Section titles like GENERAL INFORMATION, MAILING ADDRESS and Buttons like “Click here if filing a JOINT return”, Submit button text: Magenta
-  - Field validation labels like “required!”, Error messages (e.g., “SSN must be 9 digits”): Red
-  - Required fields with valid inputs: Green.
-  - "Verify Age" and "Verify Spouse Age" buttons: 
-    - Text color: Magenta 
-    - Hover:Magenta
-  - Form background section boxes: Light Purple Background
-  - Invalid or empty required fields will show a border after submission: bold orange
-  - Submit Button: background-hover: Yellow Accent
-  - Text: Standard black/dark gray
-  - Accent Color: Bright orange for headers like “THIS RETURN CAN BE FILED…”
-  - Form Field Background: Light lavender/grayish purple — this maintains good contrast without looking too stark
-  - Overall Color Mood: Professional and structured — balancing bold emphasis (orange) with institutional calm (lavender + purple)
-
-  ### 5. Bookkeeping Facts Page: checkThis.html
+  ### 4. Bookkeeping Facts Page: checkThis.html
   - Background: Lightly visible money-themed image (dollar bills) as a faded background
   - Titles/Headers: Red shades (#C62828-like)
   - Text: Black
@@ -224,7 +205,7 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Card Borders and Text: Varying tones of red, black, gray
   - Color Mood: More attention-grabbing and informational (reds for urgency, purple for brand consistency)
 
-  ### 6. Play & Save Page: prize.html
+  ### 5. Play & Save Page: prize.html
   - Background: Bright, abstract art (orange, blue, white swirls)
   - Title Text: Purple
   - Button: Bold magenta/dark pink
@@ -273,9 +254,6 @@ The wireframe is designed using Balsamiq software
 #### Quiz
 ![Quiz Pg1](assets/images/readme/Bals/Bals-Quiz1.png)
 ![Quiz Pg2](assets/images/readme/Bals/Bals-Quiz2.png)
-
-#### Format-1040
-![Format-1040](assets/images/readme/Bals/Bals-Format1040.png)
 
 #### Check This!
 ![Booking](assets/images/readme/Bals/Bals-CheckThis!.png)
@@ -346,19 +324,22 @@ _Main color palette_
   - A score out of 10 is calculated.
   - A personalized feedback message is shown.
 
+  If the score suggests the user might not need help (0-5 pts), they are redirected to Home.
+
   If the score suggests the user might need help (> 6 pts), they are redirected to relevant services like Form 1040 submission or contact options.
 
   The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
-
   ![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
   ![quiz_page2](assets/images/readme/Webpgs/quiz-P2.png)
   ![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
+  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2b.png)
 
   ### 3. Feedback: feedback.html
-  Displays feedback based on quiz results. High scores lead to a message with two action buttons:
-    - Fill Form 1040 Now
+  Displays feedback based on quiz results. High scores lead to a message with three action buttons:
+    - Fill Form 1040 pdf
     -	Contact Us via Website
+    - Home (this button allows users to return to the main site.)
 
   Bookkeeping Assessment Result: After completing the quiz, users who score within a certain range are shown a feedback message:
 
@@ -376,154 +357,37 @@ _Main color palette_
     - Personalized tax advice
 
   - Call-to-Action Buttons:
-    - IRS Format-1040 – Directs the user to begin completing the official tax form with us.
+    - IRS Format-1040 pdf – Directs the user to begin completing the official tax form with IRS.
     - Request a Free Consultation offering an easy way to reach out and get help.
+    - Redirecting to Home.
 
   - Design Notes:
     - Clean, transparent card UI over a background image related to finance/taxes.
     - Clear visual hierarchy with bold headlines, informative content, and strong CTAs.
     - Colorful, accessible buttons for quick action.
 
+  #### IRS Form 1040 pdf
+  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040.png)
+  
+  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040p1.png)
+  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040p2.png)
+
+  #### Request a Free Consultation (Website link)
+  ![feedback_page](assets/images/readme/Webpgs/feedbackwebp.png)
+  ![feedback_page](assets/images/readme/Webpgs/feedbackwebp1.png)
+
+  #### Home (Back to Main page)
   ![feedback_page](assets/images/readme/Webpgs/feedback.png)
-  ![feedback_page](assets/images/readme/Webpgs/feedbackh.png)
-
-  ### 4. Format 1040: format1040.html
-
-  *Page Header*
-  - Title: Bold and clear – “IRS Format-1040 2024”
-
-  - Spanish Forms Print Options:
-    - On screen and printed
-    - Printed only
-
-  *Form Sections and Features*
-  - Main Information Sheet
-
-  - Cleanly organized into sections
-
-  - Required fields marked with red asterisks and inline validation (e.g., “SSN must be 9 digits”)
-  
-  - Each SSN input has a unique name and associated properties for storage.
-
-  - Real-time feedback with color-coded borders (red = error, green = valid)
-
-  - Joint Information and Forein Address are collapsible sections
-
-  - Clearly labeled call-to-action button: "Click here if filing a JOINT return..."
-
-  - Mailing Address with zip code input validated
-
-  - Dropdown menus for state selection
-
-  - Phone number input validated with live success messages
-
-  - Validated with specific format (e.g., (909) 372-5197)
-
-  - Includes time-of-day type preference
-
-  - Birth Date Section (labeled as “Bird Date”)
-
-  - Age verification with visual feedback
-
-  *Submission Feedback*
-  - Success Message: Large, bold confirmation banner: “SUCCESS! Form submitted successfully!”
-  - Submit Button: Dark Res and hover styled in yellow with strong contrast and clear call to action.
-
-  ---
-
-  ### Format 1040 - Empty
-
-  ![Format 1040_page](assets/images/readme/fF1040/format1040.png)
-  ![Format 1040_page](assets/images/readme/fF1040/format1040-2.png)
-  ![Format 1040_page](assets/images/readme/fF1040/format1040-3.png)
-  ![Format 1040_page](assets/images/readme/fF1040/format1040-4.png)
-  ![Format 1040_page](assets/images/readme/fF1040/format1040-5.png)
-
-
-  ---
-
-  ### Collapsible Sections
-  Hover to reveal and complete the required fields.
-  - Joint Information
-  - Forein Address
-  
-  ![Format 1040_page](assets/images/readme/fF1040/fJointH.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fForeinAH.png)
-
-  ---
-
-  ### Invalid or Missing Information
-
-  ![Format 1040_page](assets/images/readme/fF1040/fi1.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fi2.png)
-
-
-  ---
-
-  ### Incomplete Form Submitted
-  ![Format 1040_page](assets/images/readme/fF1040/fi&v.png)
-
-
-  ---
-
-  ### SSN Validation
-  - Should be 9 digits, if not an error message appears.
-  - If requiere SSN confirmation, they must match.
-
-  ![Format 1040_page](assets/images/readme/fF1040/fsvsi.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fsvsnm.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fsvconfirm.png)
-
-
-  ---
-
-  ### Phone Number Validation
-  - Should be 10 digits, if not an error message appears.
-
-  ![Format 1040_page](assets/images/readme/fF1040/fpifsv.png)
-
-
-  ---
-
-  ### Birth of Date Validation
-  - Verify Age allows to know if is older than 18 the Age or if is younger indicates.
-
-  ![Format 1040_page](assets/images/readme/fF1040/fdob.png)
-
-
-  --- 
-  
-  ### Zip Code Validation
-  - Should be 5 digits, if not an error message appears.
-
-  ![Format 1040_page](assets/images/readme/fF1040/fzr.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fzcv.png)
-
-
-  ---
-
-  ### Number of boxes auto-filled based on answers
-  ![Format 1040_page](assets/images/readme/fF1040/fex.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fex1.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fex2.png)
-  Submit bottom hover with nice color.
-
-  ![Format 1040_page](assets/images/readme/fF1040/fhovers.png)
-  
-  ---
-
-  ### Displays success message after submission.
-  ![Format 1040_page](assets/images/readme/fF1040/fv.png)
-  ![Format 1040_page](assets/images/readme/fF1040/fs.png)    
 
 --- 
 
-  ### 5. Bookkeeping Fact Cards (Check This!): checkThis.html
+  ### 4. Bookkeeping Fact Cards (Check This!): checkThis.html
   Linked from the main page; presents interesting Bookkeeping Facts.
 
   This interactive panel provides users with quick, digestible insights into bookkeeping essentials. Each fact is visually supported with a relevant image and a concise explanation.
   - Illustrated cards with bite-sized facts  
-  - Reset functionality 
+  - Reset functionality
+  - A “Back” button allows users to return to the main site.
 
   *Card Topics:*
   - What is Bookkeeping? 
@@ -565,7 +429,7 @@ _Main color palette_
 
 ---
 
-  ### 6. Prize Page (Play & Save!): prize.html
+  ### 5. Prize Page (Play & Save!): prize.html
   A fun interactive page where users can win a discount or special offer.
 
   Try Your Luck! – Interactive Prize Game
@@ -745,12 +609,6 @@ These tools ensured that all pages were free of syntax errors and followed best 
 
 ---
 
-  ##### Formato-1040: [`format1040.html`](format1040.html)
-  After clicking the **"Format 1040"** button, users are guided through interactive formulary.
-  ![Formato 1040 Page](assets/images/readme/W3C-Markup/W3C-format1040.html.png)
-
----
-
   ### Page After Clicking "Check This!"
 
   #### Informational Page: [`checkThis.html`](checkThis.html)
@@ -769,12 +627,6 @@ These tools ensured that all pages were free of syntax errors and followed best 
 
 ## CSS
 All pages have passed the official W3C CSS Validator with no errors.
-  #### Format-1040
-  #### Informational Page: [`format1040.css`](format1040.css)
-      
-  ![Format-1040 CSS](assets/images/readme/W3-CSS/W3C-format1040.css.png)
-
----
 
   #### Quiz
   #### Informational Page: [`quiz.css`](quiz.css)
@@ -785,15 +637,21 @@ All pages have passed the official W3C CSS Validator with no errors.
 ## JS
 All pages have passed the official JSHint with no errors.
 
-  #### Format-1040
-  #### Informational Page: [`format1040.js`](format1040.js)
-  ![JS](assets/images/readme/JSHint/JSH-format1040.js.png)
-
----
-
   #### Quiz
   #### Informational Page: [`quiz.js `](quiz.js)
   ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
+
+---
+
+  #### Facts
+  #### Informational Page: [`facts.js `](facts.js)
+  ![JS](assets/images/readme/JSHint/JSH-facts.js.png)
+
+---
+
+  #### Prize
+  #### Informational Page: [`prize.js `](prize.js)
+  ![JS](assets/images/readme/JSHint/JSH-prize.js.png)
 
 ---
 
