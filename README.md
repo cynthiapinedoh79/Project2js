@@ -65,6 +65,8 @@ All pages were designed with **Responsive Design** to provide a consistent exper
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-p2a.png)
 
+![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-p2b.png)
+
 ![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
 
 ![Responsive devices -home](assets/images/readme/amIR/AIR-CheckThis!.png)
@@ -674,11 +676,6 @@ All pages have passed the official JSHint with no errors.
    
   ---
 
-  #### Format 1040 Page: [`format1040.html`](form.html)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-format1040.png)
-
-  ---
-
   #### Check This! Page: [`checkThis!.html`]( checkThis.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-checkThis.html.png)
 
@@ -756,11 +753,13 @@ As a Frequent User, I want to:
 
 - Significant bugs were identified and resolved across all major development areas, including **HTML5**, **CSS3**, and **JavaScript**.
 - Several **spelling and grammar issues** were corrected throughout the project to improve clarity and professionalism.
+- Improved navigation by adding functional Back/Home buttons to return to the main page.
+- Resolved JavaScript syntax errors to ensure cleaner and more maintainable code.
+- Verified in Google Chrome Developer Tools that the console is free of errors after inspection for each page.
 
 ---
 ### Unsolved Bugs / Areas for Improvement
 
-- **Form 1040 validation**: The final section still requires refinement to ensure complete input validation and proper feedback handling.
 - **CSS cleanup**: Some unused or redundant CSS rules should be removed to reduce file size and improve maintainability.
 - **Code optimization**: Grouping and organizing code by section or page can make it easier to deploy, reduce the likelihood of bugs, and improve performance.
 - **Lighthouse Performance**: The site's performance metrics (as measured by Google's Lighthouse tool) can be improved by further optimizing code, assets, and loading behavior.
