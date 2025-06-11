@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const page1 = document.getElementById("page-1");
   const page2 = document.getElementById("page-2");
   const nextBtn = document.getElementById("next-btn");
+  const q1backBtn = document.getElementById("q1back-btn");
+  
   const quizForm = document.getElementById("quiz-form");
   const resultDiv = document.getElementById("result");
 
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.<br>Back to Home...</div>`;
         setTimeout(() => {
           window.location.href = "./index.html";
-        }, 4000);
+        }, 6000);
       }
 
       resultDiv.classList.add("alert", "alert-info", "mt-3");

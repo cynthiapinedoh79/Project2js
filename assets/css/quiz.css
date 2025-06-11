@@ -180,6 +180,7 @@ body.feedback-wrapper {
 }
 
 .quiz-wrapper button {
+  display: block;
   background-color: rgba(173, 92, 70, 0.813);
   color: white;
   border: none;
@@ -188,8 +189,33 @@ body.feedback-wrapper {
   font-size: 1rem;
   cursor: pointer;
   display: block;
-  margin: 1.5rem auto 0;
+  margin: 1 rem auto;  /* Centers it horizontally */
   transition: background-color 0.3s ease;
+  justify-content:center;
+}
+
+.quiz-wrapper .button {
+  display: block;
+  background-color: rgba(173, 92, 70, 0.813);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 1 rem auto;  /* Centers it horizontally */
+  transition: background-color 0.3s ease;
+  justify-content:center;
+}
+
+.quiz-wrapper .button-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 1rem; /* Space between buttons */
+  justify-content:center;
+  margin: 1 rem auto;  /* Centers it horizontally */
+  margin-top: 1rem;
 }
 
 .quiz-wrapper button:hover {
@@ -357,6 +383,14 @@ body.checkThis-wrapper {
   margin: 5px;
   width: 150px;
   border: none;
+  margin: 1 rem auto;  /* Centers it horizontally */
+  justify-content: center;
+}
+
+#backCTBtn.checkThis-wrapper {
+  margin: 1 rem auto;  /* Centers it horizontally */
+  justify-content: center;
+  align-content: center;
 }
 
 .checkThis-wrapper .btn-darkRed {
@@ -364,10 +398,6 @@ body.checkThis-wrapper {
   color: rgb(254, 243, 243);
 }
 
-.checkThis-wrapper .btn-darkRed {
-  background-color: #9E0059;
-  color: rgb(254, 243, 243);
-}
 
 .checkThis-wrapper .btn-purple {
   background-color: #33008a;

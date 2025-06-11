@@ -5,9 +5,11 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/cynthiapinedoh79/Project2js)
 [![View Demo](https://img.shields.io/badge/View-Demo-brightgreen)](https://cynthiapinedoh79.github.io/Project2js/)
 
-![HTML](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-%231572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML5-28.2%25-%23E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-39.1%25-%231572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-21.1%25-%23F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Dockerfile](https://img.shields.io/badge/Dockerfile-11.6%25-384d54?style=flat)
+
 
 
 
