@@ -80,9 +80,11 @@ All pages were designed with **Responsive Design** to provide a consistent exper
 
 ![Responsive devices -Quiz Pg1](assets/images/readme/amIR/AIR-Quiz-pg1.png)
 
-![Responsive devices -Quiz Pg2a](assets/images/readme/amIR/AIR-Quiz-p2a.png)
+![Responsive devices -Quiz Pg1](assets/images/readme/amIR/AIR-Quiz-pg1a.png)
 
-![Responsive devices -Quiz Pg2b](assets/images/readme/amIR/AIR-Quiz-p2b.png)
+![Responsive devices -Quiz Pg2a](assets/images/readme/amIR/AIR-Quiz-pg2a.png)
+
+![Responsive devices -Quiz Pg2b](assets/images/readme/amIR/AIR-Quiz-pg2b.png)
 
 ![Responsive devices -Feedback](assets/images/readme/amIR/AIR-Feedback.png)
 
@@ -358,7 +360,7 @@ _Main color palette_
   ![quiz_pg1](assets/images/readme/Webpgs/quiz-p1.png)
   ![quiz_pg2](assets/images/readme/Webpgs/quiz-P2.png)
 
-  #### If the quiz score is less than 6, the user is redirected to the Home Page
+  #### Users who score less than 6 on the quiz can navigate back to the Home Page using the Back button.
   ![quiz_pg2a](assets/images/readme/Webpgs/quiz-P2a.png)
   #### If the quiz score is 6 or higher, the user is redirected to the Bookkeeping Feedback Page
   ![quiz_pg2b](assets/images/readme/Webpgs/quiz-P2b.png)
@@ -451,7 +453,9 @@ _Main color palette_
 
   - Background includes a money-themed image for subtle visual relevance.
 
+  #### Users can navigate back to the Home Page using the Back button.
   ![checkThis!](assets/images/readme/Webpgs/CheckThis.png)
+  
   ![checkThis!_pg1](assets/images/readme/Webpgs/CheckThis1.png)
   ![checkThis!_pg2](assets/images/readme/Webpgs/CheckThis2.png)
 
@@ -794,7 +798,6 @@ As a Frequent User, I want to:
 
 1. **Easily Access and Submit IRS Form 1040**
    - Fill out and submit the IRS Form 1040 through a simple and secure on-site form.
-   - Save progress if needed and return to the form later.
 
 2. **View Helpful Financial Comparisons for Smarter Decisions**
    - Quickly review side-by-side comparisons such as **LLC vs. S-Corp** structures with graphics.
@@ -814,7 +817,7 @@ As a Frequent User, I want to:
 ### Solved Bugs
 
 - Significant bugs were identified and resolved across all major development areas, including **HTML5**, **CSS3**, and **JavaScript**.
-- Several **spelling and grammar issues** were corrected throughout the project to improve clarity and professionalism.
+- Several spelling and grammar issues were corrected throughout the project to improve clarity and professionalism.
 - Improved navigation by adding functional Back/Home buttons to return to the main page.
 - Resolved JavaScript syntax errors to ensure cleaner and more maintainable code.
 - Verified in Google Chrome Developer Tools that the console is free of errors after inspection for each page.
