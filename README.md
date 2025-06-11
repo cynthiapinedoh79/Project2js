@@ -1,6 +1,15 @@
 # 📊 Project2js – Bookkeeping Interactive Web App
 
-## Code Institute - First Milestone Project: User-Centric Frontend Development
+## Code Institute - Second Milestone Project: User-Centric Frontend Development
+![GitHub repo size](https://img.shields.io/github/repo-size/cynthiapinedoh79/Project2js)
+![GitHub last commit](https://img.shields.io/github/last-commit/cynthiapinedoh79/Project2js)
+[![View Demo](https://img.shields.io/badge/View-Demo-brightgreen)](https://cynthiapinedoh79.github.io/Project2js/)
+
+![HTML](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-%231572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+
 
 ## 🔗 Live Demo  
 [👉 Try the live website](https://cynthiapinedoh79.github.io/Project2js/)  
@@ -8,6 +17,8 @@
 ![Main Screenshots](assets/images/readme/amIR/AIR-Home.png)
 
 ---
+
+“Project2js is a multi-page web app offering interactive tools for assessing bookkeeping needs. It features a quiz, educational facts, PDF access, and a gamified reward system.”
 
 # 📋 Table of Contents
 - [🧾 Project Overview](#🧾-project-overview)
@@ -31,10 +42,11 @@
   - [✅ Browser & Device Testing](#✅-browser--device-testing)
   - [✅ Validator Testing](#✅-validator-testing)
   - [✅ Accessibility Testing](#✅-accessibility-testing)
+  - [✅ Console in Google Chrome DevTools-"Inspect" Testing](#✅-console-in-google-chrome-devtools-inspect-testing)
   - [🧑‍💻 Testing User Stories – User Experience (UX) Evaluation](#🧑‍💻-testing-user-stories--user-experience-ux-evaluation)
 
   - [🐞 Bugs](#🐞-bugs)
-- [📥 Deployment](#📥-deployment)
+  - [📥 Deployment](#📥-deployment)
   - [🌐 GitHub Pages Deployment](#🌐-github-pages-deployment)
   - [🍴 Forking the GitHub Repository](#🍴-forking-the-github-repository)
   - [📂 Making a Local Clone](#📂-making-a-local-clone)
@@ -44,56 +56,65 @@
 ---
 
 ## 🧾 Project Overview
+Project2js is an interactive, feature-rich web application that introduces users to the world of professional bookkeeping. Designed for individuals and small businesses, it combines utility, engagement, and learning in one experience.
+Key Features:
 
-This site offers a fun and engaging way to learn about professional bookkeeping services through:  
-- A quick interactive quiz
--Format 1040
-- Bookkeeping fact cards  
-- A reward-based “Try Your Luck” game  
-- A fully interactive IRS Form 1040  
+🧠 Personalized Quiz – Evaluate your bookkeeping needs in minutes
 
-It targets individuals and small businesses looking for better tax and financial management.
+📄 Form 1040 PDF Access – Link to the official IRS form
+
+📚 Bookkeeping Fact Cards – Fast, educational insights
+
+🎲 “Try Your Luck” Mini-Game – Win a bonus or discount
+
+This app aims to inform, engage, and guide users toward better financial organization.
 
 ---
 
 ## 📱 Am I Responsive? - Demo
 All pages were designed with **Responsive Design** to provide a consistent experience across various screen sizes and devices.
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Home.png)
+![Responsive devices -Home](assets/images/readme/amIR/AIR-Home.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-pg1.png)
+![Responsive devices -Quiz Pg1](assets/images/readme/amIR/AIR-Quiz-pg1.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-p2a.png)
+![Responsive devices -Quiz Pg2a](assets/images/readme/amIR/AIR-Quiz-p2a.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Quiz-p2b.png)
+![Responsive devices -Quiz Pg2b](assets/images/readme/amIR/AIR-Quiz-p2b.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Feedback.png)
+![Responsive devices -Feedback](assets/images/readme/amIR/AIR-Feedback.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-CheckThis!.png)
+![Responsive devices -CheckThis](assets/images/readme/amIR/AIR-CheckThis.png)
 
-![Responsive devices -home](assets/images/readme/amIR/AIR-Play%20&%20Save!.png)
+![Responsive devices -Prize](assets/images/readme/amIR/AIR-prize.png)
 
 
-### A live demo to the website can be found [here](https://cynthiapinedoh79.github.io/Project2js/)
+### A live demo to the website 
+[👉 Try the live website](https://cynthiapinedoh79.github.io/Project2js/) 
 
 ---
 
 ## 🎯 UX
-This website is designed for individuals and businesses interested in professional bookkeeping services — from tax return support to general accounting solutions.
+### Target Audience:
+Individuals and businesses seeking clarity, tools, and support in managing their finances.
 
-Visitors can explore summarized information about our offerings, take a quick quiz to evaluate whether they need bookkeeping support, or even win a special prize such as a bookkeeping bonus or discount!
+### Core UX Goals:
 
-The site serves as an engaging introduction to bookkeeping services, using clear, visual content with the purpose of informing and inviting users to take action.
+1. Build trust and credibility through clean design and intuitive structure
+2. Offer quick, interactive content that’s informative yet fun
+3. Provide actionable takeaways (e.g., IRS form, consultation link)
+4. Ensure accessibility and responsive design for all devices
+5. Create opportunities for return visits and deeper engagement
 
-Main Goals of This Site:
-1.  Establish a strong online presence
-2.  Promote our bookkeeping and tax-related services
-3.  Attract and convert new clients
-4.  Encourage visitor interaction through a fun quiz and prize feature
-5.  Present key service highlights through "Check This!" Bookkeeping Fact Cards
-6.  Offer a ready-to-fill IRS Form 1040 pdf as part of our service suite
-7.  (Coming Soon) Compare tax savings and benefits between LLC and S-Corp structures
-8.  (Coming Soon) Match Game- to provide brief, practical tips for better financial management — helping visitors make smarter decisions about bookkeeping, taxes, and business structure with clear, brief, and easy-to-understand content.
+### Main Site Goals:
+
+- Promote core services through engaging features
+- Attract potential clients through playful, educational content
+- Help users assess their bookkeeping needs via a quick quiz
+- Provide added value—discounts, tools, and practical insights—even for casual visitors
+- Offer a ready-to-fill IRS Form 1040 PDF as part of the service suite
+- (Coming Soon) Introduce a Tax Comparison Tool to highlight potential savings between LLC and S-Corp business structures
+- (Coming Soon) Launch a Match Game that delivers quick, actionable tips for smarter financial decisions—covering bookkeeping, taxes, and business planning in a fun, easy-to-understand format
 
 ---
 
@@ -258,10 +279,10 @@ The wireframe is designed using Balsamiq software
 ![Quiz Pg2](assets/images/readme/Bals/Bals-Quiz2.png)
 
 #### Check This!
-![Booking](assets/images/readme/Bals/Bals-CheckThis!.png)
+![CheckThis](assets/images/readme/Bals/Bals-CheckThis.png)
 
 #### Play & Save!
-![Booking](assets/images/readme/Bals/Bals-Play&Save!.png)
+![Prize](assets/images/readme/Bals/Bals-Prize.png)
 
 ### 🎨 Surface
 To create a pleasing and understandable view, I opt for natural colors such as earth, green, and a range of tones that complement and contrast each other.
@@ -275,9 +296,9 @@ To create a pleasing and understandable view, I opt for natural colors such as e
 4. JS -  Adds interactivity to the website, making the experience more dynamic and engaging for users.
 
 *Webaim
-[Tested the contrast](https://webaim.org/resources/contrastchecker/)
+[Tested contrast](https://webaim.org/resources/contrastchecker/)
 *Coolors
-[Tested the contrast](https://coolors.co/contrast-checker/33008a-f8f8ff)
+[Tested color](https://coolors.co/contrast-checker/33008a-f8f8ff)
 
 _Main color palette_
 ![Main color Palette](assets/images/readme/PalletColors.png)
@@ -306,7 +327,7 @@ _Main color palette_
 
   - Visual Styling: High contrast between button text (white) and button background (dark purple).
 
-  - Ver dark green header text that draws attention.
+  - Very dark green header text helps capture attention.
 
   - Central alignment of all content for focus and simplicity.
 
@@ -332,10 +353,13 @@ _Main color palette_
 
   The clean UI, transparent card background, and motivating CTA buttons make the experience smooth and user-friendly.
 
-  ![quiz_page1](assets/images/readme/Webpgs/quiz-p1.png)
-  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2.png)
-  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2a.png)
-  ![quiz_page2](assets/images/readme/Webpgs/quiz-P2b.png)
+  ![quiz_pg1](assets/images/readme/Webpgs/quiz-p1.png)
+  ![quiz_pg2](assets/images/readme/Webpgs/quiz-P2.png)
+
+  #### If the quiz score is less than 6, the user is redirected to the Home Page
+  ![quiz_pg2a](assets/images/readme/Webpgs/quiz-P2a.png)
+  #### If the quiz score is 6 or higher, the user is redirected to the Bookkeeping Feedback Page
+  ![quiz_pg2b](assets/images/readme/Webpgs/quiz-P2b.png)
 
   ### 3. Feedback: feedback.html
   Displays feedback based on quiz results. High scores lead to a message with three action buttons:
@@ -369,17 +393,17 @@ _Main color palette_
     - Colorful, accessible buttons for quick action.
 
   #### IRS Form 1040 pdf
-  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040.png)
+  ![feedback_form1040](assets/images/readme/Webpgs/feedbackform1040.png)
   
-  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040p1.png)
-  ![feedback_page](assets/images/readme/Webpgs/feedbackform1040p2.png)
+  ![feedback_form1040 Pg1](assets/images/readme/Webpgs/feedbackform1040p1.png)
+  ![feedback_form1040 Pg2](assets/images/readme/Webpgs/feedbackform1040p2.png)
 
   #### Request a Free Consultation (Website link)
-  ![feedback_page](assets/images/readme/Webpgs/feedbackwebp.png)
-  ![feedback_page](assets/images/readme/Webpgs/feedbackwebp1.png)
+  ![feedback_Webpg](assets/images/readme/Webpgs/feedbackwebp.png)
+  ![feedback_Webpg1](assets/images/readme/Webpgs/feedbackwebp1.png)
 
-  #### Home (Back to Main page)
-  ![feedback_page](assets/images/readme/Webpgs/feedback.png)
+  #### Home (Back to Home page)
+  ![feedback_return to Home](assets/images/readme/Webpgs/feedback.png)
 
 --- 
 
@@ -425,9 +449,9 @@ _Main color palette_
 
   - Background includes a money-themed image for subtle visual relevance.
 
-  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!.png)
-  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!1.png)
-  ![checkThis!_page](assets/images/readme/Webpgs/CheckThis!2.png)
+  ![checkThis!](assets/images/readme/Webpgs/CheckThis.png)
+  ![checkThis!_pg1](assets/images/readme/Webpgs/CheckThis1.png)
+  ![checkThis!_pg2](assets/images/readme/Webpgs/CheckThis2.png)
 
 ---
 
@@ -463,46 +487,45 @@ _Main color palette_
 
   - Encourages users to contact you or schedule a consultation.
 
-  ![contact_section](assets/images/readme/Webpgs/Play%20&%20Save!.png)
+  ![Prize Pg1](assets/images/readme/Webpgs/prize1.png)
+  ![Prize Pg2](assets/images/readme/Webpgs/prize2.png)
 
 ---
 
 ### CCS Files
-1. quiz.css – Provides the styling for all site sections except the Form 1040 page.
-
-2. format1040.css – Specifically styles the IRS Form 1040 section. It includes rules for showing and hiding elements, hover effects, alerts, error and success messages, and validation feedback. It also visually highlights input fields, checkboxes, and radio buttons when submitted data is invalid.
+Currently, all styles are consolidated in a single CSS file (quiz.css) for simplicity.
+1. quiz.css – Contains all custom styling for the website, including layout, typography, color schemes, button designs, responsive behavior, and section-specific formatting across all pages.
 
 ---
 
 ### JS Files.
-1. quiz.css – Contains the JavaScript code for all site functionality except the Form 1040.
-
-2. format1040.css – This file handles the JavaScript for the Form 1040. Due to the form's complexity, the script is extensive and focuses specifically on validating the format and content of 
-the entered data.
+1. quiz.js – – Handles all logic related to the quiz feature, including navigation, score calculation, and conditional redirects based on user answers.
+2. facts.js – Controls the behavior of the fact card section, such as generating, cycling through, and resetting educational bookkeeping facts.
+3. prize.js – Manages the “Play & Save!” mini-game logic, including card reveal animation, prize display, and back navigation.
 
 ---
 
+
 ### 🔮 Features Left to Implement
-Towards the future,
-1. I would like to improve the performance of the website.
 
-2. Tax Structure Comparison Tool
+1. **Performance Optimization**  
+   Further streamline scripts and assets to improve load times and Lighthouse scores.
 
-    An interactive feature that helps users compare LLC vs. S-Corp structures in terms of:
-
-    -Tax savings potential
-    -Liability protection
-    -Administrative requirements
-    -Suitability based on business type or income level
+2. **Tax Structure Comparison Tool**  
+   An interactive calculator to compare LLC vs. S-Corp options, showing:
+   - Estimated tax savings
+   - Liability protection
+   - Legal requirements
+   - Suitability based on business type or income level
+   - Best-use scenarios
 
     This tool will assist small business owners in choosing the right entity type to maximize financial efficiency and minimize tax burden.
 
-3. Financial Match Game (memory-style)
-    A fun, educational mini-game designed to reinforce key financial tips.
-    
-    Users will match cards that highlight:
-    - Best practices for bookkeeping
-    - Smart tax strategies
+3. **Financial Match Game (Memory Style)**  
+   A gamified learning tool to reinforce:
+   - Bookkeeping best practices
+   - Smart tax strategies
+
 
 Business structure insights (LLC, S-Corp, Sole Prop, etc.)
 The game will deliver practical, easy-to-understand content that helps users make smarter business and tax decisions, all while keeping the learning experience enjoyable.
@@ -545,7 +568,7 @@ The game will deliver practical, easy-to-understand content that helps users mak
 11. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://balsamiq.cloud/s45whoh/p56wz1i/r2278) during the design process.
 12. [Responsive Screenshots](https://ui.dev/amiresponsive)
-    - To able to get responsive screenshoots from different devices.
+    - To capture responsive screenshots across devices.
 13. [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/?fcolor=CDA37C&bcolor=FFFF00)
     - Webaim Contrast Checker.
 14. [Coolors](Coolorshttps://coolors.co/)
@@ -553,18 +576,15 @@ The game will deliver practical, easy-to-understand content that helps users mak
 15. Lighthouse by Google-Inspect
     - Generate a Lighthouse report by Google: Performance, Accesibility, Best Practices, and SEO.
 16. [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    - W3C MArkup Validator
+    - W3C Markup Validator
 17. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-- W3C CSS Validator
-18. [Sqoosh app](https://squoosh.app/)
-- Sqoosh App to resize or compress image files
-
-19. [Youtube](https://www.youtube.com/)
-- YouTube
-20. [Pexels]( https://www.pexels.com/)
-- Pexels
-21. [W3 Schools]( https://www.w3schools.com/)
-- W3 Schools
+    - W3C CSS Validator
+18. [Youtube](https://www.youtube.com/)
+    - YouTube
+19. [Pexels]( https://www.pexels.com/)
+    - Pexels
+20. [W3 Schools]( https://www.w3schools.com/)
+    - W3 Schools
 
 ---
 
@@ -591,7 +611,7 @@ These tools ensured that all pages were free of syntax errors and followed best 
 ## HTML
   All pages have passed the official W3C Markup Validator with no errors.
 
-### Main Page and Quiz Flow
+### Home Page and Quiz Flow
 
   #### Home Page: [`index.html`](index.html)
   This is the landing page titled **"Needs Bookkeeping?"** where users begin their experience.
@@ -607,7 +627,7 @@ These tools ensured that all pages were free of syntax errors and followed best 
 
   #### Feedback Page: [`feedback.html`](feedback.html)
   Based on the quiz answers, users receive tailored feedback and helpful suggestions.
-  ![feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
+  ![Feedback.html](assets/images/readme/W3C-Markup/W3C-feedback.html.png)
 
 ---
 
@@ -641,48 +661,81 @@ All pages have passed the official JSHint with no errors.
 
   #### Quiz
   #### Informational Page: [`quiz.js `](quiz.js)
-  ![JS](assets/images/readme/JSHint/JSH-quiz.js.png)
+  ![Quiz JS](assets/images/readme/JSHint/JSH-quiz.js.png)
 
 ---
 
   #### Facts
   #### Informational Page: [`facts.js `](facts.js)
-  ![JS](assets/images/readme/JSHint/JSH-facts.js.png)
+  ![Facts JS](assets/images/readme/JSHint/JSH-facts.js.png)
 
 ---
 
   #### Prize
   #### Informational Page: [`prize.js `](prize.js)
-  ![JS](assets/images/readme/JSHint/JSH-prize.js.png)
+  ![Prize JS](assets/images/readme/JSHint/JSH-prize.js.png)
 
 ---
 
 ### ✅ Accessibility Testing
 - Lighthouse DevTools by Google
-### Main Page and Quiz Flow
+### Home Page and Quiz Flow
   #### Home Page: [`index.html`](index.html)
   ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-index.html.png)
 
   ---
 
   #### Quiz Pages: [`quiz.html`](quiz.html)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-1).png)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-quiz.html(pg-2).png)
+  ![Lighthouse DevTools Quiz Pg1](assets/images/readme/Lighthouse/LH-quiz.html(pg-1).png)
+  ![Lighthouse DevTools Quiz Pg2](assets/images/readme/Lighthouse/LH-quiz.html(pg-2).png)
 
   ---
 
   #### Feedback Page: [`feedback.html`](quiz.html)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-feedback.html.png)
+  ![Lighthouse DevTools Feedback](assets/images/readme/Lighthouse/LH-feedback.html.png)
    
   ---
 
   #### Check This! Page: [`checkThis!.html`]( checkThis.html)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-checkThis.html.png)
+  ![Lighthouse DevTools CheckThis!](assets/images/readme/Lighthouse/LH-checkThis.html.png)
 
   ---
 
-  #### Save & Play! Page: [`quiz.html`]( quiz.html)
-  ![Lighthouse DevTools Home](assets/images/readme/Lighthouse/LH-prize.html.png)
+  #### Save & Play! Page: [`prize.html`]( quiz.html)
+  ![Lighthouse DevTools Play & Save!](assets/images/readme/Lighthouse/LH-prize.html.png)
+
+---
+
+### ✅ Console in Google Chrome DevTools-"Inspect" Testing
+- Console Error Testing using Google Chrome DevTools
+
+  Each page was tested via the Console tab in Chrome's Developer Tools to detect and resolve any JavaScript or resource-related issues. All known 404, syntax, or runtime errors were addressed, ensuring a clean console output across the site.
+
+
+### Home Page and Quiz Flow
+  #### Home Page: [`index.html`](index.html)
+  ![Console DevTools Home](assets/images/readme/Console(DevTools)/Console-index.png)
+
+  ---
+
+  #### Quiz Pages: [`quiz.html`](quiz.html)
+  ![Console DevTools Quiz Pg1](assets/images/readme/Console(DevTools)/Console-quizpg1.png)
+  ![Console DevTools Quiz Pg2](assets/images/readme/Console(DevTools)/Console-quizpg2.png)
+
+  ---
+
+  #### Feedback Page: [`feedback.html`](quiz.html)
+  ![Console DevTools Feedback](assets/images/readme/Console(DevTools)/Console-feedback.png)
+   
+  ---
+
+  #### Check This! Page: [`checkThis!.html`]( checkThis.html)
+  ![Console DevTools CheckThis](assets/images/readme/Console(DevTools)/Console-checkThis.png)
+
+  ---
+
+  #### Save & Play! Page: [`quiz.html`]( prize.html)
+  ![Console DevTools Prize](assets/images/readme/Console(DevTools)/Console-prize.png)
 
 ---
 
@@ -774,7 +827,7 @@ The project was successfully deployed to **GitHub Pages** using the steps below:
 
 1. Log in to GitHub and open your project’s [repository](https://github.com/).
 2. At the top of the repository (below the repo name, not the site header), click on the **"Settings"** tab.
-   - Alternatively, view a GIF tutorial by clicking [here](https://raw.githubusercontent.com/).
+   - Alternatively, view a GIF tutorial by clicking [Link to GitHub Docs](https://raw.githubusercontent.com/).
 3. In the left-hand sidebar under **"Code and Automation"**, click on **"Pages"**.
 4. On the GitHub Pages screen, scroll down to the **"Source"** section.
 5. Click the dropdown that says **"None"** and select **"Master Branch"** (or **"main"**, if that's your default).
