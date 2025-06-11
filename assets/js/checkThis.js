@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let factsIndex = 0;
     const factsContainer = document.getElementById("facts-container");
-    const btnsContainer = document.getElementById("buttons-container");
-    const newFactBtn = document.querySelector(".btn-darkRed");
+    const newFactBtn = document.getElementById("factsFbk"); // Correct ID from your HTML
     const factsFbk = document.getElementById("factsFbk");
-    const backCTBtn = document.getElementById("backCTBtn");
     const clearBtn = document.querySelector(".btn-purple");
+    const backCTBtn = document.getElementById("backCTBtn");
+    const btnsContainer = document.getElementById("buttons-container");
 
     const facts = [
         {
@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     function addFact() {
+        if (factsIndex >= facts.length) return;
+
         const fact = facts[factsIndex];
         const newFactElement = document.createElement("div");
         newFactElement.classList.add("fact-card");
@@ -61,46 +63,41 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>${fact.content}</p>
             <img src="${fact.imageURL}" alt="${fact.imageAlt}">
         `;
+
         factsContainer.appendChild(newFactElement);
         factsIndex++;
 
         if (factsFbk) {
             factsFbk.innerText = (factsIndex === facts.length) ?
-                "See Facts!" :
+                "All facts displayed" :
                 "Click to add another fact";
         }
 
         if (factsIndex === facts.length && newFactBtn && btnsContainer.contains(newFactBtn)) {
             btnsContainer.removeChild(newFactBtn);
-            if (backCTBtn) backCTBtn.style.display = "inline-block";
         }
     }
 
     function clearAllFacts() {
         factsContainer.innerHTML = "";
-        if (!btnsContainer.contains(newFactBtn)) {
-            btnsContainer.appendChild(newFactBtn);
-        }
         factsIndex = 0;
 
-        if (factsFbk) {
-            factsFbk.innerText = "Click to add another fact";
+        if (!btnsContainer.contains(newFactBtn)) {
+            btnsContainer.insertBefore(newFactBtn, backCTBtn); // place before Back button
         }
 
-        if (backCTBtn) {
-            backCTBtn.style.display = "none";
+        if (factsFbk) {
+            factsFbk.innerText = "See Facts!";
         }
     }
 
-    // Only run if all required elements are found
+    // Check all required elements before binding events
     if (factsContainer && btnsContainer && newFactBtn && clearBtn && backCTBtn && factsFbk) {
         newFactBtn.addEventListener("click", addFact);
         clearBtn.addEventListener("click", clearAllFacts);
-        backCTBtn.addEventListener("click", () => {
-            window.location.href = "./index.html";
-        });
     } else {
         console.warn("Missing required elements for fact logic.");
     }
 
 });
+

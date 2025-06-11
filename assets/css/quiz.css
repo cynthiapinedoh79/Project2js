@@ -159,8 +159,6 @@ body.feedback-wrapper {
   max-width: 100%;
 }
 
-
-
 .quiz-wrapper h1,
 .feedback-wrapper h1 {
   text-align: center;
@@ -214,7 +212,7 @@ body.feedback-wrapper {
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   gap: 1rem; /* Space between buttons */
   justify-content:center;
-  margin: 1 rem auto;  /* Centers it horizontally */
+  margin: 1rem auto;  /* Centers it horizontally */
   margin-top: 1rem;
 }
 
@@ -380,15 +378,14 @@ body.checkThis-wrapper {
   color: white;
   border-radius: 5px;
   padding: 5px;
-  margin: 5px;
   width: 150px;
   border: none;
-  margin: 1 rem auto;  /* Centers it horizontally */
   justify-content: center;
+  margin: 0; /* Ensures gap works consistently */
 }
 
 #backCTBtn.checkThis-wrapper {
-  margin: 1 rem auto;  /* Centers it horizontally */
+  margin: 1rem auto;  /* Centers it horizontally */
   justify-content: center;
   align-content: center;
 }
@@ -432,13 +429,17 @@ body.checkThis-wrapper {
   margin-bottom: 25px;
 }
 
+
 .checkThis-wrapper #buttons-container {
   display: flex;
   justify-content: center;
   /* center horizontally */
-  gap: 20px;
+  gap: 1rem;
   /* space between buttons */
-  margin: 10px;
+  margin: 1rem auto;  /* Centers it horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 
 .checkThis-wrapper h1 {

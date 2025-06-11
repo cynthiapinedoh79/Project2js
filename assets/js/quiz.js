@@ -55,10 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
           window.location.href = "./feedback.html";
         }, 4000);
       } else {
-        resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.<br>Back to Home...</div>`;
-        setTimeout(() => {
-          window.location.href = "./index.html";
-        }, 6000);
+        resultDiv.innerHTML += `<div class="feedback-line">You're doing great! Keep it up.</div>`;
       }
 
       resultDiv.classList.add("alert", "alert-info", "mt-3");
