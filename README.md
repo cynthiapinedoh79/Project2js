@@ -501,9 +501,10 @@ Currently, all styles are consolidated in a single CSS file (quiz.css) for simpl
 ---
 
 ### JS Files.
-1. quiz.js – – Handles all logic related to the quiz feature, including navigation, score calculation, and conditional redirects based on user answers.
-2. facts.js – Controls the behavior of the fact card section, such as generating, cycling through, and resetting educational bookkeeping facts.
-3. prize.js – Manages the “Play & Save!” mini-game logic, including card reveal animation, prize display, and back navigation.
+1. index.js – Manages all logic related to the homepage, including navigation and event handling for the three main buttons: Quiz, Check This!, and Play & Save!.
+2. quiz.js – – Handles all logic related to the quiz feature, including navigation, score calculation, and conditional redirects based on user answers.
+3. facts.js – Controls the behavior of the fact card section, such as generating, cycling through, and resetting educational bookkeeping facts.
+4. prize.js – Manages the “Play & Save!” mini-game logic, including card reveal animation, prize display, and back navigation.
 
 ---
 
@@ -661,15 +662,21 @@ All pages have passed the official W3C CSS Validator with no errors.
 ## JS
 All pages have passed the official JSHint with no errors.
 
+  #### Index
+  #### Informational Page: [`index.js `](index.js)
+  ![Index JS](assets/images/readme/JSHint/JSH-index.js.png)
+
+---
+
   #### Quiz
   #### Informational Page: [`quiz.js `](quiz.js)
   ![Quiz JS](assets/images/readme/JSHint/JSH-quiz.js.png)
 
 ---
 
-  #### Facts
-  #### Informational Page: [`facts.js `](facts.js)
-  ![Facts JS](assets/images/readme/JSHint/JSH-facts.js.png)
+  #### CheckThis!
+  #### Informational Page: [`checkThis.js `](checkThis.js)
+  ![Facts JS](assets/images/readme/JSHint/JSH-checkThis.js.png)
 
 ---
 
