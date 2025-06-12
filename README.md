@@ -65,9 +65,9 @@ Key Features:
 
 📄 Form 1040 PDF Access – Link to the official IRS form
 
-📚 Bookkeeping Fact Cards – Fast, educational insights
+📚 CheckThis!: Bookkeeping Fact Cards – Fast, educational insights
 
-🎲 “Try Your Luck” Mini-Game – Win a bonus or discount
+🎲 Play & Save!: “Try Your Luck” Mini-Game – Win a bonus or discount
 
 This app aims to inform, engage, and guide users toward better financial organization.
 
@@ -130,10 +130,10 @@ As the sole developer of this website, my mission is to provide you with an enjo
 - User Experience Objectives:
 From the user’s perspective, I’ve built this site with the following priorities in mind:
 
-- I want to navigate this website quickly and easily.
-- I should be able to use a mouse, keyboard, or touchscreen effortlessly.
-- I value high-quality, well-organized information that I can consume in just a few minutes.
-- As a user, I need a simple and clear way to get in touch with you.
+  - I want to navigate this website quickly and easily.
+  - I should be able to use a mouse, keyboard, or touchscreen effortlessly.
+  - I value high-quality, well-organized information that I can consume in just a few minutes.
+  - As a user, I need a simple and clear way to get in touch with you.
 
   ### First-Time Visitor Goals
 
@@ -202,7 +202,7 @@ From the user’s perspective, I’ve built this site with the following priorit
 
   - Card Background: Semi-transparent white.
   - Text: Black.
-  - Button: Next, Submit Quiz.
+  - Buttons: Next, Submit Quiz and Back.
     - Background Color: Muted Brown.
     - Hover: Dark Brown.
 
@@ -228,7 +228,13 @@ From the user’s perspective, I’ve built this site with the following priorit
   - Background: Lightly visible money-themed image (dollar bills) as a faded background
   - Titles/Headers: Red shades (#C62828-like)
   - Text: Black
-  - Button: Purple
+  - Call-to-action buttons: Clear Facts, See Facts!-Click to add another fact, and Back (to Home page).
+    - Clear Facts button:
+      - Background Color: Deep purple
+      - Hover: Green.
+    -  buttons: Facts!-Click to add another fact, and Back
+      - Background Color: Dark Red
+      - Hover: Orange.
   - Card Borders and Text: Varying tones of red, black, gray
   - Color Mood: More attention-grabbing and informational (reds for urgency, purple for brand consistency)
 
@@ -406,7 +412,7 @@ _Main color palette_
   ![feedback_Webpg](assets/images/readme/Webpgs/feedbackwebp.png)
   ![feedback_Webpg1](assets/images/readme/Webpgs/feedbackwebp1.png)
 
-  #### Home (Back to Home page)
+  #### Home- Navigates the user back to the main landing page of the application.
   ![feedback_return to Home](assets/images/readme/Webpgs/feedback.png)
 
 --- 
@@ -456,7 +462,10 @@ _Main color palette_
   #### Users can navigate back to the Home Page using the Back button.
   ![checkThis!](assets/images/readme/Webpgs/CheckThis.png)
   
+  #### After the first click, the "See Facts!" button updates to "Click to add another fact" and remains available until six fact cards are shown.
   ![checkThis!_pg1](assets/images/readme/Webpgs/CheckThis1.png)
+
+  #### "Click to add Another Fact"-button is hidden once six fact cards have been displayed.
   ![checkThis!_pg2](assets/images/readme/Webpgs/CheckThis2.png)
 
 ---
@@ -930,11 +939,11 @@ Cloning a repository – GitHub Docs
 
 ### 🙏 Acknowledgements
 
-- Special thanks to the **Code Institute tutor support team** for their consistent guidance and encouragement throughout the development process.
-- I am especially grateful to my mentor, **Medale Oluwafemi**, for his meaningful advice, constructive feedback, and support.
-- Appreciation to the **Code Institute tutor community** for their assistance and insights during challenges.
-- A heartfelt thanks to **Code Institute** for providing an invaluable course that built the foundation for this project.
-- I drew inspiration for this project from exploring the many example projects showcased by **Code Institute**, which helped spark ideas and refine my goals.
+- I would like to express my sincere gratitude to the **Code Institute support team** (mentor, tutor and Student Care) for their unwavering guidance and encouragement throughout the development of this project.
+- A special thanks to my mentor, Medale Oluwafemi, whose insightful advice, constructive feedback, and continuous support were instrumental to my progress.
+- Appreciation to the Code Institute Slack community for their valuable assistance and shared insights during moments of challenge.
+- My heartfelt thanks go to **Code Institute** for offering an exceptional course that laid the foundation for this project and significantly advanced my learning journey.
+- Finally, I was inspired by the diverse and creative example projects showcased by **Code Institute**, which helped shape and refine the vision for my own work.
 
 ---
 

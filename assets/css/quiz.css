@@ -187,7 +187,6 @@ body.feedback-wrapper {
   font-size: 1rem;
   cursor: pointer;
   display: block;
-  margin: 1 rem auto;  /* Centers it horizontally */
   transition: background-color 0.3s ease;
   justify-content:center;
 }
@@ -202,7 +201,6 @@ body.feedback-wrapper {
   font-size: 1rem;
   cursor: pointer;
   display: block;
-  margin: 1 rem auto;  /* Centers it horizontally */
   transition: background-color 0.3s ease;
   justify-content:center;
 }
